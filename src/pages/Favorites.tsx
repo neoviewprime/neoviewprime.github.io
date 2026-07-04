@@ -1,202 +1,97 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-
-import { Card, CardContent } from '@/components/ui/card';
-import { ReportCard } from '@/components/ReportCard';
-import { AlertTriangle, BarChart3, Clock3, FileSpreadsheet, FileText, Folder, Search, Sparkles, Star, TrendingUp, Zap } from 'lucide-react';
-import { Input } from '@/components/ui/input';
+import React from 'react';
+import { AlertTriangle, BarChart3, Clock3, FileSpreadsheet, FileText, Folder, Star, TrendingUp, Zap } from 'lucide-react';
 import { FloatingAssistant } from '@/components/FloatingAssistant';
-import { ActivityRow, EmptyState, FilterChip, PageHeader, PremiumPanel } from '@/components/premium/PremiumShell';
-import {
-  listFavoriteReports,
-  subscribeFavoriteReports,
-  syncFavoriteReportsFromBackend,
-  updateFavoriteReportMetrics,
-  type FavoriteReportEntry
-} from '@/lib/reportFavorites';
-import { useAuth } from '@/hooks/useAuth';
-import type { ChatPageContext } from '@/types/backend';
+import { PageTitle, Panel, QuickTabs, SearchControl, SmallArrowRow } from '@/components/neo/NeoReferenceUI';
 
-const Favorites: React.FC = () => {
-  const navigate = useNavigate();
-  const { user } = useAuth();
+const Favorites: React.FC = () => (
+  <>
+    <div className="neo-page">
+      <div className="neo-page-inner">
+        <PageTitle
+          icon={Star}
+          iconTone="amber"
+          title="Favoritos"
+          description="Acesso rápido aos relatórios e indicadores mais importantes para você."
+          actions={<button className="neo-action-button text-amber-300"><Star className="h-4 w-4" /> Gerenciar favoritos</button>}
+        />
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<'reports' | 'indicators'>('reports');
-  const [favoriteReports, setFavoriteReports] = useState<FavoriteReportEntry[]>([]);
+        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+          <QuickTabs items={['Relatórios', 'Indicadores']} />
+          <div className="w-full max-w-xs"><SearchControl placeholder="Buscar nos favoritos..." /></div>
+        </div>
 
-  useEffect(() => {
-    const reload = () => setFavoriteReports(listFavoriteReports(user?.id));
-    reload();
-    void syncFavoriteReportsFromBackend(user?.id).then(reload);
-    return subscribeFavoriteReports(reload);
-  }, [user?.id]);
+        <div className="grid gap-4 xl:grid-cols-[1fr_380px]">
+          <div className="space-y-4">
+            <Panel title="Coleções" action={<button className="text-sm font-medium text-emerald-400">Ver todas ›</button>}>
+              <div className="grid gap-3 md:grid-cols-4">
+                {[
+                  ['Executive Overview', 'Visão geral estratégica', '8 relatórios', 'green'],
+                  ['Financeiro & Contábil', 'Análises financeiras', '6 relatórios', 'purple'],
+                  ['Operações & Produção', 'Performance operacional', '7 relatórios', 'amber'],
+                  ['Comercial & Vendas', 'Inteligência comercial', '5 relatórios', 'blue'],
+                ].map(([title, sub, count, tone]) => (
+                  <div key={title} className="rounded-xl border border-border/60 bg-white/[0.025] p-4">
+                    <Folder className={`mb-3 h-9 w-9 ${tone === 'green' ? 'text-emerald-300' : tone === 'purple' ? 'text-violet-300' : tone === 'amber' ? 'text-amber-300' : 'text-sky-300'}`} />
+                    <div className="flex justify-between gap-3"><p className="font-medium text-foreground">{title}</p><Star className="h-4 w-4 fill-amber-400 text-amber-400" /></div>
+                    <p className="mt-2 text-sm text-muted-foreground">{sub}</p>
+                    <p className="mt-2 text-sm text-muted-foreground">{count}</p>
+                  </div>
+                ))}
+              </div>
+            </Panel>
 
-  const filteredReports = useMemo(
-    () =>
-      favoriteReports.filter((entry) =>
-        `${entry.report.name} ${entry.report.description} ${entry.path.join(' ')}`
-          .toLowerCase()
-          .includes(searchQuery.toLowerCase())
-      ),
-    [favoriteReports, searchQuery]
-  );
+            <Panel title="Relatórios favoritos" action={<button className="text-sm font-medium text-emerald-400">Ver todas ›</button>}>
+              <div className="grid gap-3 md:grid-cols-2">
+                {['Relatório S.A. Comercial Q4 2024', 'DRE Consolidado Dezembro', 'Estratégia de Expansão 2025', 'Dashboard Operacional - Dezembro', 'Fluxo de Caixa Projetado', 'Plano Comercial 2025'].map((title, index) => (
+                  <div key={title} className="flex items-center gap-3 rounded-xl border border-border/60 bg-white/[0.025] p-3">
+                    {index % 3 === 0 ? <FileText className="h-9 w-9 text-red-300" /> : <FileSpreadsheet className="h-9 w-9 text-emerald-300" />}
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate font-medium text-foreground">{title}</p>
+                      <p className="text-sm text-muted-foreground">{index % 2 ? 'Financeiro' : 'Comercial'}</p>
+                    </div>
+                    <span className="text-sm text-muted-foreground">19/12/2024</span>
+                    <Star className="h-5 w-5 fill-amber-400 text-amber-400" />
+                  </div>
+                ))}
+              </div>
+            </Panel>
 
-  const chatPageContext = useMemo<ChatPageContext>(() => {
-    const visibleNames = filteredReports.slice(0, 3).map((entry) => entry.report.name);
-    return {
-      page: 'generic',
-      title: 'Favoritos',
-      summary: [
-        `O usuário está na tela de favoritos.`,
-        `Existem ${favoriteReports.length} relatório(s) favorito(s) salvo(s) para esta conta.`,
-        searchQuery ? `Busca atual nos favoritos: ${searchQuery}.` : 'Não há filtro digitado na busca de favoritos.',
-        visibleNames.length ? `Favoritos mais visiveis agora: ${visibleNames.join(', ')}.` : 'Nenhum favorito aparece com os filtros atuais.'
-      ].join(' '),
-      hints: []
-    };
-  }, [favoriteReports.length, filteredReports, searchQuery]);
-
-  return (
-    <>
-      <div className="neo-page">
-        <div className="neo-page-inner">
-          <PageHeader
-            icon={Star}
-            title="Favoritos"
-            description="Acesso rápido aos relatórios e indicadores mais importantes para você."
-            actions={<button className="neo-pill px-4 py-2 text-sm font-medium text-foreground"><Star className="mr-2 inline h-4 w-4 text-amber-500" />Gerenciar favoritos</button>}
-          />
-
-          <div className="mb-6 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-            <div className="flex flex-wrap items-center gap-2">
-              <FilterChip active={activeTab === 'reports'} onClick={() => setActiveTab('reports')}><FileText className="mr-2 inline h-4 w-4" />Relatórios</FilterChip>
-              <FilterChip active={activeTab === 'indicators'} onClick={() => setActiveTab('indicators')}><BarChart3 className="mr-2 inline h-4 w-4" />Indicadores</FilterChip>
-              <FilterChip active>Todos</FilterChip>
-              <FilterChip>Acesso recente</FilterChip>
-              <FilterChip>Área de atuação</FilterChip>
-            </div>
-            <div className="relative w-full lg:max-w-sm">
-              <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <Input
-                placeholder="Buscar nos favoritos..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="neo-control h-11 pl-10"
-              />
-            </div>
+            <Panel title="Acesso recente">
+              {['Comparativo Geração x Consumo 2024', 'Pesquisa Satisfação Corporativa 2024', 'Apresentação Resultados do Mês', 'Análise de Custos e Despesas', 'Relatório de Sustentabilidade 2024'].map((title) => (
+                <div key={title} className="flex items-center justify-between border-b border-border/60 py-3 text-sm last:border-0">
+                  <span className="text-foreground">{title}</span><span className="text-muted-foreground">15/12/2024</span><Star className="h-5 w-5 fill-amber-400 text-amber-400" />
+                </div>
+              ))}
+            </Panel>
           </div>
 
-          <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_360px]">
-            <div className="space-y-6">
-              <PremiumPanel title="Coleções" actionLabel="Ver todas">
-                <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-                  {[
-                    ['Executive Overview', 'Visão geral estratégica', '8 relatórios', 'green'],
-                    ['Financeiro & Contábil', 'Análises financeiras', '6 relatórios', 'purple'],
-                    ['Operações & Produção', 'Performance operacional', '7 relatórios', 'amber'],
-                    ['Comercial & Vendas', 'Inteligência comercial', '5 relatórios', 'blue'],
-                  ].map(([title, subtitle, meta, tone]) => (
-                    <div key={title} className="rounded-[22px] border border-border/70 bg-background/55 p-4 dark:bg-white/[0.035]">
-                      <div className="mb-4 flex items-center justify-between">
-                        <Folder className={`h-8 w-8 ${tone === 'green' ? 'text-emerald-500' : tone === 'purple' ? 'text-violet-500' : tone === 'amber' ? 'text-amber-500' : 'text-sky-500'}`} />
-                        <Star className="h-4 w-4 fill-amber-400 text-amber-400" />
-                      </div>
-                      <p className="font-semibold text-foreground">{title}</p>
-                      <p className="mt-1 text-xs text-muted-foreground">{subtitle}</p>
-                      <p className="mt-3 text-xs text-muted-foreground">{meta}</p>
-                    </div>
-                  ))}
+          <aside className="space-y-4">
+            <Panel title="Insights para você">
+              <SmallArrowRow icon={TrendingUp} title="Crescimento nas vendas" subtitle="+12% vs. mês anterior" tone="green" />
+              <SmallArrowRow icon={Zap} title="Redução de custos operacionais" subtitle="-8% vs. orçamento" tone="amber" />
+              <SmallArrowRow icon={AlertTriangle} title="3 alertas não visualizados" subtitle="Validações críticas pendentes" tone="purple" />
+            </Panel>
+            <Panel title="Atividade dos favoritos">
+              <div className="flex items-center justify-center gap-6">
+                <div className="grid h-32 w-32 place-items-center rounded-full border-[14px] border-sky-500 bg-emerald-500/20 text-center">
+                  <span className="text-3xl font-bold text-foreground">28</span>
                 </div>
-              </PremiumPanel>
-
-              <PremiumPanel title={activeTab === 'reports' ? 'Relatórios favoritos' : 'Indicadores favoritos'} actionLabel="Ver todos">
-                {activeTab === 'reports' && (
-                  filteredReports.length === 0 ? (
-                    <EmptyState
-                      icon={Star}
-                      title="Nenhum favorito encontrado"
-                      description="Marque com estrela um relatório na hierarquia final para ele aparecer aqui."
-                      actionLabel="Ir para relatórios"
-                      onAction={() => navigate('/reports')}
-                    />
-                  ) : (
-                    <div className="grid gap-4 lg:grid-cols-2">
-                      {filteredReports.map((entry) => (
-                        <div key={entry.report.id} className="space-y-2">
-                          {entry.path.length ? <p className="text-xs text-muted-foreground">Caminho: {entry.path.join(' > ')}</p> : null}
-                          <ReportCard
-                            report={entry.report}
-                            reportPath={entry.path}
-                            companyId={entry.companyId}
-                            onMetricsChange={(reportId, metrics) => updateFavoriteReportMetrics(reportId, metrics, user?.id)}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  )
-                )}
-
-                {activeTab === 'indicators' && (
-                  <EmptyState
-                    icon={BarChart3}
-                    title="Nenhum indicador favoritado"
-                    description="Quando você salvar indicadores estratégicos, eles aparecerão organizados nesta área."
-                    actionLabel="Abrir estatísticas"
-                    onAction={() => navigate('/indicators')}
-                  />
-                )}
-              </PremiumPanel>
-
-              <PremiumPanel title="Acesso recente" actionLabel="Ver todos">
-                <div className="space-y-3">
-                  {['Comparativo Geração x Consumo 2024', 'Pesquisa Satisfação Corporativa 2024', 'Apresentação Resultados do Mês', 'Análise de Custos e Despesas'].map((item, index) => (
-                    <ActivityRow key={item} icon={index % 2 ? FileText : FileSpreadsheet} title={item} subtitle={index % 2 ? 'RH' : 'Planejamento'} meta={`${15 - index}/12/2024`} tone={index % 2 ? 'red' : 'green'} />
-                  ))}
+                <div className="space-y-3 text-sm">
+                  <p><span className="text-sky-300">●</span> Relatórios vistos 18</p>
+                  <p><span className="text-emerald-300">●</span> Relatórios criados 6</p>
+                  <p><span className="text-amber-300">●</span> Indicadores 4</p>
                 </div>
-              </PremiumPanel>
-            </div>
-
-            <aside className="space-y-6">
-              <PremiumPanel title="Insights para você">
-                <div className="space-y-3">
-                  <ActivityRow icon={TrendingUp} title="Crescimento nas vendas" subtitle="+12% vs. mês anterior" tone="green" />
-                  <ActivityRow icon={Zap} title="Redução de custos operacionais" subtitle="-8% vs. orçamento" tone="amber" />
-                  <ActivityRow icon={AlertTriangle} title="3 alertas não visualizados" subtitle="Validações críticas pendentes" tone="purple" />
-                </div>
-              </PremiumPanel>
-
-              <PremiumPanel title="Atividade dos favoritos">
-                <div className="rounded-[24px] border border-border/70 bg-background/55 p-5 text-center dark:bg-white/[0.035]">
-                  <p className="text-4xl font-semibold text-foreground">{favoriteReports.length || 28}</p>
-                  <p className="mt-1 text-sm text-muted-foreground">Acessos nos últimos 7 dias</p>
-                </div>
-                <div className="mt-4 space-y-2 text-sm text-muted-foreground">
-                  <p>Relatórios vistos: <span className="float-right text-foreground">18</span></p>
-                  <p>Relatórios criados: <span className="float-right text-foreground">6</span></p>
-                  <p>Indicadores: <span className="float-right text-foreground">4</span></p>
-                </div>
-              </PremiumPanel>
-
-              <PremiumPanel title="Recomendações">
-                <ActivityRow icon={FileSpreadsheet} title="Análise de Rentabilidade por Produto" subtitle="Popular entre usuários da sua área" tone="green" />
-                <button type="button" className="mt-4 w-full rounded-2xl border border-border/70 px-4 py-3 text-sm font-medium text-primary">Ver mais recomendações</button>
-              </PremiumPanel>
-            </aside>
-          </div>
+              </div>
+            </Panel>
+            <Panel title="Recomendações">
+              <SmallArrowRow icon={FileSpreadsheet} title="Análise de Rentabilidade por Produto" subtitle="Popular entre usuários da sua área" tone="green" />
+            </Panel>
+          </aside>
         </div>
       </div>
-
-      <FloatingAssistant
-        currentLevel="companies"
-        selectedCompanyId={undefined}
-        selectedSupId={undefined}
-        selectedMgmtId={undefined}
-        selectedProjId={undefined}
-        pageContext={chatPageContext}
-      />
-    </>
-  );
-};
+    </div>
+    <FloatingAssistant currentLevel="favorites" selectedCompanyId={undefined} selectedSupId={undefined} selectedMgmtId={undefined} selectedProjId={undefined} />
+  </>
+);
 
 export default Favorites;

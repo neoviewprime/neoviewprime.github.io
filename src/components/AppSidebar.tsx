@@ -30,7 +30,7 @@ interface AppSidebarProps {
   onLogout: () => void;
 }
 
-const DESKTOP_EXPANDED = 256;
+const DESKTOP_EXPANDED = 266;
 const DESKTOP_COLLAPSED = 72;
 
 export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClose, onLogout }) => {

@@ -1,513 +1,67 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React from 'react';
+import { ArrowRight, CheckCircle2, Clock3, ShieldCheck, Users, XCircle } from 'lucide-react';
 import { FloatingAssistant } from '@/components/FloatingAssistant';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import {
-  CheckCircle,
-  Clock3,
-  Filter,
-  ShieldCheck,
-  Eye,
-  FileText,
-  History,
-  MapPinned,
-  XCircle,
-} from 'lucide-react';
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog';
-import { useApprovals } from '@/hooks/useApprovals';
-import { useAuth } from '@/hooks/useAuth';
-import type { ChatPageContext } from '@/types/backend';
-import { useApprovalDelegations } from '@/hooks/useApprovalDelegations';
-import { useUserManagement } from '@/hooks/useUserManagement';
-import { FilterChip, MetricCard, PageHeader, PremiumPanel } from '@/components/premium/PremiumShell';
-
-const formatDate = (dateString: string) =>
-  new Date(dateString).toLocaleDateString('pt-BR', {
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-  });
+import { DecisionList, FilterButton, PageTitle, Panel, ReportsTable, SmallArrowRow, StatCard } from '@/components/neo/NeoReferenceUI';
 
 const Approvals: React.FC = () => {
-  const [selectedReport, setSelectedReport] = useState<string | null>(null);
-  const [rejectComment, setRejectComment] = useState('');
-  const [showRejectDialog, setShowRejectDialog] = useState(false);
-  const [delegateUserId, setDelegateUserId] = useState('');
-  const [delegationNotes, setDelegationNotes] = useState('');
-  const [delegationValidUntil, setDelegationValidUntil] = useState('');
-  const { user } = useAuth();
-
-  const {
-    pendingApprovals,
-    approvalHistory,
-    stats,
-    isLoading,
-    error,
-    fetchPendingApprovals,
-    fetchApprovalHistory,
-    fetchStats,
-    approveReport,
-    rejectReport,
-  } = useApprovals();
-  const {
-    outgoing,
-    incoming,
-    isLoading: isDelegationLoading,
-    error: delegationError,
-    refresh: refreshDelegations,
-    createDelegation,
-    revokeDelegation,
-  } = useApprovalDelegations();
-  const { users, fetchUsers } = useUserManagement();
-
-  useEffect(() => {
-    fetchPendingApprovals(user?.id);
-    fetchApprovalHistory(undefined, user?.id);
-    fetchStats(user?.id);
-  }, [fetchApprovalHistory, fetchPendingApprovals, fetchStats, user?.id]);
-
-  useEffect(() => {
-    if (!user?.id) return;
-    refreshDelegations().catch(() => undefined);
-    if (!user.company_id) return;
-    fetchUsers({
-      companyId: user.company_id,
-      superintendenceId: user.superintendence_id,
-      managementId: user.management_id,
-      projectId: user.project_id,
-      activeOnly: true,
-    }).catch(() => undefined);
-  }, [fetchUsers, refreshDelegations, user?.company_id, user?.id, user?.management_id, user?.project_id, user?.superintendence_id]);
-
-  const selectedPending = useMemo(
-    () => pendingApprovals.find((report) => report.id === selectedReport) ?? null,
-    [pendingApprovals, selectedReport]
-  );
-
-  const delegationCandidates = useMemo(
-    () => users.filter((candidate) => candidate.id !== user?.id && candidate.status !== 'inactive').sort((left, right) => left.full_name.localeCompare(right.full_name)),
-    [user?.id, users]
-  );
-
-  const chatPageContext = useMemo<ChatPageContext>(() => {
-    const nextReports = pendingApprovals.slice(0, 3).map((report) => report.name);
-    const summaryParts = [
-      `O usuário está na central de validações.`,
-      `Existem ${stats.pending} pendência(s), ${stats.approved_today} aprovação(ões) hoje e ${stats.rejected_today} rejeição(ões) hoje.`,
-      nextReports.length
-        ? `Primeiros relatórios aguardando decisão: ${nextReports.join(', ')}.`
-        : 'Não há relatórios pendentes na fila agora.',
-      selectedPending
-        ? `O relatório selecionado para contexto imediato é ${selectedPending.name}, com destino ${selectedPending.destination_path.join(' > ')}.`
-        : 'Nenhum relatório específico está selecionado neste momento.',
-      incoming.length
-        ? `Há ${incoming.length} delegação(ões) recebida(s) ativa(s) ou históricas.`
-        : 'Não há delegações recebidas neste momento.',
-      showRejectDialog
-        ? `O diálogo de rejeição está aberto${rejectComment.trim() ? ' e já existe um comentário preenchido' : ' e o comentário ainda está vazio'}.`
-        : 'O diálogo de rejeição está fechado.',
-      approvalHistory.length
-        ? `Há ${approvalHistory.length} item(ns) no histórico de decisões carregado(s).`
-        : 'O histórico de decisões veio vazio.'
-    ];
-
-    return {
-      page: 'approvals',
-      title: 'Validações',
-      summary: summaryParts.join(' '),
-      hints: [
-        'Resuma a fila com base nos dados carregados e diga o que exige ação agora.',
-        'Explique aprovar, rejeitar, destino automático e histórico usando o estado real da tela.',
-        'Se o usuário pedir ajuda, destaque pendências, delegações ativas e o fluxo da unidade dele.'
-      ]
-    };
-  }, [approvalHistory.length, incoming.length, pendingApprovals, rejectComment, selectedPending, showRejectDialog, stats]);
-
-  const handleApprove = async (reportId: string) => {
-    if (!user?.id) return;
-    await approveReport({
-      reportId,
-      approverId: user.id,
-      approverName: user?.full_name ?? 'Gestor NeoView',
-      comments: 'Relatório aprovado para publicação no destino informado.',
-    });
-  };
-
-  const handleReject = async () => {
-    if (!selectedReport || !rejectComment.trim() || !user?.id) return;
-
-    const success = await rejectReport({
-      reportId: selectedReport,
-      approverId: user.id,
-      approverName: user?.full_name ?? 'Gestor NeoView',
-      comments: rejectComment,
-    });
-
-    if (success) {
-      setShowRejectDialog(false);
-      setRejectComment('');
-      setSelectedReport(null);
-    }
-  };
-
-  const handleCreateDelegation = async () => {
-    if (!delegateUserId || !delegationValidUntil) return;
-    const success = await createDelegation({
-      delegateUserId,
-      validUntil: new Date(delegationValidUntil).toISOString(),
-      notes: delegationNotes.trim() || undefined,
-    });
-    if (success) {
-      setDelegateUserId('');
-      setDelegationNotes('');
-      setDelegationValidUntil('');
-    }
-  };
-
-  const handleRevokeDelegation = async (delegationId: string) => {
-    await revokeDelegation(delegationId);
-  };
-
   return (
     <>
       <div className="neo-page">
         <div className="neo-page-inner">
-        <PageHeader
-          icon={ShieldCheck}
-          title="Validações"
-          description="Aprove, rejeite ou delegue relatórios com segurança, rastreabilidade e foco nos prazos críticos."
-          actions={
-            <>
-              <Button variant="outline" className="rounded-2xl">
-                <Filter className="mr-2 h-4 w-4" />
-                Filtros
-              </Button>
-              <Badge variant="outline" className="w-fit gap-2 rounded-2xl px-4 py-2">
-                <History className="h-3.5 w-3.5" />
-                Analytics & SLA
-              </Badge>
-            </>
-          }
-        />
-
-        {error ? (
-          <Card className="mb-6 border-destructive/30 bg-destructive/5">
-            <CardContent className="p-4 text-sm text-destructive">{error}</CardContent>
-          </Card>
-        ) : null}
-
-        <div className="mb-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
-          <MetricCard label="Pendentes" value={stats.pending} helper="Aguardando decisão" icon={Clock3} tone="amber" trend="+20% vs ontem" />
-          <MetricCard label="Aprovados hoje" value={stats.approved_today} helper="Liberados para publicação" icon={CheckCircle} tone="green" trend="+10% vs ontem" />
-          <MetricCard label="Rejeitados hoje" value={stats.rejected_today} helper="Devolvidos para correção" icon={XCircle} tone="red" trend="-25% vs ontem" />
-          <MetricCard label="Tempo médio" value={`${stats.avg_approval_time_hours}h`} helper="Entre submissão e decisão" icon={History} tone="blue" trend="-0,3h vs ontem" />
-          <MetricCard label="No prazo" value="85%" helper="Dentro do SLA" icon={ShieldCheck} tone="purple" trend="+8% vs ontem" />
-        </div>
-
-        <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
-          <div className="space-y-4">
-            <Card className="overflow-hidden rounded-[28px] border-border/70">
-              <CardHeader className="border-b border-border/70 pb-0">
-                <div className="mb-4 flex flex-wrap items-center gap-2">
-                  <FilterChip active>Fila de aprovações <span className="ml-1 rounded-full bg-muted px-2 py-0.5 text-xs">{stats.pending}</span></FilterChip>
-                  <FilterChip>Minhas decisões</FilterChip>
-                  <FilterChip>Delegações <span className="ml-1 rounded-full bg-muted px-2 py-0.5 text-xs">{incoming.length + outgoing.length}</span></FilterChip>
-                  <FilterChip>Todos</FilterChip>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {isLoading ? (
-                  <div className="space-y-3">
-                    {[1, 2, 3].map((item) => (
-                      <div key={item} className="h-28 animate-pulse rounded-2xl bg-muted/50" />
-                    ))}
-                  </div>
-                ) : pendingApprovals.length === 0 ? (
-                  <div className="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8 text-center">
-                    <CheckCircle className="mx-auto mb-3 h-12 w-12 text-emerald-600" />
-                    <h3 className="text-lg font-semibold text-foreground">Fila vazia</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      Não há relatórios pendentes. As próximas submissões aparecerão aqui automaticamente.
-                    </p>
-                  </div>
-                ) : (
-                  pendingApprovals.map((report) => (
-                    <div key={report.id} className="rounded-[24px] border border-border/70 bg-background/50 p-4 dark:bg-white/[0.035] sm:p-5">
-                      <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                        <div className="flex items-start gap-4">
-                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
-                            <FileText className="h-5 w-5" />
-                          </div>
-                          <div className="min-w-0">
-                            <div className="flex flex-wrap items-center gap-2">
-                              <h3 className="text-lg font-semibold text-foreground">{report.name}</h3>
-                              <Badge className="bg-amber-500/10 text-amber-700 hover:bg-amber-500/10">
-                                Pendente
-                              </Badge>
-                            </div>
-                            <p className="mt-1 text-sm text-muted-foreground">{report.description}</p>
-                            <div className="mt-3 flex flex-wrap gap-4 text-xs text-muted-foreground">
-                              <span>Indicador: {report.indicator_name}</span>
-                              <span>Enviado por: {report.submitter_name}</span>
-                              {report.approver_name ? <span>Aprovador: {report.approver_name}</span> : null}
-                              {report.delegated_by_name ? <span>Delegado por: {report.delegated_by_name}</span> : null}
-                              <span>{formatDate(report.uploaded_at)}</span>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div className="flex flex-wrap gap-2">
-                          {report.report_url ? (
-                            <Button variant="outline" size="sm" className="rounded-2xl" asChild>
-                              <a href={report.report_url} target="_blank" rel="noreferrer">
-                                <Eye className="mr-2 h-4 w-4" />
-                                Visualizar
-                              </a>
-                            </Button>
-                          ) : null}
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            className="rounded-2xl text-destructive hover:text-destructive"
-                            onClick={() => {
-                              setSelectedReport(report.id);
-                              setShowRejectDialog(true);
-                            }}
-                          >
-                            <XCircle className="mr-2 h-4 w-4" />
-                            Rejeitar
-                          </Button>
-                          <Button size="sm" className="rounded-2xl bg-emerald-600 hover:bg-emerald-700" onClick={() => handleApprove(report.id)}>
-                            <CheckCircle className="mr-2 h-4 w-4" />
-                            Aprovar
-                          </Button>
-                        </div>
-                      </div>
-
-                      <div className="mt-4 rounded-2xl bg-muted/40 p-4">
-                        <div className="flex items-center gap-2 text-sm font-medium text-foreground">
-                          <MapPinned className="h-4 w-4 text-primary" />
-                          Destino automático após aprovação
-                        </div>
-                        <p className="mt-2 text-sm text-muted-foreground">
-                          {report.destination_path.join(' > ')}
-                        </p>
-                      </div>
-                    </div>
-                  ))
-                )}
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="space-y-6">
-            <Card className="rounded-3xl border-border/70">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl">Regras e delegações</CardTitle>
-                <CardDescription>
-                  Aprovadores podem delegar temporariamente decisões; o sistema valida prazo, escopo e revogação.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-5">
-                {delegationError ? <p className="text-sm text-destructive">{delegationError}</p> : null}
-
-                {user?.can_approve ? (
-                  <div className="space-y-3 rounded-2xl border border-border/70 p-4">
-                    <div className="flex items-center gap-2 text-sm font-medium text-foreground">
-                      <ShieldCheck className="h-4 w-4 text-primary" />
-                      Nova delegação
-                    </div>
-                    <select
-                      value={delegateUserId}
-                      onChange={(event) => setDelegateUserId(event.target.value)}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                    >
-                      <option value="">Selecione um usuário da mesma alçada</option>
-                      {delegationCandidates.map((candidate) => (
-                        <option key={candidate.id} value={candidate.id}>
-                          {candidate.full_name} {candidate.job_title ? `- ${candidate.job_title}` : ''}
-                        </option>
-                      ))}
-                    </select>
-                    <Input
-                      type="datetime-local"
-                      value={delegationValidUntil}
-                      onChange={(event) => setDelegationValidUntil(event.target.value)}
-                    />
-                    <Textarea
-                      value={delegationNotes}
-                      onChange={(event) => setDelegationNotes(event.target.value)}
-                      placeholder="Observação opcional sobre a delegação"
-                      rows={3}
-                    />
-                    <Button className="rounded-2xl" onClick={handleCreateDelegation} disabled={!delegateUserId || !delegationValidUntil || isDelegationLoading}>
-                      Delegar aprovação
-                    </Button>
-                  </div>
-                ) : (
-                  <div className="rounded-2xl border border-border/70 bg-muted/30 p-4 text-sm text-muted-foreground">
-                    Seu usuário não é um aprovador nato, mas pode receber delegações ativas abaixo.
-                  </div>
-                )}
-
-                <div className="space-y-3">
-                  <div>
-                    <p className="text-sm font-semibold text-foreground">Delegações recebidas</p>
-                    <p className="text-xs text-muted-foreground">Quando ativas, elas liberam a fila de aprovação no seu usuário.</p>
-                  </div>
-                  {incoming.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">Nenhuma delegação recebida.</p>
-                  ) : (
-                    incoming.map((delegation) => (
-                      <div key={delegation.id} className="rounded-2xl border border-border/60 p-4">
-                        <div className="flex items-start justify-between gap-3">
-                          <div>
-                            <p className="font-medium text-foreground">{delegation.delegator_name ?? 'Aprovador'}</p>
-                            <p className="text-xs text-muted-foreground">
-                              Válida até {formatDate(delegation.valid_until)}
-                            </p>
-                          </div>
-                          <Badge className={delegation.is_active ? 'bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/10' : 'bg-muted text-muted-foreground'}>
-                            {delegation.is_active ? 'Ativa' : 'Encerrada'}
-                          </Badge>
-                        </div>
-                        {delegation.notes ? <p className="mt-2 text-sm text-muted-foreground">{delegation.notes}</p> : null}
-                      </div>
-                    ))
-                  )}
-                </div>
-
-                <div className="space-y-3">
-                  <div>
-                    <p className="text-sm font-semibold text-foreground">Delegações criadas por você</p>
-                    <p className="text-xs text-muted-foreground">Você pode revogar quando quiser.</p>
-                  </div>
-                  {outgoing.length === 0 ? (
-                    <p className="text-sm text-muted-foreground">Nenhuma delegação criada.</p>
-                  ) : (
-                    outgoing.map((delegation) => (
-                      <div key={delegation.id} className="rounded-2xl border border-border/60 p-4">
-                        <div className="flex items-start justify-between gap-3">
-                          <div>
-                            <p className="font-medium text-foreground">{delegation.delegate_name ?? 'Usuário delegado'}</p>
-                            <p className="text-xs text-muted-foreground">
-                              Válida até {formatDate(delegation.valid_until)}
-                            </p>
-                          </div>
-                          <div className="flex flex-wrap items-center gap-2">
-                            <Badge className={delegation.is_active ? 'bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/10' : 'bg-muted text-muted-foreground'}>
-                              {delegation.is_active ? 'Ativa' : 'Encerrada'}
-                            </Badge>
-                            {delegation.is_active ? (
-                              <Button variant="outline" size="sm" className="rounded-2xl" onClick={() => handleRevokeDelegation(delegation.id)}>
-                                Revogar
-                              </Button>
-                            ) : null}
-                          </div>
-                        </div>
-                        {delegation.notes ? <p className="mt-2 text-sm text-muted-foreground">{delegation.notes}</p> : null}
-                      </div>
-                    ))
-                  )}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="rounded-[28px] border-border/70">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl">Histórico de decisões</CardTitle>
-                <CardDescription>
-                  Histórico gravado no schema toda vez que você aprova ou rejeita um relatório.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                {approvalHistory.length === 0 ? (
-                  <p className="text-sm text-muted-foreground">Nenhuma decisão registrada ainda.</p>
-                ) : (
-                  approvalHistory.slice(0, 8).map((item) => (
-                    <div key={item.id} className="rounded-2xl border border-border/60 bg-background/50 p-4 dark:bg-white/[0.035]">
-                      <div className="flex items-center justify-between gap-3">
-                        <div className="min-w-0">
-                          <p className="truncate font-semibold text-foreground">{item.report_name ?? item.report_id}</p>
-                          <p className="text-xs text-muted-foreground">
-                            {item.submitter_name ?? 'Analista NeoView'} • {formatDate(item.approved_at ?? item.created_at)}
-                          </p>
-                        </div>
-                        <Badge
-                          className={
-                            item.status === 'approved'
-                              ? 'bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/10'
-                              : 'bg-rose-500/10 text-rose-700 hover:bg-rose-500/10'
-                          }
-                        >
-                          {item.status === 'approved' ? 'Aprovado' : 'Rejeitado'}
-                        </Badge>
-                      </div>
-                      {item.destination_path?.length ? (
-                        <p className="mt-2 text-xs text-muted-foreground">
-                          Destino: {item.destination_path.join(' > ')}
-                        </p>
-                      ) : null}
-                      {item.comments ? (
-                        <p className="mt-2 text-sm text-muted-foreground">{item.comments}</p>
-                      ) : null}
-                    </div>
-                  ))
-                )}
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <Dialog open={showRejectDialog} onOpenChange={setShowRejectDialog}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Rejeitar relatório</DialogTitle>
-            <DialogDescription>
-              O autor receberá esse contexto para corrigir o envio antes de uma nova submissão.
-            </DialogDescription>
-          </DialogHeader>
-
-          {selectedPending ? (
-            <div className="rounded-xl bg-muted/40 p-3 text-sm text-muted-foreground">
-              <p className="font-medium text-foreground">{selectedPending.name}</p>
-              <p className="mt-1">Destino previsto: {selectedPending.destination_path.join(' > ')}</p>
-            </div>
-          ) : null}
-
-          <Textarea
-            placeholder="Descreva o motivo da rejeição..."
-            value={rejectComment}
-            onChange={(event) => setRejectComment(event.target.value)}
-            rows={5}
+          <PageTitle
+            title="Validações"
+            description="Aprove, rejeite ou delegue relatórios com segurança e agilidade."
+            actions={<button className="neo-action-button border-primary/50 text-primary"><ShieldCheck className="h-4 w-4" /> Analytics & SLA</button>}
           />
 
-          <DialogFooter>
-            <Button variant="outline" onClick={() => setShowRejectDialog(false)}>
-              Cancelar
-            </Button>
-            <Button variant="destructive" onClick={handleReject} disabled={!rejectComment.trim()}>
-              Confirmar rejeição
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+          <div className="mb-4 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+            <StatCard icon={Clock3} label="Pendentes" value="12" helper="Aguardando" trend="+20% vs ontem" tone="amber" />
+            <StatCard icon={CheckCircle2} label="Aprovados hoje" value="18" helper="Liberados para publicação" trend="+10% vs ontem" tone="green" />
+            <StatCard icon={XCircle} label="Rejeitados hoje" value="3" helper="Devolvidos para correção" trend="-25% vs ontem" tone="red" />
+            <StatCard icon={Clock3} label="Tempo médio" value="1,7h" helper="Entre submissão e decisão" trend="-0,3h vs ontem" tone="blue" />
+            <StatCard icon={Clock3} label="No prazo" value="85%" helper="Dentro do SLA" trend="+8% vs ontem" tone="purple" />
+          </div>
 
-      <FloatingAssistant variant="chat" pageContext={chatPageContext} />
+          <div className="grid gap-4 xl:grid-cols-[1fr_380px]">
+            <Panel>
+              <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+                <div className="flex gap-6 text-sm">
+                  {['Fila de aprovações 12', 'Minhas decisões', 'Delegações 2', 'Todos 56'].map((tab, index) => (
+                    <button key={tab} className={index === 0 ? 'border-b-2 border-primary pb-3 text-foreground' : 'pb-3 text-muted-foreground'}>{tab}</button>
+                  ))}
+                </div>
+                <FilterButton />
+              </div>
+              <ReportsTable approvals />
+              <div className="mt-4 flex items-center justify-between text-sm text-muted-foreground">
+                <span>Mostrando 1 a 6 de 12 aprovações</span>
+                <div className="flex gap-2">
+                  {['‹', '1', '2', '›'].map((item) => <button key={item} className={`neo-icon-button h-9 w-9 ${item === '1' ? 'bg-primary text-primary-foreground' : ''}`}>{item}</button>)}
+                </div>
+              </div>
+            </Panel>
+
+            <aside className="space-y-4">
+              <Panel title="Histórico de decisões" action={<button className="text-sm font-medium text-emerald-400">Ver tudo</button>}>
+                <DecisionList />
+                <button className="neo-action-button mt-4 w-full justify-between">Ver todas as decisões <ArrowRight className="h-4 w-4" /></button>
+              </Panel>
+              <Panel title="Regras e delegações" action={<button className="text-sm font-medium text-emerald-400">Gerenciar</button>}>
+                <div className="space-y-2">
+                  <SmallArrowRow icon={ShieldCheck} title="Regras de aprovação" subtitle="2 regras ativas • SLA: 24h" tone="purple" />
+                  <SmallArrowRow icon={Users} title="Minhas delegações" subtitle="2 delegações ativas" tone="amber" />
+                  <SmallArrowRow icon={Users} title="Substitutos" subtitle="1 substituto configurado" tone="blue" />
+                </div>
+              </Panel>
+            </aside>
+          </div>
+
+          <div className="neo-surface mt-4 rounded-xl p-4 text-sm text-muted-foreground">
+            Dica: Use os filtros para focar no que precisa de atenção. Aprovações em atraso são destacadas em vermelho.
+          </div>
+        </div>
+      </div>
+      <FloatingAssistant currentLevel="approvals" selectedCompanyId={undefined} selectedSupId={undefined} selectedMgmtId={undefined} selectedProjId={undefined} />
     </>
   );
 };

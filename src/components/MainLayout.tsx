@@ -8,7 +8,7 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { HierarchyNavProvider } from '@/context/HierarchyNavContext';
 import { useAuth } from '@/hooks/useAuth';
 
-const DESKTOP_EXPANDED = 256;
+const DESKTOP_EXPANDED = 266;
 const DESKTOP_COLLAPSED = 72;
 const SIDEBAR_STORAGE_KEY = 'neoview_sidebar_open_v2';
 
@@ -96,7 +96,7 @@ export default function MainLayout() {
             onToggleSidebar={toggleSidebar}
             onLogout={handleLogout}
           />
-          <main className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-clip px-0 pb-[calc(env(safe-area-inset-bottom)+5.75rem)] pt-2 sm:pb-[calc(env(safe-area-inset-bottom)+1rem)] sm:pt-4">
+          <main className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-clip px-0 pb-[calc(env(safe-area-inset-bottom)+5.75rem)] pt-0 sm:pb-[calc(env(safe-area-inset-bottom)+1rem)]">
             <Outlet />
           </main>
         </motion.div>
