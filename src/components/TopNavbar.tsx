@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Home, Star, HelpCircle, LogOut, ChevronLeft, Bell, Share2, ShieldCheck, Clock3 } from 'lucide-react';
+import { Menu, HelpCircle, ChevronLeft, Bell, Share2, ShieldCheck, Clock3 } from 'lucide-react';
 import { NeoLogo } from './NeoLogo';
 import { GlobalSearch } from './GlobalSearch';
 import { ThemeToggle } from './ThemeToggle';
@@ -21,12 +21,12 @@ interface TopNavbarProps {
 export const TopNavbar: React.FC<TopNavbarProps> = ({
   onToggleSidebar,
   isAuthenticated,
-  onLogout,
 }) => {
   const navigate = useNavigate();
   const { canGoBack, triggerBack } = useHierarchyNav();
   const { user } = useAuth();
   const isMobile = useMediaQuery('(max-width: 767px)');
+  const isDesktop = useMediaQuery('(min-width: 1024px)');
   const { items, unreadCount, isLoading, markAllAsRead, markAsRead } = useNotifications(isAuthenticated && Boolean(user?.id));
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
@@ -42,13 +42,20 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
     if (type.includes('delegation')) return ShieldCheck;
     return Clock3;
   };
+  const initials = user?.full_name
+    ?.split(/\s+/)
+    .filter(Boolean)
+    .map((part) => part[0])
+    .slice(0, 2)
+    .join('')
+    .toUpperCase() ?? 'JN';
 
   return (
     <header className="sticky top-0 z-50 border-b neo-topbar">
-      <div className="px-3 pb-2 pt-[max(0.65rem,env(safe-area-inset-top))] sm:px-4 sm:pb-0 sm:pt-0">
+      <div className="px-3 pb-2 pt-[max(0.65rem,env(safe-area-inset-top))] sm:px-6 sm:pb-0 sm:pt-0">
         <div className="flex min-h-14 items-center justify-between gap-2 sm:min-h-16 sm:gap-4">
           <div className="flex min-w-0 items-center gap-2 sm:gap-4">
-            {isAuthenticated ? (
+            {isAuthenticated && !isDesktop ? (
               <button
                 onClick={onToggleSidebar}
                 className="rounded-xl p-2 text-foreground transition-colors hover:bg-muted"
@@ -58,13 +65,13 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
               </button>
             ) : null}
 
-            <button onClick={() => navigate(isAuthenticated ? '/home' : '/')} className="shrink-0">
+            <button onClick={() => navigate(isAuthenticated ? '/home' : '/')} className="shrink-0 lg:hidden">
               <NeoLogo size="md" />
             </button>
           </div>
 
           {isAuthenticated && !isMobile ? (
-            <div className="hidden flex-1 justify-center px-4 sm:flex">
+            <div className="hidden flex-1 justify-start px-0 sm:flex">
               <GlobalSearch />
             </div>
           ) : null}
@@ -167,38 +174,23 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
             {isAuthenticated ? (
               <>
                 {!isMobile ? (
-                  <>
-                    <button
-                      onClick={() => navigate('/home')}
-                    className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
-                    >
-                      <Home className="h-4 w-4" />
-                      <span className="hidden sm:inline">Inicio</span>
-                    </button>
-                    <button
-                      onClick={() => navigate('/favorites')}
-                    className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
-                    >
-                      <Star className="h-4 w-4" />
-                      <span className="hidden sm:inline">Favoritos</span>
-                    </button>
-                    <button
-                      onClick={() => navigate('/help')}
-                    className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
-                    >
-                      <HelpCircle className="h-4 w-4" />
-                      <span className="hidden sm:inline">Ajuda</span>
-                    </button>
-                  </>
-                ) : null}
-
-                {!isMobile ? (
                   <button
-                    onClick={onLogout}
-                    className="flex items-center gap-2 rounded-xl px-2 py-2 text-sm text-destructive transition-colors hover:bg-destructive/10 sm:px-3"
+                    onClick={() => navigate('/help')}
+                    className="flex items-center gap-2 rounded-xl px-2 py-2 text-sm text-foreground transition-colors hover:bg-muted sm:px-3"
+                    aria-label="Ajuda"
                   >
-                    <LogOut className="h-4 w-4" />
-                    <span className="hidden md:inline">Sair</span>
+                    <HelpCircle className="h-5 w-5" />
+                  </button>
+                ) : null}
+                {isAuthenticated ? (
+                  <button
+                    type="button"
+                    onClick={() => navigate('/settings')}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground ring-1 ring-primary/30"
+                    title={user?.full_name ?? 'Perfil'}
+                    aria-label="Abrir perfil"
+                  >
+                    {initials}
                   </button>
                 ) : null}
               </>

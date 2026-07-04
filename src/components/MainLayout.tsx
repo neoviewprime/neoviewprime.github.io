@@ -10,18 +10,20 @@ import { useAuth } from '@/hooks/useAuth';
 
 const DESKTOP_EXPANDED = 256;
 const DESKTOP_COLLAPSED = 72;
+const SIDEBAR_STORAGE_KEY = 'neoview_sidebar_open_v2';
 
 export default function MainLayout() {
   const navigate = useNavigate();
   const location = useLocation();
   const { isAuthenticated, isLoading, signOut } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(() => {
-    return localStorage.getItem('sidebar_open') === 'true';
+    const saved = localStorage.getItem(SIDEBAR_STORAGE_KEY);
+    return saved === null ? true : saved === 'true';
   });
 
   useEffect(() => {
-    const saved = localStorage.getItem('sidebar_open') === 'true';
-    setSidebarOpen(saved);
+    const saved = localStorage.getItem(SIDEBAR_STORAGE_KEY);
+    setSidebarOpen(saved === null ? true : saved === 'true');
   }, []);
 
   useEffect(() => {
@@ -36,13 +38,13 @@ export default function MainLayout() {
   const toggleSidebar = () => {
     setSidebarOpen((prev) => {
       const newState = !prev;
-      localStorage.setItem('sidebar_open', String(newState));
+      localStorage.setItem(SIDEBAR_STORAGE_KEY, String(newState));
       return newState;
     });
   };
 
   const closeSidebar = () => {
-    localStorage.setItem('sidebar_open', 'false');
+    localStorage.setItem(SIDEBAR_STORAGE_KEY, 'false');
     setSidebarOpen(false);
   };
 
@@ -50,6 +52,7 @@ export default function MainLayout() {
     await signOut();
     localStorage.removeItem('neoview_user');
     localStorage.removeItem('sidebar_open');
+    localStorage.removeItem(SIDEBAR_STORAGE_KEY);
     localStorage.removeItem('neoview_client_id');
     localStorage.removeItem('neoview-report-upload-draft');
     Object.keys(localStorage)
@@ -78,23 +81,25 @@ export default function MainLayout() {
   }
 
   return (
-    <div className="app-shell-bg flex min-h-dvh flex-col bg-background">
+    <div className="app-shell-bg min-h-dvh bg-background">
       <HierarchyNavProvider>
-        <TopNavbar
-          isAuthenticated={isAuthenticated}
-          onToggleSidebar={toggleSidebar}
-          onLogout={handleLogout}
-        />
-        <AppSidebar isOpen={sidebarOpen} onClose={closeSidebar} onLogout={handleLogout} />
+        <AppSidebar isOpen={sidebarOpen} onToggle={toggleSidebar} onClose={closeSidebar} onLogout={handleLogout} />
 
-        <motion.main
-          className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-clip px-0 pb-[calc(env(safe-area-inset-bottom)+5.75rem)] pt-2 sm:pb-[calc(env(safe-area-inset-bottom)+1rem)] sm:pt-4"
+        <motion.div
+          className="flex min-h-dvh min-w-0 flex-1 flex-col"
           initial={false}
           animate={{ marginLeft: targetMarginLeft }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         >
-          <Outlet />
-        </motion.main>
+          <TopNavbar
+            isAuthenticated={isAuthenticated}
+            onToggleSidebar={toggleSidebar}
+            onLogout={handleLogout}
+          />
+          <main className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-clip px-0 pb-[calc(env(safe-area-inset-bottom)+5.75rem)] pt-2 sm:pb-[calc(env(safe-area-inset-bottom)+1rem)] sm:pt-4">
+            <Outlet />
+          </main>
+        </motion.div>
         <MobileBottomNav onOpenMenu={toggleSidebar} />
       </HierarchyNavProvider>
     </div>

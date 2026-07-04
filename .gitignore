@@ -23,6 +23,7 @@ tmp_*
 # Visual reference exports kept locally; named PNGs in MELHORIAS remain versioned.
 MELHORIAS/Redesenho de Site Profissional.html
 MELHORIAS/Redesenho de Site Profissional_files/
+MELHORIAS_CODEX/
 
 # Editor directories and files
 .vscode/*

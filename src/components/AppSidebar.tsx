@@ -13,6 +13,9 @@ import {
   User,
   X,
   LogOut,
+  ChevronsLeft,
+  ChevronsRight,
+  Building2,
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -22,6 +25,7 @@ import { NeoLogo } from '@/components/NeoLogo';
 
 interface AppSidebarProps {
   isOpen: boolean;
+  onToggle: () => void;
   onClose: () => void;
   onLogout: () => void;
 }
@@ -29,7 +33,7 @@ interface AppSidebarProps {
 const DESKTOP_EXPANDED = 256;
 const DESKTOP_COLLAPSED = 72;
 
-export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogout }) => {
+export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClose, onLogout }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -46,9 +50,12 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogou
       { icon: CheckSquare, label: 'Validações', path: '/approvals' },
       { icon: Star, label: 'Favoritos', path: '/favorites' },
       { icon: HelpCircle, label: 'Ajuda', path: '/help' },
-      ...(isSuperadmin ? [{ icon: Shield, label: 'Superadmin', path: '/superadmin' }] : []),
       { icon: Settings, label: 'Configurações', path: '/settings' },
     ],
+    []
+  );
+  const adminItems = useMemo(
+    () => (isSuperadmin ? [{ icon: Shield, label: 'Superadmin', path: '/superadmin' }] : []),
     [isSuperadmin]
   );
 
@@ -97,9 +104,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogou
       <motion.aside
         className={cn(
           'neo-sidebar fixed left-0 z-50 overflow-hidden border-r',
-          isDesktop
-            ? 'top-16 block h-[calc(100dvh-4rem)]'
-            : 'top-0 h-dvh w-[min(84vw,340px)]'
+          isDesktop ? 'top-0 block h-dvh' : 'top-0 h-dvh w-[min(84vw,340px)]'
         )}
         initial={false}
         variants={sidebarVariants}
@@ -111,7 +116,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogou
         <div className="flex h-full flex-col pb-[calc(env(safe-area-inset-bottom)+0.75rem)]">
           <div
             className={cn(
-              'flex items-center border-b border-sidebar-border p-3',
+              'flex min-h-[4.6rem] items-center border-b border-sidebar-border p-4',
               isDesktop && !isOpen ? 'justify-center' : 'justify-between'
             )}
           >
@@ -135,7 +140,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogou
           </motion.p>
 
           <motion.nav
-            className="flex-1 space-y-1 overflow-y-auto p-2 pt-3"
+            className="flex-1 space-y-1 overflow-y-auto p-3 pt-3"
             variants={listVariants}
             initial={false}
             animate="animate"
@@ -174,6 +179,50 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogou
                 </motion.button>
               );
             })}
+
+            {adminItems.length ? (
+              <div className="pt-5">
+                <motion.p
+                  className="mb-2 px-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-sidebar-foreground/55"
+                  variants={labelVariants}
+                  initial={false}
+                  animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
+                >
+                  Administracao
+                </motion.p>
+                {adminItems.map((item) => {
+                  const Icon = item.icon;
+                  const isActive = location.pathname === item.path;
+                  return (
+                    <motion.button
+                      key={item.path}
+                      onClick={() => {
+                        navigate(item.path);
+                        if (!isDesktop) handleCloseMobile();
+                      }}
+                      className={cn(
+                        'relative flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left transition-all',
+                        isActive
+                          ? 'bg-sidebar-primary/15 text-sidebar-accent-foreground ring-1 ring-sidebar-primary/35'
+                          : 'text-sidebar-foreground/78 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
+                        isDesktop && !isOpen ? 'justify-center px-0' : ''
+                      )}
+                    >
+                      {isActive ? <span className="absolute left-0 top-1/2 h-7 w-1 -translate-y-1/2 rounded-r-full bg-sidebar-primary" /> : null}
+                      <Icon className={cn('h-5 w-5 shrink-0', isActive ? 'text-sidebar-primary' : '')} />
+                      <motion.span
+                        className="overflow-hidden whitespace-nowrap text-sm"
+                        variants={labelVariants}
+                        initial={false}
+                        animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
+                      >
+                        {item.label}
+                      </motion.span>
+                    </motion.button>
+                  );
+                })}
+              </div>
+            ) : null}
           </motion.nav>
 
           <div className="border-t border-sidebar-border p-3">
@@ -203,14 +252,40 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogou
                 </div>
               </div>
             ) : null}
+            <motion.div
+              className="mb-3 overflow-hidden rounded-2xl border border-sidebar-border bg-sidebar-accent/35"
+              variants={labelVariants}
+              initial={false}
+              animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
+            >
+              <button className="flex w-full items-center gap-3 px-3 py-3 text-left text-sidebar-foreground">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sidebar-primary/15">
+                  <Building2 className="h-4 w-4" />
+                </div>
+                <div className="min-w-0">
+                  <p className="truncate text-sm font-medium">Neoenergia Coelba</p>
+                  <p className="truncate text-xs text-sidebar-foreground/65">Workspace atual</p>
+                </div>
+              </button>
+            </motion.div>
             <motion.p
               className="whitespace-nowrap text-xs text-sidebar-foreground/60"
               variants={labelVariants}
               initial={false}
               animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
             >
-              NeoView v1.0
+              NeoView v2.0.0
             </motion.p>
+            {isDesktop ? (
+              <button
+                type="button"
+                onClick={onToggle}
+                className="mt-3 flex w-full items-center justify-center rounded-xl border border-sidebar-border px-3 py-2.5 text-sidebar-foreground/75 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                aria-label={isOpen ? 'Recolher sidebar' : 'Expandir sidebar'}
+              >
+                {isOpen ? <ChevronsLeft className="h-4 w-4" /> : <ChevronsRight className="h-4 w-4" />}
+              </button>
+            ) : null}
             {!isDesktop ? (
               <button
                 type="button"
