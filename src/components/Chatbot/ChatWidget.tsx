@@ -51,7 +51,8 @@ export function ChatWidget({
     sendMessage,
     startNewSession,
     loadSession,
-    getSessions
+    getSessions,
+    rateMessage
   } = useChatbot(pageContext);
 
   useEffect(() => {
@@ -336,7 +337,7 @@ export function ChatWidget({
         <div className="flex-1 min-h-0 overflow-y-auto p-4 space-y-4">
           {messages.map((message) => (
             <div key={message.id}>
-              <ChatMessage message={message} />
+              <ChatMessage message={message} onRate={(messageId, rating) => void rateMessage(messageId, rating)} />
               {message.role === 'assistant' && message.metadata?.sources && (
                 <ChatSources
                   sources={message.metadata.sources}

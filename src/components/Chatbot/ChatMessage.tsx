@@ -9,15 +9,17 @@
  */
 
 import React from 'react';
-import { Bot, User } from 'lucide-react';
+import { Bot, ThumbsDown, ThumbsUp, User } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import type { ChatMessage as ChatMessageType } from '@/types/backend';
 
 interface ChatMessageProps {
   message: ChatMessageType;
+  onRate?: (messageId: string, rating: 'positive' | 'negative') => void;
 }
 
-export function ChatMessage({ message }: ChatMessageProps) {
+export function ChatMessage({ message, onRate }: ChatMessageProps) {
   const isUser = message.role === 'user';
   const isSystem = message.role === 'system';
 
@@ -47,21 +49,54 @@ export function ChatMessage({ message }: ChatMessageProps) {
       </div>
 
       {/* Message Content */}
-      <div
-        className={cn(
-          'max-w-[80%] rounded-2xl px-4 py-2',
-          isUser
-            ? 'bg-primary text-primary-foreground rounded-br-md'
-            : 'bg-muted text-foreground rounded-bl-md'
-        )}
-      >
-        {isUser ? (
-          <p className="text-sm whitespace-pre-wrap">{message.content}</p>
-        ) : (
-          <div className="text-sm prose prose-sm dark:prose-invert max-w-none">
-            <MessageContent content={message.content} />
+      <div className="max-w-[80%]">
+        <div
+          className={cn(
+            'rounded-2xl px-4 py-2',
+            isUser
+              ? 'bg-primary text-primary-foreground rounded-br-md'
+              : 'bg-muted text-foreground rounded-bl-md'
+          )}
+        >
+          {isUser ? (
+            <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+          ) : (
+            <div className="text-sm prose prose-sm dark:prose-invert max-w-none">
+              <MessageContent content={message.content} />
+            </div>
+          )}
+        </div>
+
+        {!isUser && message.content.trim() && onRate ? (
+          <div className="mt-1 flex items-center gap-1 text-muted-foreground">
+            <span className="mr-1 text-[11px]">Avaliar</span>
+            <Button
+              type="button"
+              variant={message.metadata?.evaluation === 'positive' ? 'secondary' : 'ghost'}
+              size="icon"
+              className="h-7 w-7 rounded-full"
+              aria-label="Resposta útil"
+              onClick={() => onRate(message.id, 'positive')}
+            >
+              <ThumbsUp className="h-3.5 w-3.5" />
+            </Button>
+            <Button
+              type="button"
+              variant={message.metadata?.evaluation === 'negative' ? 'secondary' : 'ghost'}
+              size="icon"
+              className="h-7 w-7 rounded-full"
+              aria-label="Resposta não útil"
+              onClick={() => onRate(message.id, 'negative')}
+            >
+              <ThumbsDown className="h-3.5 w-3.5" />
+            </Button>
+            {message.metadata?.intent ? (
+              <span className="ml-1 max-w-[9rem] truncate text-[11px]" title={`Intencao: ${message.metadata.intent}`}>
+                {message.metadata.intent}
+              </span>
+            ) : null}
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );

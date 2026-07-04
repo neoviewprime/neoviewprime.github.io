@@ -25,6 +25,7 @@ interface UseChatbotReturn {
   startNewSession: () => Promise<void>;
   loadSession: (sessionId: string) => Promise<void>;
   getSessions: () => Promise<ChatSession[]>;
+  rateMessage: (messageId: string, rating: 'positive' | 'negative') => Promise<void>;
 }
 
 const buildWelcomeMessage = (pageContext?: ChatPageContext | null): string => {
@@ -64,6 +65,14 @@ interface ApiSource {
 interface StreamEvent {
   event: string;
   data: string;
+}
+
+interface ChatDonePayload {
+  sources?: ApiSource[];
+  totalSources?: number;
+  intent?: string;
+  confidence?: number;
+  retrievalMode?: string;
 }
 
 interface SessionApiItem {
@@ -283,7 +292,7 @@ export function useChatbot(pageContext?: ChatPageContext | null): UseChatbotRetu
         }
 
         if (event === 'done') {
-          const payload = JSON.parse(data) as { sources?: ApiSource[]; totalSources?: number };
+          const payload = JSON.parse(data) as ChatDonePayload;
           const sources = (payload.sources ?? []).map(mapSource);
           const finalAnswer = accumulatedAnswer.trim() || 'Nao consegui gerar uma resposta.';
 
@@ -298,7 +307,10 @@ export function useChatbot(pageContext?: ChatPageContext | null): UseChatbotRetu
                       sources,
                       model: 'local-rag',
                       tokens_used: undefined,
-                      totalSources: typeof payload.totalSources === 'number' ? payload.totalSources : undefined
+                      totalSources: typeof payload.totalSources === 'number' ? payload.totalSources : undefined,
+                      intent: payload.intent,
+                      confidence: payload.confidence,
+                      retrievalMode: payload.retrievalMode
                     }
                   }
                 : message
@@ -362,6 +374,35 @@ export function useChatbot(pageContext?: ChatPageContext | null): UseChatbotRetu
     return (payload.sessions ?? []).map(mapSession);
   }, []);
 
+  const rateMessage = useCallback(async (messageId: string, rating: 'positive' | 'negative') => {
+    const message = messages.find((item) => item.id === messageId);
+    const previousUserMessage = [...messages]
+      .slice(0, messages.findIndex((item) => item.id === messageId))
+      .reverse()
+      .find((item) => item.role === 'user');
+
+    setMessages((prev) =>
+      prev.map((item) =>
+        item.id === messageId
+          ? { ...item, metadata: { ...item.metadata, evaluation: rating } }
+          : item
+      )
+    );
+
+    await fetch(`${API_URL}/chat/feedback`, {
+      method: 'POST',
+      headers: getAuthHeaders(),
+      body: JSON.stringify({
+        messageId,
+        sessionId: message?.session_id ?? session?.id,
+        rating,
+        question: previousUserMessage?.content,
+        answer: message?.content,
+        metadata: message?.metadata
+      })
+    }).catch(() => undefined);
+  }, [messages, session?.id]);
+
   return {
     messages,
     session,
@@ -372,7 +413,8 @@ export function useChatbot(pageContext?: ChatPageContext | null): UseChatbotRetu
     clearChat,
     startNewSession,
     loadSession,
-    getSessions
+    getSessions,
+    rateMessage
   };
 }
 

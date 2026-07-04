@@ -96,6 +96,18 @@ type SearchResult = {
   score: number;
 };
 
+type ChatLearningItem = {
+  id: string;
+  split: 'train' | 'test';
+  rating: 'positive' | 'negative';
+  question: string;
+  answer: string;
+  intent?: string;
+  retrievalMode?: string;
+  sourceIds: string[];
+  created_at: string;
+};
+
 const DEMO_API_INSTALLED_KEY = '__neoview_demo_api_installed__';
 const METRICS_STORAGE_KEY = 'neoview-demo-metrics';
 const COMMENTS_STORAGE_KEY = 'neoview-demo-comments';
@@ -104,6 +116,7 @@ const PREFERENCES_STORAGE_KEY = 'neoview-demo-preferences';
 const DRAFTS_STORAGE_KEY = 'neoview-demo-utd-drafts';
 const APPROVAL_HISTORY_STORAGE_KEY = 'neoview-demo-approval-history';
 const DELEGATIONS_STORAGE_KEY = 'neoview-demo-approval-delegations';
+const CHAT_LEARNING_STORAGE_KEY = 'neoview-demo-chat-learning-v1';
 
 const isBrowser = () => typeof window !== 'undefined';
 const isLocalhost = () =>
@@ -124,6 +137,42 @@ const readStorage = <T,>(key: string, fallback: T): T => {
 const writeStorage = <T,>(key: string, value: T) => {
   if (!isBrowser()) return;
   window.localStorage.setItem(key, JSON.stringify(value));
+};
+
+const normalizeText = (value: string) =>
+  value
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const tokenize = (value: string) =>
+  normalizeText(value)
+    .split(/\s+/)
+    .filter((token) => token.length > 1);
+
+const synonymGroups = [
+  ['dec', 'duracao', 'interrupcao', 'continuidade'],
+  ['fec', 'frequencia', 'interrupcao', 'continuidade'],
+  ['iar', 'arrecadacao', 'receita'],
+  ['ipce', 'perdas', 'credito', 'cobranca'],
+  ['dce', 'comercial', 'distribuicao'],
+  ['relatorio', 'documento', 'pdf', 'arquivo'],
+  ['indicador', 'kpi', 'metrica', 'indice'],
+  ['empresa', 'companhia', 'distribuidora'],
+  ['aprovacao', 'validacao', 'pendencia', 'aprovar']
+];
+
+const expandQueryTokens = (tokens: string[]) => {
+  const expanded = new Set(tokens);
+  tokens.forEach((token) => {
+    synonymGroups.forEach((group) => {
+      if (group.includes(token)) group.forEach((entry) => expanded.add(entry));
+    });
+  });
+  return Array.from(expanded);
 };
 
 const createJsonResponse = (body: unknown, status = 200) =>
@@ -461,13 +510,175 @@ const buildWorkspaceSummary = () => {
   };
 };
 
-const buildChatStreamResponse = (question: string) => {
+const readChatLearning = () => readStorage<ChatLearningItem[]>(CHAT_LEARNING_STORAGE_KEY, []);
+const writeChatLearning = (items: ChatLearningItem[]) => writeStorage(CHAT_LEARNING_STORAGE_KEY, items.slice(-250));
+
+const detectChatIntent = (question: string) => {
+  const q = normalizeText(question);
+  if (/^(oi|ola|bom dia|boa tarde|boa noite)\b/.test(q)) return 'saudacao';
+  if (q.includes('o que voce faz') || q.includes('como voce ajuda') || q.includes('capacidades')) return 'capacidades';
+  if (q.includes('aprova') || q.includes('validacao') || q.includes('pendencia')) return 'aprovacoes';
+  if (q.includes('metrica') || q.includes('views') || q.includes('curtida') || q.includes('comentario') || q.includes('compartilh')) return 'metricas';
+  if (q.includes('compara') || q.includes('comparar') || q.includes('versus') || q.includes(' vs ')) return 'comparacao';
+  if (q.includes('indicador') || /\b(dec|fec|iar|ipce|dce)\b/.test(q)) return 'indicadores';
+  if (q.includes('relatorio') || q.includes('pdf') || q.includes('documento')) return 'relatorios';
+  return 'busca_semantica';
+};
+
+const sourceFromEntry = (entry: CatalogEntry, score: number) => ({
+  type: 'report',
+  id: entry.source_report_id,
+  name: entry.report_name,
+  description: entry.report_description,
+  meta: [
+    entry.company_name,
+    entry.report_date ?? 'sem data',
+    `Indicadores: ${entry.indicator_names.join(', ') || 'sem indicadores'}`
+  ].join(' | '),
+  path: entry.path,
+  relevance_score: score,
+  hierarchy: {
+    companyId: entry.company_id,
+    superintendenceId: entry.superintendence_id,
+    managementId: entry.management_id,
+    projectId: entry.project_id
+  }
+});
+
+const scoreCatalogEntry = (entry: CatalogEntry, queryTokens: string[], learning: ChatLearningItem[]) => {
+  const haystack = normalizeText([
+    entry.source_report_id,
+    entry.report_name,
+    entry.report_description ?? '',
+    entry.company_name,
+    entry.superintendence_name ?? '',
+    entry.management_name ?? '',
+    entry.project_name ?? '',
+    entry.indicator_names.join(' ')
+  ].join(' '));
+
+  let score = 0;
+  queryTokens.forEach((token) => {
+    if (haystack.includes(token)) score += token.length <= 3 ? 5 : 3;
+  });
+
+  learning.forEach((item) => {
+    if (!item.sourceIds.includes(entry.source_report_id)) return;
+    const overlap = tokenize(item.question).filter((token) => queryTokens.includes(token)).length;
+    if (overlap === 0) return;
+    score += item.rating === 'positive' ? overlap * 2.5 : -overlap * 2;
+  });
+
+  return score;
+};
+
+const buildSemanticMatches = (question: string) => {
+  const queryTokens = expandQueryTokens(tokenize(question));
+  const learning = readChatLearning();
+  return listCatalogEntries()
+    .map((entry) => ({ entry, score: scoreCatalogEntry(entry, queryTokens, learning) }))
+    .filter((item) => item.score > 0)
+    .sort((left, right) => right.score - left.score)
+    .slice(0, 12);
+};
+
+const buildCapabilitiesAnswer = () =>
+  [
+    'Sou a IRIS, assistente local do NeoView para busca e analise de relatorios.',
+    'O que eu consigo fazer agora:',
+    '- Encontrar relatorios por indicador, empresa, gerencia, unidade, projeto, tema ou trecho da descricao.',
+    '- Entender variacoes e siglas como DEC, FEC, IAR, IPCE e DCE.',
+    '- Cruzar resultados por hierarquia, listar fontes e sugerir refinamentos.',
+    '- Aprender com sua avaliacao de resposta util ou nao util, separando exemplos em treino e teste no navegador.'
+  ].join('\n');
+
+const buildChatAnswer = (question: string, pageContext?: { title?: string; summary?: string } | null) => {
+  const intent = detectChatIntent(question);
+  const matches = buildSemanticMatches(question);
+  const topMatches = matches.slice(0, 6);
+  const total = matches.length;
+  const confidence = topMatches[0] ? Math.min(0.98, Math.max(0.35, topMatches[0].score / 24)) : 0.25;
+
+  if (intent === 'saudacao') {
+    return {
+      answer: 'Ola. Sou a IRIS. Posso buscar relatorios, indicadores, metricas e pendencias no catalogo do NeoView. Me diga uma empresa, sigla ou tema para eu começar.',
+      sources: [],
+      totalSources: 0,
+      intent,
+      confidence: 0.9,
+      retrievalMode: 'intencao-direta'
+    };
+  }
+
+  if (intent === 'capacidades') {
+    return {
+      answer: buildCapabilitiesAnswer(),
+      sources: [],
+      totalSources: 0,
+      intent,
+      confidence: 0.95,
+      retrievalMode: 'intencao-direta'
+    };
+  }
+
+  if (topMatches.length === 0) {
+    const contextHint = pageContext?.title ? ` Estou considerando tambem a tela "${pageContext.title}".` : '';
+    return {
+      answer: [
+        `Nao encontrei fontes fortes para "${question}".${contextHint}`,
+        'Tente informar empresa, indicador, sigla, gerencia, projeto ou parte do nome do relatorio.',
+        'Exemplos: "relatorios de DEC da Coelba", "metricas de FEC", "pendencias de aprovacao" ou "indicadores da Pernambuco".'
+      ].join('\n'),
+      sources: [],
+      totalSources: 0,
+      intent,
+      confidence,
+      retrievalMode: 'semantica-local'
+    };
+  }
+
+  const distribution = new Map<string, number>();
+  topMatches.forEach(({ entry }) => distribution.set(entry.company_name, (distribution.get(entry.company_name) ?? 0) + 1));
+  const distributionText = Array.from(distribution.entries()).map(([company, count]) => `${company}: ${count}`).join(' | ');
+  const lines = topMatches.map(({ entry, score }, index) => {
+    const metrics = ensureMetrics(entry);
+    const metricText = intent === 'metricas'
+      ? ` | metricas: ${metrics.views} views, ${metrics.likes} curtidas, ${metrics.comments} comentarios, ${metrics.shares} compartilhamentos`
+      : '';
+    return `- ${index + 1}. ${entry.report_name} | ${entry.company_name} | ${entry.indicator_names.join(', ') || 'sem indicadores'} | score ${score.toFixed(1)}${metricText}`;
+  });
+
+  const intentLead: Record<string, string> = {
+    aprovacoes: 'Priorizei itens que ajudam a localizar relatorios e contexto para decisao/aprovacao.',
+    metricas: 'Priorizei resultados com leitura de engajamento e indicadores operacionais.',
+    comparacao: 'Separei fontes comparaveis por empresa e hierarquia.',
+    indicadores: 'Priorizei relatorios associados aos indicadores e siglas detectadas.',
+    relatorios: 'Priorizei documentos catalogados com melhor aderencia textual.',
+    busca_semantica: 'Usei busca semantica local com sinonimos e aprendizado por avaliacao.'
+  };
+
+  return {
+    answer: [
+      `Entendi sua intencao como: ${intent}.`,
+      intentLead[intent] ?? intentLead.busca_semantica,
+      `Encontrei ${total} fonte(s) aderente(s). Distribuicao: ${distributionText || 'sem agrupamento'}.`,
+      'Melhores resultados:',
+      ...lines,
+      total > topMatches.length ? `Ainda ha mais ${total - topMatches.length} resultado(s) alem deste recorte.` : '',
+      'Proximo passo sugerido: posso refinar por empresa, indicador, periodo, gerencia ou abrir um relatorio especifico.'
+    ].filter(Boolean).join('\n'),
+    sources: topMatches.map(({ entry, score }) => sourceFromEntry(entry, score)),
+    totalSources: total,
+    intent,
+    confidence,
+    retrievalMode: 'semantica-local-aprendizado'
+  };
+};
+
+const buildChatStreamResponse = (question: string, pageContext?: { title?: string; summary?: string } | null) => {
   const sessionId = `sess-demo-${Date.now()}`;
-  const answer = [
-    'Esta e uma resposta demonstrativa da IRIS no modo offline.',
-    `Pergunta recebida: "${question || 'consulta sem texto'}".`,
-    'No Netlify sem backend, o assistente permanece operacional com respostas locais para a apresentacao.'
-  ].join(' ');
+  const result = buildChatAnswer(question, pageContext);
+  const answer = result.answer;
 
   const encoder = new TextEncoder();
   const stream = new ReadableStream({
@@ -476,7 +687,13 @@ const buildChatStreamResponse = (question: string) => {
       answer.split(' ').forEach((token) => {
         controller.enqueue(encoder.encode(`event: token\ndata: ${JSON.stringify({ token: `${token} ` })}\n\n`));
       });
-      controller.enqueue(encoder.encode(`event: done\ndata: ${JSON.stringify({ sources: [], totalSources: 0 })}\n\n`));
+      controller.enqueue(encoder.encode(`event: done\ndata: ${JSON.stringify({
+        sources: result.sources,
+        totalSources: result.totalSources,
+        intent: result.intent,
+        confidence: result.confidence,
+        retrievalMode: result.retrievalMode
+      })}\n\n`));
       controller.close();
     }
   });
@@ -809,7 +1026,49 @@ const tryHandleDemoApiRequest = async (request: Request): Promise<Response | nul
 
   if (path === '/chat/stream' && method === 'POST') {
     const body = await request.clone().json().catch(() => ({} as Record<string, unknown>));
-    return buildChatStreamResponse(String((body as { message?: string }).message ?? ''));
+    return buildChatStreamResponse(
+      String((body as { message?: string }).message ?? ''),
+      (body as { pageContext?: { title?: string; summary?: string } }).pageContext
+    );
+  }
+
+  if (path === '/chat/feedback' && method === 'POST') {
+    const body = await request.clone().json().catch(() => ({} as Record<string, unknown>));
+    const metadata = (body as { metadata?: { sources?: Array<{ id?: string }>; intent?: string; retrievalMode?: string } }).metadata;
+    const current = readChatLearning();
+    const nextIndex = current.length + 1;
+    const item: ChatLearningItem = {
+      id: `learn-${Date.now()}`,
+      split: nextIndex % 5 === 0 ? 'test' : 'train',
+      rating: (body as { rating?: 'positive' | 'negative' }).rating === 'negative' ? 'negative' : 'positive',
+      question: String((body as { question?: string }).question ?? ''),
+      answer: String((body as { answer?: string }).answer ?? ''),
+      intent: metadata?.intent,
+      retrievalMode: metadata?.retrievalMode,
+      sourceIds: (metadata?.sources ?? []).map((source) => String(source.id ?? '')).filter(Boolean),
+      created_at: new Date().toISOString()
+    };
+    writeChatLearning([...current, item]);
+    return createJsonResponse({
+      success: true,
+      split: item.split,
+      totals: {
+        train: [...current, item].filter((entry) => entry.split === 'train').length,
+        test: [...current, item].filter((entry) => entry.split === 'test').length
+      }
+    });
+  }
+
+  if (path === '/chat/learning' && method === 'GET') {
+    const learning = readChatLearning();
+    return createJsonResponse({
+      total: learning.length,
+      train: learning.filter((entry) => entry.split === 'train').length,
+      test: learning.filter((entry) => entry.split === 'test').length,
+      positive: learning.filter((entry) => entry.rating === 'positive').length,
+      negative: learning.filter((entry) => entry.rating === 'negative').length,
+      recent: learning.slice(-10).reverse()
+    });
   }
 
   if (/^\/chat\/sessions\/[^/]+$/u.test(path) && method === 'GET') {

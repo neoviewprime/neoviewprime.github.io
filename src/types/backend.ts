@@ -341,6 +341,10 @@ export interface ChatMessage {
     tokens_used?: number;        // tokens consumidos
     model?: string;              // modelo usado
     totalSources?: number;       // quantidade total encontrada, mesmo se a UI mostrar um recorte
+    intent?: string;             // intenção detectada pelo RAG/chat
+    confidence?: number;         // confiança aproximada da recuperação
+    retrievalMode?: string;      // estratégia usada: semantica, indicadores, navegacao etc.
+    evaluation?: 'positive' | 'negative';
   };
   created_at: string;            // TIMESTAMP
 }
