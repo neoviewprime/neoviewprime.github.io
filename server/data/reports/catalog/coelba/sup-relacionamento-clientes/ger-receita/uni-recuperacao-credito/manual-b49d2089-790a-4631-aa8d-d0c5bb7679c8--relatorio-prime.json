@@ -1,0 +1,994 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+  "report_status": "approved",
+  "report": {
+    "name": "Relatorio Prime",
+    "description": "É um relatório",
+    "date": null,
+    "size_label": "",
+    "size_bytes": 0,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-relacionamento-clientes",
+      "name": "Superintendência de Relacionamento com Clientes"
+    },
+    "management": {
+      "id": "ger-receita",
+      "name": "Gerência da Gestão da Receita"
+    },
+    "project": {
+      "id": "uni-recuperacao-credito",
+      "name": "Unidade de Recuperação de Crédito"
+    }
+  },
+  "indicators": [
+    {
+      "id": "",
+      "name": "OPO",
+      "value": "",
+      "unit": "",
+      "trend": ""
+    },
+    {
+      "id": "",
+      "name": "OPI",
+      "value": "",
+      "unit": "",
+      "trend": ""
+    }
+  ],
+  "metrics": {
+    "views": 4,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência de Relacionamento com Clientes",
+    "Gerência da Gestão da Receita",
+    "Unidade de Recuperação de Crédito",
+    "Relatorio Prime"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+    "report_status": "approved",
+    "report": {
+      "name": "Relatorio Prime",
+      "description": "É um relatório",
+      "date": null,
+      "size_label": "",
+      "size_bytes": 0,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-relacionamento-clientes",
+        "name": "Superintendência de Relacionamento com Clientes"
+      },
+      "management": {
+        "id": "ger-receita",
+        "name": "Gerência da Gestão da Receita"
+      },
+      "project": {
+        "id": "uni-recuperacao-credito",
+        "name": "Unidade de Recuperação de Crédito"
+      }
+    },
+    "indicators": [
+      {
+        "id": "",
+        "name": "OPO",
+        "value": "",
+        "unit": "",
+        "trend": ""
+      },
+      {
+        "id": "",
+        "name": "OPI",
+        "value": "",
+        "unit": "",
+        "trend": ""
+      }
+    ],
+    "metrics": {
+      "views": 4,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência de Relacionamento com Clientes",
+      "Gerência da Gestão da Receita",
+      "Unidade de Recuperação de Crédito",
+      "Relatorio Prime"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+      "report_status": "approved",
+      "report": {
+        "name": "Relatorio Prime",
+        "description": "É um relatório",
+        "date": null,
+        "size_label": "",
+        "size_bytes": 0,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-relacionamento-clientes",
+          "name": "Superintendência de Relacionamento com Clientes"
+        },
+        "management": {
+          "id": "ger-receita",
+          "name": "Gerência da Gestão da Receita"
+        },
+        "project": {
+          "id": "uni-recuperacao-credito",
+          "name": "Unidade de Recuperação de Crédito"
+        }
+      },
+      "indicators": [
+        {
+          "id": "",
+          "name": "OPO",
+          "value": "",
+          "unit": "",
+          "trend": ""
+        },
+        {
+          "id": "",
+          "name": "OPI",
+          "value": "",
+          "unit": "",
+          "trend": ""
+        }
+      ],
+      "metrics": {
+        "views": 4,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência de Relacionamento com Clientes",
+        "Gerência da Gestão da Receita",
+        "Unidade de Recuperação de Crédito",
+        "Relatorio Prime"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+        "report_status": "approved",
+        "report": {
+          "name": "Relatorio Prime",
+          "description": "É um relatório",
+          "date": null,
+          "size_label": "",
+          "size_bytes": 0,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-relacionamento-clientes",
+            "name": "Superintendência de Relacionamento com Clientes"
+          },
+          "management": {
+            "id": "ger-receita",
+            "name": "Gerência da Gestão da Receita"
+          },
+          "project": {
+            "id": "uni-recuperacao-credito",
+            "name": "Unidade de Recuperação de Crédito"
+          }
+        },
+        "indicators": [
+          {
+            "id": "",
+            "name": "OPO",
+            "value": "",
+            "unit": "",
+            "trend": ""
+          },
+          {
+            "id": "",
+            "name": "OPI",
+            "value": "",
+            "unit": "",
+            "trend": ""
+          }
+        ],
+        "metrics": {
+          "views": 4,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência de Relacionamento com Clientes",
+          "Gerência da Gestão da Receita",
+          "Unidade de Recuperação de Crédito",
+          "Relatorio Prime"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+          "report_status": "approved",
+          "report": {
+            "name": "Relatorio Prime",
+            "description": "É um relatório",
+            "date": null,
+            "size_label": "",
+            "size_bytes": 0,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-relacionamento-clientes",
+              "name": "Superintendência de Relacionamento com Clientes"
+            },
+            "management": {
+              "id": "ger-receita",
+              "name": "Gerência da Gestão da Receita"
+            },
+            "project": {
+              "id": "uni-recuperacao-credito",
+              "name": "Unidade de Recuperação de Crédito"
+            }
+          },
+          "indicators": [
+            {
+              "id": "",
+              "name": "OPO",
+              "value": "",
+              "unit": "",
+              "trend": ""
+            },
+            {
+              "id": "",
+              "name": "OPI",
+              "value": "",
+              "unit": "",
+              "trend": ""
+            }
+          ],
+          "metrics": {
+            "views": 4,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência de Relacionamento com Clientes",
+            "Gerência da Gestão da Receita",
+            "Unidade de Recuperação de Crédito",
+            "Relatorio Prime"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+            "report_status": "approved",
+            "report": {
+              "name": "Relatorio Prime",
+              "description": "É um relatório",
+              "date": null,
+              "size_label": "",
+              "size_bytes": 0,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-relacionamento-clientes",
+                "name": "Superintendência de Relacionamento com Clientes"
+              },
+              "management": {
+                "id": "ger-receita",
+                "name": "Gerência da Gestão da Receita"
+              },
+              "project": {
+                "id": "uni-recuperacao-credito",
+                "name": "Unidade de Recuperação de Crédito"
+              }
+            },
+            "indicators": [
+              {
+                "id": "",
+                "name": "OPO",
+                "value": "",
+                "unit": "",
+                "trend": ""
+              },
+              {
+                "id": "",
+                "name": "OPI",
+                "value": "",
+                "unit": "",
+                "trend": ""
+              }
+            ],
+            "metrics": {
+              "views": 4,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência de Relacionamento com Clientes",
+              "Gerência da Gestão da Receita",
+              "Unidade de Recuperação de Crédito",
+              "Relatorio Prime"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+              "report_status": "approved",
+              "report": {
+                "name": "Relatorio Prime",
+                "description": "É um relatório",
+                "date": null,
+                "size_label": "",
+                "size_bytes": 0,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-relacionamento-clientes",
+                  "name": "Superintendência de Relacionamento com Clientes"
+                },
+                "management": {
+                  "id": "ger-receita",
+                  "name": "Gerência da Gestão da Receita"
+                },
+                "project": {
+                  "id": "uni-recuperacao-credito",
+                  "name": "Unidade de Recuperação de Crédito"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "",
+                  "name": "OPO",
+                  "value": "",
+                  "unit": "",
+                  "trend": ""
+                },
+                {
+                  "id": "",
+                  "name": "OPI",
+                  "value": "",
+                  "unit": "",
+                  "trend": ""
+                }
+              ],
+              "metrics": {
+                "views": 4,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência de Relacionamento com Clientes",
+                "Gerência da Gestão da Receita",
+                "Unidade de Recuperação de Crédito",
+                "Relatorio Prime"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+                "report_status": "approved",
+                "report": {
+                  "name": "Relatorio Prime",
+                  "description": "É um relatório",
+                  "date": null,
+                  "size_label": "",
+                  "size_bytes": 0,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-relacionamento-clientes",
+                    "name": "Superintendência de Relacionamento com Clientes"
+                  },
+                  "management": {
+                    "id": "ger-receita",
+                    "name": "Gerência da Gestão da Receita"
+                  },
+                  "project": {
+                    "id": "uni-recuperacao-credito",
+                    "name": "Unidade de Recuperação de Crédito"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "",
+                    "name": "OPO",
+                    "value": "",
+                    "unit": "",
+                    "trend": ""
+                  },
+                  {
+                    "id": "",
+                    "name": "OPI",
+                    "value": "",
+                    "unit": "",
+                    "trend": ""
+                  }
+                ],
+                "metrics": {
+                  "views": 4,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência de Relacionamento com Clientes",
+                  "Gerência da Gestão da Receita",
+                  "Unidade de Recuperação de Crédito",
+                  "Relatorio Prime"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Relatorio Prime",
+                    "description": "É um relatório",
+                    "date": null,
+                    "size_label": "",
+                    "size_bytes": 0,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-relacionamento-clientes",
+                      "name": "Superintendência de Relacionamento com Clientes"
+                    },
+                    "management": {
+                      "id": "ger-receita",
+                      "name": "Gerência da Gestão da Receita"
+                    },
+                    "project": {
+                      "id": "uni-recuperacao-credito",
+                      "name": "Unidade de Recuperação de Crédito"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "",
+                      "name": "OPO",
+                      "value": "",
+                      "unit": "",
+                      "trend": ""
+                    },
+                    {
+                      "id": "",
+                      "name": "OPI",
+                      "value": "",
+                      "unit": "",
+                      "trend": ""
+                    }
+                  ],
+                  "metrics": {
+                    "views": 4,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência de Relacionamento com Clientes",
+                    "Gerência da Gestão da Receita",
+                    "Unidade de Recuperação de Crédito",
+                    "Relatorio Prime"
+                  ],
+                  "raw_json": {
+                    "schema": "neoview.report.v1",
+                    "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+                    "report_status": "approved",
+                    "report": {
+                      "name": "Relatorio Prime",
+                      "description": "É um relatório",
+                      "date": null,
+                      "size_label": "",
+                      "size_bytes": 0,
+                      "url": null
+                    },
+                    "hierarchy": {
+                      "company": {
+                        "id": "coelba",
+                        "name": "Neoenergia Coelba"
+                      },
+                      "superintendence": {
+                        "id": "sup-relacionamento-clientes",
+                        "name": "Superintendência de Relacionamento com Clientes"
+                      },
+                      "management": {
+                        "id": "ger-receita",
+                        "name": "Gerência da Gestão da Receita"
+                      },
+                      "project": {
+                        "id": "uni-recuperacao-credito",
+                        "name": "Unidade de Recuperação de Crédito"
+                      }
+                    },
+                    "indicators": [
+                      {
+                        "id": "",
+                        "name": "OPO",
+                        "value": "",
+                        "unit": "",
+                        "trend": ""
+                      },
+                      {
+                        "id": "",
+                        "name": "OPI",
+                        "value": "",
+                        "unit": "",
+                        "trend": ""
+                      }
+                    ],
+                    "metrics": {
+                      "views": 4,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    },
+                    "path": [
+                      "Neoenergia Coelba",
+                      "Superintendência de Relacionamento com Clientes",
+                      "Gerência da Gestão da Receita",
+                      "Unidade de Recuperação de Crédito",
+                      "Relatorio Prime"
+                    ],
+                    "raw_json": {
+                      "schema": "neoview.report.v1",
+                      "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+                      "report_status": "approved",
+                      "report": {
+                        "name": "Relatorio Prime",
+                        "description": "É um relatório",
+                        "date": null,
+                        "size_label": "",
+                        "size_bytes": 0,
+                        "url": null
+                      },
+                      "hierarchy": {
+                        "company": {
+                          "id": "coelba",
+                          "name": "Neoenergia Coelba"
+                        },
+                        "superintendence": {
+                          "id": "sup-relacionamento-clientes",
+                          "name": "Superintendência de Relacionamento com Clientes"
+                        },
+                        "management": {
+                          "id": "ger-receita",
+                          "name": "Gerência da Gestão da Receita"
+                        },
+                        "project": {
+                          "id": "uni-recuperacao-credito",
+                          "name": "Unidade de Recuperação de Crédito"
+                        }
+                      },
+                      "indicators": [
+                        {
+                          "id": "",
+                          "name": "OPO",
+                          "value": "",
+                          "unit": "",
+                          "trend": ""
+                        },
+                        {
+                          "id": "",
+                          "name": "OPI",
+                          "value": "",
+                          "unit": "",
+                          "trend": ""
+                        }
+                      ],
+                      "metrics": {
+                        "views": 4,
+                        "comments": 0,
+                        "likes": 0,
+                        "shares": 0
+                      },
+                      "path": [
+                        "Neoenergia Coelba",
+                        "Superintendência de Relacionamento com Clientes",
+                        "Gerência da Gestão da Receita",
+                        "Unidade de Recuperação de Crédito",
+                        "Relatorio Prime"
+                      ],
+                      "raw_json": {
+                        "schema": "neoview.report.v1",
+                        "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+                        "report_status": "approved",
+                        "report": {
+                          "name": "Relatorio Prime",
+                          "description": "É um relatório",
+                          "date": null,
+                          "size_label": "",
+                          "size_bytes": 0,
+                          "url": null
+                        },
+                        "hierarchy": {
+                          "company": {
+                            "id": "coelba",
+                            "name": "Neoenergia Coelba"
+                          },
+                          "superintendence": {
+                            "id": "sup-relacionamento-clientes",
+                            "name": "Superintendência de Relacionamento com Clientes"
+                          },
+                          "management": {
+                            "id": "ger-receita",
+                            "name": "Gerência da Gestão da Receita"
+                          },
+                          "project": {
+                            "id": "uni-recuperacao-credito",
+                            "name": "Unidade de Recuperação de Crédito"
+                          }
+                        },
+                        "indicators": [
+                          {
+                            "id": "",
+                            "name": "OPO",
+                            "value": "",
+                            "unit": "",
+                            "trend": ""
+                          },
+                          {
+                            "id": "",
+                            "name": "OPI",
+                            "value": "",
+                            "unit": "",
+                            "trend": ""
+                          }
+                        ],
+                        "metrics": {
+                          "views": 4,
+                          "comments": 0,
+                          "likes": 0,
+                          "shares": 0
+                        },
+                        "path": [
+                          "Neoenergia Coelba",
+                          "Superintendência de Relacionamento com Clientes",
+                          "Gerência da Gestão da Receita",
+                          "Unidade de Recuperação de Crédito",
+                          "Relatorio Prime"
+                        ],
+                        "raw_json": {
+                          "schema": "neoview.report.v1",
+                          "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+                          "report_status": "approved",
+                          "report": {
+                            "name": "Relatorio Prime",
+                            "description": "É um relatório",
+                            "date": null,
+                            "size_label": "",
+                            "size_bytes": 0,
+                            "url": null
+                          },
+                          "hierarchy": {
+                            "company": {
+                              "id": "coelba",
+                              "name": "Neoenergia Coelba"
+                            },
+                            "superintendence": {
+                              "id": "sup-relacionamento-clientes",
+                              "name": "Superintendência de Relacionamento com Clientes"
+                            },
+                            "management": {
+                              "id": "ger-receita",
+                              "name": "Gerência da Gestão da Receita"
+                            },
+                            "project": {
+                              "id": "uni-recuperacao-credito",
+                              "name": "Unidade de Recuperação de Crédito"
+                            }
+                          },
+                          "indicators": [
+                            {
+                              "id": "",
+                              "name": "OPO",
+                              "value": "",
+                              "unit": "",
+                              "trend": ""
+                            },
+                            {
+                              "id": "",
+                              "name": "OPI",
+                              "value": "",
+                              "unit": "",
+                              "trend": ""
+                            }
+                          ],
+                          "metrics": {
+                            "views": 4,
+                            "comments": 0,
+                            "likes": 0,
+                            "shares": 0
+                          },
+                          "path": [
+                            "Neoenergia Coelba",
+                            "Superintendência de Relacionamento com Clientes",
+                            "Gerência da Gestão da Receita",
+                            "Unidade de Recuperação de Crédito",
+                            "Relatorio Prime"
+                          ],
+                          "raw_json": {
+                            "schema": "neoview.report.v1",
+                            "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+                            "report_status": "approved",
+                            "report": {
+                              "name": "Relatorio Prime",
+                              "description": "É um relatório",
+                              "date": null,
+                              "size_label": "",
+                              "size_bytes": 0,
+                              "url": null
+                            },
+                            "hierarchy": {
+                              "company": {
+                                "id": "coelba",
+                                "name": "Neoenergia Coelba"
+                              },
+                              "superintendence": {
+                                "id": "sup-relacionamento-clientes",
+                                "name": "Superintendência de Relacionamento com Clientes"
+                              },
+                              "management": {
+                                "id": "ger-receita",
+                                "name": "Gerência da Gestão da Receita"
+                              },
+                              "project": {
+                                "id": "uni-recuperacao-credito",
+                                "name": "Unidade de Recuperação de Crédito"
+                              }
+                            },
+                            "indicators": [
+                              {
+                                "id": "",
+                                "name": "OPO",
+                                "value": "",
+                                "unit": "",
+                                "trend": ""
+                              },
+                              {
+                                "id": "",
+                                "name": "OPI",
+                                "value": "",
+                                "unit": "",
+                                "trend": ""
+                              }
+                            ],
+                            "metrics": {
+                              "views": 4,
+                              "comments": 0,
+                              "likes": 0,
+                              "shares": 0
+                            },
+                            "path": [
+                              "Neoenergia Coelba",
+                              "Superintendência de Relacionamento com Clientes",
+                              "Gerência da Gestão da Receita",
+                              "Unidade de Recuperação de Crédito",
+                              "Relatorio Prime"
+                            ],
+                            "raw_json": {
+                              "schema": "neoview.report.v1",
+                              "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+                              "report_status": "approved",
+                              "report": {
+                                "name": "Relatorio Prime",
+                                "description": "É um relatório",
+                                "date": null,
+                                "size_label": "",
+                                "size_bytes": 0,
+                                "url": null
+                              },
+                              "hierarchy": {
+                                "company": {
+                                  "id": "coelba",
+                                  "name": "Neoenergia Coelba"
+                                },
+                                "superintendence": {
+                                  "id": "sup-relacionamento-clientes",
+                                  "name": "Superintendência de Relacionamento com Clientes"
+                                },
+                                "management": {
+                                  "id": "ger-receita",
+                                  "name": "Gerência da Gestão da Receita"
+                                },
+                                "project": {
+                                  "id": "uni-recuperacao-credito",
+                                  "name": "Unidade de Recuperação de Crédito"
+                                }
+                              },
+                              "indicators": [
+                                {
+                                  "id": "",
+                                  "name": "OPO",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": ""
+                                },
+                                {
+                                  "id": "",
+                                  "name": "OPI",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": ""
+                                }
+                              ],
+                              "metrics": {
+                                "views": 4,
+                                "comments": 0,
+                                "likes": 0,
+                                "shares": 0
+                              },
+                              "path": [
+                                "Neoenergia Coelba",
+                                "Superintendência de Relacionamento com Clientes",
+                                "Gerência da Gestão da Receita",
+                                "Unidade de Recuperação de Crédito",
+                                "Relatorio Prime"
+                              ],
+                              "raw_json": {
+                                "schema": "neoview.report.v1",
+                                "source_report_id": "manual-b49d2089-790a-4631-aa8d-d0c5bb7679c8",
+                                "report": {
+                                  "name": "Relatorio Prime",
+                                  "description": "É um relatório",
+                                  "date": null,
+                                  "size_label": "",
+                                  "size_bytes": 0,
+                                  "url": null
+                                },
+                                "hierarchy": {
+                                  "company": {
+                                    "id": "coelba",
+                                    "name": "Neoenergia Coelba"
+                                  },
+                                  "superintendence": {
+                                    "id": "sup-relacionamento-clientes",
+                                    "name": "Superintendência de Relacionamento com Clientes"
+                                  },
+                                  "management": {
+                                    "id": "ger-receita",
+                                    "name": "Gerência da Gestão da Receita"
+                                  },
+                                  "project": {
+                                    "id": "uni-recuperacao-credito",
+                                    "name": "Unidade de Recuperação de Crédito"
+                                  }
+                                },
+                                "indicators": [
+                                  {
+                                    "name": "OPO"
+                                  },
+                                  {
+                                    "name": "OPI"
+                                  }
+                                ],
+                                "metrics": {
+                                  "views": 0,
+                                  "comments": 0,
+                                  "likes": 0,
+                                  "shares": 0
+                                },
+                                "path": [
+                                  "Neoenergia Coelba",
+                                  "Superintendência de Relacionamento com Clientes",
+                                  "Gerência da Gestão da Receita",
+                                  "Unidade de Recuperação de Crédito",
+                                  "Relatorio Prime"
+                                ],
+                                "raw_json": {
+                                  "reportName": "Relatorio Prime",
+                                  "reportDescription": "É um relatório",
+                                  "reportSizeLabel": "",
+                                  "companyId": "coelba",
+                                  "companyName": "Neoenergia Coelba",
+                                  "superintendenceId": "sup-relacionamento-clientes",
+                                  "superintendenceName": "Superintendência de Relacionamento com Clientes",
+                                  "managementId": "ger-receita",
+                                  "managementName": "Gerência da Gestão da Receita",
+                                  "projectId": "uni-recuperacao-credito",
+                                  "projectName": "Unidade de Recuperação de Crédito",
+                                  "indicators": [
+                                    {
+                                      "name": "OPO"
+                                    },
+                                    {
+                                      "name": "OPI"
+                                    }
+                                  ],
+                                  "metrics": {
+                                    "views": 0,
+                                    "comments": 0,
+                                    "likes": 0,
+                                    "shares": 0
+                                  }
+                                },
+                                "generated_at": "2026-03-08T18:47:59.346Z"
+                              },
+                              "generated_at": "2026-03-31T23:04:36.619Z"
+                            },
+                            "generated_at": "2026-03-31T23:07:12.505Z"
+                          },
+                          "generated_at": "2026-03-31T23:34:15.408Z"
+                        },
+                        "generated_at": "2026-03-31T23:36:58.533Z"
+                      },
+                      "generated_at": "2026-03-31T23:56:54.197Z"
+                    },
+                    "generated_at": "2026-04-01T07:33:53.477Z"
+                  },
+                  "generated_at": "2026-04-01T08:05:22.867Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.139Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.633Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.666Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.690Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.678Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.221Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.438Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.770Z"
+}

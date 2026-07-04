@@ -1,0 +1,887 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+  "report_status": "approved",
+  "report": {
+    "name": "aswas",
+    "description": "asasas",
+    "date": null,
+    "size_label": "",
+    "size_bytes": 0,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-expancao-ba",
+      "name": "Superintendência Expansão e Preservação"
+    },
+    "management": {
+      "id": "ger-atendimento",
+      "name": "Gerência de Atendimento"
+    },
+    "project": {
+      "id": "proj-call-center",
+      "name": "Melhoria Call Center"
+    }
+  },
+  "indicators": [
+    {
+      "id": "",
+      "name": "asas",
+      "value": "",
+      "unit": "",
+      "trend": ""
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Expansão e Preservação",
+    "Gerência de Atendimento",
+    "Melhoria Call Center",
+    "aswas"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+    "report_status": "approved",
+    "report": {
+      "name": "aswas",
+      "description": "asasas",
+      "date": null,
+      "size_label": "",
+      "size_bytes": 0,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-expancao-ba",
+        "name": "Superintendência Expansão e Preservação"
+      },
+      "management": {
+        "id": "ger-atendimento",
+        "name": "Gerência de Atendimento"
+      },
+      "project": {
+        "id": "proj-call-center",
+        "name": "Melhoria Call Center"
+      }
+    },
+    "indicators": [
+      {
+        "id": "",
+        "name": "asas",
+        "value": "",
+        "unit": "",
+        "trend": ""
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Expansão e Preservação",
+      "Gerência de Atendimento",
+      "Melhoria Call Center",
+      "aswas"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+      "report_status": "approved",
+      "report": {
+        "name": "aswas",
+        "description": "asasas",
+        "date": null,
+        "size_label": "",
+        "size_bytes": 0,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-expancao-ba",
+          "name": "Superintendência Expansão e Preservação"
+        },
+        "management": {
+          "id": "ger-atendimento",
+          "name": "Gerência de Atendimento"
+        },
+        "project": {
+          "id": "proj-call-center",
+          "name": "Melhoria Call Center"
+        }
+      },
+      "indicators": [
+        {
+          "id": "",
+          "name": "asas",
+          "value": "",
+          "unit": "",
+          "trend": ""
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Expansão e Preservação",
+        "Gerência de Atendimento",
+        "Melhoria Call Center",
+        "aswas"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+        "report_status": "approved",
+        "report": {
+          "name": "aswas",
+          "description": "asasas",
+          "date": null,
+          "size_label": "",
+          "size_bytes": 0,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-expancao-ba",
+            "name": "Superintendência Expansão e Preservação"
+          },
+          "management": {
+            "id": "ger-atendimento",
+            "name": "Gerência de Atendimento"
+          },
+          "project": {
+            "id": "proj-call-center",
+            "name": "Melhoria Call Center"
+          }
+        },
+        "indicators": [
+          {
+            "id": "",
+            "name": "asas",
+            "value": "",
+            "unit": "",
+            "trend": ""
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Expansão e Preservação",
+          "Gerência de Atendimento",
+          "Melhoria Call Center",
+          "aswas"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+          "report_status": "approved",
+          "report": {
+            "name": "aswas",
+            "description": "asasas",
+            "date": null,
+            "size_label": "",
+            "size_bytes": 0,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-expancao-ba",
+              "name": "Superintendência Expansão e Preservação"
+            },
+            "management": {
+              "id": "ger-atendimento",
+              "name": "Gerência de Atendimento"
+            },
+            "project": {
+              "id": "proj-call-center",
+              "name": "Melhoria Call Center"
+            }
+          },
+          "indicators": [
+            {
+              "id": "",
+              "name": "asas",
+              "value": "",
+              "unit": "",
+              "trend": ""
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Expansão e Preservação",
+            "Gerência de Atendimento",
+            "Melhoria Call Center",
+            "aswas"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+            "report_status": "approved",
+            "report": {
+              "name": "aswas",
+              "description": "asasas",
+              "date": null,
+              "size_label": "",
+              "size_bytes": 0,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-expancao-ba",
+                "name": "Superintendência Expansão e Preservação"
+              },
+              "management": {
+                "id": "ger-atendimento",
+                "name": "Gerência de Atendimento"
+              },
+              "project": {
+                "id": "proj-call-center",
+                "name": "Melhoria Call Center"
+              }
+            },
+            "indicators": [
+              {
+                "id": "",
+                "name": "asas",
+                "value": "",
+                "unit": "",
+                "trend": ""
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Expansão e Preservação",
+              "Gerência de Atendimento",
+              "Melhoria Call Center",
+              "aswas"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+              "report_status": "approved",
+              "report": {
+                "name": "aswas",
+                "description": "asasas",
+                "date": null,
+                "size_label": "",
+                "size_bytes": 0,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-expancao-ba",
+                  "name": "Superintendência Expansão e Preservação"
+                },
+                "management": {
+                  "id": "ger-atendimento",
+                  "name": "Gerência de Atendimento"
+                },
+                "project": {
+                  "id": "proj-call-center",
+                  "name": "Melhoria Call Center"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "",
+                  "name": "asas",
+                  "value": "",
+                  "unit": "",
+                  "trend": ""
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Expansão e Preservação",
+                "Gerência de Atendimento",
+                "Melhoria Call Center",
+                "aswas"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+                "report_status": "approved",
+                "report": {
+                  "name": "aswas",
+                  "description": "asasas",
+                  "date": null,
+                  "size_label": "",
+                  "size_bytes": 0,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-expancao-ba",
+                    "name": "Superintendência Expansão e Preservação"
+                  },
+                  "management": {
+                    "id": "ger-atendimento",
+                    "name": "Gerência de Atendimento"
+                  },
+                  "project": {
+                    "id": "proj-call-center",
+                    "name": "Melhoria Call Center"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "",
+                    "name": "asas",
+                    "value": "",
+                    "unit": "",
+                    "trend": ""
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Expansão e Preservação",
+                  "Gerência de Atendimento",
+                  "Melhoria Call Center",
+                  "aswas"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "aswas",
+                    "description": "asasas",
+                    "date": null,
+                    "size_label": "",
+                    "size_bytes": 0,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-expancao-ba",
+                      "name": "Superintendência Expansão e Preservação"
+                    },
+                    "management": {
+                      "id": "ger-atendimento",
+                      "name": "Gerência de Atendimento"
+                    },
+                    "project": {
+                      "id": "proj-call-center",
+                      "name": "Melhoria Call Center"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "",
+                      "name": "asas",
+                      "value": "",
+                      "unit": "",
+                      "trend": ""
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Expansão e Preservação",
+                    "Gerência de Atendimento",
+                    "Melhoria Call Center",
+                    "aswas"
+                  ],
+                  "raw_json": {
+                    "schema": "neoview.report.v1",
+                    "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+                    "report_status": "approved",
+                    "report": {
+                      "name": "aswas",
+                      "description": "asasas",
+                      "date": null,
+                      "size_label": "",
+                      "size_bytes": 0,
+                      "url": null
+                    },
+                    "hierarchy": {
+                      "company": {
+                        "id": "coelba",
+                        "name": "Neoenergia Coelba"
+                      },
+                      "superintendence": {
+                        "id": "sup-expancao-ba",
+                        "name": "Superintendência Expansão e Preservação"
+                      },
+                      "management": {
+                        "id": "ger-atendimento",
+                        "name": "Gerência de Atendimento"
+                      },
+                      "project": {
+                        "id": "proj-call-center",
+                        "name": "Melhoria Call Center"
+                      }
+                    },
+                    "indicators": [
+                      {
+                        "id": "",
+                        "name": "asas",
+                        "value": "",
+                        "unit": "",
+                        "trend": ""
+                      }
+                    ],
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    },
+                    "path": [
+                      "Neoenergia Coelba",
+                      "Superintendência Expansão e Preservação",
+                      "Gerência de Atendimento",
+                      "Melhoria Call Center",
+                      "aswas"
+                    ],
+                    "raw_json": {
+                      "schema": "neoview.report.v1",
+                      "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+                      "report_status": "approved",
+                      "report": {
+                        "name": "aswas",
+                        "description": "asasas",
+                        "date": null,
+                        "size_label": "",
+                        "size_bytes": 0,
+                        "url": null
+                      },
+                      "hierarchy": {
+                        "company": {
+                          "id": "coelba",
+                          "name": "Neoenergia Coelba"
+                        },
+                        "superintendence": {
+                          "id": "sup-expancao-ba",
+                          "name": "Superintendência Expansão e Preservação"
+                        },
+                        "management": {
+                          "id": "ger-atendimento",
+                          "name": "Gerência de Atendimento"
+                        },
+                        "project": {
+                          "id": "proj-call-center",
+                          "name": "Melhoria Call Center"
+                        }
+                      },
+                      "indicators": [
+                        {
+                          "id": "",
+                          "name": "asas",
+                          "value": "",
+                          "unit": "",
+                          "trend": ""
+                        }
+                      ],
+                      "metrics": {
+                        "views": 0,
+                        "comments": 0,
+                        "likes": 0,
+                        "shares": 0
+                      },
+                      "path": [
+                        "Neoenergia Coelba",
+                        "Superintendência Expansão e Preservação",
+                        "Gerência de Atendimento",
+                        "Melhoria Call Center",
+                        "aswas"
+                      ],
+                      "raw_json": {
+                        "schema": "neoview.report.v1",
+                        "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+                        "report_status": "approved",
+                        "report": {
+                          "name": "aswas",
+                          "description": "asasas",
+                          "date": null,
+                          "size_label": "",
+                          "size_bytes": 0,
+                          "url": null
+                        },
+                        "hierarchy": {
+                          "company": {
+                            "id": "coelba",
+                            "name": "Neoenergia Coelba"
+                          },
+                          "superintendence": {
+                            "id": "sup-expancao-ba",
+                            "name": "Superintendência Expansão e Preservação"
+                          },
+                          "management": {
+                            "id": "ger-atendimento",
+                            "name": "Gerência de Atendimento"
+                          },
+                          "project": {
+                            "id": "proj-call-center",
+                            "name": "Melhoria Call Center"
+                          }
+                        },
+                        "indicators": [
+                          {
+                            "id": "",
+                            "name": "asas",
+                            "value": "",
+                            "unit": "",
+                            "trend": ""
+                          }
+                        ],
+                        "metrics": {
+                          "views": 0,
+                          "comments": 0,
+                          "likes": 0,
+                          "shares": 0
+                        },
+                        "path": [
+                          "Neoenergia Coelba",
+                          "Superintendência Expansão e Preservação",
+                          "Gerência de Atendimento",
+                          "Melhoria Call Center",
+                          "aswas"
+                        ],
+                        "raw_json": {
+                          "schema": "neoview.report.v1",
+                          "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+                          "report_status": "approved",
+                          "report": {
+                            "name": "aswas",
+                            "description": "asasas",
+                            "date": null,
+                            "size_label": "",
+                            "size_bytes": 0,
+                            "url": null
+                          },
+                          "hierarchy": {
+                            "company": {
+                              "id": "coelba",
+                              "name": "Neoenergia Coelba"
+                            },
+                            "superintendence": {
+                              "id": "sup-expancao-ba",
+                              "name": "Superintendência Expansão e Preservação"
+                            },
+                            "management": {
+                              "id": "ger-atendimento",
+                              "name": "Gerência de Atendimento"
+                            },
+                            "project": {
+                              "id": "proj-call-center",
+                              "name": "Melhoria Call Center"
+                            }
+                          },
+                          "indicators": [
+                            {
+                              "id": "",
+                              "name": "asas",
+                              "value": "",
+                              "unit": "",
+                              "trend": ""
+                            }
+                          ],
+                          "metrics": {
+                            "views": 0,
+                            "comments": 0,
+                            "likes": 0,
+                            "shares": 0
+                          },
+                          "path": [
+                            "Neoenergia Coelba",
+                            "Superintendência Expansão e Preservação",
+                            "Gerência de Atendimento",
+                            "Melhoria Call Center",
+                            "aswas"
+                          ],
+                          "raw_json": {
+                            "schema": "neoview.report.v1",
+                            "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+                            "report_status": "approved",
+                            "report": {
+                              "name": "aswas",
+                              "description": "asasas",
+                              "date": null,
+                              "size_label": "",
+                              "size_bytes": 0,
+                              "url": null
+                            },
+                            "hierarchy": {
+                              "company": {
+                                "id": "coelba",
+                                "name": "Neoenergia Coelba"
+                              },
+                              "superintendence": {
+                                "id": "sup-expancao-ba",
+                                "name": "Superintendência Expansão e Preservação"
+                              },
+                              "management": {
+                                "id": "ger-atendimento",
+                                "name": "Gerência de Atendimento"
+                              },
+                              "project": {
+                                "id": "proj-call-center",
+                                "name": "Melhoria Call Center"
+                              }
+                            },
+                            "indicators": [
+                              {
+                                "id": "",
+                                "name": "asas",
+                                "value": "",
+                                "unit": "",
+                                "trend": ""
+                              }
+                            ],
+                            "metrics": {
+                              "views": 0,
+                              "comments": 0,
+                              "likes": 0,
+                              "shares": 0
+                            },
+                            "path": [
+                              "Neoenergia Coelba",
+                              "Superintendência Expansão e Preservação",
+                              "Gerência de Atendimento",
+                              "Melhoria Call Center",
+                              "aswas"
+                            ],
+                            "raw_json": {
+                              "schema": "neoview.report.v1",
+                              "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+                              "report_status": "approved",
+                              "report": {
+                                "name": "aswas",
+                                "description": "asasas",
+                                "date": null,
+                                "size_label": "",
+                                "size_bytes": 0,
+                                "url": null
+                              },
+                              "hierarchy": {
+                                "company": {
+                                  "id": "coelba",
+                                  "name": "Neoenergia Coelba"
+                                },
+                                "superintendence": {
+                                  "id": "sup-expancao-ba",
+                                  "name": "Superintendência Expansão e Preservação"
+                                },
+                                "management": {
+                                  "id": "ger-atendimento",
+                                  "name": "Gerência de Atendimento"
+                                },
+                                "project": {
+                                  "id": "proj-call-center",
+                                  "name": "Melhoria Call Center"
+                                }
+                              },
+                              "indicators": [
+                                {
+                                  "id": "",
+                                  "name": "asas",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": ""
+                                }
+                              ],
+                              "metrics": {
+                                "views": 0,
+                                "comments": 0,
+                                "likes": 0,
+                                "shares": 0
+                              },
+                              "path": [
+                                "Neoenergia Coelba",
+                                "Superintendência Expansão e Preservação",
+                                "Gerência de Atendimento",
+                                "Melhoria Call Center",
+                                "aswas"
+                              ],
+                              "raw_json": {
+                                "schema": "neoview.report.v1",
+                                "source_report_id": "manual-9965aba5-8d0b-4e69-8d37-6718713b8968",
+                                "report": {
+                                  "name": "aswas",
+                                  "description": "asasas",
+                                  "date": null,
+                                  "size_label": "",
+                                  "size_bytes": "0",
+                                  "url": null
+                                },
+                                "hierarchy": {
+                                  "company": {
+                                    "id": "coelba",
+                                    "name": "Neoenergia Coelba"
+                                  },
+                                  "superintendence": {
+                                    "id": "sup-expancao-ba",
+                                    "name": "Superintendência Expansão e Preservação"
+                                  },
+                                  "management": {
+                                    "id": "ger-atendimento",
+                                    "name": "Gerência de Atendimento"
+                                  },
+                                  "project": {
+                                    "id": "proj-call-center",
+                                    "name": "Melhoria Call Center"
+                                  }
+                                },
+                                "indicators": [
+                                  {
+                                    "id": "",
+                                    "name": "asas",
+                                    "value": "",
+                                    "unit": "",
+                                    "trend": "stable"
+                                  }
+                                ],
+                                "metrics": {
+                                  "views": 0,
+                                  "comments": 0,
+                                  "likes": 0,
+                                  "shares": 0
+                                },
+                                "path": [
+                                  "Neoenergia Coelba",
+                                  "Superintendência Expansão e Preservação",
+                                  "Gerência de Atendimento",
+                                  "Melhoria Call Center",
+                                  "aswas"
+                                ],
+                                "raw_json": {
+                                  "metrics": {
+                                    "likes": 0,
+                                    "views": 0,
+                                    "shares": 0,
+                                    "comments": 0
+                                  },
+                                  "companyId": "coelba",
+                                  "projectId": "proj-call-center",
+                                  "indicators": [
+                                    {
+                                      "name": "asas"
+                                    }
+                                  ],
+                                  "reportName": "aswas",
+                                  "companyName": "Neoenergia Coelba",
+                                  "projectName": "Melhoria Call Center",
+                                  "managementId": "ger-atendimento",
+                                  "managementName": "Gerência de Atendimento",
+                                  "reportSizeLabel": "",
+                                  "reportDescription": "asasas",
+                                  "superintendenceId": "sup-expancao-ba",
+                                  "superintendenceName": "Superintendência Expansão e Preservação"
+                                },
+                                "generated_at": "2026-03-08T00:35:03.132Z"
+                              },
+                              "generated_at": "2026-03-31T23:04:36.566Z"
+                            },
+                            "generated_at": "2026-03-31T23:07:12.457Z"
+                          },
+                          "generated_at": "2026-03-31T23:34:15.358Z"
+                        },
+                        "generated_at": "2026-03-31T23:36:58.485Z"
+                      },
+                      "generated_at": "2026-03-31T23:56:54.120Z"
+                    },
+                    "generated_at": "2026-04-01T07:33:53.421Z"
+                  },
+                  "generated_at": "2026-04-01T08:05:22.814Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.088Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.576Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.611Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.620Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.605Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.167Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.387Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.738Z"
+}

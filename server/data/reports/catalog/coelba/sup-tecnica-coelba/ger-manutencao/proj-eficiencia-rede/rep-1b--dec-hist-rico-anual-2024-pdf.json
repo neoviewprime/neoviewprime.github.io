@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-1b",
+  "report_status": "approved",
+  "report": {
+    "name": "DEC Histórico Anual 2024.pdf",
+    "description": "Histórico anual do DEC com análise de tendências e sazonalidade.",
+    "date": "2024-12-20",
+    "size_label": "3.5 MB",
+    "size_bytes": 3670016,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendência Técnica Coelba"
+    },
+    "management": {
+      "id": "ger-manutencao",
+      "name": "Gerência de Manutenção"
+    },
+    "project": {
+      "id": "proj-eficiencia-rede",
+      "name": "Eficiência de Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-dec",
+      "name": "DEC - Duração Equivalente por Consumidor",
+      "value": "12.5",
+      "unit": "horas",
+      "trend": "down"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Técnica Coelba",
+    "Gerência de Manutenção",
+    "Eficiência de Rede",
+    "DEC Histórico Anual 2024.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-1b",
+    "report_status": "approved",
+    "report": {
+      "name": "DEC Histórico Anual 2024.pdf",
+      "description": "Histórico anual do DEC com análise de tendências e sazonalidade.",
+      "date": "2024-12-20",
+      "size_label": "3.5 MB",
+      "size_bytes": 3670016,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendência Técnica Coelba"
+      },
+      "management": {
+        "id": "ger-manutencao",
+        "name": "Gerência de Manutenção"
+      },
+      "project": {
+        "id": "proj-eficiencia-rede",
+        "name": "Eficiência de Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-dec",
+        "name": "DEC - Duração Equivalente por Consumidor",
+        "value": "12.5",
+        "unit": "horas",
+        "trend": "down"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Técnica Coelba",
+      "Gerência de Manutenção",
+      "Eficiência de Rede",
+      "DEC Histórico Anual 2024.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-1b",
+      "report_status": "approved",
+      "report": {
+        "name": "DEC Histórico Anual 2024.pdf",
+        "description": "Histórico anual do DEC com análise de tendências e sazonalidade.",
+        "date": "2024-12-20",
+        "size_label": "3.5 MB",
+        "size_bytes": 3670016,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendência Técnica Coelba"
+        },
+        "management": {
+          "id": "ger-manutencao",
+          "name": "Gerência de Manutenção"
+        },
+        "project": {
+          "id": "proj-eficiencia-rede",
+          "name": "Eficiência de Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-dec",
+          "name": "DEC - Duração Equivalente por Consumidor",
+          "value": "12.5",
+          "unit": "horas",
+          "trend": "down"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Técnica Coelba",
+        "Gerência de Manutenção",
+        "Eficiência de Rede",
+        "DEC Histórico Anual 2024.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-1b",
+        "report_status": "approved",
+        "report": {
+          "name": "DEC Histórico Anual 2024.pdf",
+          "description": "Histórico anual do DEC com análise de tendências e sazonalidade.",
+          "date": "2024-12-20",
+          "size_label": "3.5 MB",
+          "size_bytes": 3670016,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendência Técnica Coelba"
+          },
+          "management": {
+            "id": "ger-manutencao",
+            "name": "Gerência de Manutenção"
+          },
+          "project": {
+            "id": "proj-eficiencia-rede",
+            "name": "Eficiência de Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-dec",
+            "name": "DEC - Duração Equivalente por Consumidor",
+            "value": "12.5",
+            "unit": "horas",
+            "trend": "down"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Técnica Coelba",
+          "Gerência de Manutenção",
+          "Eficiência de Rede",
+          "DEC Histórico Anual 2024.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-1b",
+          "report_status": "approved",
+          "report": {
+            "name": "DEC Histórico Anual 2024.pdf",
+            "description": "Histórico anual do DEC com análise de tendências e sazonalidade.",
+            "date": "2024-12-20",
+            "size_label": "3.5 MB",
+            "size_bytes": 3670016,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendência Técnica Coelba"
+            },
+            "management": {
+              "id": "ger-manutencao",
+              "name": "Gerência de Manutenção"
+            },
+            "project": {
+              "id": "proj-eficiencia-rede",
+              "name": "Eficiência de Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-dec",
+              "name": "DEC - Duração Equivalente por Consumidor",
+              "value": "12.5",
+              "unit": "horas",
+              "trend": "down"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Técnica Coelba",
+            "Gerência de Manutenção",
+            "Eficiência de Rede",
+            "DEC Histórico Anual 2024.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-1b",
+            "report_status": "approved",
+            "report": {
+              "name": "DEC Histórico Anual 2024.pdf",
+              "description": "Histórico anual do DEC com análise de tendências e sazonalidade.",
+              "date": "2024-12-20",
+              "size_label": "3.5 MB",
+              "size_bytes": 3670016,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendência Técnica Coelba"
+              },
+              "management": {
+                "id": "ger-manutencao",
+                "name": "Gerência de Manutenção"
+              },
+              "project": {
+                "id": "proj-eficiencia-rede",
+                "name": "Eficiência de Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-dec",
+                "name": "DEC - Duração Equivalente por Consumidor",
+                "value": "12.5",
+                "unit": "horas",
+                "trend": "down"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Técnica Coelba",
+              "Gerência de Manutenção",
+              "Eficiência de Rede",
+              "DEC Histórico Anual 2024.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-1b",
+              "report_status": "approved",
+              "report": {
+                "name": "DEC Histórico Anual 2024.pdf",
+                "description": "Histórico anual do DEC com análise de tendências e sazonalidade.",
+                "date": "2024-12-20",
+                "size_label": "3.5 MB",
+                "size_bytes": 3670016,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendência Técnica Coelba"
+                },
+                "management": {
+                  "id": "ger-manutencao",
+                  "name": "Gerência de Manutenção"
+                },
+                "project": {
+                  "id": "proj-eficiencia-rede",
+                  "name": "Eficiência de Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-dec",
+                  "name": "DEC - Duração Equivalente por Consumidor",
+                  "value": "12.5",
+                  "unit": "horas",
+                  "trend": "down"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Técnica Coelba",
+                "Gerência de Manutenção",
+                "Eficiência de Rede",
+                "DEC Histórico Anual 2024.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-1b",
+                "report_status": "approved",
+                "report": {
+                  "name": "DEC Histórico Anual 2024.pdf",
+                  "description": "Histórico anual do DEC com análise de tendências e sazonalidade.",
+                  "date": "2024-12-20",
+                  "size_label": "3.5 MB",
+                  "size_bytes": 3670016,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendência Técnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-manutencao",
+                    "name": "Gerência de Manutenção"
+                  },
+                  "project": {
+                    "id": "proj-eficiencia-rede",
+                    "name": "Eficiência de Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-dec",
+                    "name": "DEC - Duração Equivalente por Consumidor",
+                    "value": "12.5",
+                    "unit": "horas",
+                    "trend": "down"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Técnica Coelba",
+                  "Gerência de Manutenção",
+                  "Eficiência de Rede",
+                  "DEC Histórico Anual 2024.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-1b",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "DEC Histórico Anual 2024.pdf",
+                    "description": "Histórico anual do DEC com análise de tendências e sazonalidade.",
+                    "date": "2024-12-20",
+                    "size_label": "3.5 MB",
+                    "size_bytes": 3670016,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendência Técnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-manutencao",
+                      "name": "Gerência de Manutenção"
+                    },
+                    "project": {
+                      "id": "proj-eficiencia-rede",
+                      "name": "Eficiência de Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-dec",
+                      "name": "DEC - Duração Equivalente por Consumidor",
+                      "value": "12.5",
+                      "unit": "horas",
+                      "trend": "down"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Técnica Coelba",
+                    "Gerência de Manutenção",
+                    "Eficiência de Rede",
+                    "DEC Histórico Anual 2024.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-1b",
+                    "name": "DEC Histórico Anual 2024.pdf",
+                    "date": "2024-12-20",
+                    "size": "3.5 MB",
+                    "description": "Histórico anual do DEC com análise de tendências e sazonalidade.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.018Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.323Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.779Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.869Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.875Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.824Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.372Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.583Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.859Z"
+}

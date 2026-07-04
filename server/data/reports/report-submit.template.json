@@ -1,0 +1,38 @@
+{
+  "reportName": "Relatorio DEC Janeiro 2026.pdf",
+  "reportDescription": "Consolidado mensal do indicador DEC com analise por regiao.",
+  "reportDate": "2026-01-31",
+  "reportSizeLabel": "2.7 MB",
+  "reportUrl": "https://example.com/relatorios/dec-jan-2026.pdf",
+  "companyId": "coelba",
+  "companyName": "Neoenergia Coelba",
+  "superintendenceId": "sup-operacoes-ba",
+  "superintendenceName": "Superintendencia Operacao Centro Norte",
+  "managementId": "ger-manutencao",
+  "managementName": "Gerencia de Manutencao",
+  "projectId": "proj-eficiencia-rede",
+  "projectName": "Eficiencia de Rede",
+  "indicators": [
+    {
+      "id": "ind-dec",
+      "name": "DEC - Duracao Equivalente por Consumidor",
+      "value": "12.5",
+      "unit": "horas",
+      "trend": "down"
+    },
+    {
+      "id": "ind-fec",
+      "name": "FEC - Frequencia Equivalente por Consumidor",
+      "value": "8.2",
+      "unit": "interrupcoes",
+      "trend": "stable"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  }
+}
+

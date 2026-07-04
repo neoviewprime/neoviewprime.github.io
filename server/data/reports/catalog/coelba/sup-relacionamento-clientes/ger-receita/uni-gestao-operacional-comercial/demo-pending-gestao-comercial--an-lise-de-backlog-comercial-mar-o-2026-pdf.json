@@ -1,0 +1,839 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "demo-pending-gestao-comercial",
+  "report_status": "pending_approval",
+  "report": {
+    "name": "Análise de Backlog Comercial Março 2026.pdf",
+    "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+    "date": "2026-03-10",
+    "size_label": "2.4 MB",
+    "size_bytes": 2516582,
+    "url": "https://example.com/demo/backlog-comercial"
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-relacionamento-clientes",
+      "name": "Superintendencia de Relacionamento com Clientes"
+    },
+    "management": {
+      "id": "ger-receita",
+      "name": "Gerencia da Gestao da Receita"
+    },
+    "project": {
+      "id": "uni-gestao-operacional-comercial",
+      "name": "Unidade Gestao Operacional Comercial"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-sla-comercial",
+      "name": "SLA Comercial",
+      "value": "93.1",
+      "unit": "%",
+      "trend": "down"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendencia de Relacionamento com Clientes",
+    "Gerencia da Gestao da Receita",
+    "Unidade Gestao Operacional Comercial",
+    "Análise de Backlog Comercial Março 2026.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "demo-pending-gestao-comercial",
+    "report_status": "pending_approval",
+    "report": {
+      "name": "Análise de Backlog Comercial Março 2026.pdf",
+      "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+      "date": "2026-03-10",
+      "size_label": "2.4 MB",
+      "size_bytes": 2516582,
+      "url": "https://example.com/demo/backlog-comercial"
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-relacionamento-clientes",
+        "name": "Superintendencia de Relacionamento com Clientes"
+      },
+      "management": {
+        "id": "ger-receita",
+        "name": "Gerencia da Gestao da Receita"
+      },
+      "project": {
+        "id": "uni-gestao-operacional-comercial",
+        "name": "Unidade Gestao Operacional Comercial"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-sla-comercial",
+        "name": "SLA Comercial",
+        "value": "93.1",
+        "unit": "%",
+        "trend": "down"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendencia de Relacionamento com Clientes",
+      "Gerencia da Gestao da Receita",
+      "Unidade Gestao Operacional Comercial",
+      "Análise de Backlog Comercial Março 2026.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "demo-pending-gestao-comercial",
+      "report_status": "pending_approval",
+      "report": {
+        "name": "Análise de Backlog Comercial Março 2026.pdf",
+        "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+        "date": "2026-03-10",
+        "size_label": "2.4 MB",
+        "size_bytes": 2516582,
+        "url": "https://example.com/demo/backlog-comercial"
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-relacionamento-clientes",
+          "name": "Superintendencia de Relacionamento com Clientes"
+        },
+        "management": {
+          "id": "ger-receita",
+          "name": "Gerencia da Gestao da Receita"
+        },
+        "project": {
+          "id": "uni-gestao-operacional-comercial",
+          "name": "Unidade Gestao Operacional Comercial"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-sla-comercial",
+          "name": "SLA Comercial",
+          "value": "93.1",
+          "unit": "%",
+          "trend": "down"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendencia de Relacionamento com Clientes",
+        "Gerencia da Gestao da Receita",
+        "Unidade Gestao Operacional Comercial",
+        "Análise de Backlog Comercial Março 2026.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "demo-pending-gestao-comercial",
+        "report_status": "pending_approval",
+        "report": {
+          "name": "Análise de Backlog Comercial Março 2026.pdf",
+          "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+          "date": "2026-03-10",
+          "size_label": "2.4 MB",
+          "size_bytes": 2516582,
+          "url": "https://example.com/demo/backlog-comercial"
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-relacionamento-clientes",
+            "name": "Superintendencia de Relacionamento com Clientes"
+          },
+          "management": {
+            "id": "ger-receita",
+            "name": "Gerencia da Gestao da Receita"
+          },
+          "project": {
+            "id": "uni-gestao-operacional-comercial",
+            "name": "Unidade Gestao Operacional Comercial"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-sla-comercial",
+            "name": "SLA Comercial",
+            "value": "93.1",
+            "unit": "%",
+            "trend": "down"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendencia de Relacionamento com Clientes",
+          "Gerencia da Gestao da Receita",
+          "Unidade Gestao Operacional Comercial",
+          "Análise de Backlog Comercial Março 2026.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "demo-pending-gestao-comercial",
+          "report_status": "pending_approval",
+          "report": {
+            "name": "Análise de Backlog Comercial Março 2026.pdf",
+            "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+            "date": "2026-03-10",
+            "size_label": "2.4 MB",
+            "size_bytes": 2516582,
+            "url": "https://example.com/demo/backlog-comercial"
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-relacionamento-clientes",
+              "name": "Superintendencia de Relacionamento com Clientes"
+            },
+            "management": {
+              "id": "ger-receita",
+              "name": "Gerencia da Gestao da Receita"
+            },
+            "project": {
+              "id": "uni-gestao-operacional-comercial",
+              "name": "Unidade Gestao Operacional Comercial"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-sla-comercial",
+              "name": "SLA Comercial",
+              "value": "93.1",
+              "unit": "%",
+              "trend": "down"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendencia de Relacionamento com Clientes",
+            "Gerencia da Gestao da Receita",
+            "Unidade Gestao Operacional Comercial",
+            "Análise de Backlog Comercial Março 2026.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "demo-pending-gestao-comercial",
+            "report_status": "pending_approval",
+            "report": {
+              "name": "Análise de Backlog Comercial Março 2026.pdf",
+              "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+              "date": "2026-03-10",
+              "size_label": "2.4 MB",
+              "size_bytes": 2516582,
+              "url": "https://example.com/demo/backlog-comercial"
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-relacionamento-clientes",
+                "name": "Superintendencia de Relacionamento com Clientes"
+              },
+              "management": {
+                "id": "ger-receita",
+                "name": "Gerencia da Gestao da Receita"
+              },
+              "project": {
+                "id": "uni-gestao-operacional-comercial",
+                "name": "Unidade Gestao Operacional Comercial"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-sla-comercial",
+                "name": "SLA Comercial",
+                "value": "93.1",
+                "unit": "%",
+                "trend": "down"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendencia de Relacionamento com Clientes",
+              "Gerencia da Gestao da Receita",
+              "Unidade Gestao Operacional Comercial",
+              "Análise de Backlog Comercial Março 2026.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "demo-pending-gestao-comercial",
+              "report_status": "pending_approval",
+              "report": {
+                "name": "Análise de Backlog Comercial Março 2026.pdf",
+                "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+                "date": "2026-03-10",
+                "size_label": "2.4 MB",
+                "size_bytes": 2516582,
+                "url": "https://example.com/demo/backlog-comercial"
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-relacionamento-clientes",
+                  "name": "Superintendencia de Relacionamento com Clientes"
+                },
+                "management": {
+                  "id": "ger-receita",
+                  "name": "Gerencia da Gestao da Receita"
+                },
+                "project": {
+                  "id": "uni-gestao-operacional-comercial",
+                  "name": "Unidade Gestao Operacional Comercial"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-sla-comercial",
+                  "name": "SLA Comercial",
+                  "value": "93.1",
+                  "unit": "%",
+                  "trend": "down"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendencia de Relacionamento com Clientes",
+                "Gerencia da Gestao da Receita",
+                "Unidade Gestao Operacional Comercial",
+                "Análise de Backlog Comercial Março 2026.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "demo-pending-gestao-comercial",
+                "report_status": "pending_approval",
+                "report": {
+                  "name": "Análise de Backlog Comercial Março 2026.pdf",
+                  "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+                  "date": "2026-03-10",
+                  "size_label": "2.4 MB",
+                  "size_bytes": 2516582,
+                  "url": "https://example.com/demo/backlog-comercial"
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-relacionamento-clientes",
+                    "name": "Superintendencia de Relacionamento com Clientes"
+                  },
+                  "management": {
+                    "id": "ger-receita",
+                    "name": "Gerencia da Gestao da Receita"
+                  },
+                  "project": {
+                    "id": "uni-gestao-operacional-comercial",
+                    "name": "Unidade Gestao Operacional Comercial"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-sla-comercial",
+                    "name": "SLA Comercial",
+                    "value": "93.1",
+                    "unit": "%",
+                    "trend": "down"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendencia de Relacionamento com Clientes",
+                  "Gerencia da Gestao da Receita",
+                  "Unidade Gestao Operacional Comercial",
+                  "Análise de Backlog Comercial Março 2026.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "demo-pending-gestao-comercial",
+                  "report_status": "pending_approval",
+                  "report": {
+                    "name": "Análise de Backlog Comercial Março 2026.pdf",
+                    "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+                    "date": "2026-03-10",
+                    "size_label": "2.4 MB",
+                    "size_bytes": 2516582,
+                    "url": "https://example.com/demo/backlog-comercial"
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-relacionamento-clientes",
+                      "name": "Superintendencia de Relacionamento com Clientes"
+                    },
+                    "management": {
+                      "id": "ger-receita",
+                      "name": "Gerencia da Gestao da Receita"
+                    },
+                    "project": {
+                      "id": "uni-gestao-operacional-comercial",
+                      "name": "Unidade Gestao Operacional Comercial"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-sla-comercial",
+                      "name": "SLA Comercial",
+                      "value": "93.1",
+                      "unit": "%",
+                      "trend": "down"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendencia de Relacionamento com Clientes",
+                    "Gerencia da Gestao da Receita",
+                    "Unidade Gestao Operacional Comercial",
+                    "Análise de Backlog Comercial Março 2026.pdf"
+                  ],
+                  "raw_json": {
+                    "schema": "neoview.report.v1",
+                    "source_report_id": "demo-pending-gestao-comercial",
+                    "report_status": "pending_approval",
+                    "report": {
+                      "name": "Análise de Backlog Comercial Março 2026.pdf",
+                      "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+                      "date": "2026-03-10",
+                      "size_label": "2.4 MB",
+                      "size_bytes": 2516582,
+                      "url": "https://example.com/demo/backlog-comercial"
+                    },
+                    "hierarchy": {
+                      "company": {
+                        "id": "coelba",
+                        "name": "Neoenergia Coelba"
+                      },
+                      "superintendence": {
+                        "id": "sup-relacionamento-clientes",
+                        "name": "Superintendencia de Relacionamento com Clientes"
+                      },
+                      "management": {
+                        "id": "ger-receita",
+                        "name": "Gerencia da Gestao da Receita"
+                      },
+                      "project": {
+                        "id": "uni-gestao-operacional-comercial",
+                        "name": "Unidade Gestao Operacional Comercial"
+                      }
+                    },
+                    "indicators": [
+                      {
+                        "id": "ind-sla-comercial",
+                        "name": "SLA Comercial",
+                        "value": "93.1",
+                        "unit": "%",
+                        "trend": "down"
+                      }
+                    ],
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    },
+                    "path": [
+                      "Neoenergia Coelba",
+                      "Superintendencia de Relacionamento com Clientes",
+                      "Gerencia da Gestao da Receita",
+                      "Unidade Gestao Operacional Comercial",
+                      "Análise de Backlog Comercial Março 2026.pdf"
+                    ],
+                    "raw_json": {
+                      "schema": "neoview.report.v1",
+                      "source_report_id": "demo-pending-gestao-comercial",
+                      "report_status": "pending_approval",
+                      "report": {
+                        "name": "Análise de Backlog Comercial Março 2026.pdf",
+                        "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+                        "date": "2026-03-10",
+                        "size_label": "2.4 MB",
+                        "size_bytes": 2516582,
+                        "url": "https://example.com/demo/backlog-comercial"
+                      },
+                      "hierarchy": {
+                        "company": {
+                          "id": "coelba",
+                          "name": "Neoenergia Coelba"
+                        },
+                        "superintendence": {
+                          "id": "sup-relacionamento-clientes",
+                          "name": "Superintendencia de Relacionamento com Clientes"
+                        },
+                        "management": {
+                          "id": "ger-receita",
+                          "name": "Gerencia da Gestao da Receita"
+                        },
+                        "project": {
+                          "id": "uni-gestao-operacional-comercial",
+                          "name": "Unidade Gestao Operacional Comercial"
+                        }
+                      },
+                      "indicators": [
+                        {
+                          "id": "ind-sla-comercial",
+                          "name": "SLA Comercial",
+                          "value": "93.1",
+                          "unit": "%",
+                          "trend": "down"
+                        }
+                      ],
+                      "metrics": {
+                        "views": 0,
+                        "comments": 0,
+                        "likes": 0,
+                        "shares": 0
+                      },
+                      "path": [
+                        "Neoenergia Coelba",
+                        "Superintendencia de Relacionamento com Clientes",
+                        "Gerencia da Gestao da Receita",
+                        "Unidade Gestao Operacional Comercial",
+                        "Análise de Backlog Comercial Março 2026.pdf"
+                      ],
+                      "raw_json": {
+                        "schema": "neoview.report.v1",
+                        "source_report_id": "demo-pending-gestao-comercial",
+                        "report_status": "pending_approval",
+                        "report": {
+                          "name": "Análise de Backlog Comercial Março 2026.pdf",
+                          "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+                          "date": "2026-03-10",
+                          "size_label": "2.4 MB",
+                          "size_bytes": 2516582,
+                          "url": "https://example.com/demo/backlog-comercial"
+                        },
+                        "hierarchy": {
+                          "company": {
+                            "id": "coelba",
+                            "name": "Neoenergia Coelba"
+                          },
+                          "superintendence": {
+                            "id": "sup-relacionamento-clientes",
+                            "name": "Superintendencia de Relacionamento com Clientes"
+                          },
+                          "management": {
+                            "id": "ger-receita",
+                            "name": "Gerencia da Gestao da Receita"
+                          },
+                          "project": {
+                            "id": "uni-gestao-operacional-comercial",
+                            "name": "Unidade Gestao Operacional Comercial"
+                          }
+                        },
+                        "indicators": [
+                          {
+                            "id": "ind-sla-comercial",
+                            "name": "SLA Comercial",
+                            "value": "93.1",
+                            "unit": "%",
+                            "trend": "down"
+                          }
+                        ],
+                        "metrics": {
+                          "views": 0,
+                          "comments": 0,
+                          "likes": 0,
+                          "shares": 0
+                        },
+                        "path": [
+                          "Neoenergia Coelba",
+                          "Superintendencia de Relacionamento com Clientes",
+                          "Gerencia da Gestao da Receita",
+                          "Unidade Gestao Operacional Comercial",
+                          "Análise de Backlog Comercial Março 2026.pdf"
+                        ],
+                        "raw_json": {
+                          "schema": "neoview.report.v1",
+                          "source_report_id": "demo-pending-gestao-comercial",
+                          "report_status": "pending_approval",
+                          "report": {
+                            "name": "Análise de Backlog Comercial Março 2026.pdf",
+                            "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+                            "date": "2026-03-10",
+                            "size_label": "2.4 MB",
+                            "size_bytes": 2516582,
+                            "url": "https://example.com/demo/backlog-comercial"
+                          },
+                          "hierarchy": {
+                            "company": {
+                              "id": "coelba",
+                              "name": "Neoenergia Coelba"
+                            },
+                            "superintendence": {
+                              "id": "sup-relacionamento-clientes",
+                              "name": "Superintendencia de Relacionamento com Clientes"
+                            },
+                            "management": {
+                              "id": "ger-receita",
+                              "name": "Gerencia da Gestao da Receita"
+                            },
+                            "project": {
+                              "id": "uni-gestao-operacional-comercial",
+                              "name": "Unidade Gestao Operacional Comercial"
+                            }
+                          },
+                          "indicators": [
+                            {
+                              "id": "ind-sla-comercial",
+                              "name": "SLA Comercial",
+                              "value": "93.1",
+                              "unit": "%",
+                              "trend": "down"
+                            }
+                          ],
+                          "metrics": {
+                            "views": 0,
+                            "comments": 0,
+                            "likes": 0,
+                            "shares": 0
+                          },
+                          "path": [
+                            "Neoenergia Coelba",
+                            "Superintendencia de Relacionamento com Clientes",
+                            "Gerencia da Gestao da Receita",
+                            "Unidade Gestao Operacional Comercial",
+                            "Análise de Backlog Comercial Março 2026.pdf"
+                          ],
+                          "raw_json": {
+                            "schema": "neoview.report.v1",
+                            "source_report_id": "demo-pending-gestao-comercial",
+                            "report_status": "pending_approval",
+                            "report": {
+                              "name": "Análise de Backlog Comercial Março 2026.pdf",
+                              "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+                              "date": "2026-03-10",
+                              "size_label": "2.4 MB",
+                              "size_bytes": 2516582,
+                              "url": "https://example.com/demo/backlog-comercial"
+                            },
+                            "hierarchy": {
+                              "company": {
+                                "id": "coelba",
+                                "name": "Neoenergia Coelba"
+                              },
+                              "superintendence": {
+                                "id": "sup-relacionamento-clientes",
+                                "name": "Superintendencia de Relacionamento com Clientes"
+                              },
+                              "management": {
+                                "id": "ger-receita",
+                                "name": "Gerencia da Gestao da Receita"
+                              },
+                              "project": {
+                                "id": "uni-gestao-operacional-comercial",
+                                "name": "Unidade Gestao Operacional Comercial"
+                              }
+                            },
+                            "indicators": [
+                              {
+                                "id": "ind-sla-comercial",
+                                "name": "SLA Comercial",
+                                "value": "93.1",
+                                "unit": "%",
+                                "trend": "down"
+                              }
+                            ],
+                            "metrics": {
+                              "views": 0,
+                              "comments": 0,
+                              "likes": 0,
+                              "shares": 0
+                            },
+                            "path": [
+                              "Neoenergia Coelba",
+                              "Superintendencia de Relacionamento com Clientes",
+                              "Gerencia da Gestao da Receita",
+                              "Unidade Gestao Operacional Comercial",
+                              "Análise de Backlog Comercial Março 2026.pdf"
+                            ],
+                            "raw_json": {
+                              "schema": "neoview.report.v1",
+                              "source_report_id": "demo-pending-gestao-comercial",
+                              "report_status": "pending_approval",
+                              "report": {
+                                "name": "Análise de Backlog Comercial Março 2026.pdf",
+                                "description": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+                                "date": "2026-03-10",
+                                "size_label": "2.4 MB",
+                                "size_bytes": 2516582,
+                                "url": "https://example.com/demo/backlog-comercial"
+                              },
+                              "hierarchy": {
+                                "company": {
+                                  "id": "coelba",
+                                  "name": "Neoenergia Coelba"
+                                },
+                                "superintendence": {
+                                  "id": "sup-relacionamento-clientes",
+                                  "name": "Superintendencia de Relacionamento com Clientes"
+                                },
+                                "management": {
+                                  "id": "ger-receita",
+                                  "name": "Gerencia da Gestao da Receita"
+                                },
+                                "project": {
+                                  "id": "uni-gestao-operacional-comercial",
+                                  "name": "Unidade Gestao Operacional Comercial"
+                                }
+                              },
+                              "indicators": [
+                                {
+                                  "id": "ind-sla-comercial",
+                                  "name": "SLA Comercial",
+                                  "value": "93.1",
+                                  "unit": "%",
+                                  "trend": "down"
+                                }
+                              ],
+                              "metrics": {
+                                "views": 0,
+                                "comments": 0,
+                                "likes": 0,
+                                "shares": 0
+                              },
+                              "path": [
+                                "Neoenergia Coelba",
+                                "Superintendencia de Relacionamento com Clientes",
+                                "Gerencia da Gestao da Receita",
+                                "Unidade Gestao Operacional Comercial",
+                                "Análise de Backlog Comercial Março 2026.pdf"
+                              ],
+                              "raw_json": {
+                                "sourceReportId": "demo-pending-gestao-comercial",
+                                "reportName": "Análise de Backlog Comercial Março 2026.pdf",
+                                "reportDescription": "Panorama do backlog de atendimentos comerciais com foco em fila critica, reaberturas e risco de SLA.",
+                                "reportDate": "2026-03-10",
+                                "reportSizeLabel": "2.4 MB",
+                                "reportUrl": "https://example.com/demo/backlog-comercial",
+                                "companyId": "coelba",
+                                "companyName": "Neoenergia Coelba",
+                                "superintendenceId": "sup-relacionamento-clientes",
+                                "superintendenceName": "Superintendencia de Relacionamento com Clientes",
+                                "managementId": "ger-receita",
+                                "managementName": "Gerencia da Gestao da Receita",
+                                "projectId": "uni-gestao-operacional-comercial",
+                                "projectName": "Unidade Gestao Operacional Comercial",
+                                "indicators": [
+                                  {
+                                    "id": "ind-sla-comercial",
+                                    "name": "SLA Comercial",
+                                    "value": "93.1",
+                                    "unit": "%",
+                                    "trend": "down"
+                                  }
+                                ],
+                                "submitterName": "Bruna Almeida",
+                                "submitterEmail": "bruna.almeida@neoview.local",
+                                "submittedByName": "Bruna Almeida",
+                                "submittedByEmail": "bruna.almeida@neoview.local"
+                              },
+                              "generated_at": "2026-03-31T23:04:39.400Z"
+                            },
+                            "generated_at": "2026-03-31T23:07:13.601Z"
+                          },
+                          "generated_at": "2026-03-31T23:34:16.225Z"
+                        },
+                        "generated_at": "2026-03-31T23:36:59.334Z"
+                      },
+                      "generated_at": "2026-03-31T23:56:55.892Z"
+                    },
+                    "generated_at": "2026-04-01T07:33:54.412Z"
+                  },
+                  "generated_at": "2026-04-01T08:05:23.936Z"
+                },
+                "generated_at": "2026-04-01T08:09:41.046Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.506Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.793Z"
+          },
+          "generated_at": "2026-04-03T14:08:36.614Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.511Z"
+      },
+      "generated_at": "2026-04-03T14:44:32.156Z"
+    },
+    "generated_at": "2026-04-03T14:58:41.260Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.165Z"
+}

@@ -1,0 +1,515 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "manual-12af4867-167d-4bb4-92a6-b83351c9bf23",
+  "report_status": "approved",
+  "report": {
+    "name": "LO",
+    "description": "Acompanhamento LO",
+    "date": "2026-04-01",
+    "size_label": "Link externo",
+    "size_bytes": 0,
+    "url": "https://www.google.com"
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-utds-coelba",
+      "name": "UTD's"
+    },
+    "management": {
+      "id": "mgmt-utd-atributos",
+      "name": "Atributos"
+    },
+    "project": {
+      "id": "utd-financeiro",
+      "name": "Financeiro"
+    }
+  },
+  "indicators": [
+    {
+      "id": "",
+      "name": "LOI",
+      "value": "",
+      "unit": "",
+      "trend": "stable"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "UTD's",
+    "Atributos",
+    "Financeiro",
+    "LO"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "manual-12af4867-167d-4bb4-92a6-b83351c9bf23",
+    "report_status": "approved",
+    "report": {
+      "name": "LO",
+      "description": "Acompanhamento LO",
+      "date": "2026-04-01",
+      "size_label": "Link externo",
+      "size_bytes": 0,
+      "url": "https://www.google.com"
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-utds-coelba",
+        "name": "UTD's"
+      },
+      "management": {
+        "id": "mgmt-utd-atributos",
+        "name": "Atributos"
+      },
+      "project": {
+        "id": "utd-financeiro",
+        "name": "Financeiro"
+      }
+    },
+    "indicators": [
+      {
+        "id": "",
+        "name": "LOI",
+        "value": "",
+        "unit": "",
+        "trend": "stable"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "UTD's",
+      "Atributos",
+      "Financeiro",
+      "LO"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "manual-12af4867-167d-4bb4-92a6-b83351c9bf23",
+      "report_status": "approved",
+      "report": {
+        "name": "LO",
+        "description": "Acompanhamento LO",
+        "date": "2026-04-01",
+        "size_label": "Link externo",
+        "size_bytes": 0,
+        "url": "https://www.google.com"
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-utds-coelba",
+          "name": "UTD's"
+        },
+        "management": {
+          "id": "mgmt-utd-atributos",
+          "name": "Atributos"
+        },
+        "project": {
+          "id": "utd-financeiro",
+          "name": "Financeiro"
+        }
+      },
+      "indicators": [
+        {
+          "id": "",
+          "name": "LOI",
+          "value": "",
+          "unit": "",
+          "trend": "stable"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "UTD's",
+        "Atributos",
+        "Financeiro",
+        "LO"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "manual-12af4867-167d-4bb4-92a6-b83351c9bf23",
+        "report_status": "approved",
+        "report": {
+          "name": "LO",
+          "description": "Acompanhamento LO",
+          "date": "2026-04-01",
+          "size_label": "Link externo",
+          "size_bytes": 0,
+          "url": "https://www.google.com"
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-utds-coelba",
+            "name": "UTD's"
+          },
+          "management": {
+            "id": "mgmt-utd-atributos",
+            "name": "Atributos"
+          },
+          "project": {
+            "id": "utd-financeiro",
+            "name": "Financeiro"
+          }
+        },
+        "indicators": [
+          {
+            "id": "",
+            "name": "LOI",
+            "value": "",
+            "unit": "",
+            "trend": "stable"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "UTD's",
+          "Atributos",
+          "Financeiro",
+          "LO"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "manual-12af4867-167d-4bb4-92a6-b83351c9bf23",
+          "report_status": "approved",
+          "report": {
+            "name": "LO",
+            "description": "Acompanhamento LO",
+            "date": "2026-04-01",
+            "size_label": "Link externo",
+            "size_bytes": 0,
+            "url": "https://www.google.com"
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-utds-coelba",
+              "name": "UTD's"
+            },
+            "management": {
+              "id": "mgmt-utd-atributos",
+              "name": "Atributos"
+            },
+            "project": {
+              "id": "utd-financeiro",
+              "name": "Financeiro"
+            }
+          },
+          "indicators": [
+            {
+              "id": "",
+              "name": "LOI",
+              "value": "",
+              "unit": "",
+              "trend": "stable"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "UTD's",
+            "Atributos",
+            "Financeiro",
+            "LO"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "manual-12af4867-167d-4bb4-92a6-b83351c9bf23",
+            "report_status": "approved",
+            "report": {
+              "name": "LO",
+              "description": "Acompanhamento LO",
+              "date": "2026-04-01",
+              "size_label": "Link externo",
+              "size_bytes": 0,
+              "url": "https://www.google.com"
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-utds-coelba",
+                "name": "UTD's"
+              },
+              "management": {
+                "id": "mgmt-utd-atributos",
+                "name": "Atributos"
+              },
+              "project": {
+                "id": "utd-financeiro",
+                "name": "Financeiro"
+              }
+            },
+            "indicators": [
+              {
+                "id": "",
+                "name": "LOI",
+                "value": "",
+                "unit": "",
+                "trend": "stable"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "UTD's",
+              "Atributos",
+              "Financeiro",
+              "LO"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "manual-12af4867-167d-4bb4-92a6-b83351c9bf23",
+              "report_status": "approved",
+              "report": {
+                "name": "LO",
+                "description": "Acompanhamento LO",
+                "date": "2026-04-01",
+                "size_label": "Link externo",
+                "size_bytes": 0,
+                "url": "https://www.google.com"
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-utds-coelba",
+                  "name": "UTD's"
+                },
+                "management": {
+                  "id": "mgmt-utd-atributos",
+                  "name": "Atributos"
+                },
+                "project": {
+                  "id": "utd-financeiro",
+                  "name": "Financeiro"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "",
+                  "name": "LOI",
+                  "value": "",
+                  "unit": "",
+                  "trend": "stable"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "UTD's",
+                "Atributos",
+                "Financeiro",
+                "LO"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "manual-12af4867-167d-4bb4-92a6-b83351c9bf23",
+                "report_status": "approved",
+                "report": {
+                  "name": "LO",
+                  "description": "Acompanhamento LO",
+                  "date": "2026-04-01",
+                  "size_label": "Link externo",
+                  "size_bytes": 0,
+                  "url": "https://www.google.com"
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-utds-coelba",
+                    "name": "UTD's"
+                  },
+                  "management": {
+                    "id": "mgmt-utd-atributos",
+                    "name": "Atributos"
+                  },
+                  "project": {
+                    "id": "utd-financeiro",
+                    "name": "Financeiro"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "",
+                    "name": "LOI",
+                    "value": "",
+                    "unit": "",
+                    "trend": "stable"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "UTD's",
+                  "Atributos",
+                  "Financeiro",
+                  "LO"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "manual-12af4867-167d-4bb4-92a6-b83351c9bf23",
+                  "report_status": "pending_approval",
+                  "report": {
+                    "name": "LO",
+                    "description": "Acompanhamento LO",
+                    "date": "2026-04-01",
+                    "size_label": "Link externo",
+                    "size_bytes": 0,
+                    "url": "https://www.google.com"
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-utds-coelba",
+                      "name": "UTD's"
+                    },
+                    "management": {
+                      "id": "mgmt-utd-atributos",
+                      "name": "Atributos"
+                    },
+                    "project": {
+                      "id": "utd-financeiro",
+                      "name": "Financeiro"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "",
+                      "name": "LOI",
+                      "value": "",
+                      "unit": "",
+                      "trend": "stable"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "UTD's",
+                    "Atributos",
+                    "Financeiro",
+                    "LO"
+                  ],
+                  "raw_json": {
+                    "assetType": "hyperlink",
+                    "reportName": "LO",
+                    "reportDescription": "Acompanhamento LO",
+                    "reportDate": "2026-04-01",
+                    "reportSizeLabel": "Link externo",
+                    "reportUrl": "https://www.google.com",
+                    "companyId": "coelba",
+                    "companyName": "Neoenergia Coelba",
+                    "superintendenceId": "sup-utds-coelba",
+                    "superintendenceName": "UTD's",
+                    "managementId": "mgmt-utd-atributos",
+                    "managementName": "Atributos",
+                    "projectId": "utd-financeiro",
+                    "projectName": "Financeiro",
+                    "submittedByName": "Gabriel Nunes Barbosa Nogueira",
+                    "submittedByEmail": "gabrielnbn@hotmail.com",
+                    "indicators": [
+                      {
+                        "name": "LOI"
+                      }
+                    ],
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:24.005Z"
+                },
+                "generated_at": "2026-04-01T08:09:41.128Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.586Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.879Z"
+          },
+          "generated_at": "2026-04-03T14:08:36.823Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.588Z"
+      },
+      "generated_at": "2026-04-03T14:44:32.238Z"
+    },
+    "generated_at": "2026-04-03T14:58:41.327Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.202Z"
+}

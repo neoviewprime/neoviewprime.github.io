@@ -1,0 +1,351 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model audit_logs {
+  id          String? @id
+  user_id     String?
+  action      String
+  entity_type String
+  entity_id   String?
+  old_values  String?
+  new_values  String?
+  ip_address  String?
+  user_agent  String?
+  created_at  String? @default("CURRENT_TIMESTAMP")
+
+  @@index([user_id], map: "idx_audit_logs_user_id")
+  @@index([created_at], map: "idx_audit_logs_created_at")
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model auth_sessions {
+  id         String? @id
+  user_id    String
+  token_hash String
+  expires_at String
+  revoked_at String?
+  created_at String? @default("CURRENT_TIMESTAMP")
+
+  @@index([user_id], map: "idx_auth_sessions_user_id")
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model chat_messages {
+  id         String? @id
+  session_id String
+  role       String
+  message    String
+  created_at String? @default("CURRENT_TIMESTAMP")
+
+  @@index([session_id], map: "idx_chat_messages_session_id")
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model chat_sessions {
+  id         String? @id
+  user_id    String
+  created_at String? @default("CURRENT_TIMESTAMP")
+
+  @@index([user_id], map: "idx_chat_sessions_user_id")
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model report_approvals {
+  id               String? @id
+  report_id        String
+  approver_id      String
+  approver_name    String
+  status           String
+  comments         String?
+  approved_at      String? @default("CURRENT_TIMESTAMP")
+  report_name      String
+  destination_path String?
+  submitter_name   String? @default("Analista NeoView")
+  created_at       String? @default("CURRENT_TIMESTAMP")
+  updated_at       String? @default("CURRENT_TIMESTAMP")
+
+  @@index([approver_id], map: "idx_report_approvals_approver_id")
+  @@index([report_id], map: "idx_report_approvals_report_id")
+  @@ignore
+}
+
+model report_catalog {
+  id                   String? @id
+  source_report_id     String  @unique(map: "sqlite_autoindex_report_catalog_2")
+  report_status        String? @default("approved")
+  report_name          String
+  report_description   String?
+  report_date          String?
+  report_size_label    String?
+  report_size_bytes    Int?
+  report_url           String?
+  company_id           String?
+  company_name         String?
+  superintendence_id   String?
+  superintendence_name String?
+  management_id        String?
+  management_name      String?
+  project_id           String?
+  project_name         String?
+  indicator_id         String?
+  indicator_name       String?
+  indicator_ids        String?
+  indicator_names      String?
+  indicator_value      String?
+  indicator_unit       String?
+  indicator_trend      String?
+  metric_views         Int?    @default(0)
+  metric_comments      Int?    @default(0)
+  metric_likes         Int?    @default(0)
+  metric_shares        Int?    @default(0)
+  path                 String?
+  raw_json             String?
+  created_at           String? @default("CURRENT_TIMESTAMP")
+  updated_at           String? @default("CURRENT_TIMESTAMP")
+
+  @@index([source_report_id], map: "idx_report_catalog_source_report_id")
+  @@index([company_id], map: "idx_report_catalog_company_id")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model report_catalog_fts {
+  source_report_id     Unsupported("")?
+  report_name          Unsupported("")?
+  report_description   Unsupported("")?
+  company_name         Unsupported("")?
+  superintendence_name Unsupported("")?
+  management_name      Unsupported("")?
+  project_name         Unsupported("")?
+  indicator_names      Unsupported("")?
+  path                 Unsupported("")?
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model report_catalog_fts_config {
+  k Unsupported("")  @id
+  v Unsupported("")?
+
+  @@ignore
+}
+
+model report_catalog_fts_content {
+  id Int              @id @default(autoincrement())
+  c0 Unsupported("")?
+  c1 Unsupported("")?
+  c2 Unsupported("")?
+  c3 Unsupported("")?
+  c4 Unsupported("")?
+  c5 Unsupported("")?
+  c6 Unsupported("")?
+  c7 Unsupported("")?
+  c8 Unsupported("")?
+}
+
+model report_catalog_fts_data {
+  id    Int    @id @default(autoincrement())
+  block Bytes?
+}
+
+model report_catalog_fts_docsize {
+  id Int    @id @default(autoincrement())
+  sz Bytes?
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model report_catalog_fts_idx {
+  segid Unsupported("")
+  term  Unsupported("")
+  pgno  Unsupported("")?
+
+  @@id([segid, term])
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model report_chunks {
+  id         String? @id
+  report_id  String
+  chunk_text String
+  embedding  String?
+  metadata   String
+  created_at String? @default("CURRENT_TIMESTAMP")
+
+  @@index([report_id], map: "idx_report_chunks_report_id")
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model report_comments {
+  id                String? @id
+  report_catalog_id String
+  parent_comment_id String?
+  actor_key         String
+  user_id           String?
+  message           String
+  created_at        String? @default("CURRENT_TIMESTAMP")
+
+  @@index([parent_comment_id], map: "idx_report_comments_parent_comment_id")
+  @@index([report_catalog_id, created_at], map: "idx_report_comments_report_catalog_id")
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model report_engagement_events {
+  id                String? @id
+  report_catalog_id String
+  actor_key         String
+  action            String
+  occurred_at       String? @default("CURRENT_TIMESTAMP")
+
+  @@index([report_catalog_id, actor_key, action, occurred_at], map: "idx_report_engagement_events_lookup")
+  @@ignore
+}
+
+model report_engagement_metrics {
+  id                String  @id
+  report_catalog_id String  @unique(map: "sqlite_autoindex_report_engagement_metrics_2")
+  report_source_id  String?
+  report_name       String?
+  report_path       String?
+  views_count       Int?    @default(0)
+  likes_count       Int?    @default(0)
+  comments_count    Int?    @default(0)
+  shares_count      Int?    @default(0)
+  created_at        String? @default("CURRENT_TIMESTAMP")
+  updated_at        String? @default("CURRENT_TIMESTAMP")
+
+  @@index([report_catalog_id], map: "idx_report_engagement_metrics_report_catalog_id")
+}
+
+model report_likes {
+  id                String? @id
+  report_catalog_id String
+  actor_key         String
+  user_id           String?
+  created_at        String? @default("CURRENT_TIMESTAMP")
+
+  @@unique([report_catalog_id, actor_key], map: "idx_report_likes_unique")
+  @@index([report_catalog_id], map: "idx_report_likes_report_catalog_id")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model report_shares {
+  id                String? @id
+  report_catalog_id String
+  actor_key         String
+  sender_user_id    String?
+  recipient_user_id String?
+  recipient_name    String?
+  created_at        String? @default("CURRENT_TIMESTAMP")
+
+  @@index([report_catalog_id, created_at], map: "idx_report_shares_report_catalog_id")
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model report_submissions {
+  id                 String? @id
+  report_catalog_id  String?
+  submitted_by       String?
+  approver_user_id   String?
+  approver_name      String?
+  approver_job_title String?
+  payload            String
+  created_at         String? @default("CURRENT_TIMESTAMP")
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model reports {
+  id                String? @id
+  report_catalog_id String?
+  source_report_id  String?
+  original_filename String?
+  title             String
+  source_file       String? @unique(map: "sqlite_autoindex_reports_2")
+  json_content      String?
+  created_at        String? @default("CURRENT_TIMESTAMP")
+
+  @@index([source_file], map: "idx_reports_source_file")
+  @@ignore
+}
+
+model roles {
+  id          String? @id
+  code        String  @unique(map: "sqlite_autoindex_roles_2")
+  description String?
+  created_at  String? @default("CURRENT_TIMESTAMP")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model semantic_cache {
+  id              String? @id
+  query           String
+  query_embedding String?
+  response        String
+  created_at      String? @default("CURRENT_TIMESTAMP")
+
+  @@ignore
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model user_credentials {
+  user_id       String? @id
+  password_hash String
+  created_at    String? @default("CURRENT_TIMESTAMP")
+  updated_at    String? @default("CURRENT_TIMESTAMP")
+
+  @@ignore
+}
+
+model user_roles {
+  id         String? @id
+  user_id    String
+  role_id    String
+  created_at String? @default("CURRENT_TIMESTAMP")
+
+  @@unique([user_id, role_id], map: "idx_user_roles_unique")
+  @@index([user_id], map: "idx_user_roles_user_id")
+}
+
+model users {
+  id                   String? @id
+  email                String  @unique(map: "sqlite_autoindex_users_2")
+  name                 String
+  employee_id          String? @unique(map: "sqlite_autoindex_users_3")
+  company_id           String?
+  company_name         String?
+  superintendence_id   String?
+  superintendence_name String?
+  management_id        String?
+  management_name      String?
+  project_id           String?
+  project_name         String?
+  job_title            String?
+  hierarchy_level      Int?
+  manager_user_id      String?
+  approver_user_id     String?
+  status               String? @default("active")
+  phone                String?
+  created_at           String? @default("CURRENT_TIMESTAMP")
+  updated_at           String? @default("CURRENT_TIMESTAMP")
+
+  @@index([approver_user_id], map: "idx_users_approver_user_id")
+  @@index([manager_user_id], map: "idx_users_manager_user_id")
+  @@index([company_id], map: "idx_users_company_id")
+  @@index([email], map: "idx_users_email")
+}

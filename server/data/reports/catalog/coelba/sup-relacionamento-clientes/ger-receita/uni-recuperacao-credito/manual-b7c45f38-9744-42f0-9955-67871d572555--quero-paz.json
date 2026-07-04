@@ -1,0 +1,1006 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+  "report_status": "approved",
+  "report": {
+    "name": "Quero Paz",
+    "description": "Uma relatoróio da paz",
+    "date": "2026-03-13",
+    "size_label": "",
+    "size_bytes": 0,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-relacionamento-clientes",
+      "name": "Superintendência de Relacionamento com Clientes"
+    },
+    "management": {
+      "id": "ger-receita",
+      "name": "Gerência da Gestão da Receita"
+    },
+    "project": {
+      "id": "uni-recuperacao-credito",
+      "name": "Unidade de Recuperação de Crédito"
+    }
+  },
+  "indicators": [
+    {
+      "id": "",
+      "name": "BBB",
+      "value": "",
+      "unit": "",
+      "trend": ""
+    },
+    {
+      "id": "",
+      "name": "TCC",
+      "value": "",
+      "unit": "",
+      "trend": ""
+    }
+  ],
+  "metrics": {
+    "views": 1,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência de Relacionamento com Clientes",
+    "Gerência da Gestão da Receita",
+    "Unidade de Recuperação de Crédito",
+    "Quero Paz"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+    "report_status": "approved",
+    "report": {
+      "name": "Quero Paz",
+      "description": "Uma relatoróio da paz",
+      "date": "2026-03-13",
+      "size_label": "",
+      "size_bytes": 0,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-relacionamento-clientes",
+        "name": "Superintendência de Relacionamento com Clientes"
+      },
+      "management": {
+        "id": "ger-receita",
+        "name": "Gerência da Gestão da Receita"
+      },
+      "project": {
+        "id": "uni-recuperacao-credito",
+        "name": "Unidade de Recuperação de Crédito"
+      }
+    },
+    "indicators": [
+      {
+        "id": "",
+        "name": "BBB",
+        "value": "",
+        "unit": "",
+        "trend": ""
+      },
+      {
+        "id": "",
+        "name": "TCC",
+        "value": "",
+        "unit": "",
+        "trend": ""
+      }
+    ],
+    "metrics": {
+      "views": 1,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência de Relacionamento com Clientes",
+      "Gerência da Gestão da Receita",
+      "Unidade de Recuperação de Crédito",
+      "Quero Paz"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+      "report_status": "approved",
+      "report": {
+        "name": "Quero Paz",
+        "description": "Uma relatoróio da paz",
+        "date": "2026-03-13",
+        "size_label": "",
+        "size_bytes": 0,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-relacionamento-clientes",
+          "name": "Superintendência de Relacionamento com Clientes"
+        },
+        "management": {
+          "id": "ger-receita",
+          "name": "Gerência da Gestão da Receita"
+        },
+        "project": {
+          "id": "uni-recuperacao-credito",
+          "name": "Unidade de Recuperação de Crédito"
+        }
+      },
+      "indicators": [
+        {
+          "id": "",
+          "name": "BBB",
+          "value": "",
+          "unit": "",
+          "trend": ""
+        },
+        {
+          "id": "",
+          "name": "TCC",
+          "value": "",
+          "unit": "",
+          "trend": ""
+        }
+      ],
+      "metrics": {
+        "views": 1,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência de Relacionamento com Clientes",
+        "Gerência da Gestão da Receita",
+        "Unidade de Recuperação de Crédito",
+        "Quero Paz"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+        "report_status": "approved",
+        "report": {
+          "name": "Quero Paz",
+          "description": "Uma relatoróio da paz",
+          "date": "2026-03-13",
+          "size_label": "",
+          "size_bytes": 0,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-relacionamento-clientes",
+            "name": "Superintendência de Relacionamento com Clientes"
+          },
+          "management": {
+            "id": "ger-receita",
+            "name": "Gerência da Gestão da Receita"
+          },
+          "project": {
+            "id": "uni-recuperacao-credito",
+            "name": "Unidade de Recuperação de Crédito"
+          }
+        },
+        "indicators": [
+          {
+            "id": "",
+            "name": "BBB",
+            "value": "",
+            "unit": "",
+            "trend": ""
+          },
+          {
+            "id": "",
+            "name": "TCC",
+            "value": "",
+            "unit": "",
+            "trend": ""
+          }
+        ],
+        "metrics": {
+          "views": 1,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência de Relacionamento com Clientes",
+          "Gerência da Gestão da Receita",
+          "Unidade de Recuperação de Crédito",
+          "Quero Paz"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+          "report_status": "approved",
+          "report": {
+            "name": "Quero Paz",
+            "description": "Uma relatoróio da paz",
+            "date": "2026-03-13",
+            "size_label": "",
+            "size_bytes": 0,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-relacionamento-clientes",
+              "name": "Superintendência de Relacionamento com Clientes"
+            },
+            "management": {
+              "id": "ger-receita",
+              "name": "Gerência da Gestão da Receita"
+            },
+            "project": {
+              "id": "uni-recuperacao-credito",
+              "name": "Unidade de Recuperação de Crédito"
+            }
+          },
+          "indicators": [
+            {
+              "id": "",
+              "name": "BBB",
+              "value": "",
+              "unit": "",
+              "trend": ""
+            },
+            {
+              "id": "",
+              "name": "TCC",
+              "value": "",
+              "unit": "",
+              "trend": ""
+            }
+          ],
+          "metrics": {
+            "views": 1,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência de Relacionamento com Clientes",
+            "Gerência da Gestão da Receita",
+            "Unidade de Recuperação de Crédito",
+            "Quero Paz"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+            "report_status": "approved",
+            "report": {
+              "name": "Quero Paz",
+              "description": "Uma relatoróio da paz",
+              "date": "2026-03-13",
+              "size_label": "",
+              "size_bytes": 0,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-relacionamento-clientes",
+                "name": "Superintendência de Relacionamento com Clientes"
+              },
+              "management": {
+                "id": "ger-receita",
+                "name": "Gerência da Gestão da Receita"
+              },
+              "project": {
+                "id": "uni-recuperacao-credito",
+                "name": "Unidade de Recuperação de Crédito"
+              }
+            },
+            "indicators": [
+              {
+                "id": "",
+                "name": "BBB",
+                "value": "",
+                "unit": "",
+                "trend": ""
+              },
+              {
+                "id": "",
+                "name": "TCC",
+                "value": "",
+                "unit": "",
+                "trend": ""
+              }
+            ],
+            "metrics": {
+              "views": 1,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência de Relacionamento com Clientes",
+              "Gerência da Gestão da Receita",
+              "Unidade de Recuperação de Crédito",
+              "Quero Paz"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+              "report_status": "approved",
+              "report": {
+                "name": "Quero Paz",
+                "description": "Uma relatoróio da paz",
+                "date": "2026-03-13",
+                "size_label": "",
+                "size_bytes": 0,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-relacionamento-clientes",
+                  "name": "Superintendência de Relacionamento com Clientes"
+                },
+                "management": {
+                  "id": "ger-receita",
+                  "name": "Gerência da Gestão da Receita"
+                },
+                "project": {
+                  "id": "uni-recuperacao-credito",
+                  "name": "Unidade de Recuperação de Crédito"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "",
+                  "name": "BBB",
+                  "value": "",
+                  "unit": "",
+                  "trend": ""
+                },
+                {
+                  "id": "",
+                  "name": "TCC",
+                  "value": "",
+                  "unit": "",
+                  "trend": ""
+                }
+              ],
+              "metrics": {
+                "views": 1,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência de Relacionamento com Clientes",
+                "Gerência da Gestão da Receita",
+                "Unidade de Recuperação de Crédito",
+                "Quero Paz"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+                "report_status": "approved",
+                "report": {
+                  "name": "Quero Paz",
+                  "description": "Uma relatoróio da paz",
+                  "date": "2026-03-13",
+                  "size_label": "",
+                  "size_bytes": 0,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-relacionamento-clientes",
+                    "name": "Superintendência de Relacionamento com Clientes"
+                  },
+                  "management": {
+                    "id": "ger-receita",
+                    "name": "Gerência da Gestão da Receita"
+                  },
+                  "project": {
+                    "id": "uni-recuperacao-credito",
+                    "name": "Unidade de Recuperação de Crédito"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "",
+                    "name": "BBB",
+                    "value": "",
+                    "unit": "",
+                    "trend": ""
+                  },
+                  {
+                    "id": "",
+                    "name": "TCC",
+                    "value": "",
+                    "unit": "",
+                    "trend": ""
+                  }
+                ],
+                "metrics": {
+                  "views": 1,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência de Relacionamento com Clientes",
+                  "Gerência da Gestão da Receita",
+                  "Unidade de Recuperação de Crédito",
+                  "Quero Paz"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Quero Paz",
+                    "description": "Uma relatoróio da paz",
+                    "date": "2026-03-13",
+                    "size_label": "",
+                    "size_bytes": 0,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-relacionamento-clientes",
+                      "name": "Superintendência de Relacionamento com Clientes"
+                    },
+                    "management": {
+                      "id": "ger-receita",
+                      "name": "Gerência da Gestão da Receita"
+                    },
+                    "project": {
+                      "id": "uni-recuperacao-credito",
+                      "name": "Unidade de Recuperação de Crédito"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "",
+                      "name": "BBB",
+                      "value": "",
+                      "unit": "",
+                      "trend": ""
+                    },
+                    {
+                      "id": "",
+                      "name": "TCC",
+                      "value": "",
+                      "unit": "",
+                      "trend": ""
+                    }
+                  ],
+                  "metrics": {
+                    "views": 1,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência de Relacionamento com Clientes",
+                    "Gerência da Gestão da Receita",
+                    "Unidade de Recuperação de Crédito",
+                    "Quero Paz"
+                  ],
+                  "raw_json": {
+                    "schema": "neoview.report.v1",
+                    "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+                    "report_status": "approved",
+                    "report": {
+                      "name": "Quero Paz",
+                      "description": "Uma relatoróio da paz",
+                      "date": "2026-03-13",
+                      "size_label": "",
+                      "size_bytes": 0,
+                      "url": null
+                    },
+                    "hierarchy": {
+                      "company": {
+                        "id": "coelba",
+                        "name": "Neoenergia Coelba"
+                      },
+                      "superintendence": {
+                        "id": "sup-relacionamento-clientes",
+                        "name": "Superintendência de Relacionamento com Clientes"
+                      },
+                      "management": {
+                        "id": "ger-receita",
+                        "name": "Gerência da Gestão da Receita"
+                      },
+                      "project": {
+                        "id": "uni-recuperacao-credito",
+                        "name": "Unidade de Recuperação de Crédito"
+                      }
+                    },
+                    "indicators": [
+                      {
+                        "id": "",
+                        "name": "BBB",
+                        "value": "",
+                        "unit": "",
+                        "trend": ""
+                      },
+                      {
+                        "id": "",
+                        "name": "TCC",
+                        "value": "",
+                        "unit": "",
+                        "trend": ""
+                      }
+                    ],
+                    "metrics": {
+                      "views": 1,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    },
+                    "path": [
+                      "Neoenergia Coelba",
+                      "Superintendência de Relacionamento com Clientes",
+                      "Gerência da Gestão da Receita",
+                      "Unidade de Recuperação de Crédito",
+                      "Quero Paz"
+                    ],
+                    "raw_json": {
+                      "schema": "neoview.report.v1",
+                      "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+                      "report_status": "approved",
+                      "report": {
+                        "name": "Quero Paz",
+                        "description": "Uma relatoróio da paz",
+                        "date": "2026-03-13",
+                        "size_label": "",
+                        "size_bytes": 0,
+                        "url": null
+                      },
+                      "hierarchy": {
+                        "company": {
+                          "id": "coelba",
+                          "name": "Neoenergia Coelba"
+                        },
+                        "superintendence": {
+                          "id": "sup-relacionamento-clientes",
+                          "name": "Superintendência de Relacionamento com Clientes"
+                        },
+                        "management": {
+                          "id": "ger-receita",
+                          "name": "Gerência da Gestão da Receita"
+                        },
+                        "project": {
+                          "id": "uni-recuperacao-credito",
+                          "name": "Unidade de Recuperação de Crédito"
+                        }
+                      },
+                      "indicators": [
+                        {
+                          "id": "",
+                          "name": "BBB",
+                          "value": "",
+                          "unit": "",
+                          "trend": ""
+                        },
+                        {
+                          "id": "",
+                          "name": "TCC",
+                          "value": "",
+                          "unit": "",
+                          "trend": ""
+                        }
+                      ],
+                      "metrics": {
+                        "views": 1,
+                        "comments": 0,
+                        "likes": 0,
+                        "shares": 0
+                      },
+                      "path": [
+                        "Neoenergia Coelba",
+                        "Superintendência de Relacionamento com Clientes",
+                        "Gerência da Gestão da Receita",
+                        "Unidade de Recuperação de Crédito",
+                        "Quero Paz"
+                      ],
+                      "raw_json": {
+                        "schema": "neoview.report.v1",
+                        "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+                        "report_status": "approved",
+                        "report": {
+                          "name": "Quero Paz",
+                          "description": "Uma relatoróio da paz",
+                          "date": "2026-03-13",
+                          "size_label": "",
+                          "size_bytes": 0,
+                          "url": null
+                        },
+                        "hierarchy": {
+                          "company": {
+                            "id": "coelba",
+                            "name": "Neoenergia Coelba"
+                          },
+                          "superintendence": {
+                            "id": "sup-relacionamento-clientes",
+                            "name": "Superintendência de Relacionamento com Clientes"
+                          },
+                          "management": {
+                            "id": "ger-receita",
+                            "name": "Gerência da Gestão da Receita"
+                          },
+                          "project": {
+                            "id": "uni-recuperacao-credito",
+                            "name": "Unidade de Recuperação de Crédito"
+                          }
+                        },
+                        "indicators": [
+                          {
+                            "id": "",
+                            "name": "BBB",
+                            "value": "",
+                            "unit": "",
+                            "trend": ""
+                          },
+                          {
+                            "id": "",
+                            "name": "TCC",
+                            "value": "",
+                            "unit": "",
+                            "trend": ""
+                          }
+                        ],
+                        "metrics": {
+                          "views": 1,
+                          "comments": 0,
+                          "likes": 0,
+                          "shares": 0
+                        },
+                        "path": [
+                          "Neoenergia Coelba",
+                          "Superintendência de Relacionamento com Clientes",
+                          "Gerência da Gestão da Receita",
+                          "Unidade de Recuperação de Crédito",
+                          "Quero Paz"
+                        ],
+                        "raw_json": {
+                          "schema": "neoview.report.v1",
+                          "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+                          "report_status": "approved",
+                          "report": {
+                            "name": "Quero Paz",
+                            "description": "Uma relatoróio da paz",
+                            "date": "2026-03-13",
+                            "size_label": "",
+                            "size_bytes": 0,
+                            "url": null
+                          },
+                          "hierarchy": {
+                            "company": {
+                              "id": "coelba",
+                              "name": "Neoenergia Coelba"
+                            },
+                            "superintendence": {
+                              "id": "sup-relacionamento-clientes",
+                              "name": "Superintendência de Relacionamento com Clientes"
+                            },
+                            "management": {
+                              "id": "ger-receita",
+                              "name": "Gerência da Gestão da Receita"
+                            },
+                            "project": {
+                              "id": "uni-recuperacao-credito",
+                              "name": "Unidade de Recuperação de Crédito"
+                            }
+                          },
+                          "indicators": [
+                            {
+                              "id": "",
+                              "name": "BBB",
+                              "value": "",
+                              "unit": "",
+                              "trend": ""
+                            },
+                            {
+                              "id": "",
+                              "name": "TCC",
+                              "value": "",
+                              "unit": "",
+                              "trend": ""
+                            }
+                          ],
+                          "metrics": {
+                            "views": 1,
+                            "comments": 0,
+                            "likes": 0,
+                            "shares": 0
+                          },
+                          "path": [
+                            "Neoenergia Coelba",
+                            "Superintendência de Relacionamento com Clientes",
+                            "Gerência da Gestão da Receita",
+                            "Unidade de Recuperação de Crédito",
+                            "Quero Paz"
+                          ],
+                          "raw_json": {
+                            "schema": "neoview.report.v1",
+                            "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+                            "report_status": "approved",
+                            "report": {
+                              "name": "Quero Paz",
+                              "description": "Uma relatoróio da paz",
+                              "date": "2026-03-13",
+                              "size_label": "",
+                              "size_bytes": 0,
+                              "url": null
+                            },
+                            "hierarchy": {
+                              "company": {
+                                "id": "coelba",
+                                "name": "Neoenergia Coelba"
+                              },
+                              "superintendence": {
+                                "id": "sup-relacionamento-clientes",
+                                "name": "Superintendência de Relacionamento com Clientes"
+                              },
+                              "management": {
+                                "id": "ger-receita",
+                                "name": "Gerência da Gestão da Receita"
+                              },
+                              "project": {
+                                "id": "uni-recuperacao-credito",
+                                "name": "Unidade de Recuperação de Crédito"
+                              }
+                            },
+                            "indicators": [
+                              {
+                                "id": "",
+                                "name": "BBB",
+                                "value": "",
+                                "unit": "",
+                                "trend": ""
+                              },
+                              {
+                                "id": "",
+                                "name": "TCC",
+                                "value": "",
+                                "unit": "",
+                                "trend": ""
+                              }
+                            ],
+                            "metrics": {
+                              "views": 1,
+                              "comments": 0,
+                              "likes": 0,
+                              "shares": 0
+                            },
+                            "path": [
+                              "Neoenergia Coelba",
+                              "Superintendência de Relacionamento com Clientes",
+                              "Gerência da Gestão da Receita",
+                              "Unidade de Recuperação de Crédito",
+                              "Quero Paz"
+                            ],
+                            "raw_json": {
+                              "schema": "neoview.report.v1",
+                              "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+                              "report_status": "approved",
+                              "report": {
+                                "name": "Quero Paz",
+                                "description": "Uma relatoróio da paz",
+                                "date": "2026-03-13",
+                                "size_label": "",
+                                "size_bytes": 0,
+                                "url": null
+                              },
+                              "hierarchy": {
+                                "company": {
+                                  "id": "coelba",
+                                  "name": "Neoenergia Coelba"
+                                },
+                                "superintendence": {
+                                  "id": "sup-relacionamento-clientes",
+                                  "name": "Superintendência de Relacionamento com Clientes"
+                                },
+                                "management": {
+                                  "id": "ger-receita",
+                                  "name": "Gerência da Gestão da Receita"
+                                },
+                                "project": {
+                                  "id": "uni-recuperacao-credito",
+                                  "name": "Unidade de Recuperação de Crédito"
+                                }
+                              },
+                              "indicators": [
+                                {
+                                  "id": "",
+                                  "name": "BBB",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": ""
+                                },
+                                {
+                                  "id": "",
+                                  "name": "TCC",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": ""
+                                }
+                              ],
+                              "metrics": {
+                                "views": 1,
+                                "comments": 0,
+                                "likes": 0,
+                                "shares": 0
+                              },
+                              "path": [
+                                "Neoenergia Coelba",
+                                "Superintendência de Relacionamento com Clientes",
+                                "Gerência da Gestão da Receita",
+                                "Unidade de Recuperação de Crédito",
+                                "Quero Paz"
+                              ],
+                              "raw_json": {
+                                "schema": "neoview.report.v1",
+                                "source_report_id": "manual-b7c45f38-9744-42f0-9955-67871d572555",
+                                "report": {
+                                  "name": "Quero Paz",
+                                  "description": "Uma relatoróio da paz",
+                                  "date": "2026-03-13T03:00:00.000Z",
+                                  "size_label": "",
+                                  "size_bytes": "0",
+                                  "url": null
+                                },
+                                "hierarchy": {
+                                  "company": {
+                                    "id": "coelba",
+                                    "name": "Neoenergia Coelba"
+                                  },
+                                  "superintendence": {
+                                    "id": "sup-relacionamento-clientes",
+                                    "name": "Superintendência de Relacionamento com Clientes"
+                                  },
+                                  "management": {
+                                    "id": "ger-receita",
+                                    "name": "Gerência da Gestão da Receita"
+                                  },
+                                  "project": {
+                                    "id": "uni-recuperacao-credito",
+                                    "name": "Unidade de Recuperação de Crédito"
+                                  }
+                                },
+                                "indicators": [
+                                  {
+                                    "id": "",
+                                    "name": "BBB",
+                                    "value": "",
+                                    "unit": "",
+                                    "trend": "stable"
+                                  },
+                                  {
+                                    "id": "",
+                                    "name": "TCC",
+                                    "value": "",
+                                    "unit": "",
+                                    "trend": "stable"
+                                  }
+                                ],
+                                "metrics": {
+                                  "views": 0,
+                                  "comments": 0,
+                                  "likes": 0,
+                                  "shares": 0
+                                },
+                                "path": [
+                                  "Neoenergia Coelba",
+                                  "Superintendência de Relacionamento com Clientes",
+                                  "Gerência da Gestão da Receita",
+                                  "Unidade de Recuperação de Crédito",
+                                  "Quero Paz"
+                                ],
+                                "raw_json": {
+                                  "metrics": {
+                                    "likes": 0,
+                                    "views": 0,
+                                    "shares": 0,
+                                    "comments": 0
+                                  },
+                                  "assetType": "pdf",
+                                  "companyId": "coelba",
+                                  "projectId": "uni-recuperacao-credito",
+                                  "indicators": [
+                                    {
+                                      "name": "BBB"
+                                    },
+                                    {
+                                      "name": "TCC"
+                                    }
+                                  ],
+                                  "reportDate": "2026-03-13",
+                                  "reportName": "Quero Paz",
+                                  "companyName": "Neoenergia Coelba",
+                                  "projectName": "Unidade de Recuperação de Crédito",
+                                  "managementId": "ger-receita",
+                                  "managementName": "Gerência da Gestão da Receita",
+                                  "reportSizeLabel": "",
+                                  "submittedByName": "Aaa",
+                                  "submittedByEmail": "aaa@neoview.local",
+                                  "reportDescription": "Uma relatoróio da paz",
+                                  "superintendenceId": "sup-relacionamento-clientes",
+                                  "superintendenceName": "Superintendência de Relacionamento com Clientes"
+                                },
+                                "generated_at": "2026-03-13T20:39:30.327Z"
+                              },
+                              "generated_at": "2026-03-31T23:04:36.636Z"
+                            },
+                            "generated_at": "2026-03-31T23:07:12.519Z"
+                          },
+                          "generated_at": "2026-03-31T23:34:15.422Z"
+                        },
+                        "generated_at": "2026-03-31T23:36:58.552Z"
+                      },
+                      "generated_at": "2026-03-31T23:56:54.216Z"
+                    },
+                    "generated_at": "2026-04-01T07:33:53.498Z"
+                  },
+                  "generated_at": "2026-04-01T08:05:22.887Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.163Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.651Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.685Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.714Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.695Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.239Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.454Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.780Z"
+}

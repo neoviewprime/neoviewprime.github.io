@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-corp-1",
+  "report_status": "approved",
+  "report": {
+    "name": "Pesquisa Satisfação Corporativos 2024.pdf",
+    "description": "Resultado da pesquisa anual de satisfação com clientes corporativos incluindo análise de NPS.",
+    "date": "2024-12-22",
+    "size_label": "4.1 MB",
+    "size_bytes": 4299162,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-relacionamento-clientes",
+      "name": "Superintendência de Relacionamento com Clientes"
+    },
+    "management": {
+      "id": "ger-grandes-clientes",
+      "name": "Gerência de Grandes Clientes"
+    },
+    "project": {
+      "id": "proj-atendimento-corporativo",
+      "name": "Atendimento Corporativo"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-satisfacao-corp",
+      "name": "Satisfação Clientes Corporativos",
+      "value": "92.1",
+      "unit": "%",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência de Relacionamento com Clientes",
+    "Gerência de Grandes Clientes",
+    "Atendimento Corporativo",
+    "Pesquisa Satisfação Corporativos 2024.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-corp-1",
+    "report_status": "approved",
+    "report": {
+      "name": "Pesquisa Satisfação Corporativos 2024.pdf",
+      "description": "Resultado da pesquisa anual de satisfação com clientes corporativos incluindo análise de NPS.",
+      "date": "2024-12-22",
+      "size_label": "4.1 MB",
+      "size_bytes": 4299162,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-relacionamento-clientes",
+        "name": "Superintendência de Relacionamento com Clientes"
+      },
+      "management": {
+        "id": "ger-grandes-clientes",
+        "name": "Gerência de Grandes Clientes"
+      },
+      "project": {
+        "id": "proj-atendimento-corporativo",
+        "name": "Atendimento Corporativo"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-satisfacao-corp",
+        "name": "Satisfação Clientes Corporativos",
+        "value": "92.1",
+        "unit": "%",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência de Relacionamento com Clientes",
+      "Gerência de Grandes Clientes",
+      "Atendimento Corporativo",
+      "Pesquisa Satisfação Corporativos 2024.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-corp-1",
+      "report_status": "approved",
+      "report": {
+        "name": "Pesquisa Satisfação Corporativos 2024.pdf",
+        "description": "Resultado da pesquisa anual de satisfação com clientes corporativos incluindo análise de NPS.",
+        "date": "2024-12-22",
+        "size_label": "4.1 MB",
+        "size_bytes": 4299162,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-relacionamento-clientes",
+          "name": "Superintendência de Relacionamento com Clientes"
+        },
+        "management": {
+          "id": "ger-grandes-clientes",
+          "name": "Gerência de Grandes Clientes"
+        },
+        "project": {
+          "id": "proj-atendimento-corporativo",
+          "name": "Atendimento Corporativo"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-satisfacao-corp",
+          "name": "Satisfação Clientes Corporativos",
+          "value": "92.1",
+          "unit": "%",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência de Relacionamento com Clientes",
+        "Gerência de Grandes Clientes",
+        "Atendimento Corporativo",
+        "Pesquisa Satisfação Corporativos 2024.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-corp-1",
+        "report_status": "approved",
+        "report": {
+          "name": "Pesquisa Satisfação Corporativos 2024.pdf",
+          "description": "Resultado da pesquisa anual de satisfação com clientes corporativos incluindo análise de NPS.",
+          "date": "2024-12-22",
+          "size_label": "4.1 MB",
+          "size_bytes": 4299162,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-relacionamento-clientes",
+            "name": "Superintendência de Relacionamento com Clientes"
+          },
+          "management": {
+            "id": "ger-grandes-clientes",
+            "name": "Gerência de Grandes Clientes"
+          },
+          "project": {
+            "id": "proj-atendimento-corporativo",
+            "name": "Atendimento Corporativo"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-satisfacao-corp",
+            "name": "Satisfação Clientes Corporativos",
+            "value": "92.1",
+            "unit": "%",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência de Relacionamento com Clientes",
+          "Gerência de Grandes Clientes",
+          "Atendimento Corporativo",
+          "Pesquisa Satisfação Corporativos 2024.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-corp-1",
+          "report_status": "approved",
+          "report": {
+            "name": "Pesquisa Satisfação Corporativos 2024.pdf",
+            "description": "Resultado da pesquisa anual de satisfação com clientes corporativos incluindo análise de NPS.",
+            "date": "2024-12-22",
+            "size_label": "4.1 MB",
+            "size_bytes": 4299162,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-relacionamento-clientes",
+              "name": "Superintendência de Relacionamento com Clientes"
+            },
+            "management": {
+              "id": "ger-grandes-clientes",
+              "name": "Gerência de Grandes Clientes"
+            },
+            "project": {
+              "id": "proj-atendimento-corporativo",
+              "name": "Atendimento Corporativo"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-satisfacao-corp",
+              "name": "Satisfação Clientes Corporativos",
+              "value": "92.1",
+              "unit": "%",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência de Relacionamento com Clientes",
+            "Gerência de Grandes Clientes",
+            "Atendimento Corporativo",
+            "Pesquisa Satisfação Corporativos 2024.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-corp-1",
+            "report_status": "approved",
+            "report": {
+              "name": "Pesquisa Satisfação Corporativos 2024.pdf",
+              "description": "Resultado da pesquisa anual de satisfação com clientes corporativos incluindo análise de NPS.",
+              "date": "2024-12-22",
+              "size_label": "4.1 MB",
+              "size_bytes": 4299162,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-relacionamento-clientes",
+                "name": "Superintendência de Relacionamento com Clientes"
+              },
+              "management": {
+                "id": "ger-grandes-clientes",
+                "name": "Gerência de Grandes Clientes"
+              },
+              "project": {
+                "id": "proj-atendimento-corporativo",
+                "name": "Atendimento Corporativo"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-satisfacao-corp",
+                "name": "Satisfação Clientes Corporativos",
+                "value": "92.1",
+                "unit": "%",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência de Relacionamento com Clientes",
+              "Gerência de Grandes Clientes",
+              "Atendimento Corporativo",
+              "Pesquisa Satisfação Corporativos 2024.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-corp-1",
+              "report_status": "approved",
+              "report": {
+                "name": "Pesquisa Satisfação Corporativos 2024.pdf",
+                "description": "Resultado da pesquisa anual de satisfação com clientes corporativos incluindo análise de NPS.",
+                "date": "2024-12-22",
+                "size_label": "4.1 MB",
+                "size_bytes": 4299162,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-relacionamento-clientes",
+                  "name": "Superintendência de Relacionamento com Clientes"
+                },
+                "management": {
+                  "id": "ger-grandes-clientes",
+                  "name": "Gerência de Grandes Clientes"
+                },
+                "project": {
+                  "id": "proj-atendimento-corporativo",
+                  "name": "Atendimento Corporativo"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-satisfacao-corp",
+                  "name": "Satisfação Clientes Corporativos",
+                  "value": "92.1",
+                  "unit": "%",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência de Relacionamento com Clientes",
+                "Gerência de Grandes Clientes",
+                "Atendimento Corporativo",
+                "Pesquisa Satisfação Corporativos 2024.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-corp-1",
+                "report_status": "approved",
+                "report": {
+                  "name": "Pesquisa Satisfação Corporativos 2024.pdf",
+                  "description": "Resultado da pesquisa anual de satisfação com clientes corporativos incluindo análise de NPS.",
+                  "date": "2024-12-22",
+                  "size_label": "4.1 MB",
+                  "size_bytes": 4299162,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-relacionamento-clientes",
+                    "name": "Superintendência de Relacionamento com Clientes"
+                  },
+                  "management": {
+                    "id": "ger-grandes-clientes",
+                    "name": "Gerência de Grandes Clientes"
+                  },
+                  "project": {
+                    "id": "proj-atendimento-corporativo",
+                    "name": "Atendimento Corporativo"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-satisfacao-corp",
+                    "name": "Satisfação Clientes Corporativos",
+                    "value": "92.1",
+                    "unit": "%",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência de Relacionamento com Clientes",
+                  "Gerência de Grandes Clientes",
+                  "Atendimento Corporativo",
+                  "Pesquisa Satisfação Corporativos 2024.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-corp-1",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Pesquisa Satisfação Corporativos 2024.pdf",
+                    "description": "Resultado da pesquisa anual de satisfação com clientes corporativos incluindo análise de NPS.",
+                    "date": "2024-12-22",
+                    "size_label": "4.1 MB",
+                    "size_bytes": 4299162,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-relacionamento-clientes",
+                      "name": "Superintendência de Relacionamento com Clientes"
+                    },
+                    "management": {
+                      "id": "ger-grandes-clientes",
+                      "name": "Gerência de Grandes Clientes"
+                    },
+                    "project": {
+                      "id": "proj-atendimento-corporativo",
+                      "name": "Atendimento Corporativo"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-satisfacao-corp",
+                      "name": "Satisfação Clientes Corporativos",
+                      "value": "92.1",
+                      "unit": "%",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência de Relacionamento com Clientes",
+                    "Gerência de Grandes Clientes",
+                    "Atendimento Corporativo",
+                    "Pesquisa Satisfação Corporativos 2024.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-corp-1",
+                    "name": "Pesquisa Satisfação Corporativos 2024.pdf",
+                    "date": "2024-12-22",
+                    "size": "4.1 MB",
+                    "description": "Resultado da pesquisa anual de satisfação com clientes corporativos incluindo análise de NPS.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.802Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.910Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.359Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.646Z"
+          },
+          "generated_at": "2026-04-03T14:08:35.979Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.359Z"
+      },
+      "generated_at": "2026-04-03T14:44:32.005Z"
+    },
+    "generated_at": "2026-04-03T14:58:41.133Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.113Z"
+}

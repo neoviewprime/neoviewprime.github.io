@@ -1,0 +1,997 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+  "report_status": "approved",
+  "report": {
+    "name": "Testando",
+    "description": "Estou testando",
+    "date": "2026-03-10",
+    "size_label": "",
+    "size_bytes": 0,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-relacionamento-clientes",
+      "name": "Superintendência de Relacionamento com Clientes"
+    },
+    "management": {
+      "id": "ger-receita",
+      "name": "Gerência da Gestão da Receita"
+    },
+    "project": {
+      "id": "uni-recuperacao-credito",
+      "name": "Unidade de Recuperação de Crédito"
+    }
+  },
+  "indicators": [
+    {
+      "id": "",
+      "name": "DDE",
+      "value": "",
+      "unit": "",
+      "trend": ""
+    },
+    {
+      "id": "",
+      "name": "EDR",
+      "value": "",
+      "unit": "",
+      "trend": ""
+    }
+  ],
+  "metrics": {
+    "views": 2,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência de Relacionamento com Clientes",
+    "Gerência da Gestão da Receita",
+    "Unidade de Recuperação de Crédito",
+    "Testando"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+    "report_status": "approved",
+    "report": {
+      "name": "Testando",
+      "description": "Estou testando",
+      "date": "2026-03-10",
+      "size_label": "",
+      "size_bytes": 0,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-relacionamento-clientes",
+        "name": "Superintendência de Relacionamento com Clientes"
+      },
+      "management": {
+        "id": "ger-receita",
+        "name": "Gerência da Gestão da Receita"
+      },
+      "project": {
+        "id": "uni-recuperacao-credito",
+        "name": "Unidade de Recuperação de Crédito"
+      }
+    },
+    "indicators": [
+      {
+        "id": "",
+        "name": "DDE",
+        "value": "",
+        "unit": "",
+        "trend": ""
+      },
+      {
+        "id": "",
+        "name": "EDR",
+        "value": "",
+        "unit": "",
+        "trend": ""
+      }
+    ],
+    "metrics": {
+      "views": 2,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência de Relacionamento com Clientes",
+      "Gerência da Gestão da Receita",
+      "Unidade de Recuperação de Crédito",
+      "Testando"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+      "report_status": "approved",
+      "report": {
+        "name": "Testando",
+        "description": "Estou testando",
+        "date": "2026-03-10",
+        "size_label": "",
+        "size_bytes": 0,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-relacionamento-clientes",
+          "name": "Superintendência de Relacionamento com Clientes"
+        },
+        "management": {
+          "id": "ger-receita",
+          "name": "Gerência da Gestão da Receita"
+        },
+        "project": {
+          "id": "uni-recuperacao-credito",
+          "name": "Unidade de Recuperação de Crédito"
+        }
+      },
+      "indicators": [
+        {
+          "id": "",
+          "name": "DDE",
+          "value": "",
+          "unit": "",
+          "trend": ""
+        },
+        {
+          "id": "",
+          "name": "EDR",
+          "value": "",
+          "unit": "",
+          "trend": ""
+        }
+      ],
+      "metrics": {
+        "views": 2,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência de Relacionamento com Clientes",
+        "Gerência da Gestão da Receita",
+        "Unidade de Recuperação de Crédito",
+        "Testando"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+        "report_status": "approved",
+        "report": {
+          "name": "Testando",
+          "description": "Estou testando",
+          "date": "2026-03-10",
+          "size_label": "",
+          "size_bytes": 0,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-relacionamento-clientes",
+            "name": "Superintendência de Relacionamento com Clientes"
+          },
+          "management": {
+            "id": "ger-receita",
+            "name": "Gerência da Gestão da Receita"
+          },
+          "project": {
+            "id": "uni-recuperacao-credito",
+            "name": "Unidade de Recuperação de Crédito"
+          }
+        },
+        "indicators": [
+          {
+            "id": "",
+            "name": "DDE",
+            "value": "",
+            "unit": "",
+            "trend": ""
+          },
+          {
+            "id": "",
+            "name": "EDR",
+            "value": "",
+            "unit": "",
+            "trend": ""
+          }
+        ],
+        "metrics": {
+          "views": 2,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência de Relacionamento com Clientes",
+          "Gerência da Gestão da Receita",
+          "Unidade de Recuperação de Crédito",
+          "Testando"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+          "report_status": "approved",
+          "report": {
+            "name": "Testando",
+            "description": "Estou testando",
+            "date": "2026-03-10",
+            "size_label": "",
+            "size_bytes": 0,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-relacionamento-clientes",
+              "name": "Superintendência de Relacionamento com Clientes"
+            },
+            "management": {
+              "id": "ger-receita",
+              "name": "Gerência da Gestão da Receita"
+            },
+            "project": {
+              "id": "uni-recuperacao-credito",
+              "name": "Unidade de Recuperação de Crédito"
+            }
+          },
+          "indicators": [
+            {
+              "id": "",
+              "name": "DDE",
+              "value": "",
+              "unit": "",
+              "trend": ""
+            },
+            {
+              "id": "",
+              "name": "EDR",
+              "value": "",
+              "unit": "",
+              "trend": ""
+            }
+          ],
+          "metrics": {
+            "views": 2,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência de Relacionamento com Clientes",
+            "Gerência da Gestão da Receita",
+            "Unidade de Recuperação de Crédito",
+            "Testando"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+            "report_status": "approved",
+            "report": {
+              "name": "Testando",
+              "description": "Estou testando",
+              "date": "2026-03-10",
+              "size_label": "",
+              "size_bytes": 0,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-relacionamento-clientes",
+                "name": "Superintendência de Relacionamento com Clientes"
+              },
+              "management": {
+                "id": "ger-receita",
+                "name": "Gerência da Gestão da Receita"
+              },
+              "project": {
+                "id": "uni-recuperacao-credito",
+                "name": "Unidade de Recuperação de Crédito"
+              }
+            },
+            "indicators": [
+              {
+                "id": "",
+                "name": "DDE",
+                "value": "",
+                "unit": "",
+                "trend": ""
+              },
+              {
+                "id": "",
+                "name": "EDR",
+                "value": "",
+                "unit": "",
+                "trend": ""
+              }
+            ],
+            "metrics": {
+              "views": 2,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência de Relacionamento com Clientes",
+              "Gerência da Gestão da Receita",
+              "Unidade de Recuperação de Crédito",
+              "Testando"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+              "report_status": "approved",
+              "report": {
+                "name": "Testando",
+                "description": "Estou testando",
+                "date": "2026-03-10",
+                "size_label": "",
+                "size_bytes": 0,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-relacionamento-clientes",
+                  "name": "Superintendência de Relacionamento com Clientes"
+                },
+                "management": {
+                  "id": "ger-receita",
+                  "name": "Gerência da Gestão da Receita"
+                },
+                "project": {
+                  "id": "uni-recuperacao-credito",
+                  "name": "Unidade de Recuperação de Crédito"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "",
+                  "name": "DDE",
+                  "value": "",
+                  "unit": "",
+                  "trend": ""
+                },
+                {
+                  "id": "",
+                  "name": "EDR",
+                  "value": "",
+                  "unit": "",
+                  "trend": ""
+                }
+              ],
+              "metrics": {
+                "views": 2,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência de Relacionamento com Clientes",
+                "Gerência da Gestão da Receita",
+                "Unidade de Recuperação de Crédito",
+                "Testando"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+                "report_status": "approved",
+                "report": {
+                  "name": "Testando",
+                  "description": "Estou testando",
+                  "date": "2026-03-10",
+                  "size_label": "",
+                  "size_bytes": 0,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-relacionamento-clientes",
+                    "name": "Superintendência de Relacionamento com Clientes"
+                  },
+                  "management": {
+                    "id": "ger-receita",
+                    "name": "Gerência da Gestão da Receita"
+                  },
+                  "project": {
+                    "id": "uni-recuperacao-credito",
+                    "name": "Unidade de Recuperação de Crédito"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "",
+                    "name": "DDE",
+                    "value": "",
+                    "unit": "",
+                    "trend": ""
+                  },
+                  {
+                    "id": "",
+                    "name": "EDR",
+                    "value": "",
+                    "unit": "",
+                    "trend": ""
+                  }
+                ],
+                "metrics": {
+                  "views": 2,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência de Relacionamento com Clientes",
+                  "Gerência da Gestão da Receita",
+                  "Unidade de Recuperação de Crédito",
+                  "Testando"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Testando",
+                    "description": "Estou testando",
+                    "date": "2026-03-10",
+                    "size_label": "",
+                    "size_bytes": 0,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-relacionamento-clientes",
+                      "name": "Superintendência de Relacionamento com Clientes"
+                    },
+                    "management": {
+                      "id": "ger-receita",
+                      "name": "Gerência da Gestão da Receita"
+                    },
+                    "project": {
+                      "id": "uni-recuperacao-credito",
+                      "name": "Unidade de Recuperação de Crédito"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "",
+                      "name": "DDE",
+                      "value": "",
+                      "unit": "",
+                      "trend": ""
+                    },
+                    {
+                      "id": "",
+                      "name": "EDR",
+                      "value": "",
+                      "unit": "",
+                      "trend": ""
+                    }
+                  ],
+                  "metrics": {
+                    "views": 2,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência de Relacionamento com Clientes",
+                    "Gerência da Gestão da Receita",
+                    "Unidade de Recuperação de Crédito",
+                    "Testando"
+                  ],
+                  "raw_json": {
+                    "schema": "neoview.report.v1",
+                    "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+                    "report_status": "approved",
+                    "report": {
+                      "name": "Testando",
+                      "description": "Estou testando",
+                      "date": "2026-03-10",
+                      "size_label": "",
+                      "size_bytes": 0,
+                      "url": null
+                    },
+                    "hierarchy": {
+                      "company": {
+                        "id": "coelba",
+                        "name": "Neoenergia Coelba"
+                      },
+                      "superintendence": {
+                        "id": "sup-relacionamento-clientes",
+                        "name": "Superintendência de Relacionamento com Clientes"
+                      },
+                      "management": {
+                        "id": "ger-receita",
+                        "name": "Gerência da Gestão da Receita"
+                      },
+                      "project": {
+                        "id": "uni-recuperacao-credito",
+                        "name": "Unidade de Recuperação de Crédito"
+                      }
+                    },
+                    "indicators": [
+                      {
+                        "id": "",
+                        "name": "DDE",
+                        "value": "",
+                        "unit": "",
+                        "trend": ""
+                      },
+                      {
+                        "id": "",
+                        "name": "EDR",
+                        "value": "",
+                        "unit": "",
+                        "trend": ""
+                      }
+                    ],
+                    "metrics": {
+                      "views": 2,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    },
+                    "path": [
+                      "Neoenergia Coelba",
+                      "Superintendência de Relacionamento com Clientes",
+                      "Gerência da Gestão da Receita",
+                      "Unidade de Recuperação de Crédito",
+                      "Testando"
+                    ],
+                    "raw_json": {
+                      "schema": "neoview.report.v1",
+                      "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+                      "report_status": "approved",
+                      "report": {
+                        "name": "Testando",
+                        "description": "Estou testando",
+                        "date": "2026-03-10",
+                        "size_label": "",
+                        "size_bytes": 0,
+                        "url": null
+                      },
+                      "hierarchy": {
+                        "company": {
+                          "id": "coelba",
+                          "name": "Neoenergia Coelba"
+                        },
+                        "superintendence": {
+                          "id": "sup-relacionamento-clientes",
+                          "name": "Superintendência de Relacionamento com Clientes"
+                        },
+                        "management": {
+                          "id": "ger-receita",
+                          "name": "Gerência da Gestão da Receita"
+                        },
+                        "project": {
+                          "id": "uni-recuperacao-credito",
+                          "name": "Unidade de Recuperação de Crédito"
+                        }
+                      },
+                      "indicators": [
+                        {
+                          "id": "",
+                          "name": "DDE",
+                          "value": "",
+                          "unit": "",
+                          "trend": ""
+                        },
+                        {
+                          "id": "",
+                          "name": "EDR",
+                          "value": "",
+                          "unit": "",
+                          "trend": ""
+                        }
+                      ],
+                      "metrics": {
+                        "views": 2,
+                        "comments": 0,
+                        "likes": 0,
+                        "shares": 0
+                      },
+                      "path": [
+                        "Neoenergia Coelba",
+                        "Superintendência de Relacionamento com Clientes",
+                        "Gerência da Gestão da Receita",
+                        "Unidade de Recuperação de Crédito",
+                        "Testando"
+                      ],
+                      "raw_json": {
+                        "schema": "neoview.report.v1",
+                        "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+                        "report_status": "approved",
+                        "report": {
+                          "name": "Testando",
+                          "description": "Estou testando",
+                          "date": "2026-03-10",
+                          "size_label": "",
+                          "size_bytes": 0,
+                          "url": null
+                        },
+                        "hierarchy": {
+                          "company": {
+                            "id": "coelba",
+                            "name": "Neoenergia Coelba"
+                          },
+                          "superintendence": {
+                            "id": "sup-relacionamento-clientes",
+                            "name": "Superintendência de Relacionamento com Clientes"
+                          },
+                          "management": {
+                            "id": "ger-receita",
+                            "name": "Gerência da Gestão da Receita"
+                          },
+                          "project": {
+                            "id": "uni-recuperacao-credito",
+                            "name": "Unidade de Recuperação de Crédito"
+                          }
+                        },
+                        "indicators": [
+                          {
+                            "id": "",
+                            "name": "DDE",
+                            "value": "",
+                            "unit": "",
+                            "trend": ""
+                          },
+                          {
+                            "id": "",
+                            "name": "EDR",
+                            "value": "",
+                            "unit": "",
+                            "trend": ""
+                          }
+                        ],
+                        "metrics": {
+                          "views": 2,
+                          "comments": 0,
+                          "likes": 0,
+                          "shares": 0
+                        },
+                        "path": [
+                          "Neoenergia Coelba",
+                          "Superintendência de Relacionamento com Clientes",
+                          "Gerência da Gestão da Receita",
+                          "Unidade de Recuperação de Crédito",
+                          "Testando"
+                        ],
+                        "raw_json": {
+                          "schema": "neoview.report.v1",
+                          "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+                          "report_status": "approved",
+                          "report": {
+                            "name": "Testando",
+                            "description": "Estou testando",
+                            "date": "2026-03-10",
+                            "size_label": "",
+                            "size_bytes": 0,
+                            "url": null
+                          },
+                          "hierarchy": {
+                            "company": {
+                              "id": "coelba",
+                              "name": "Neoenergia Coelba"
+                            },
+                            "superintendence": {
+                              "id": "sup-relacionamento-clientes",
+                              "name": "Superintendência de Relacionamento com Clientes"
+                            },
+                            "management": {
+                              "id": "ger-receita",
+                              "name": "Gerência da Gestão da Receita"
+                            },
+                            "project": {
+                              "id": "uni-recuperacao-credito",
+                              "name": "Unidade de Recuperação de Crédito"
+                            }
+                          },
+                          "indicators": [
+                            {
+                              "id": "",
+                              "name": "DDE",
+                              "value": "",
+                              "unit": "",
+                              "trend": ""
+                            },
+                            {
+                              "id": "",
+                              "name": "EDR",
+                              "value": "",
+                              "unit": "",
+                              "trend": ""
+                            }
+                          ],
+                          "metrics": {
+                            "views": 2,
+                            "comments": 0,
+                            "likes": 0,
+                            "shares": 0
+                          },
+                          "path": [
+                            "Neoenergia Coelba",
+                            "Superintendência de Relacionamento com Clientes",
+                            "Gerência da Gestão da Receita",
+                            "Unidade de Recuperação de Crédito",
+                            "Testando"
+                          ],
+                          "raw_json": {
+                            "schema": "neoview.report.v1",
+                            "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+                            "report_status": "approved",
+                            "report": {
+                              "name": "Testando",
+                              "description": "Estou testando",
+                              "date": "2026-03-10",
+                              "size_label": "",
+                              "size_bytes": 0,
+                              "url": null
+                            },
+                            "hierarchy": {
+                              "company": {
+                                "id": "coelba",
+                                "name": "Neoenergia Coelba"
+                              },
+                              "superintendence": {
+                                "id": "sup-relacionamento-clientes",
+                                "name": "Superintendência de Relacionamento com Clientes"
+                              },
+                              "management": {
+                                "id": "ger-receita",
+                                "name": "Gerência da Gestão da Receita"
+                              },
+                              "project": {
+                                "id": "uni-recuperacao-credito",
+                                "name": "Unidade de Recuperação de Crédito"
+                              }
+                            },
+                            "indicators": [
+                              {
+                                "id": "",
+                                "name": "DDE",
+                                "value": "",
+                                "unit": "",
+                                "trend": ""
+                              },
+                              {
+                                "id": "",
+                                "name": "EDR",
+                                "value": "",
+                                "unit": "",
+                                "trend": ""
+                              }
+                            ],
+                            "metrics": {
+                              "views": 2,
+                              "comments": 0,
+                              "likes": 0,
+                              "shares": 0
+                            },
+                            "path": [
+                              "Neoenergia Coelba",
+                              "Superintendência de Relacionamento com Clientes",
+                              "Gerência da Gestão da Receita",
+                              "Unidade de Recuperação de Crédito",
+                              "Testando"
+                            ],
+                            "raw_json": {
+                              "schema": "neoview.report.v1",
+                              "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+                              "report_status": "approved",
+                              "report": {
+                                "name": "Testando",
+                                "description": "Estou testando",
+                                "date": "2026-03-10",
+                                "size_label": "",
+                                "size_bytes": 0,
+                                "url": null
+                              },
+                              "hierarchy": {
+                                "company": {
+                                  "id": "coelba",
+                                  "name": "Neoenergia Coelba"
+                                },
+                                "superintendence": {
+                                  "id": "sup-relacionamento-clientes",
+                                  "name": "Superintendência de Relacionamento com Clientes"
+                                },
+                                "management": {
+                                  "id": "ger-receita",
+                                  "name": "Gerência da Gestão da Receita"
+                                },
+                                "project": {
+                                  "id": "uni-recuperacao-credito",
+                                  "name": "Unidade de Recuperação de Crédito"
+                                }
+                              },
+                              "indicators": [
+                                {
+                                  "id": "",
+                                  "name": "DDE",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": ""
+                                },
+                                {
+                                  "id": "",
+                                  "name": "EDR",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": ""
+                                }
+                              ],
+                              "metrics": {
+                                "views": 2,
+                                "comments": 0,
+                                "likes": 0,
+                                "shares": 0
+                              },
+                              "path": [
+                                "Neoenergia Coelba",
+                                "Superintendência de Relacionamento com Clientes",
+                                "Gerência da Gestão da Receita",
+                                "Unidade de Recuperação de Crédito",
+                                "Testando"
+                              ],
+                              "raw_json": {
+                                "schema": "neoview.report.v1",
+                                "source_report_id": "manual-7f725add-d46e-4ca3-bbe0-25cead5b355e",
+                                "report": {
+                                  "name": "Testando",
+                                  "description": "Estou testando",
+                                  "date": "2026-03-10",
+                                  "size_label": "",
+                                  "size_bytes": 0,
+                                  "url": "https:\\testando"
+                                },
+                                "hierarchy": {
+                                  "company": {
+                                    "id": "coelba",
+                                    "name": "Neoenergia Coelba"
+                                  },
+                                  "superintendence": {
+                                    "id": "sup-relacionamento-clientes",
+                                    "name": "Superintendência de Relacionamento com Clientes"
+                                  },
+                                  "management": {
+                                    "id": "ger-receita",
+                                    "name": "Gerência da Gestão da Receita"
+                                  },
+                                  "project": {
+                                    "id": "uni-recuperacao-credito",
+                                    "name": "Unidade de Recuperação de Crédito"
+                                  }
+                                },
+                                "indicators": [
+                                  {
+                                    "name": "DDE"
+                                  },
+                                  {
+                                    "name": "EDR"
+                                  }
+                                ],
+                                "metrics": {
+                                  "views": 0,
+                                  "comments": 0,
+                                  "likes": 0,
+                                  "shares": 0
+                                },
+                                "path": [
+                                  "Neoenergia Coelba",
+                                  "Superintendência de Relacionamento com Clientes",
+                                  "Gerência da Gestão da Receita",
+                                  "Unidade de Recuperação de Crédito",
+                                  "Testando"
+                                ],
+                                "raw_json": {
+                                  "assetType": "hyperlink",
+                                  "reportName": "Testando",
+                                  "reportDescription": "Estou testando",
+                                  "reportDate": "2026-03-10",
+                                  "reportSizeLabel": "",
+                                  "reportUrl": "https:\\testando",
+                                  "companyId": "coelba",
+                                  "companyName": "Neoenergia Coelba",
+                                  "superintendenceId": "sup-relacionamento-clientes",
+                                  "superintendenceName": "Superintendência de Relacionamento com Clientes",
+                                  "managementId": "ger-receita",
+                                  "managementName": "Gerência da Gestão da Receita",
+                                  "projectId": "uni-recuperacao-credito",
+                                  "projectName": "Unidade de Recuperação de Crédito",
+                                  "indicators": [
+                                    {
+                                      "name": "DDE"
+                                    },
+                                    {
+                                      "name": "EDR"
+                                    }
+                                  ],
+                                  "metrics": {
+                                    "views": 0,
+                                    "comments": 0,
+                                    "likes": 0,
+                                    "shares": 0
+                                  }
+                                },
+                                "generated_at": "2026-03-11T00:44:16.981Z"
+                              },
+                              "generated_at": "2026-03-31T23:04:36.518Z"
+                            },
+                            "generated_at": "2026-03-31T23:07:12.430Z"
+                          },
+                          "generated_at": "2026-03-31T23:34:15.326Z"
+                        },
+                        "generated_at": "2026-03-31T23:36:58.454Z"
+                      },
+                      "generated_at": "2026-03-31T23:56:54.027Z"
+                    },
+                    "generated_at": "2026-04-01T07:33:53.384Z"
+                  },
+                  "generated_at": "2026-04-01T08:05:22.775Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.051Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.540Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.569Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.582Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.518Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.130Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.352Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.721Z"
+}

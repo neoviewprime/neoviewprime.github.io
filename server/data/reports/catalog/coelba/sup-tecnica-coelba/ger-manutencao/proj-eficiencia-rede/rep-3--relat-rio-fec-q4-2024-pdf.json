@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-3",
+  "report_status": "approved",
+  "report": {
+    "name": "Relatório FEC Q4 2024.pdf",
+    "description": "Relatório trimestral do FEC com análise de causas e planos de ação.",
+    "date": "2024-12-15",
+    "size_label": "1.9 MB",
+    "size_bytes": 1992294,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendência Técnica Coelba"
+    },
+    "management": {
+      "id": "ger-manutencao",
+      "name": "Gerência de Manutenção"
+    },
+    "project": {
+      "id": "proj-eficiencia-rede",
+      "name": "Eficiência de Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-fec",
+      "name": "FEC - Frequência Equivalente por Consumidor",
+      "value": "8.2",
+      "unit": "interrupções",
+      "trend": "stable"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Técnica Coelba",
+    "Gerência de Manutenção",
+    "Eficiência de Rede",
+    "Relatório FEC Q4 2024.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-3",
+    "report_status": "approved",
+    "report": {
+      "name": "Relatório FEC Q4 2024.pdf",
+      "description": "Relatório trimestral do FEC com análise de causas e planos de ação.",
+      "date": "2024-12-15",
+      "size_label": "1.9 MB",
+      "size_bytes": 1992294,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendência Técnica Coelba"
+      },
+      "management": {
+        "id": "ger-manutencao",
+        "name": "Gerência de Manutenção"
+      },
+      "project": {
+        "id": "proj-eficiencia-rede",
+        "name": "Eficiência de Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-fec",
+        "name": "FEC - Frequência Equivalente por Consumidor",
+        "value": "8.2",
+        "unit": "interrupções",
+        "trend": "stable"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Técnica Coelba",
+      "Gerência de Manutenção",
+      "Eficiência de Rede",
+      "Relatório FEC Q4 2024.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-3",
+      "report_status": "approved",
+      "report": {
+        "name": "Relatório FEC Q4 2024.pdf",
+        "description": "Relatório trimestral do FEC com análise de causas e planos de ação.",
+        "date": "2024-12-15",
+        "size_label": "1.9 MB",
+        "size_bytes": 1992294,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendência Técnica Coelba"
+        },
+        "management": {
+          "id": "ger-manutencao",
+          "name": "Gerência de Manutenção"
+        },
+        "project": {
+          "id": "proj-eficiencia-rede",
+          "name": "Eficiência de Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-fec",
+          "name": "FEC - Frequência Equivalente por Consumidor",
+          "value": "8.2",
+          "unit": "interrupções",
+          "trend": "stable"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Técnica Coelba",
+        "Gerência de Manutenção",
+        "Eficiência de Rede",
+        "Relatório FEC Q4 2024.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-3",
+        "report_status": "approved",
+        "report": {
+          "name": "Relatório FEC Q4 2024.pdf",
+          "description": "Relatório trimestral do FEC com análise de causas e planos de ação.",
+          "date": "2024-12-15",
+          "size_label": "1.9 MB",
+          "size_bytes": 1992294,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendência Técnica Coelba"
+          },
+          "management": {
+            "id": "ger-manutencao",
+            "name": "Gerência de Manutenção"
+          },
+          "project": {
+            "id": "proj-eficiencia-rede",
+            "name": "Eficiência de Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-fec",
+            "name": "FEC - Frequência Equivalente por Consumidor",
+            "value": "8.2",
+            "unit": "interrupções",
+            "trend": "stable"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Técnica Coelba",
+          "Gerência de Manutenção",
+          "Eficiência de Rede",
+          "Relatório FEC Q4 2024.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-3",
+          "report_status": "approved",
+          "report": {
+            "name": "Relatório FEC Q4 2024.pdf",
+            "description": "Relatório trimestral do FEC com análise de causas e planos de ação.",
+            "date": "2024-12-15",
+            "size_label": "1.9 MB",
+            "size_bytes": 1992294,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendência Técnica Coelba"
+            },
+            "management": {
+              "id": "ger-manutencao",
+              "name": "Gerência de Manutenção"
+            },
+            "project": {
+              "id": "proj-eficiencia-rede",
+              "name": "Eficiência de Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-fec",
+              "name": "FEC - Frequência Equivalente por Consumidor",
+              "value": "8.2",
+              "unit": "interrupções",
+              "trend": "stable"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Técnica Coelba",
+            "Gerência de Manutenção",
+            "Eficiência de Rede",
+            "Relatório FEC Q4 2024.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-3",
+            "report_status": "approved",
+            "report": {
+              "name": "Relatório FEC Q4 2024.pdf",
+              "description": "Relatório trimestral do FEC com análise de causas e planos de ação.",
+              "date": "2024-12-15",
+              "size_label": "1.9 MB",
+              "size_bytes": 1992294,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendência Técnica Coelba"
+              },
+              "management": {
+                "id": "ger-manutencao",
+                "name": "Gerência de Manutenção"
+              },
+              "project": {
+                "id": "proj-eficiencia-rede",
+                "name": "Eficiência de Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-fec",
+                "name": "FEC - Frequência Equivalente por Consumidor",
+                "value": "8.2",
+                "unit": "interrupções",
+                "trend": "stable"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Técnica Coelba",
+              "Gerência de Manutenção",
+              "Eficiência de Rede",
+              "Relatório FEC Q4 2024.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-3",
+              "report_status": "approved",
+              "report": {
+                "name": "Relatório FEC Q4 2024.pdf",
+                "description": "Relatório trimestral do FEC com análise de causas e planos de ação.",
+                "date": "2024-12-15",
+                "size_label": "1.9 MB",
+                "size_bytes": 1992294,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendência Técnica Coelba"
+                },
+                "management": {
+                  "id": "ger-manutencao",
+                  "name": "Gerência de Manutenção"
+                },
+                "project": {
+                  "id": "proj-eficiencia-rede",
+                  "name": "Eficiência de Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-fec",
+                  "name": "FEC - Frequência Equivalente por Consumidor",
+                  "value": "8.2",
+                  "unit": "interrupções",
+                  "trend": "stable"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Técnica Coelba",
+                "Gerência de Manutenção",
+                "Eficiência de Rede",
+                "Relatório FEC Q4 2024.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-3",
+                "report_status": "approved",
+                "report": {
+                  "name": "Relatório FEC Q4 2024.pdf",
+                  "description": "Relatório trimestral do FEC com análise de causas e planos de ação.",
+                  "date": "2024-12-15",
+                  "size_label": "1.9 MB",
+                  "size_bytes": 1992294,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendência Técnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-manutencao",
+                    "name": "Gerência de Manutenção"
+                  },
+                  "project": {
+                    "id": "proj-eficiencia-rede",
+                    "name": "Eficiência de Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-fec",
+                    "name": "FEC - Frequência Equivalente por Consumidor",
+                    "value": "8.2",
+                    "unit": "interrupções",
+                    "trend": "stable"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Técnica Coelba",
+                  "Gerência de Manutenção",
+                  "Eficiência de Rede",
+                  "Relatório FEC Q4 2024.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-3",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Relatório FEC Q4 2024.pdf",
+                    "description": "Relatório trimestral do FEC com análise de causas e planos de ação.",
+                    "date": "2024-12-15",
+                    "size_label": "1.9 MB",
+                    "size_bytes": 1992294,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendência Técnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-manutencao",
+                      "name": "Gerência de Manutenção"
+                    },
+                    "project": {
+                      "id": "proj-eficiencia-rede",
+                      "name": "Eficiência de Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-fec",
+                      "name": "FEC - Frequência Equivalente por Consumidor",
+                      "value": "8.2",
+                      "unit": "interrupções",
+                      "trend": "stable"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Técnica Coelba",
+                    "Gerência de Manutenção",
+                    "Eficiência de Rede",
+                    "Relatório FEC Q4 2024.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-3",
+                    "name": "Relatório FEC Q4 2024.pdf",
+                    "date": "2024-12-15",
+                    "size": "1.9 MB",
+                    "description": "Relatório trimestral do FEC com análise de causas e planos de ação.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.236Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.375Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.830Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.932Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.939Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.872Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.416Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.635Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.886Z"
+}

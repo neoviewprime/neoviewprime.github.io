@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-8",
+  "report_status": "approved",
+  "report": {
+    "name": "Projeto Smart Grid.pdf",
+    "description": "Documento técnico do projeto de smart grid com arquitetura e tecnologias.",
+    "date": "2024-11-28",
+    "size_label": "5.2 MB",
+    "size_bytes": 5452595,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "brasilia",
+      "name": "Neoenergia Brasília"
+    },
+    "superintendence": {
+      "id": "sup-operacoes-df",
+      "name": "Superintendência de Operações"
+    },
+    "management": {
+      "id": "ger-tecnica-df",
+      "name": "Gerência Técnica"
+    },
+    "project": {
+      "id": "proj-smart-grid",
+      "name": "Smart Grid"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-automacao",
+      "name": "Nível de Automação",
+      "value": "45",
+      "unit": "%",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Brasília",
+    "Superintendência de Operações",
+    "Gerência Técnica",
+    "Smart Grid",
+    "Projeto Smart Grid.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-8",
+    "report_status": "approved",
+    "report": {
+      "name": "Projeto Smart Grid.pdf",
+      "description": "Documento técnico do projeto de smart grid com arquitetura e tecnologias.",
+      "date": "2024-11-28",
+      "size_label": "5.2 MB",
+      "size_bytes": 5452595,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "brasilia",
+        "name": "Neoenergia Brasília"
+      },
+      "superintendence": {
+        "id": "sup-operacoes-df",
+        "name": "Superintendência de Operações"
+      },
+      "management": {
+        "id": "ger-tecnica-df",
+        "name": "Gerência Técnica"
+      },
+      "project": {
+        "id": "proj-smart-grid",
+        "name": "Smart Grid"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-automacao",
+        "name": "Nível de Automação",
+        "value": "45",
+        "unit": "%",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Brasília",
+      "Superintendência de Operações",
+      "Gerência Técnica",
+      "Smart Grid",
+      "Projeto Smart Grid.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-8",
+      "report_status": "approved",
+      "report": {
+        "name": "Projeto Smart Grid.pdf",
+        "description": "Documento técnico do projeto de smart grid com arquitetura e tecnologias.",
+        "date": "2024-11-28",
+        "size_label": "5.2 MB",
+        "size_bytes": 5452595,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "brasilia",
+          "name": "Neoenergia Brasília"
+        },
+        "superintendence": {
+          "id": "sup-operacoes-df",
+          "name": "Superintendência de Operações"
+        },
+        "management": {
+          "id": "ger-tecnica-df",
+          "name": "Gerência Técnica"
+        },
+        "project": {
+          "id": "proj-smart-grid",
+          "name": "Smart Grid"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-automacao",
+          "name": "Nível de Automação",
+          "value": "45",
+          "unit": "%",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Brasília",
+        "Superintendência de Operações",
+        "Gerência Técnica",
+        "Smart Grid",
+        "Projeto Smart Grid.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-8",
+        "report_status": "approved",
+        "report": {
+          "name": "Projeto Smart Grid.pdf",
+          "description": "Documento técnico do projeto de smart grid com arquitetura e tecnologias.",
+          "date": "2024-11-28",
+          "size_label": "5.2 MB",
+          "size_bytes": 5452595,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "brasilia",
+            "name": "Neoenergia Brasília"
+          },
+          "superintendence": {
+            "id": "sup-operacoes-df",
+            "name": "Superintendência de Operações"
+          },
+          "management": {
+            "id": "ger-tecnica-df",
+            "name": "Gerência Técnica"
+          },
+          "project": {
+            "id": "proj-smart-grid",
+            "name": "Smart Grid"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-automacao",
+            "name": "Nível de Automação",
+            "value": "45",
+            "unit": "%",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Brasília",
+          "Superintendência de Operações",
+          "Gerência Técnica",
+          "Smart Grid",
+          "Projeto Smart Grid.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-8",
+          "report_status": "approved",
+          "report": {
+            "name": "Projeto Smart Grid.pdf",
+            "description": "Documento técnico do projeto de smart grid com arquitetura e tecnologias.",
+            "date": "2024-11-28",
+            "size_label": "5.2 MB",
+            "size_bytes": 5452595,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "brasilia",
+              "name": "Neoenergia Brasília"
+            },
+            "superintendence": {
+              "id": "sup-operacoes-df",
+              "name": "Superintendência de Operações"
+            },
+            "management": {
+              "id": "ger-tecnica-df",
+              "name": "Gerência Técnica"
+            },
+            "project": {
+              "id": "proj-smart-grid",
+              "name": "Smart Grid"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-automacao",
+              "name": "Nível de Automação",
+              "value": "45",
+              "unit": "%",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Brasília",
+            "Superintendência de Operações",
+            "Gerência Técnica",
+            "Smart Grid",
+            "Projeto Smart Grid.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-8",
+            "report_status": "approved",
+            "report": {
+              "name": "Projeto Smart Grid.pdf",
+              "description": "Documento técnico do projeto de smart grid com arquitetura e tecnologias.",
+              "date": "2024-11-28",
+              "size_label": "5.2 MB",
+              "size_bytes": 5452595,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "brasilia",
+                "name": "Neoenergia Brasília"
+              },
+              "superintendence": {
+                "id": "sup-operacoes-df",
+                "name": "Superintendência de Operações"
+              },
+              "management": {
+                "id": "ger-tecnica-df",
+                "name": "Gerência Técnica"
+              },
+              "project": {
+                "id": "proj-smart-grid",
+                "name": "Smart Grid"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-automacao",
+                "name": "Nível de Automação",
+                "value": "45",
+                "unit": "%",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Brasília",
+              "Superintendência de Operações",
+              "Gerência Técnica",
+              "Smart Grid",
+              "Projeto Smart Grid.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-8",
+              "report_status": "approved",
+              "report": {
+                "name": "Projeto Smart Grid.pdf",
+                "description": "Documento técnico do projeto de smart grid com arquitetura e tecnologias.",
+                "date": "2024-11-28",
+                "size_label": "5.2 MB",
+                "size_bytes": 5452595,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "brasilia",
+                  "name": "Neoenergia Brasília"
+                },
+                "superintendence": {
+                  "id": "sup-operacoes-df",
+                  "name": "Superintendência de Operações"
+                },
+                "management": {
+                  "id": "ger-tecnica-df",
+                  "name": "Gerência Técnica"
+                },
+                "project": {
+                  "id": "proj-smart-grid",
+                  "name": "Smart Grid"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-automacao",
+                  "name": "Nível de Automação",
+                  "value": "45",
+                  "unit": "%",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Brasília",
+                "Superintendência de Operações",
+                "Gerência Técnica",
+                "Smart Grid",
+                "Projeto Smart Grid.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-8",
+                "report_status": "approved",
+                "report": {
+                  "name": "Projeto Smart Grid.pdf",
+                  "description": "Documento técnico do projeto de smart grid com arquitetura e tecnologias.",
+                  "date": "2024-11-28",
+                  "size_label": "5.2 MB",
+                  "size_bytes": 5452595,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "brasilia",
+                    "name": "Neoenergia Brasília"
+                  },
+                  "superintendence": {
+                    "id": "sup-operacoes-df",
+                    "name": "Superintendência de Operações"
+                  },
+                  "management": {
+                    "id": "ger-tecnica-df",
+                    "name": "Gerência Técnica"
+                  },
+                  "project": {
+                    "id": "proj-smart-grid",
+                    "name": "Smart Grid"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-automacao",
+                    "name": "Nível de Automação",
+                    "value": "45",
+                    "unit": "%",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Brasília",
+                  "Superintendência de Operações",
+                  "Gerência Técnica",
+                  "Smart Grid",
+                  "Projeto Smart Grid.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-8",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Projeto Smart Grid.pdf",
+                    "description": "Documento técnico do projeto de smart grid com arquitetura e tecnologias.",
+                    "date": "2024-11-28",
+                    "size_label": "5.2 MB",
+                    "size_bytes": 5452595,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "brasilia",
+                      "name": "Neoenergia Brasília"
+                    },
+                    "superintendence": {
+                      "id": "sup-operacoes-df",
+                      "name": "Superintendência de Operações"
+                    },
+                    "management": {
+                      "id": "ger-tecnica-df",
+                      "name": "Gerência Técnica"
+                    },
+                    "project": {
+                      "id": "proj-smart-grid",
+                      "name": "Smart Grid"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-automacao",
+                      "name": "Nível de Automação",
+                      "value": "45",
+                      "unit": "%",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Brasília",
+                    "Superintendência de Operações",
+                    "Gerência Técnica",
+                    "Smart Grid",
+                    "Projeto Smart Grid.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-8",
+                    "name": "Projeto Smart Grid.pdf",
+                    "date": "2024-11-28",
+                    "size": "5.2 MB",
+                    "description": "Documento técnico do projeto de smart grid com arquitetura e tecnologias.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.660Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.728Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.173Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.365Z"
+          },
+          "generated_at": "2026-04-03T14:08:35.377Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.200Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.751Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.949Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.031Z"
+}

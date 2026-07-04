@@ -1,0 +1,994 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+  "report_status": "approved",
+  "report": {
+    "name": "Teste-dce",
+    "description": "Resuminho",
+    "date": null,
+    "size_label": "",
+    "size_bytes": 0,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-relacionamento-clientes",
+      "name": "Superintendência de Relacionamento com Clientes"
+    },
+    "management": {
+      "id": "ger-receita",
+      "name": "Gerência da Gestão da Receita"
+    },
+    "project": {
+      "id": "uni-recuperacao-credito",
+      "name": "Unidade de Recuperação de Crédito"
+    }
+  },
+  "indicators": [
+    {
+      "id": "",
+      "name": "IPCE",
+      "value": "",
+      "unit": "",
+      "trend": ""
+    },
+    {
+      "id": "",
+      "name": "IAR",
+      "value": "",
+      "unit": "",
+      "trend": ""
+    }
+  ],
+  "metrics": {
+    "views": 8,
+    "comments": 2,
+    "likes": 1,
+    "shares": 1
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência de Relacionamento com Clientes",
+    "Gerência da Gestão da Receita",
+    "Unidade de Recuperação de Crédito",
+    "Teste-dce"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+    "report_status": "approved",
+    "report": {
+      "name": "Teste-dce",
+      "description": "Resuminho",
+      "date": null,
+      "size_label": "",
+      "size_bytes": 0,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-relacionamento-clientes",
+        "name": "Superintendência de Relacionamento com Clientes"
+      },
+      "management": {
+        "id": "ger-receita",
+        "name": "Gerência da Gestão da Receita"
+      },
+      "project": {
+        "id": "uni-recuperacao-credito",
+        "name": "Unidade de Recuperação de Crédito"
+      }
+    },
+    "indicators": [
+      {
+        "id": "",
+        "name": "IPCE",
+        "value": "",
+        "unit": "",
+        "trend": ""
+      },
+      {
+        "id": "",
+        "name": "IAR",
+        "value": "",
+        "unit": "",
+        "trend": ""
+      }
+    ],
+    "metrics": {
+      "views": 8,
+      "comments": 2,
+      "likes": 1,
+      "shares": 1
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência de Relacionamento com Clientes",
+      "Gerência da Gestão da Receita",
+      "Unidade de Recuperação de Crédito",
+      "Teste-dce"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+      "report_status": "approved",
+      "report": {
+        "name": "Teste-dce",
+        "description": "Resuminho",
+        "date": null,
+        "size_label": "",
+        "size_bytes": 0,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-relacionamento-clientes",
+          "name": "Superintendência de Relacionamento com Clientes"
+        },
+        "management": {
+          "id": "ger-receita",
+          "name": "Gerência da Gestão da Receita"
+        },
+        "project": {
+          "id": "uni-recuperacao-credito",
+          "name": "Unidade de Recuperação de Crédito"
+        }
+      },
+      "indicators": [
+        {
+          "id": "",
+          "name": "IPCE",
+          "value": "",
+          "unit": "",
+          "trend": ""
+        },
+        {
+          "id": "",
+          "name": "IAR",
+          "value": "",
+          "unit": "",
+          "trend": ""
+        }
+      ],
+      "metrics": {
+        "views": 8,
+        "comments": 2,
+        "likes": 1,
+        "shares": 1
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência de Relacionamento com Clientes",
+        "Gerência da Gestão da Receita",
+        "Unidade de Recuperação de Crédito",
+        "Teste-dce"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+        "report_status": "approved",
+        "report": {
+          "name": "Teste-dce",
+          "description": "Resuminho",
+          "date": null,
+          "size_label": "",
+          "size_bytes": 0,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-relacionamento-clientes",
+            "name": "Superintendência de Relacionamento com Clientes"
+          },
+          "management": {
+            "id": "ger-receita",
+            "name": "Gerência da Gestão da Receita"
+          },
+          "project": {
+            "id": "uni-recuperacao-credito",
+            "name": "Unidade de Recuperação de Crédito"
+          }
+        },
+        "indicators": [
+          {
+            "id": "",
+            "name": "IPCE",
+            "value": "",
+            "unit": "",
+            "trend": ""
+          },
+          {
+            "id": "",
+            "name": "IAR",
+            "value": "",
+            "unit": "",
+            "trend": ""
+          }
+        ],
+        "metrics": {
+          "views": 8,
+          "comments": 2,
+          "likes": 1,
+          "shares": 1
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência de Relacionamento com Clientes",
+          "Gerência da Gestão da Receita",
+          "Unidade de Recuperação de Crédito",
+          "Teste-dce"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+          "report_status": "approved",
+          "report": {
+            "name": "Teste-dce",
+            "description": "Resuminho",
+            "date": null,
+            "size_label": "",
+            "size_bytes": 0,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-relacionamento-clientes",
+              "name": "Superintendência de Relacionamento com Clientes"
+            },
+            "management": {
+              "id": "ger-receita",
+              "name": "Gerência da Gestão da Receita"
+            },
+            "project": {
+              "id": "uni-recuperacao-credito",
+              "name": "Unidade de Recuperação de Crédito"
+            }
+          },
+          "indicators": [
+            {
+              "id": "",
+              "name": "IPCE",
+              "value": "",
+              "unit": "",
+              "trend": ""
+            },
+            {
+              "id": "",
+              "name": "IAR",
+              "value": "",
+              "unit": "",
+              "trend": ""
+            }
+          ],
+          "metrics": {
+            "views": 8,
+            "comments": 2,
+            "likes": 1,
+            "shares": 1
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência de Relacionamento com Clientes",
+            "Gerência da Gestão da Receita",
+            "Unidade de Recuperação de Crédito",
+            "Teste-dce"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+            "report_status": "approved",
+            "report": {
+              "name": "Teste-dce",
+              "description": "Resuminho",
+              "date": null,
+              "size_label": "",
+              "size_bytes": 0,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-relacionamento-clientes",
+                "name": "Superintendência de Relacionamento com Clientes"
+              },
+              "management": {
+                "id": "ger-receita",
+                "name": "Gerência da Gestão da Receita"
+              },
+              "project": {
+                "id": "uni-recuperacao-credito",
+                "name": "Unidade de Recuperação de Crédito"
+              }
+            },
+            "indicators": [
+              {
+                "id": "",
+                "name": "IPCE",
+                "value": "",
+                "unit": "",
+                "trend": ""
+              },
+              {
+                "id": "",
+                "name": "IAR",
+                "value": "",
+                "unit": "",
+                "trend": ""
+              }
+            ],
+            "metrics": {
+              "views": 8,
+              "comments": 2,
+              "likes": 1,
+              "shares": 1
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência de Relacionamento com Clientes",
+              "Gerência da Gestão da Receita",
+              "Unidade de Recuperação de Crédito",
+              "Teste-dce"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+              "report_status": "approved",
+              "report": {
+                "name": "Teste-dce",
+                "description": "Resuminho",
+                "date": null,
+                "size_label": "",
+                "size_bytes": 0,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-relacionamento-clientes",
+                  "name": "Superintendência de Relacionamento com Clientes"
+                },
+                "management": {
+                  "id": "ger-receita",
+                  "name": "Gerência da Gestão da Receita"
+                },
+                "project": {
+                  "id": "uni-recuperacao-credito",
+                  "name": "Unidade de Recuperação de Crédito"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "",
+                  "name": "IPCE",
+                  "value": "",
+                  "unit": "",
+                  "trend": ""
+                },
+                {
+                  "id": "",
+                  "name": "IAR",
+                  "value": "",
+                  "unit": "",
+                  "trend": ""
+                }
+              ],
+              "metrics": {
+                "views": 8,
+                "comments": 2,
+                "likes": 1,
+                "shares": 1
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência de Relacionamento com Clientes",
+                "Gerência da Gestão da Receita",
+                "Unidade de Recuperação de Crédito",
+                "Teste-dce"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+                "report_status": "approved",
+                "report": {
+                  "name": "Teste-dce",
+                  "description": "Resuminho",
+                  "date": null,
+                  "size_label": "",
+                  "size_bytes": 0,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-relacionamento-clientes",
+                    "name": "Superintendência de Relacionamento com Clientes"
+                  },
+                  "management": {
+                    "id": "ger-receita",
+                    "name": "Gerência da Gestão da Receita"
+                  },
+                  "project": {
+                    "id": "uni-recuperacao-credito",
+                    "name": "Unidade de Recuperação de Crédito"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "",
+                    "name": "IPCE",
+                    "value": "",
+                    "unit": "",
+                    "trend": ""
+                  },
+                  {
+                    "id": "",
+                    "name": "IAR",
+                    "value": "",
+                    "unit": "",
+                    "trend": ""
+                  }
+                ],
+                "metrics": {
+                  "views": 8,
+                  "comments": 2,
+                  "likes": 1,
+                  "shares": 1
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência de Relacionamento com Clientes",
+                  "Gerência da Gestão da Receita",
+                  "Unidade de Recuperação de Crédito",
+                  "Teste-dce"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Teste-dce",
+                    "description": "Resuminho",
+                    "date": null,
+                    "size_label": "",
+                    "size_bytes": 0,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-relacionamento-clientes",
+                      "name": "Superintendência de Relacionamento com Clientes"
+                    },
+                    "management": {
+                      "id": "ger-receita",
+                      "name": "Gerência da Gestão da Receita"
+                    },
+                    "project": {
+                      "id": "uni-recuperacao-credito",
+                      "name": "Unidade de Recuperação de Crédito"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "",
+                      "name": "IPCE",
+                      "value": "",
+                      "unit": "",
+                      "trend": ""
+                    },
+                    {
+                      "id": "",
+                      "name": "IAR",
+                      "value": "",
+                      "unit": "",
+                      "trend": ""
+                    }
+                  ],
+                  "metrics": {
+                    "views": 8,
+                    "comments": 2,
+                    "likes": 1,
+                    "shares": 1
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência de Relacionamento com Clientes",
+                    "Gerência da Gestão da Receita",
+                    "Unidade de Recuperação de Crédito",
+                    "Teste-dce"
+                  ],
+                  "raw_json": {
+                    "schema": "neoview.report.v1",
+                    "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+                    "report_status": "approved",
+                    "report": {
+                      "name": "Teste-dce",
+                      "description": "Resuminho",
+                      "date": null,
+                      "size_label": "",
+                      "size_bytes": 0,
+                      "url": null
+                    },
+                    "hierarchy": {
+                      "company": {
+                        "id": "coelba",
+                        "name": "Neoenergia Coelba"
+                      },
+                      "superintendence": {
+                        "id": "sup-relacionamento-clientes",
+                        "name": "Superintendência de Relacionamento com Clientes"
+                      },
+                      "management": {
+                        "id": "ger-receita",
+                        "name": "Gerência da Gestão da Receita"
+                      },
+                      "project": {
+                        "id": "uni-recuperacao-credito",
+                        "name": "Unidade de Recuperação de Crédito"
+                      }
+                    },
+                    "indicators": [
+                      {
+                        "id": "",
+                        "name": "IPCE",
+                        "value": "",
+                        "unit": "",
+                        "trend": ""
+                      },
+                      {
+                        "id": "",
+                        "name": "IAR",
+                        "value": "",
+                        "unit": "",
+                        "trend": ""
+                      }
+                    ],
+                    "metrics": {
+                      "views": 8,
+                      "comments": 2,
+                      "likes": 1,
+                      "shares": 1
+                    },
+                    "path": [
+                      "Neoenergia Coelba",
+                      "Superintendência de Relacionamento com Clientes",
+                      "Gerência da Gestão da Receita",
+                      "Unidade de Recuperação de Crédito",
+                      "Teste-dce"
+                    ],
+                    "raw_json": {
+                      "schema": "neoview.report.v1",
+                      "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+                      "report_status": "approved",
+                      "report": {
+                        "name": "Teste-dce",
+                        "description": "Resuminho",
+                        "date": null,
+                        "size_label": "",
+                        "size_bytes": 0,
+                        "url": null
+                      },
+                      "hierarchy": {
+                        "company": {
+                          "id": "coelba",
+                          "name": "Neoenergia Coelba"
+                        },
+                        "superintendence": {
+                          "id": "sup-relacionamento-clientes",
+                          "name": "Superintendência de Relacionamento com Clientes"
+                        },
+                        "management": {
+                          "id": "ger-receita",
+                          "name": "Gerência da Gestão da Receita"
+                        },
+                        "project": {
+                          "id": "uni-recuperacao-credito",
+                          "name": "Unidade de Recuperação de Crédito"
+                        }
+                      },
+                      "indicators": [
+                        {
+                          "id": "",
+                          "name": "IPCE",
+                          "value": "",
+                          "unit": "",
+                          "trend": ""
+                        },
+                        {
+                          "id": "",
+                          "name": "IAR",
+                          "value": "",
+                          "unit": "",
+                          "trend": ""
+                        }
+                      ],
+                      "metrics": {
+                        "views": 8,
+                        "comments": 2,
+                        "likes": 1,
+                        "shares": 1
+                      },
+                      "path": [
+                        "Neoenergia Coelba",
+                        "Superintendência de Relacionamento com Clientes",
+                        "Gerência da Gestão da Receita",
+                        "Unidade de Recuperação de Crédito",
+                        "Teste-dce"
+                      ],
+                      "raw_json": {
+                        "schema": "neoview.report.v1",
+                        "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+                        "report_status": "approved",
+                        "report": {
+                          "name": "Teste-dce",
+                          "description": "Resuminho",
+                          "date": null,
+                          "size_label": "",
+                          "size_bytes": 0,
+                          "url": null
+                        },
+                        "hierarchy": {
+                          "company": {
+                            "id": "coelba",
+                            "name": "Neoenergia Coelba"
+                          },
+                          "superintendence": {
+                            "id": "sup-relacionamento-clientes",
+                            "name": "Superintendência de Relacionamento com Clientes"
+                          },
+                          "management": {
+                            "id": "ger-receita",
+                            "name": "Gerência da Gestão da Receita"
+                          },
+                          "project": {
+                            "id": "uni-recuperacao-credito",
+                            "name": "Unidade de Recuperação de Crédito"
+                          }
+                        },
+                        "indicators": [
+                          {
+                            "id": "",
+                            "name": "IPCE",
+                            "value": "",
+                            "unit": "",
+                            "trend": ""
+                          },
+                          {
+                            "id": "",
+                            "name": "IAR",
+                            "value": "",
+                            "unit": "",
+                            "trend": ""
+                          }
+                        ],
+                        "metrics": {
+                          "views": 8,
+                          "comments": 2,
+                          "likes": 1,
+                          "shares": 1
+                        },
+                        "path": [
+                          "Neoenergia Coelba",
+                          "Superintendência de Relacionamento com Clientes",
+                          "Gerência da Gestão da Receita",
+                          "Unidade de Recuperação de Crédito",
+                          "Teste-dce"
+                        ],
+                        "raw_json": {
+                          "schema": "neoview.report.v1",
+                          "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+                          "report_status": "approved",
+                          "report": {
+                            "name": "Teste-dce",
+                            "description": "Resuminho",
+                            "date": null,
+                            "size_label": "",
+                            "size_bytes": 0,
+                            "url": null
+                          },
+                          "hierarchy": {
+                            "company": {
+                              "id": "coelba",
+                              "name": "Neoenergia Coelba"
+                            },
+                            "superintendence": {
+                              "id": "sup-relacionamento-clientes",
+                              "name": "Superintendência de Relacionamento com Clientes"
+                            },
+                            "management": {
+                              "id": "ger-receita",
+                              "name": "Gerência da Gestão da Receita"
+                            },
+                            "project": {
+                              "id": "uni-recuperacao-credito",
+                              "name": "Unidade de Recuperação de Crédito"
+                            }
+                          },
+                          "indicators": [
+                            {
+                              "id": "",
+                              "name": "IPCE",
+                              "value": "",
+                              "unit": "",
+                              "trend": ""
+                            },
+                            {
+                              "id": "",
+                              "name": "IAR",
+                              "value": "",
+                              "unit": "",
+                              "trend": ""
+                            }
+                          ],
+                          "metrics": {
+                            "views": 8,
+                            "comments": 2,
+                            "likes": 1,
+                            "shares": 1
+                          },
+                          "path": [
+                            "Neoenergia Coelba",
+                            "Superintendência de Relacionamento com Clientes",
+                            "Gerência da Gestão da Receita",
+                            "Unidade de Recuperação de Crédito",
+                            "Teste-dce"
+                          ],
+                          "raw_json": {
+                            "schema": "neoview.report.v1",
+                            "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+                            "report_status": "approved",
+                            "report": {
+                              "name": "Teste-dce",
+                              "description": "Resuminho",
+                              "date": null,
+                              "size_label": "",
+                              "size_bytes": 0,
+                              "url": null
+                            },
+                            "hierarchy": {
+                              "company": {
+                                "id": "coelba",
+                                "name": "Neoenergia Coelba"
+                              },
+                              "superintendence": {
+                                "id": "sup-relacionamento-clientes",
+                                "name": "Superintendência de Relacionamento com Clientes"
+                              },
+                              "management": {
+                                "id": "ger-receita",
+                                "name": "Gerência da Gestão da Receita"
+                              },
+                              "project": {
+                                "id": "uni-recuperacao-credito",
+                                "name": "Unidade de Recuperação de Crédito"
+                              }
+                            },
+                            "indicators": [
+                              {
+                                "id": "",
+                                "name": "IPCE",
+                                "value": "",
+                                "unit": "",
+                                "trend": ""
+                              },
+                              {
+                                "id": "",
+                                "name": "IAR",
+                                "value": "",
+                                "unit": "",
+                                "trend": ""
+                              }
+                            ],
+                            "metrics": {
+                              "views": 7,
+                              "comments": 2,
+                              "likes": 1,
+                              "shares": 1
+                            },
+                            "path": [
+                              "Neoenergia Coelba",
+                              "Superintendência de Relacionamento com Clientes",
+                              "Gerência da Gestão da Receita",
+                              "Unidade de Recuperação de Crédito",
+                              "Teste-dce"
+                            ],
+                            "raw_json": {
+                              "schema": "neoview.report.v1",
+                              "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+                              "report_status": "approved",
+                              "report": {
+                                "name": "Teste-dce",
+                                "description": "Resuminho",
+                                "date": null,
+                                "size_label": "",
+                                "size_bytes": 0,
+                                "url": null
+                              },
+                              "hierarchy": {
+                                "company": {
+                                  "id": "coelba",
+                                  "name": "Neoenergia Coelba"
+                                },
+                                "superintendence": {
+                                  "id": "sup-relacionamento-clientes",
+                                  "name": "Superintendência de Relacionamento com Clientes"
+                                },
+                                "management": {
+                                  "id": "ger-receita",
+                                  "name": "Gerência da Gestão da Receita"
+                                },
+                                "project": {
+                                  "id": "uni-recuperacao-credito",
+                                  "name": "Unidade de Recuperação de Crédito"
+                                }
+                              },
+                              "indicators": [
+                                {
+                                  "id": "",
+                                  "name": "IPCE",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": ""
+                                },
+                                {
+                                  "id": "",
+                                  "name": "IAR",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": ""
+                                }
+                              ],
+                              "metrics": {
+                                "views": 7,
+                                "comments": 2,
+                                "likes": 1,
+                                "shares": 1
+                              },
+                              "path": [
+                                "Neoenergia Coelba",
+                                "Superintendência de Relacionamento com Clientes",
+                                "Gerência da Gestão da Receita",
+                                "Unidade de Recuperação de Crédito",
+                                "Teste-dce"
+                              ],
+                              "raw_json": {
+                                "schema": "neoview.report.v1",
+                                "source_report_id": "manual-a03c79fb-5fb0-434b-864e-79189b3cc7f4",
+                                "report": {
+                                  "name": "Teste-dce",
+                                  "description": "Resuminho",
+                                  "date": null,
+                                  "size_label": "",
+                                  "size_bytes": 0,
+                                  "url": null
+                                },
+                                "hierarchy": {
+                                  "company": {
+                                    "id": "coelba",
+                                    "name": "Neoenergia Coelba"
+                                  },
+                                  "superintendence": {
+                                    "id": "sup-relacionamento-clientes",
+                                    "name": "Superintendência de Relacionamento com Clientes"
+                                  },
+                                  "management": {
+                                    "id": "ger-receita",
+                                    "name": "Gerência da Gestão da Receita"
+                                  },
+                                  "project": {
+                                    "id": "uni-recuperacao-credito",
+                                    "name": "Unidade de Recuperação de Crédito"
+                                  }
+                                },
+                                "indicators": [
+                                  {
+                                    "name": "IPCE"
+                                  },
+                                  {
+                                    "name": "IAR"
+                                  }
+                                ],
+                                "metrics": {
+                                  "views": 0,
+                                  "comments": 0,
+                                  "likes": 0,
+                                  "shares": 0
+                                },
+                                "path": [
+                                  "Neoenergia Coelba",
+                                  "Superintendência de Relacionamento com Clientes",
+                                  "Gerência da Gestão da Receita",
+                                  "Unidade de Recuperação de Crédito",
+                                  "Teste-dce"
+                                ],
+                                "raw_json": {
+                                  "reportName": "Teste-dce",
+                                  "reportDescription": "Resuminho",
+                                  "reportSizeLabel": "",
+                                  "companyId": "coelba",
+                                  "companyName": "Neoenergia Coelba",
+                                  "superintendenceId": "sup-relacionamento-clientes",
+                                  "superintendenceName": "Superintendência de Relacionamento com Clientes",
+                                  "managementId": "ger-receita",
+                                  "managementName": "Gerência da Gestão da Receita",
+                                  "projectId": "uni-recuperacao-credito",
+                                  "projectName": "Unidade de Recuperação de Crédito",
+                                  "indicators": [
+                                    {
+                                      "name": "IPCE"
+                                    },
+                                    {
+                                      "name": "IAR"
+                                    }
+                                  ],
+                                  "metrics": {
+                                    "views": 0,
+                                    "comments": 0,
+                                    "likes": 0,
+                                    "shares": 0
+                                  }
+                                },
+                                "generated_at": "2026-03-08T02:28:33.603Z"
+                              },
+                              "generated_at": "2026-03-31T23:04:36.602Z"
+                            },
+                            "generated_at": "2026-03-31T23:07:12.486Z"
+                          },
+                          "generated_at": "2026-03-31T23:34:15.392Z"
+                        },
+                        "generated_at": "2026-03-31T23:36:58.518Z"
+                      },
+                      "generated_at": "2026-03-31T23:56:54.183Z"
+                    },
+                    "generated_at": "2026-04-01T07:33:53.459Z"
+                  },
+                  "generated_at": "2026-04-01T08:05:22.851Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.121Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.611Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.648Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.662Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.661Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.204Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.421Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.761Z"
+}

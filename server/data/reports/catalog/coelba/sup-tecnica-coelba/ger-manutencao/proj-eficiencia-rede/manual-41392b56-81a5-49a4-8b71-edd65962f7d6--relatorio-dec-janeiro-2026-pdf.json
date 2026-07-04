@@ -1,0 +1,1012 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+  "report_status": "approved",
+  "report": {
+    "name": "Relatorio DEC Janeiro 2026.pdf",
+    "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+    "date": "2026-01-31",
+    "size_label": "",
+    "size_bytes": 0,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendencia Tecnica Coelba"
+    },
+    "management": {
+      "id": "ger-manutencao",
+      "name": "Gerencia de Manutencao"
+    },
+    "project": {
+      "id": "proj-eficiencia-rede",
+      "name": "Eficiencia de Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-dec",
+      "name": "DEC - Duracao Equivalente por Consumidor",
+      "value": "",
+      "unit": "",
+      "trend": ""
+    },
+    {
+      "id": "ind-fec",
+      "name": "FEC - Frequencia Equivalente por Consumidor",
+      "value": "",
+      "unit": "",
+      "trend": ""
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendencia Tecnica Coelba",
+    "Gerencia de Manutencao",
+    "Eficiencia de Rede",
+    "Relatorio DEC Janeiro 2026.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+    "report_status": "approved",
+    "report": {
+      "name": "Relatorio DEC Janeiro 2026.pdf",
+      "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+      "date": "2026-01-31",
+      "size_label": "",
+      "size_bytes": 0,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendencia Tecnica Coelba"
+      },
+      "management": {
+        "id": "ger-manutencao",
+        "name": "Gerencia de Manutencao"
+      },
+      "project": {
+        "id": "proj-eficiencia-rede",
+        "name": "Eficiencia de Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-dec",
+        "name": "DEC - Duracao Equivalente por Consumidor",
+        "value": "",
+        "unit": "",
+        "trend": ""
+      },
+      {
+        "id": "ind-fec",
+        "name": "FEC - Frequencia Equivalente por Consumidor",
+        "value": "",
+        "unit": "",
+        "trend": ""
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendencia Tecnica Coelba",
+      "Gerencia de Manutencao",
+      "Eficiencia de Rede",
+      "Relatorio DEC Janeiro 2026.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+      "report_status": "approved",
+      "report": {
+        "name": "Relatorio DEC Janeiro 2026.pdf",
+        "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+        "date": "2026-01-31",
+        "size_label": "",
+        "size_bytes": 0,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendencia Tecnica Coelba"
+        },
+        "management": {
+          "id": "ger-manutencao",
+          "name": "Gerencia de Manutencao"
+        },
+        "project": {
+          "id": "proj-eficiencia-rede",
+          "name": "Eficiencia de Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-dec",
+          "name": "DEC - Duracao Equivalente por Consumidor",
+          "value": "",
+          "unit": "",
+          "trend": ""
+        },
+        {
+          "id": "ind-fec",
+          "name": "FEC - Frequencia Equivalente por Consumidor",
+          "value": "",
+          "unit": "",
+          "trend": ""
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendencia Tecnica Coelba",
+        "Gerencia de Manutencao",
+        "Eficiencia de Rede",
+        "Relatorio DEC Janeiro 2026.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+        "report_status": "approved",
+        "report": {
+          "name": "Relatorio DEC Janeiro 2026.pdf",
+          "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+          "date": "2026-01-31",
+          "size_label": "",
+          "size_bytes": 0,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendencia Tecnica Coelba"
+          },
+          "management": {
+            "id": "ger-manutencao",
+            "name": "Gerencia de Manutencao"
+          },
+          "project": {
+            "id": "proj-eficiencia-rede",
+            "name": "Eficiencia de Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-dec",
+            "name": "DEC - Duracao Equivalente por Consumidor",
+            "value": "",
+            "unit": "",
+            "trend": ""
+          },
+          {
+            "id": "ind-fec",
+            "name": "FEC - Frequencia Equivalente por Consumidor",
+            "value": "",
+            "unit": "",
+            "trend": ""
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendencia Tecnica Coelba",
+          "Gerencia de Manutencao",
+          "Eficiencia de Rede",
+          "Relatorio DEC Janeiro 2026.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+          "report_status": "approved",
+          "report": {
+            "name": "Relatorio DEC Janeiro 2026.pdf",
+            "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+            "date": "2026-01-31",
+            "size_label": "",
+            "size_bytes": 0,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendencia Tecnica Coelba"
+            },
+            "management": {
+              "id": "ger-manutencao",
+              "name": "Gerencia de Manutencao"
+            },
+            "project": {
+              "id": "proj-eficiencia-rede",
+              "name": "Eficiencia de Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-dec",
+              "name": "DEC - Duracao Equivalente por Consumidor",
+              "value": "",
+              "unit": "",
+              "trend": ""
+            },
+            {
+              "id": "ind-fec",
+              "name": "FEC - Frequencia Equivalente por Consumidor",
+              "value": "",
+              "unit": "",
+              "trend": ""
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendencia Tecnica Coelba",
+            "Gerencia de Manutencao",
+            "Eficiencia de Rede",
+            "Relatorio DEC Janeiro 2026.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+            "report_status": "approved",
+            "report": {
+              "name": "Relatorio DEC Janeiro 2026.pdf",
+              "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+              "date": "2026-01-31",
+              "size_label": "",
+              "size_bytes": 0,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendencia Tecnica Coelba"
+              },
+              "management": {
+                "id": "ger-manutencao",
+                "name": "Gerencia de Manutencao"
+              },
+              "project": {
+                "id": "proj-eficiencia-rede",
+                "name": "Eficiencia de Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-dec",
+                "name": "DEC - Duracao Equivalente por Consumidor",
+                "value": "",
+                "unit": "",
+                "trend": ""
+              },
+              {
+                "id": "ind-fec",
+                "name": "FEC - Frequencia Equivalente por Consumidor",
+                "value": "",
+                "unit": "",
+                "trend": ""
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendencia Tecnica Coelba",
+              "Gerencia de Manutencao",
+              "Eficiencia de Rede",
+              "Relatorio DEC Janeiro 2026.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+              "report_status": "approved",
+              "report": {
+                "name": "Relatorio DEC Janeiro 2026.pdf",
+                "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+                "date": "2026-01-31",
+                "size_label": "",
+                "size_bytes": 0,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendencia Tecnica Coelba"
+                },
+                "management": {
+                  "id": "ger-manutencao",
+                  "name": "Gerencia de Manutencao"
+                },
+                "project": {
+                  "id": "proj-eficiencia-rede",
+                  "name": "Eficiencia de Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-dec",
+                  "name": "DEC - Duracao Equivalente por Consumidor",
+                  "value": "",
+                  "unit": "",
+                  "trend": ""
+                },
+                {
+                  "id": "ind-fec",
+                  "name": "FEC - Frequencia Equivalente por Consumidor",
+                  "value": "",
+                  "unit": "",
+                  "trend": ""
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendencia Tecnica Coelba",
+                "Gerencia de Manutencao",
+                "Eficiencia de Rede",
+                "Relatorio DEC Janeiro 2026.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+                "report_status": "approved",
+                "report": {
+                  "name": "Relatorio DEC Janeiro 2026.pdf",
+                  "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+                  "date": "2026-01-31",
+                  "size_label": "",
+                  "size_bytes": 0,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendencia Tecnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-manutencao",
+                    "name": "Gerencia de Manutencao"
+                  },
+                  "project": {
+                    "id": "proj-eficiencia-rede",
+                    "name": "Eficiencia de Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-dec",
+                    "name": "DEC - Duracao Equivalente por Consumidor",
+                    "value": "",
+                    "unit": "",
+                    "trend": ""
+                  },
+                  {
+                    "id": "ind-fec",
+                    "name": "FEC - Frequencia Equivalente por Consumidor",
+                    "value": "",
+                    "unit": "",
+                    "trend": ""
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendencia Tecnica Coelba",
+                  "Gerencia de Manutencao",
+                  "Eficiencia de Rede",
+                  "Relatorio DEC Janeiro 2026.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Relatorio DEC Janeiro 2026.pdf",
+                    "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+                    "date": "2026-01-31",
+                    "size_label": "",
+                    "size_bytes": 0,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendencia Tecnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-manutencao",
+                      "name": "Gerencia de Manutencao"
+                    },
+                    "project": {
+                      "id": "proj-eficiencia-rede",
+                      "name": "Eficiencia de Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-dec",
+                      "name": "DEC - Duracao Equivalente por Consumidor",
+                      "value": "",
+                      "unit": "",
+                      "trend": ""
+                    },
+                    {
+                      "id": "ind-fec",
+                      "name": "FEC - Frequencia Equivalente por Consumidor",
+                      "value": "",
+                      "unit": "",
+                      "trend": ""
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendencia Tecnica Coelba",
+                    "Gerencia de Manutencao",
+                    "Eficiencia de Rede",
+                    "Relatorio DEC Janeiro 2026.pdf"
+                  ],
+                  "raw_json": {
+                    "schema": "neoview.report.v1",
+                    "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+                    "report_status": "approved",
+                    "report": {
+                      "name": "Relatorio DEC Janeiro 2026.pdf",
+                      "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+                      "date": "2026-01-31",
+                      "size_label": "",
+                      "size_bytes": 0,
+                      "url": null
+                    },
+                    "hierarchy": {
+                      "company": {
+                        "id": "coelba",
+                        "name": "Neoenergia Coelba"
+                      },
+                      "superintendence": {
+                        "id": "sup-tecnica-coelba",
+                        "name": "Superintendencia Tecnica Coelba"
+                      },
+                      "management": {
+                        "id": "ger-manutencao",
+                        "name": "Gerencia de Manutencao"
+                      },
+                      "project": {
+                        "id": "proj-eficiencia-rede",
+                        "name": "Eficiencia de Rede"
+                      }
+                    },
+                    "indicators": [
+                      {
+                        "id": "ind-dec",
+                        "name": "DEC - Duracao Equivalente por Consumidor",
+                        "value": "",
+                        "unit": "",
+                        "trend": ""
+                      },
+                      {
+                        "id": "ind-fec",
+                        "name": "FEC - Frequencia Equivalente por Consumidor",
+                        "value": "",
+                        "unit": "",
+                        "trend": ""
+                      }
+                    ],
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    },
+                    "path": [
+                      "Neoenergia Coelba",
+                      "Superintendencia Tecnica Coelba",
+                      "Gerencia de Manutencao",
+                      "Eficiencia de Rede",
+                      "Relatorio DEC Janeiro 2026.pdf"
+                    ],
+                    "raw_json": {
+                      "schema": "neoview.report.v1",
+                      "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+                      "report_status": "approved",
+                      "report": {
+                        "name": "Relatorio DEC Janeiro 2026.pdf",
+                        "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+                        "date": "2026-01-31",
+                        "size_label": "",
+                        "size_bytes": 0,
+                        "url": null
+                      },
+                      "hierarchy": {
+                        "company": {
+                          "id": "coelba",
+                          "name": "Neoenergia Coelba"
+                        },
+                        "superintendence": {
+                          "id": "sup-tecnica-coelba",
+                          "name": "Superintendencia Tecnica Coelba"
+                        },
+                        "management": {
+                          "id": "ger-manutencao",
+                          "name": "Gerencia de Manutencao"
+                        },
+                        "project": {
+                          "id": "proj-eficiencia-rede",
+                          "name": "Eficiencia de Rede"
+                        }
+                      },
+                      "indicators": [
+                        {
+                          "id": "ind-dec",
+                          "name": "DEC - Duracao Equivalente por Consumidor",
+                          "value": "",
+                          "unit": "",
+                          "trend": ""
+                        },
+                        {
+                          "id": "ind-fec",
+                          "name": "FEC - Frequencia Equivalente por Consumidor",
+                          "value": "",
+                          "unit": "",
+                          "trend": ""
+                        }
+                      ],
+                      "metrics": {
+                        "views": 0,
+                        "comments": 0,
+                        "likes": 0,
+                        "shares": 0
+                      },
+                      "path": [
+                        "Neoenergia Coelba",
+                        "Superintendencia Tecnica Coelba",
+                        "Gerencia de Manutencao",
+                        "Eficiencia de Rede",
+                        "Relatorio DEC Janeiro 2026.pdf"
+                      ],
+                      "raw_json": {
+                        "schema": "neoview.report.v1",
+                        "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+                        "report_status": "approved",
+                        "report": {
+                          "name": "Relatorio DEC Janeiro 2026.pdf",
+                          "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+                          "date": "2026-01-31",
+                          "size_label": "",
+                          "size_bytes": 0,
+                          "url": null
+                        },
+                        "hierarchy": {
+                          "company": {
+                            "id": "coelba",
+                            "name": "Neoenergia Coelba"
+                          },
+                          "superintendence": {
+                            "id": "sup-tecnica-coelba",
+                            "name": "Superintendencia Tecnica Coelba"
+                          },
+                          "management": {
+                            "id": "ger-manutencao",
+                            "name": "Gerencia de Manutencao"
+                          },
+                          "project": {
+                            "id": "proj-eficiencia-rede",
+                            "name": "Eficiencia de Rede"
+                          }
+                        },
+                        "indicators": [
+                          {
+                            "id": "ind-dec",
+                            "name": "DEC - Duracao Equivalente por Consumidor",
+                            "value": "",
+                            "unit": "",
+                            "trend": ""
+                          },
+                          {
+                            "id": "ind-fec",
+                            "name": "FEC - Frequencia Equivalente por Consumidor",
+                            "value": "",
+                            "unit": "",
+                            "trend": ""
+                          }
+                        ],
+                        "metrics": {
+                          "views": 0,
+                          "comments": 0,
+                          "likes": 0,
+                          "shares": 0
+                        },
+                        "path": [
+                          "Neoenergia Coelba",
+                          "Superintendencia Tecnica Coelba",
+                          "Gerencia de Manutencao",
+                          "Eficiencia de Rede",
+                          "Relatorio DEC Janeiro 2026.pdf"
+                        ],
+                        "raw_json": {
+                          "schema": "neoview.report.v1",
+                          "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+                          "report_status": "approved",
+                          "report": {
+                            "name": "Relatorio DEC Janeiro 2026.pdf",
+                            "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+                            "date": "2026-01-31",
+                            "size_label": "",
+                            "size_bytes": 0,
+                            "url": null
+                          },
+                          "hierarchy": {
+                            "company": {
+                              "id": "coelba",
+                              "name": "Neoenergia Coelba"
+                            },
+                            "superintendence": {
+                              "id": "sup-tecnica-coelba",
+                              "name": "Superintendencia Tecnica Coelba"
+                            },
+                            "management": {
+                              "id": "ger-manutencao",
+                              "name": "Gerencia de Manutencao"
+                            },
+                            "project": {
+                              "id": "proj-eficiencia-rede",
+                              "name": "Eficiencia de Rede"
+                            }
+                          },
+                          "indicators": [
+                            {
+                              "id": "ind-dec",
+                              "name": "DEC - Duracao Equivalente por Consumidor",
+                              "value": "",
+                              "unit": "",
+                              "trend": ""
+                            },
+                            {
+                              "id": "ind-fec",
+                              "name": "FEC - Frequencia Equivalente por Consumidor",
+                              "value": "",
+                              "unit": "",
+                              "trend": ""
+                            }
+                          ],
+                          "metrics": {
+                            "views": 0,
+                            "comments": 0,
+                            "likes": 0,
+                            "shares": 0
+                          },
+                          "path": [
+                            "Neoenergia Coelba",
+                            "Superintendencia Tecnica Coelba",
+                            "Gerencia de Manutencao",
+                            "Eficiencia de Rede",
+                            "Relatorio DEC Janeiro 2026.pdf"
+                          ],
+                          "raw_json": {
+                            "schema": "neoview.report.v1",
+                            "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+                            "report_status": "approved",
+                            "report": {
+                              "name": "Relatorio DEC Janeiro 2026.pdf",
+                              "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+                              "date": "2026-01-31",
+                              "size_label": "",
+                              "size_bytes": 0,
+                              "url": null
+                            },
+                            "hierarchy": {
+                              "company": {
+                                "id": "coelba",
+                                "name": "Neoenergia Coelba"
+                              },
+                              "superintendence": {
+                                "id": "sup-tecnica-coelba",
+                                "name": "Superintendencia Tecnica Coelba"
+                              },
+                              "management": {
+                                "id": "ger-manutencao",
+                                "name": "Gerencia de Manutencao"
+                              },
+                              "project": {
+                                "id": "proj-eficiencia-rede",
+                                "name": "Eficiencia de Rede"
+                              }
+                            },
+                            "indicators": [
+                              {
+                                "id": "ind-dec",
+                                "name": "DEC - Duracao Equivalente por Consumidor",
+                                "value": "",
+                                "unit": "",
+                                "trend": ""
+                              },
+                              {
+                                "id": "ind-fec",
+                                "name": "FEC - Frequencia Equivalente por Consumidor",
+                                "value": "",
+                                "unit": "",
+                                "trend": ""
+                              }
+                            ],
+                            "metrics": {
+                              "views": 0,
+                              "comments": 0,
+                              "likes": 0,
+                              "shares": 0
+                            },
+                            "path": [
+                              "Neoenergia Coelba",
+                              "Superintendencia Tecnica Coelba",
+                              "Gerencia de Manutencao",
+                              "Eficiencia de Rede",
+                              "Relatorio DEC Janeiro 2026.pdf"
+                            ],
+                            "raw_json": {
+                              "schema": "neoview.report.v1",
+                              "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+                              "report_status": "approved",
+                              "report": {
+                                "name": "Relatorio DEC Janeiro 2026.pdf",
+                                "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+                                "date": "2026-01-31",
+                                "size_label": "",
+                                "size_bytes": 0,
+                                "url": null
+                              },
+                              "hierarchy": {
+                                "company": {
+                                  "id": "coelba",
+                                  "name": "Neoenergia Coelba"
+                                },
+                                "superintendence": {
+                                  "id": "sup-tecnica-coelba",
+                                  "name": "Superintendencia Tecnica Coelba"
+                                },
+                                "management": {
+                                  "id": "ger-manutencao",
+                                  "name": "Gerencia de Manutencao"
+                                },
+                                "project": {
+                                  "id": "proj-eficiencia-rede",
+                                  "name": "Eficiencia de Rede"
+                                }
+                              },
+                              "indicators": [
+                                {
+                                  "id": "ind-dec",
+                                  "name": "DEC - Duracao Equivalente por Consumidor",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": ""
+                                },
+                                {
+                                  "id": "ind-fec",
+                                  "name": "FEC - Frequencia Equivalente por Consumidor",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": ""
+                                }
+                              ],
+                              "metrics": {
+                                "views": 0,
+                                "comments": 0,
+                                "likes": 0,
+                                "shares": 0
+                              },
+                              "path": [
+                                "Neoenergia Coelba",
+                                "Superintendencia Tecnica Coelba",
+                                "Gerencia de Manutencao",
+                                "Eficiencia de Rede",
+                                "Relatorio DEC Janeiro 2026.pdf"
+                              ],
+                              "raw_json": {
+                                "schema": "neoview.report.v1",
+                                "source_report_id": "manual-41392b56-81a5-49a4-8b71-edd65962f7d6",
+                                "report": {
+                                  "name": "Relatorio DEC Janeiro 2026.pdf",
+                                  "description": "Consolidado mensal do indicador DEC com analise por regiao.",
+                                  "date": "2026-01-31T03:00:00.000Z",
+                                  "size_label": "2.7 MB",
+                                  "size_bytes": "2831155",
+                                  "url": "https://example.com/relatorios/dec-jan-2026.pdf"
+                                },
+                                "hierarchy": {
+                                  "company": {
+                                    "id": "coelba",
+                                    "name": "Neoenergia Coelba"
+                                  },
+                                  "superintendence": {
+                                    "id": "sup-tecnica-coelba",
+                                    "name": "Superintendencia Tecnica Coelba"
+                                  },
+                                  "management": {
+                                    "id": "ger-manutencao",
+                                    "name": "Gerencia de Manutencao"
+                                  },
+                                  "project": {
+                                    "id": "proj-eficiencia-rede",
+                                    "name": "Eficiencia de Rede"
+                                  }
+                                },
+                                "indicators": [
+                                  {
+                                    "id": "ind-dec",
+                                    "name": "DEC - Duracao Equivalente por Consumidor",
+                                    "value": "12.5",
+                                    "unit": "horas",
+                                    "trend": "down"
+                                  },
+                                  {
+                                    "id": "ind-fec",
+                                    "name": "FEC - Frequencia Equivalente por Consumidor",
+                                    "value": "12.5",
+                                    "unit": "horas",
+                                    "trend": "down"
+                                  }
+                                ],
+                                "metrics": {
+                                  "views": 0,
+                                  "comments": 0,
+                                  "likes": 0,
+                                  "shares": 0
+                                },
+                                "path": [
+                                  "Neoenergia Coelba",
+                                  "Superintendencia Tecnica Coelba",
+                                  "Gerencia de Manutencao",
+                                  "Eficiencia de Rede",
+                                  "Relatorio DEC Janeiro 2026.pdf"
+                                ],
+                                "raw_json": {
+                                  "metrics": {
+                                    "likes": 0,
+                                    "views": 0,
+                                    "shares": 0,
+                                    "comments": 0
+                                  },
+                                  "companyId": "coelba",
+                                  "projectId": "proj-eficiencia-rede",
+                                  "reportUrl": "https://example.com/relatorios/dec-jan-2026.pdf",
+                                  "indicators": [
+                                    {
+                                      "id": "ind-dec",
+                                      "name": "DEC - Duracao Equivalente por Consumidor",
+                                      "unit": "horas",
+                                      "trend": "down",
+                                      "value": "12.5"
+                                    },
+                                    {
+                                      "id": "ind-fec",
+                                      "name": "FEC - Frequencia Equivalente por Consumidor",
+                                      "unit": "interrupcoes",
+                                      "trend": "stable",
+                                      "value": "8.2"
+                                    }
+                                  ],
+                                  "reportDate": "2026-01-31",
+                                  "reportName": "Relatorio DEC Janeiro 2026.pdf",
+                                  "companyName": "Neoenergia Coelba",
+                                  "projectName": "Eficiencia de Rede",
+                                  "managementId": "ger-manutencao",
+                                  "managementName": "Gerencia de Manutencao",
+                                  "reportSizeLabel": "2.7 MB",
+                                  "reportDescription": "Consolidado mensal do indicador DEC com analise por regiao.",
+                                  "superintendenceId": "sup-operacoes-ba",
+                                  "superintendenceName": "Superintendencia Operacao Centro Norte"
+                                },
+                                "generated_at": "2026-03-08T00:35:03.126Z"
+                              },
+                              "generated_at": "2026-03-31T23:04:36.472Z"
+                            },
+                            "generated_at": "2026-03-31T23:07:12.382Z"
+                          },
+                          "generated_at": "2026-03-31T23:34:15.277Z"
+                        },
+                        "generated_at": "2026-03-31T23:36:58.405Z"
+                      },
+                      "generated_at": "2026-03-31T23:56:53.957Z"
+                    },
+                    "generated_at": "2026-04-01T07:33:53.329Z"
+                  },
+                  "generated_at": "2026-04-01T08:05:22.729Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.000Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.482Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.499Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.520Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.445Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.066Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.296Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.684Z"
+}

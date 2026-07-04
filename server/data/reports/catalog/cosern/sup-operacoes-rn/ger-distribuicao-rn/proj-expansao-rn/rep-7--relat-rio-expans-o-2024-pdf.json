@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-7",
+  "report_status": "approved",
+  "report": {
+    "name": "Relatório Expansão 2024.pdf",
+    "description": "Relatório de expansão da rede com obras realizadas e planejadas.",
+    "date": "2024-12-05",
+    "size_label": "2.8 MB",
+    "size_bytes": 2936013,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "cosern",
+      "name": "Neoenergia Cosern"
+    },
+    "superintendence": {
+      "id": "sup-operacoes-rn",
+      "name": "Superintendência de Operações"
+    },
+    "management": {
+      "id": "ger-distribuicao-rn",
+      "name": "Gerência de Distribuição"
+    },
+    "project": {
+      "id": "proj-expansao-rn",
+      "name": "Expansão da Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-cobertura",
+      "name": "Índice de Cobertura",
+      "value": "98.2",
+      "unit": "%",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Cosern",
+    "Superintendência de Operações",
+    "Gerência de Distribuição",
+    "Expansão da Rede",
+    "Relatório Expansão 2024.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-7",
+    "report_status": "approved",
+    "report": {
+      "name": "Relatório Expansão 2024.pdf",
+      "description": "Relatório de expansão da rede com obras realizadas e planejadas.",
+      "date": "2024-12-05",
+      "size_label": "2.8 MB",
+      "size_bytes": 2936013,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "cosern",
+        "name": "Neoenergia Cosern"
+      },
+      "superintendence": {
+        "id": "sup-operacoes-rn",
+        "name": "Superintendência de Operações"
+      },
+      "management": {
+        "id": "ger-distribuicao-rn",
+        "name": "Gerência de Distribuição"
+      },
+      "project": {
+        "id": "proj-expansao-rn",
+        "name": "Expansão da Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-cobertura",
+        "name": "Índice de Cobertura",
+        "value": "98.2",
+        "unit": "%",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Cosern",
+      "Superintendência de Operações",
+      "Gerência de Distribuição",
+      "Expansão da Rede",
+      "Relatório Expansão 2024.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-7",
+      "report_status": "approved",
+      "report": {
+        "name": "Relatório Expansão 2024.pdf",
+        "description": "Relatório de expansão da rede com obras realizadas e planejadas.",
+        "date": "2024-12-05",
+        "size_label": "2.8 MB",
+        "size_bytes": 2936013,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "cosern",
+          "name": "Neoenergia Cosern"
+        },
+        "superintendence": {
+          "id": "sup-operacoes-rn",
+          "name": "Superintendência de Operações"
+        },
+        "management": {
+          "id": "ger-distribuicao-rn",
+          "name": "Gerência de Distribuição"
+        },
+        "project": {
+          "id": "proj-expansao-rn",
+          "name": "Expansão da Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-cobertura",
+          "name": "Índice de Cobertura",
+          "value": "98.2",
+          "unit": "%",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Cosern",
+        "Superintendência de Operações",
+        "Gerência de Distribuição",
+        "Expansão da Rede",
+        "Relatório Expansão 2024.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-7",
+        "report_status": "approved",
+        "report": {
+          "name": "Relatório Expansão 2024.pdf",
+          "description": "Relatório de expansão da rede com obras realizadas e planejadas.",
+          "date": "2024-12-05",
+          "size_label": "2.8 MB",
+          "size_bytes": 2936013,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "cosern",
+            "name": "Neoenergia Cosern"
+          },
+          "superintendence": {
+            "id": "sup-operacoes-rn",
+            "name": "Superintendência de Operações"
+          },
+          "management": {
+            "id": "ger-distribuicao-rn",
+            "name": "Gerência de Distribuição"
+          },
+          "project": {
+            "id": "proj-expansao-rn",
+            "name": "Expansão da Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-cobertura",
+            "name": "Índice de Cobertura",
+            "value": "98.2",
+            "unit": "%",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Cosern",
+          "Superintendência de Operações",
+          "Gerência de Distribuição",
+          "Expansão da Rede",
+          "Relatório Expansão 2024.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-7",
+          "report_status": "approved",
+          "report": {
+            "name": "Relatório Expansão 2024.pdf",
+            "description": "Relatório de expansão da rede com obras realizadas e planejadas.",
+            "date": "2024-12-05",
+            "size_label": "2.8 MB",
+            "size_bytes": 2936013,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "cosern",
+              "name": "Neoenergia Cosern"
+            },
+            "superintendence": {
+              "id": "sup-operacoes-rn",
+              "name": "Superintendência de Operações"
+            },
+            "management": {
+              "id": "ger-distribuicao-rn",
+              "name": "Gerência de Distribuição"
+            },
+            "project": {
+              "id": "proj-expansao-rn",
+              "name": "Expansão da Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-cobertura",
+              "name": "Índice de Cobertura",
+              "value": "98.2",
+              "unit": "%",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Cosern",
+            "Superintendência de Operações",
+            "Gerência de Distribuição",
+            "Expansão da Rede",
+            "Relatório Expansão 2024.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-7",
+            "report_status": "approved",
+            "report": {
+              "name": "Relatório Expansão 2024.pdf",
+              "description": "Relatório de expansão da rede com obras realizadas e planejadas.",
+              "date": "2024-12-05",
+              "size_label": "2.8 MB",
+              "size_bytes": 2936013,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "cosern",
+                "name": "Neoenergia Cosern"
+              },
+              "superintendence": {
+                "id": "sup-operacoes-rn",
+                "name": "Superintendência de Operações"
+              },
+              "management": {
+                "id": "ger-distribuicao-rn",
+                "name": "Gerência de Distribuição"
+              },
+              "project": {
+                "id": "proj-expansao-rn",
+                "name": "Expansão da Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-cobertura",
+                "name": "Índice de Cobertura",
+                "value": "98.2",
+                "unit": "%",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Cosern",
+              "Superintendência de Operações",
+              "Gerência de Distribuição",
+              "Expansão da Rede",
+              "Relatório Expansão 2024.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-7",
+              "report_status": "approved",
+              "report": {
+                "name": "Relatório Expansão 2024.pdf",
+                "description": "Relatório de expansão da rede com obras realizadas e planejadas.",
+                "date": "2024-12-05",
+                "size_label": "2.8 MB",
+                "size_bytes": 2936013,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "cosern",
+                  "name": "Neoenergia Cosern"
+                },
+                "superintendence": {
+                  "id": "sup-operacoes-rn",
+                  "name": "Superintendência de Operações"
+                },
+                "management": {
+                  "id": "ger-distribuicao-rn",
+                  "name": "Gerência de Distribuição"
+                },
+                "project": {
+                  "id": "proj-expansao-rn",
+                  "name": "Expansão da Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-cobertura",
+                  "name": "Índice de Cobertura",
+                  "value": "98.2",
+                  "unit": "%",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Cosern",
+                "Superintendência de Operações",
+                "Gerência de Distribuição",
+                "Expansão da Rede",
+                "Relatório Expansão 2024.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-7",
+                "report_status": "approved",
+                "report": {
+                  "name": "Relatório Expansão 2024.pdf",
+                  "description": "Relatório de expansão da rede com obras realizadas e planejadas.",
+                  "date": "2024-12-05",
+                  "size_label": "2.8 MB",
+                  "size_bytes": 2936013,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "cosern",
+                    "name": "Neoenergia Cosern"
+                  },
+                  "superintendence": {
+                    "id": "sup-operacoes-rn",
+                    "name": "Superintendência de Operações"
+                  },
+                  "management": {
+                    "id": "ger-distribuicao-rn",
+                    "name": "Gerência de Distribuição"
+                  },
+                  "project": {
+                    "id": "proj-expansao-rn",
+                    "name": "Expansão da Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-cobertura",
+                    "name": "Índice de Cobertura",
+                    "value": "98.2",
+                    "unit": "%",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Cosern",
+                  "Superintendência de Operações",
+                  "Gerência de Distribuição",
+                  "Expansão da Rede",
+                  "Relatório Expansão 2024.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-7",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Relatório Expansão 2024.pdf",
+                    "description": "Relatório de expansão da rede com obras realizadas e planejadas.",
+                    "date": "2024-12-05",
+                    "size_label": "2.8 MB",
+                    "size_bytes": 2936013,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "cosern",
+                      "name": "Neoenergia Cosern"
+                    },
+                    "superintendence": {
+                      "id": "sup-operacoes-rn",
+                      "name": "Superintendência de Operações"
+                    },
+                    "management": {
+                      "id": "ger-distribuicao-rn",
+                      "name": "Gerência de Distribuição"
+                    },
+                    "project": {
+                      "id": "proj-expansao-rn",
+                      "name": "Expansão da Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-cobertura",
+                      "name": "Índice de Cobertura",
+                      "value": "98.2",
+                      "unit": "%",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Cosern",
+                    "Superintendência de Operações",
+                    "Gerência de Distribuição",
+                    "Expansão da Rede",
+                    "Relatório Expansão 2024.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-7",
+                    "name": "Relatório Expansão 2024.pdf",
+                    "date": "2024-12-05",
+                    "size": "2.8 MB",
+                    "description": "Relatório de expansão da rede com obras realizadas e planejadas.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.518Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.647Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.084Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.266Z"
+          },
+          "generated_at": "2026-04-03T14:08:35.278Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.124Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.668Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.879Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.011Z"
+}

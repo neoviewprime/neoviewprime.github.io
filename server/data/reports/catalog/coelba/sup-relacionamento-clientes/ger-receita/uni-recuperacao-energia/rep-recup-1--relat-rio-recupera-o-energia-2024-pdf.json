@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-recup-1",
+  "report_status": "approved",
+  "report": {
+    "name": "Relatório Recuperação Energia 2024.pdf",
+    "description": "Relatório anual de recuperação de energia com análise detalhada das ações realizadas e resultados obtidos.",
+    "date": "2024-12-15",
+    "size_label": "3.2 MB",
+    "size_bytes": 3355443,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-relacionamento-clientes",
+      "name": "Superintendência de Relacionamento com Clientes"
+    },
+    "management": {
+      "id": "ger-receita",
+      "name": "Gerência da Gestão da Receita"
+    },
+    "project": {
+      "id": "uni-recuperacao-energia",
+      "name": "Unidade Recuperação de Energia"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-recup-energia",
+      "name": "Taxa de Recuperação de Energia",
+      "value": "87.5",
+      "unit": "%",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência de Relacionamento com Clientes",
+    "Gerência da Gestão da Receita",
+    "Unidade Recuperação de Energia",
+    "Relatório Recuperação Energia 2024.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-recup-1",
+    "report_status": "approved",
+    "report": {
+      "name": "Relatório Recuperação Energia 2024.pdf",
+      "description": "Relatório anual de recuperação de energia com análise detalhada das ações realizadas e resultados obtidos.",
+      "date": "2024-12-15",
+      "size_label": "3.2 MB",
+      "size_bytes": 3355443,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-relacionamento-clientes",
+        "name": "Superintendência de Relacionamento com Clientes"
+      },
+      "management": {
+        "id": "ger-receita",
+        "name": "Gerência da Gestão da Receita"
+      },
+      "project": {
+        "id": "uni-recuperacao-energia",
+        "name": "Unidade Recuperação de Energia"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-recup-energia",
+        "name": "Taxa de Recuperação de Energia",
+        "value": "87.5",
+        "unit": "%",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência de Relacionamento com Clientes",
+      "Gerência da Gestão da Receita",
+      "Unidade Recuperação de Energia",
+      "Relatório Recuperação Energia 2024.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-recup-1",
+      "report_status": "approved",
+      "report": {
+        "name": "Relatório Recuperação Energia 2024.pdf",
+        "description": "Relatório anual de recuperação de energia com análise detalhada das ações realizadas e resultados obtidos.",
+        "date": "2024-12-15",
+        "size_label": "3.2 MB",
+        "size_bytes": 3355443,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-relacionamento-clientes",
+          "name": "Superintendência de Relacionamento com Clientes"
+        },
+        "management": {
+          "id": "ger-receita",
+          "name": "Gerência da Gestão da Receita"
+        },
+        "project": {
+          "id": "uni-recuperacao-energia",
+          "name": "Unidade Recuperação de Energia"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-recup-energia",
+          "name": "Taxa de Recuperação de Energia",
+          "value": "87.5",
+          "unit": "%",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência de Relacionamento com Clientes",
+        "Gerência da Gestão da Receita",
+        "Unidade Recuperação de Energia",
+        "Relatório Recuperação Energia 2024.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-recup-1",
+        "report_status": "approved",
+        "report": {
+          "name": "Relatório Recuperação Energia 2024.pdf",
+          "description": "Relatório anual de recuperação de energia com análise detalhada das ações realizadas e resultados obtidos.",
+          "date": "2024-12-15",
+          "size_label": "3.2 MB",
+          "size_bytes": 3355443,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-relacionamento-clientes",
+            "name": "Superintendência de Relacionamento com Clientes"
+          },
+          "management": {
+            "id": "ger-receita",
+            "name": "Gerência da Gestão da Receita"
+          },
+          "project": {
+            "id": "uni-recuperacao-energia",
+            "name": "Unidade Recuperação de Energia"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-recup-energia",
+            "name": "Taxa de Recuperação de Energia",
+            "value": "87.5",
+            "unit": "%",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência de Relacionamento com Clientes",
+          "Gerência da Gestão da Receita",
+          "Unidade Recuperação de Energia",
+          "Relatório Recuperação Energia 2024.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-recup-1",
+          "report_status": "approved",
+          "report": {
+            "name": "Relatório Recuperação Energia 2024.pdf",
+            "description": "Relatório anual de recuperação de energia com análise detalhada das ações realizadas e resultados obtidos.",
+            "date": "2024-12-15",
+            "size_label": "3.2 MB",
+            "size_bytes": 3355443,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-relacionamento-clientes",
+              "name": "Superintendência de Relacionamento com Clientes"
+            },
+            "management": {
+              "id": "ger-receita",
+              "name": "Gerência da Gestão da Receita"
+            },
+            "project": {
+              "id": "uni-recuperacao-energia",
+              "name": "Unidade Recuperação de Energia"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-recup-energia",
+              "name": "Taxa de Recuperação de Energia",
+              "value": "87.5",
+              "unit": "%",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência de Relacionamento com Clientes",
+            "Gerência da Gestão da Receita",
+            "Unidade Recuperação de Energia",
+            "Relatório Recuperação Energia 2024.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-recup-1",
+            "report_status": "approved",
+            "report": {
+              "name": "Relatório Recuperação Energia 2024.pdf",
+              "description": "Relatório anual de recuperação de energia com análise detalhada das ações realizadas e resultados obtidos.",
+              "date": "2024-12-15",
+              "size_label": "3.2 MB",
+              "size_bytes": 3355443,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-relacionamento-clientes",
+                "name": "Superintendência de Relacionamento com Clientes"
+              },
+              "management": {
+                "id": "ger-receita",
+                "name": "Gerência da Gestão da Receita"
+              },
+              "project": {
+                "id": "uni-recuperacao-energia",
+                "name": "Unidade Recuperação de Energia"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-recup-energia",
+                "name": "Taxa de Recuperação de Energia",
+                "value": "87.5",
+                "unit": "%",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência de Relacionamento com Clientes",
+              "Gerência da Gestão da Receita",
+              "Unidade Recuperação de Energia",
+              "Relatório Recuperação Energia 2024.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-recup-1",
+              "report_status": "approved",
+              "report": {
+                "name": "Relatório Recuperação Energia 2024.pdf",
+                "description": "Relatório anual de recuperação de energia com análise detalhada das ações realizadas e resultados obtidos.",
+                "date": "2024-12-15",
+                "size_label": "3.2 MB",
+                "size_bytes": 3355443,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-relacionamento-clientes",
+                  "name": "Superintendência de Relacionamento com Clientes"
+                },
+                "management": {
+                  "id": "ger-receita",
+                  "name": "Gerência da Gestão da Receita"
+                },
+                "project": {
+                  "id": "uni-recuperacao-energia",
+                  "name": "Unidade Recuperação de Energia"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-recup-energia",
+                  "name": "Taxa de Recuperação de Energia",
+                  "value": "87.5",
+                  "unit": "%",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência de Relacionamento com Clientes",
+                "Gerência da Gestão da Receita",
+                "Unidade Recuperação de Energia",
+                "Relatório Recuperação Energia 2024.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-recup-1",
+                "report_status": "approved",
+                "report": {
+                  "name": "Relatório Recuperação Energia 2024.pdf",
+                  "description": "Relatório anual de recuperação de energia com análise detalhada das ações realizadas e resultados obtidos.",
+                  "date": "2024-12-15",
+                  "size_label": "3.2 MB",
+                  "size_bytes": 3355443,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-relacionamento-clientes",
+                    "name": "Superintendência de Relacionamento com Clientes"
+                  },
+                  "management": {
+                    "id": "ger-receita",
+                    "name": "Gerência da Gestão da Receita"
+                  },
+                  "project": {
+                    "id": "uni-recuperacao-energia",
+                    "name": "Unidade Recuperação de Energia"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-recup-energia",
+                    "name": "Taxa de Recuperação de Energia",
+                    "value": "87.5",
+                    "unit": "%",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência de Relacionamento com Clientes",
+                  "Gerência da Gestão da Receita",
+                  "Unidade Recuperação de Energia",
+                  "Relatório Recuperação Energia 2024.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-recup-1",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Relatório Recuperação Energia 2024.pdf",
+                    "description": "Relatório anual de recuperação de energia com análise detalhada das ações realizadas e resultados obtidos.",
+                    "date": "2024-12-15",
+                    "size_label": "3.2 MB",
+                    "size_bytes": 3355443,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-relacionamento-clientes",
+                      "name": "Superintendência de Relacionamento com Clientes"
+                    },
+                    "management": {
+                      "id": "ger-receita",
+                      "name": "Gerência da Gestão da Receita"
+                    },
+                    "project": {
+                      "id": "uni-recuperacao-energia",
+                      "name": "Unidade Recuperação de Energia"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-recup-energia",
+                      "name": "Taxa de Recuperação de Energia",
+                      "value": "87.5",
+                      "unit": "%",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência de Relacionamento com Clientes",
+                    "Gerência da Gestão da Receita",
+                    "Unidade Recuperação de Energia",
+                    "Relatório Recuperação Energia 2024.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-recup-1",
+                    "name": "Relatório Recuperação Energia 2024.pdf",
+                    "date": "2024-12-15",
+                    "size": "3.2 MB",
+                    "description": "Relatório anual de recuperação de energia com análise detalhada das ações realizadas e resultados obtidos.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.861Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.970Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.423Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.709Z"
+          },
+          "generated_at": "2026-04-03T14:08:36.293Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.425Z"
+      },
+      "generated_at": "2026-04-03T14:44:32.074Z"
+    },
+    "generated_at": "2026-04-03T14:58:41.184Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.133Z"
+}

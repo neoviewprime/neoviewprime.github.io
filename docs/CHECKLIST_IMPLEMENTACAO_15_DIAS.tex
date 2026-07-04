@@ -1,0 +1,372 @@
+% ============================================================
+% NEOVIEW - CHECKLIST DE IMPLEMENTAÇÃO BACKEND
+% ============================================================
+% Período: 15 dias úteis
+% Estrutura: Frontend preparado + Integração Backend via Copilot
+% ============================================================
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[portuguese]{babel}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+
+\geometry{margin=2cm}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue}
+
+% Cores
+\definecolor{neogreen}{RGB}{0, 128, 64}
+\definecolor{neoblue}{RGB}{0, 64, 128}
+\definecolor{neoorange}{RGB}{255, 128, 0}
+
+% Checkbox commands
+\newcommand{\checkbox}{$\square$}
+\newcommand{\checkedbox}{$\boxtimes$}
+
+\title{\textbf{NeoView - Checklist de Implementação Backend}\\
+\large Período: 15 Dias Úteis}
+\author{Projeto: Plataforma de Relatórios Corporativos Neoenergia}
+\date{\today}
+
+\begin{document}
+
+\begin{tcolorbox}[colback=red!5!white,colframe=red,title=\textbf{Documento Historico}]
+Este checklist e legado e nao deve ser usado como fonte de verdade para a implantacao atual.
+Para a branch atual com SQLite, use `docs/SQLITE_COPILOT.md`, `docs/SQLITE_IMPLEMENTACAO.md`, `.github/copilot-instructions.md`, `README.md` e `server/README.md`.
+\end{tcolorbox}
+
+\maketitle
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=neoblue,title=\textbf{Visão Geral}]
+Este documento apresenta um checklist historico de implementacao do backend do NeoView. Na branch atual, o banco principal e SQLite e este arquivo nao deve ser usado como fonte principal de runtime.
+\end{tcolorbox}
+
+% ============================================================
+\section{Estrutura Atual do Frontend}
+% ============================================================
+
+O frontend foi preparado com os seguintes componentes prontos para integração:
+
+\subsection{Tipos TypeScript (src/types/backend.ts)}
+\begin{itemize}[label=\checkbox]
+    \item \texttt{User, UserRole, UserRoleAssignment} - Autenticação e roles
+    \item \texttt{CompanyEntity, SuperintendenceEntity, ManagementEntity, ProjectEntity} - Hierarquia
+    \item \texttt{IndicatorEntity} - Indicadores e métricas
+    \item \texttt{ReportEntity, ReportVersion, ReportApproval} - Relatórios e Validações
+    \item \texttt{ChatMessage, ChatSession, SearchSource} - Chatbot
+    \item \texttt{AuditLog, SystemSetting, UserPreference} - Configurações
+\end{itemize}
+
+\subsection{Hooks de Integração}
+\begin{itemize}[label=\checkbox]
+    \item \texttt{useAuth.tsx} - Autenticação completa com mock
+    \item \texttt{useReports.ts} - CRUD de relatórios
+    \item \texttt{useApprovals.ts} - Sistema de aprovação
+    \item \texttt{useChatbot.ts} - Busca semântica com IA
+\end{itemize}
+
+\subsection{Páginas Funcionais}
+\begin{itemize}[label=\checkbox]
+    \item \texttt{/dashboard} - Dashboard principal com navegação hierárquica
+    \item \texttt{/companies} - Gerenciamento de empresas
+    \item \texttt{/reports} - Listagem e upload de relatórios
+    \item \texttt{/indicators} - Visualização de indicadores
+    \item \texttt{/approvals} - Aprovação de relatórios (supervisores)
+    \item \texttt{/settings} - Configurações e supervisores
+\end{itemize}
+
+% ============================================================
+\section{Cronograma de Implementação - 15 Dias}
+% ============================================================
+
+\subsection{Dias 1-2: Configuração Inicial do Banco}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=neogreen]
+\textbf{Objetivo:} Criar estrutura base do PostgreSQL
+\end{tcolorbox}
+
+\begin{itemize}[label=\checkbox]
+    \item Criar tabela \texttt{profiles} vinculada a \texttt{auth.users}
+    \item Criar ENUM \texttt{app\_role} com valores: admin, supervisor, analyst, viewer
+    \item Criar tabela \texttt{user\_roles} com RLS
+    \item Criar função \texttt{has\_role()} SECURITY DEFINER
+    \item Configurar trigger para criar profile automaticamente no signup
+    \item Testar autenticação básica
+\end{itemize}
+
+\textbf{SQL de Referência:}
+\begin{verbatim}
+CREATE TYPE public.app_role AS ENUM ('admin', 'supervisor', 'analyst', 'viewer');
+
+CREATE TABLE public.profiles (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID REFERENCES auth.users(id) ON DELETE CASCADE UNIQUE,
+    full_name TEXT,
+    department TEXT,
+    phone TEXT,
+    avatar_url TEXT,
+    created_at TIMESTAMPTZ DEFAULT now(),
+    updated_at TIMESTAMPTZ DEFAULT now()
+);
+
+CREATE TABLE public.user_roles (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID REFERENCES public.profiles(user_id) ON DELETE CASCADE,
+    role app_role NOT NULL,
+    company_id UUID,
+    UNIQUE(user_id, role, company_id)
+);
+\end{verbatim}
+
+% ============================================================
+\subsection{Dias 3-4: Hierarquia Organizacional}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=neogreen]
+\textbf{Objetivo:} Criar tabelas de hierarquia (Company → Superintendence → Management → Project)
+\end{tcolorbox}
+
+\begin{itemize}[label=\checkbox]
+    \item Criar tabela \texttt{companies}
+    \item Criar tabela \texttt{superintendences} com FK para companies
+    \item Criar tabela \texttt{managements} com FK para superintendences
+    \item Criar tabela \texttt{projects} com FK para managements
+    \item Aplicar RLS em todas as tabelas (SELECT para authenticated)
+    \item Popular com dados iniciais das empresas Neoenergia
+    \item Atualizar hook \texttt{useAuth} para buscar dados reais
+\end{itemize}
+
+% ============================================================
+\subsection{Dias 5-6: Indicadores}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=neogreen]
+\textbf{Objetivo:} Sistema de indicadores com histórico
+\end{tcolorbox}
+
+\begin{itemize}[label=\checkbox]
+    \item Criar tabela \texttt{indicators} com FK para projects
+    \item Criar tabela \texttt{indicator\_history} para histórico de valores
+    \item Criar ENUMs: \texttt{indicator\_type}, \texttt{indicator\_trend}
+    \item Criar trigger para registrar histórico em updates
+    \item Implementar RLS: SELECT para todos, UPDATE para supervisors
+    \item Popular com indicadores exemplo (DEC, FEC, Perdas, etc.)
+    \item Conectar página \texttt{/indicators} aos dados reais
+\end{itemize}
+
+% ============================================================
+\subsection{Dias 7-9: Sistema de Relatórios PDF}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=neogreen]
+\textbf{Objetivo:} Upload, versionamento e aprovação de PDFs
+\end{tcolorbox}
+
+\begin{itemize}[label=\checkbox]
+    \item Criar bucket \texttt{reports} no Storage
+    \item Configurar políticas de acesso ao bucket
+    \item Criar tabela \texttt{reports} com metadados
+    \item Criar tabela \texttt{report\_versions} para versionamento
+    \item Criar ENUM \texttt{report\_status}: draft, pending\_approval, approved, rejected, archived
+    \item Implementar upload via Edge Function ou direto do frontend
+    \item Criar tabela \texttt{report\_approvals}
+    \item Atualizar \texttt{useReports} para calls reais
+\end{itemize}
+
+\textbf{Fluxo de Upload:}
+\begin{enumerate}
+    \item Frontend captura arquivo PDF
+    \item Upload para \texttt{storage.from('reports')}
+    \item Inserir registro em \texttt{reports} com status \texttt{draft}
+    \item Usuário submete para aprovação → status \texttt{pending\_approval}
+    \item Supervisor aprova/rejeita → atualiza status
+\end{enumerate}
+
+% ============================================================
+\subsection{Dias 10-11: Sistema de Aprovação}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=neogreen]
+\textbf{Objetivo:} Workflow de aprovação por supervisores
+\end{tcolorbox}
+
+\begin{itemize}[label=\checkbox]
+    \item Criar tabela \texttt{area\_supervisors} (quem pode aprovar onde)
+    \item Implementar função \texttt{is\_supervisor\_for(entity\_type, entity\_id)}
+    \item Criar políticas RLS baseadas em área
+    \item Implementar notificação de nova aprovação pendente
+    \item Criar trigger para atualizar status do relatório após decisão
+    \item Atualizar \texttt{useApprovals} para dados reais
+    \item Testar fluxo completo: upload → submissão → aprovação
+\end{itemize}
+
+% ============================================================
+\subsection{Dias 12-13: Chatbot com Busca Semântica}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=neogreen]
+\textbf{Objetivo:} Integrar IA para busca em linguagem natural
+\end{tcolorbox}
+
+\begin{itemize}[label=\checkbox]
+    \item Criar Edge Function \texttt{/functions/chat}
+    \item Configurar chamada ao gateway de IA definido para o projeto
+    \item Implementar busca de contexto (indicadores, relatórios)
+    \item Criar tabelas \texttt{chat\_sessions} e \texttt{chat\_messages}
+    \item Implementar prompt de sistema com instruções
+    \item Atualizar \texttt{useChatbot} para Edge Function real
+    \item Testar buscas: "Qual o DEC da Coelba?", "Relatórios de perdas"
+\end{itemize}
+
+\textbf{Estrutura da Edge Function:}
+\begin{verbatim}
+// supabase/functions/chat/index.ts
+const response = await fetch(process.env.CHAT_GATEWAY_URL, {
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${Deno.env.get('CHAT_GATEWAY_API_KEY')}`,
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    model: 'google/gemini-3-flash-preview',
+    messages: [...history, { role: 'user', content: userMessage }],
+    max_tokens: 1000,
+  }),
+});
+\end{verbatim}
+
+% ============================================================
+\subsection{Dias 14-15: Auditoria, Testes e Deploy}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=neogreen]
+\textbf{Objetivo:} Finalização, logs e qualidade
+\end{tcolorbox}
+
+\begin{itemize}[label=\checkbox]
+    \item Criar tabela \texttt{audit\_logs}
+    \item Implementar trigger para log automático de operações
+    \item Criar tabelas \texttt{system\_settings} e \texttt{user\_preferences}
+    \item Revisar todas as políticas RLS
+    \item Executar linter de segurança do Supabase
+    \item Testar fluxos end-to-end
+    \item Documentar endpoints e estrutura
+    \item Publicar versão de produção
+\end{itemize}
+
+% ============================================================
+\section{Secao Historica de Integracao}
+% ============================================================
+
+\begin{tcolorbox}[colback=orange!5!white,colframe=neoorange,title=\textbf{Conteudo historico}]
+Esta secao foi mantida apenas como registro historico e nao representa o fluxo atual da branch SQLite.
+\end{tcolorbox}
+
+\subsection{Mapeamento de Tipos}
+
+\begin{center}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Origem antiga} & \textbf{Destino antigo} & \textbf{Notas} \\
+\hline
+UUID & NVARCHAR(36) & Converter para string \\
+TIMESTAMPTZ & TIMESTAMP & Timezone UTC \\
+TEXT & NCLOB & Para textos longos \\
+JSONB & NCLOB & Serializar como JSON string \\
+BOOLEAN & TINYINT & 0/1 \\
+NUMERIC & DECIMAL(18,4) & Precisão adequada \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Schema historico (NEOVIEW)}
+
+\begin{itemize}[label=\checkbox]
+    \item Criar schema \texttt{NEOVIEW}
+    \item Criar tabela \texttt{NEOVIEW.T\_USERS}
+    \item Criar tabela \texttt{NEOVIEW.T\_COMPANIES}
+    \item Criar tabela \texttt{NEOVIEW.T\_HIERARCHY} (desnormalizada)
+    \item Criar tabela \texttt{NEOVIEW.T\_INDICATORS}
+    \item Criar tabela \texttt{NEOVIEW.T\_REPORTS}
+    \item Criar tabela \texttt{NEOVIEW.T\_SYNC\_LOG}
+    \item Criar views analíticas
+\end{itemize}
+
+\subsection{Estratégias de Sincronização}
+
+\textbf{1. Carga Inicial (Full Load):}
+\begin{itemize}[label=\checkbox]
+    \item Exportar dados via \texttt{pg\_dump} ou queries
+    \item Transformar UUIDs e JSONBs
+    \item Importar via DBeaver ou script ETL
+\end{itemize}
+
+\textbf{2. Carga Incremental (Delta - a cada 15min):}
+\begin{itemize}[label=\checkbox]
+    \item Criar Edge Function \texttt{/functions/sync-hana}
+    \item Rastrear \texttt{updated\_at > last\_sync}
+    \item Gerar payload JSON para consumo
+    \item Registrar em \texttt{NEOVIEW.T\_SYNC\_LOG}
+\end{itemize}
+
+\textbf{3. Tempo Real (CDC - opcional):}
+\begin{itemize}[label=\checkbox]
+    \item Configurar Realtime no Supabase para tabelas críticas
+    \item Criar webhook para enviar mudanças
+    \item Processar via middleware ou API intermediária
+\end{itemize}
+
+% ============================================================
+\section{Arquivos de Referência no Projeto}
+% ============================================================
+
+\begin{tcolorbox}[colback=blue!5!white,colframe=neoblue]
+\textbf{Ao clonar do GitHub, consulte estes arquivos:}
+\end{tcolorbox}
+
+\begin{itemize}
+    \item \texttt{src/types/backend.ts} - Todos os tipos com comentários de mapeamento SQL
+    \item \texttt{src/hooks/useAuth.tsx} - Instruções de integração nos comentários
+    \item \texttt{src/hooks/useReports.ts} - Exemplos de queries Supabase
+    \item \texttt{src/hooks/useApprovals.ts} - Lógica de aprovação
+    \item \texttt{src/hooks/useChatbot.ts} - Estrutura da Edge Function de chat
+\end{itemize}
+
+% ============================================================
+\section{Comandos Úteis para Copilot}
+% ============================================================
+
+\begin{tcolorbox}[colback=gray!10!white,colframe=gray!50!black]
+\textbf{Prompts recomendados para o GitHub Copilot:}
+\end{tcolorbox}
+
+\begin{enumerate}
+    \item "Substituir mock data em useAuth por chamadas reais ao Supabase"
+    \item "Criar migration SQL para tabela reports baseada em ReportEntity"
+    \item "Implementar upload de PDF para Supabase Storage"
+    \item "Criar Edge Function para chat com o gateway de IA do projeto"
+    \item "Adicionar RLS policies para tabela reports permitindo SELECT para authenticated e UPDATE para owner"
+\end{enumerate}
+
+% ============================================================
+\section{Checklist Final de Qualidade}
+% ============================================================
+
+\begin{itemize}[label=\checkbox]
+    \item Todas as tabelas têm RLS habilitado
+    \item Roles são verificados via função server-side (não client-side)
+    \item Secrets estão em variáveis de ambiente
+    \item Edge Functions validam autenticação
+    \item Uploads de PDF limitados a mime-type application/pdf
+    \item Chatbot tem limite de tokens configurado
+    \item Logs de auditoria funcionando
+    \item Testes de fluxo end-to-end passando
+    \item Documentação de API atualizada
+\end{itemize}
+
+\vspace{1cm}
+\begin{center}
+\textit{Documento gerado automaticamente pelo NeoView}\\
+\textit{Versão 1.0 - \today}
+\end{center}
+
+\end{document}

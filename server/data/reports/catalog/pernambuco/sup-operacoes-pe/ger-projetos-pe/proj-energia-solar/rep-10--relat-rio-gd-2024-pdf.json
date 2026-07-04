@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-10",
+  "report_status": "approved",
+  "report": {
+    "name": "Relatório GD 2024.pdf",
+    "description": "Relatório anual de geração distribuída com análise de crescimento.",
+    "date": "2024-12-08",
+    "size_label": "2.1 MB",
+    "size_bytes": 2202010,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "pernambuco",
+      "name": "Neoenergia Pernambuco"
+    },
+    "superintendence": {
+      "id": "sup-operacoes-pe",
+      "name": "Superintendência de Operações"
+    },
+    "management": {
+      "id": "ger-projetos-pe",
+      "name": "Gerência de Projetos"
+    },
+    "project": {
+      "id": "proj-energia-solar",
+      "name": "Energia Solar Distribuída"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-gd",
+      "name": "Conexões GD",
+      "value": "15420",
+      "unit": "unidades",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Pernambuco",
+    "Superintendência de Operações",
+    "Gerência de Projetos",
+    "Energia Solar Distribuída",
+    "Relatório GD 2024.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-10",
+    "report_status": "approved",
+    "report": {
+      "name": "Relatório GD 2024.pdf",
+      "description": "Relatório anual de geração distribuída com análise de crescimento.",
+      "date": "2024-12-08",
+      "size_label": "2.1 MB",
+      "size_bytes": 2202010,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "pernambuco",
+        "name": "Neoenergia Pernambuco"
+      },
+      "superintendence": {
+        "id": "sup-operacoes-pe",
+        "name": "Superintendência de Operações"
+      },
+      "management": {
+        "id": "ger-projetos-pe",
+        "name": "Gerência de Projetos"
+      },
+      "project": {
+        "id": "proj-energia-solar",
+        "name": "Energia Solar Distribuída"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-gd",
+        "name": "Conexões GD",
+        "value": "15420",
+        "unit": "unidades",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Pernambuco",
+      "Superintendência de Operações",
+      "Gerência de Projetos",
+      "Energia Solar Distribuída",
+      "Relatório GD 2024.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-10",
+      "report_status": "approved",
+      "report": {
+        "name": "Relatório GD 2024.pdf",
+        "description": "Relatório anual de geração distribuída com análise de crescimento.",
+        "date": "2024-12-08",
+        "size_label": "2.1 MB",
+        "size_bytes": 2202010,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "pernambuco",
+          "name": "Neoenergia Pernambuco"
+        },
+        "superintendence": {
+          "id": "sup-operacoes-pe",
+          "name": "Superintendência de Operações"
+        },
+        "management": {
+          "id": "ger-projetos-pe",
+          "name": "Gerência de Projetos"
+        },
+        "project": {
+          "id": "proj-energia-solar",
+          "name": "Energia Solar Distribuída"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-gd",
+          "name": "Conexões GD",
+          "value": "15420",
+          "unit": "unidades",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Pernambuco",
+        "Superintendência de Operações",
+        "Gerência de Projetos",
+        "Energia Solar Distribuída",
+        "Relatório GD 2024.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-10",
+        "report_status": "approved",
+        "report": {
+          "name": "Relatório GD 2024.pdf",
+          "description": "Relatório anual de geração distribuída com análise de crescimento.",
+          "date": "2024-12-08",
+          "size_label": "2.1 MB",
+          "size_bytes": 2202010,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "pernambuco",
+            "name": "Neoenergia Pernambuco"
+          },
+          "superintendence": {
+            "id": "sup-operacoes-pe",
+            "name": "Superintendência de Operações"
+          },
+          "management": {
+            "id": "ger-projetos-pe",
+            "name": "Gerência de Projetos"
+          },
+          "project": {
+            "id": "proj-energia-solar",
+            "name": "Energia Solar Distribuída"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-gd",
+            "name": "Conexões GD",
+            "value": "15420",
+            "unit": "unidades",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Pernambuco",
+          "Superintendência de Operações",
+          "Gerência de Projetos",
+          "Energia Solar Distribuída",
+          "Relatório GD 2024.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-10",
+          "report_status": "approved",
+          "report": {
+            "name": "Relatório GD 2024.pdf",
+            "description": "Relatório anual de geração distribuída com análise de crescimento.",
+            "date": "2024-12-08",
+            "size_label": "2.1 MB",
+            "size_bytes": 2202010,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "pernambuco",
+              "name": "Neoenergia Pernambuco"
+            },
+            "superintendence": {
+              "id": "sup-operacoes-pe",
+              "name": "Superintendência de Operações"
+            },
+            "management": {
+              "id": "ger-projetos-pe",
+              "name": "Gerência de Projetos"
+            },
+            "project": {
+              "id": "proj-energia-solar",
+              "name": "Energia Solar Distribuída"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-gd",
+              "name": "Conexões GD",
+              "value": "15420",
+              "unit": "unidades",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Pernambuco",
+            "Superintendência de Operações",
+            "Gerência de Projetos",
+            "Energia Solar Distribuída",
+            "Relatório GD 2024.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-10",
+            "report_status": "approved",
+            "report": {
+              "name": "Relatório GD 2024.pdf",
+              "description": "Relatório anual de geração distribuída com análise de crescimento.",
+              "date": "2024-12-08",
+              "size_label": "2.1 MB",
+              "size_bytes": 2202010,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "pernambuco",
+                "name": "Neoenergia Pernambuco"
+              },
+              "superintendence": {
+                "id": "sup-operacoes-pe",
+                "name": "Superintendência de Operações"
+              },
+              "management": {
+                "id": "ger-projetos-pe",
+                "name": "Gerência de Projetos"
+              },
+              "project": {
+                "id": "proj-energia-solar",
+                "name": "Energia Solar Distribuída"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-gd",
+                "name": "Conexões GD",
+                "value": "15420",
+                "unit": "unidades",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Pernambuco",
+              "Superintendência de Operações",
+              "Gerência de Projetos",
+              "Energia Solar Distribuída",
+              "Relatório GD 2024.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-10",
+              "report_status": "approved",
+              "report": {
+                "name": "Relatório GD 2024.pdf",
+                "description": "Relatório anual de geração distribuída com análise de crescimento.",
+                "date": "2024-12-08",
+                "size_label": "2.1 MB",
+                "size_bytes": 2202010,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "pernambuco",
+                  "name": "Neoenergia Pernambuco"
+                },
+                "superintendence": {
+                  "id": "sup-operacoes-pe",
+                  "name": "Superintendência de Operações"
+                },
+                "management": {
+                  "id": "ger-projetos-pe",
+                  "name": "Gerência de Projetos"
+                },
+                "project": {
+                  "id": "proj-energia-solar",
+                  "name": "Energia Solar Distribuída"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-gd",
+                  "name": "Conexões GD",
+                  "value": "15420",
+                  "unit": "unidades",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Pernambuco",
+                "Superintendência de Operações",
+                "Gerência de Projetos",
+                "Energia Solar Distribuída",
+                "Relatório GD 2024.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-10",
+                "report_status": "approved",
+                "report": {
+                  "name": "Relatório GD 2024.pdf",
+                  "description": "Relatório anual de geração distribuída com análise de crescimento.",
+                  "date": "2024-12-08",
+                  "size_label": "2.1 MB",
+                  "size_bytes": 2202010,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "pernambuco",
+                    "name": "Neoenergia Pernambuco"
+                  },
+                  "superintendence": {
+                    "id": "sup-operacoes-pe",
+                    "name": "Superintendência de Operações"
+                  },
+                  "management": {
+                    "id": "ger-projetos-pe",
+                    "name": "Gerência de Projetos"
+                  },
+                  "project": {
+                    "id": "proj-energia-solar",
+                    "name": "Energia Solar Distribuída"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-gd",
+                    "name": "Conexões GD",
+                    "value": "15420",
+                    "unit": "unidades",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Pernambuco",
+                  "Superintendência de Operações",
+                  "Gerência de Projetos",
+                  "Energia Solar Distribuída",
+                  "Relatório GD 2024.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-10",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Relatório GD 2024.pdf",
+                    "description": "Relatório anual de geração distribuída com análise de crescimento.",
+                    "date": "2024-12-08",
+                    "size_label": "2.1 MB",
+                    "size_bytes": 2202010,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "pernambuco",
+                      "name": "Neoenergia Pernambuco"
+                    },
+                    "superintendence": {
+                      "id": "sup-operacoes-pe",
+                      "name": "Superintendência de Operações"
+                    },
+                    "management": {
+                      "id": "ger-projetos-pe",
+                      "name": "Gerência de Projetos"
+                    },
+                    "project": {
+                      "id": "proj-energia-solar",
+                      "name": "Energia Solar Distribuída"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-gd",
+                      "name": "Conexões GD",
+                      "value": "15420",
+                      "unit": "unidades",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Pernambuco",
+                    "Superintendência de Operações",
+                    "Gerência de Projetos",
+                    "Energia Solar Distribuída",
+                    "Relatório GD 2024.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-10",
+                    "name": "Relatório GD 2024.pdf",
+                    "date": "2024-12-08",
+                    "size": "2.1 MB",
+                    "description": "Relatório anual de geração distribuída com análise de crescimento.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:22.922Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.200Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.684Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.722Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.760Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.728Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.273Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.487Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.802Z"
+}

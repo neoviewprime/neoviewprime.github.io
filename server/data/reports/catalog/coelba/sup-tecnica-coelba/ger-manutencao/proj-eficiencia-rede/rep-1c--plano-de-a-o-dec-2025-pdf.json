@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-1c",
+  "report_status": "approved",
+  "report": {
+    "name": "Plano de Ação DEC 2025.pdf",
+    "description": "Plano de ação para redução do DEC em 2025 com metas e investimentos previstos.",
+    "date": "2024-12-22",
+    "size_label": "2.1 MB",
+    "size_bytes": 2202010,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendência Técnica Coelba"
+    },
+    "management": {
+      "id": "ger-manutencao",
+      "name": "Gerência de Manutenção"
+    },
+    "project": {
+      "id": "proj-eficiencia-rede",
+      "name": "Eficiência de Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-dec",
+      "name": "DEC - Duração Equivalente por Consumidor",
+      "value": "12.5",
+      "unit": "horas",
+      "trend": "down"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Técnica Coelba",
+    "Gerência de Manutenção",
+    "Eficiência de Rede",
+    "Plano de Ação DEC 2025.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-1c",
+    "report_status": "approved",
+    "report": {
+      "name": "Plano de Ação DEC 2025.pdf",
+      "description": "Plano de ação para redução do DEC em 2025 com metas e investimentos previstos.",
+      "date": "2024-12-22",
+      "size_label": "2.1 MB",
+      "size_bytes": 2202010,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendência Técnica Coelba"
+      },
+      "management": {
+        "id": "ger-manutencao",
+        "name": "Gerência de Manutenção"
+      },
+      "project": {
+        "id": "proj-eficiencia-rede",
+        "name": "Eficiência de Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-dec",
+        "name": "DEC - Duração Equivalente por Consumidor",
+        "value": "12.5",
+        "unit": "horas",
+        "trend": "down"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Técnica Coelba",
+      "Gerência de Manutenção",
+      "Eficiência de Rede",
+      "Plano de Ação DEC 2025.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-1c",
+      "report_status": "approved",
+      "report": {
+        "name": "Plano de Ação DEC 2025.pdf",
+        "description": "Plano de ação para redução do DEC em 2025 com metas e investimentos previstos.",
+        "date": "2024-12-22",
+        "size_label": "2.1 MB",
+        "size_bytes": 2202010,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendência Técnica Coelba"
+        },
+        "management": {
+          "id": "ger-manutencao",
+          "name": "Gerência de Manutenção"
+        },
+        "project": {
+          "id": "proj-eficiencia-rede",
+          "name": "Eficiência de Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-dec",
+          "name": "DEC - Duração Equivalente por Consumidor",
+          "value": "12.5",
+          "unit": "horas",
+          "trend": "down"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Técnica Coelba",
+        "Gerência de Manutenção",
+        "Eficiência de Rede",
+        "Plano de Ação DEC 2025.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-1c",
+        "report_status": "approved",
+        "report": {
+          "name": "Plano de Ação DEC 2025.pdf",
+          "description": "Plano de ação para redução do DEC em 2025 com metas e investimentos previstos.",
+          "date": "2024-12-22",
+          "size_label": "2.1 MB",
+          "size_bytes": 2202010,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendência Técnica Coelba"
+          },
+          "management": {
+            "id": "ger-manutencao",
+            "name": "Gerência de Manutenção"
+          },
+          "project": {
+            "id": "proj-eficiencia-rede",
+            "name": "Eficiência de Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-dec",
+            "name": "DEC - Duração Equivalente por Consumidor",
+            "value": "12.5",
+            "unit": "horas",
+            "trend": "down"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Técnica Coelba",
+          "Gerência de Manutenção",
+          "Eficiência de Rede",
+          "Plano de Ação DEC 2025.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-1c",
+          "report_status": "approved",
+          "report": {
+            "name": "Plano de Ação DEC 2025.pdf",
+            "description": "Plano de ação para redução do DEC em 2025 com metas e investimentos previstos.",
+            "date": "2024-12-22",
+            "size_label": "2.1 MB",
+            "size_bytes": 2202010,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendência Técnica Coelba"
+            },
+            "management": {
+              "id": "ger-manutencao",
+              "name": "Gerência de Manutenção"
+            },
+            "project": {
+              "id": "proj-eficiencia-rede",
+              "name": "Eficiência de Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-dec",
+              "name": "DEC - Duração Equivalente por Consumidor",
+              "value": "12.5",
+              "unit": "horas",
+              "trend": "down"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Técnica Coelba",
+            "Gerência de Manutenção",
+            "Eficiência de Rede",
+            "Plano de Ação DEC 2025.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-1c",
+            "report_status": "approved",
+            "report": {
+              "name": "Plano de Ação DEC 2025.pdf",
+              "description": "Plano de ação para redução do DEC em 2025 com metas e investimentos previstos.",
+              "date": "2024-12-22",
+              "size_label": "2.1 MB",
+              "size_bytes": 2202010,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendência Técnica Coelba"
+              },
+              "management": {
+                "id": "ger-manutencao",
+                "name": "Gerência de Manutenção"
+              },
+              "project": {
+                "id": "proj-eficiencia-rede",
+                "name": "Eficiência de Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-dec",
+                "name": "DEC - Duração Equivalente por Consumidor",
+                "value": "12.5",
+                "unit": "horas",
+                "trend": "down"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Técnica Coelba",
+              "Gerência de Manutenção",
+              "Eficiência de Rede",
+              "Plano de Ação DEC 2025.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-1c",
+              "report_status": "approved",
+              "report": {
+                "name": "Plano de Ação DEC 2025.pdf",
+                "description": "Plano de ação para redução do DEC em 2025 com metas e investimentos previstos.",
+                "date": "2024-12-22",
+                "size_label": "2.1 MB",
+                "size_bytes": 2202010,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendência Técnica Coelba"
+                },
+                "management": {
+                  "id": "ger-manutencao",
+                  "name": "Gerência de Manutenção"
+                },
+                "project": {
+                  "id": "proj-eficiencia-rede",
+                  "name": "Eficiência de Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-dec",
+                  "name": "DEC - Duração Equivalente por Consumidor",
+                  "value": "12.5",
+                  "unit": "horas",
+                  "trend": "down"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Técnica Coelba",
+                "Gerência de Manutenção",
+                "Eficiência de Rede",
+                "Plano de Ação DEC 2025.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-1c",
+                "report_status": "approved",
+                "report": {
+                  "name": "Plano de Ação DEC 2025.pdf",
+                  "description": "Plano de ação para redução do DEC em 2025 com metas e investimentos previstos.",
+                  "date": "2024-12-22",
+                  "size_label": "2.1 MB",
+                  "size_bytes": 2202010,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendência Técnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-manutencao",
+                    "name": "Gerência de Manutenção"
+                  },
+                  "project": {
+                    "id": "proj-eficiencia-rede",
+                    "name": "Eficiência de Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-dec",
+                    "name": "DEC - Duração Equivalente por Consumidor",
+                    "value": "12.5",
+                    "unit": "horas",
+                    "trend": "down"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Técnica Coelba",
+                  "Gerência de Manutenção",
+                  "Eficiência de Rede",
+                  "Plano de Ação DEC 2025.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-1c",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Plano de Ação DEC 2025.pdf",
+                    "description": "Plano de ação para redução do DEC em 2025 com metas e investimentos previstos.",
+                    "date": "2024-12-22",
+                    "size_label": "2.1 MB",
+                    "size_bytes": 2202010,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendência Técnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-manutencao",
+                      "name": "Gerência de Manutenção"
+                    },
+                    "project": {
+                      "id": "proj-eficiencia-rede",
+                      "name": "Eficiência de Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-dec",
+                      "name": "DEC - Duração Equivalente por Consumidor",
+                      "value": "12.5",
+                      "unit": "horas",
+                      "trend": "down"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Técnica Coelba",
+                    "Gerência de Manutenção",
+                    "Eficiência de Rede",
+                    "Plano de Ação DEC 2025.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-1c",
+                    "name": "Plano de Ação DEC 2025.pdf",
+                    "date": "2024-12-22",
+                    "size": "2.1 MB",
+                    "description": "Plano de ação para redução do DEC em 2025 com metas e investimentos previstos.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.032Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.341Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.797Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.894Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.897Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.839Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.386Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.601Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.864Z"
+}

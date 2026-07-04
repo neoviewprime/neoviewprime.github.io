@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-5",
+  "report_status": "approved",
+  "report": {
+    "name": "Pesquisa Satisfação 2024.pdf",
+    "description": "Resultado completo da pesquisa de satisfação anual com análise de todos os aspectos avaliados.",
+    "date": "2024-12-10",
+    "size_label": "4.1 MB",
+    "size_bytes": 4299162,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendência Técnica Coelba"
+    },
+    "management": {
+      "id": "ger-qualidade",
+      "name": "Gerência de Qualidade"
+    },
+    "project": {
+      "id": "proj-satisfacao",
+      "name": "Satisfação do Cliente"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-isqp",
+      "name": "ISQP - Índice de Satisfação",
+      "value": "78.5",
+      "unit": "%",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 2,
+    "comments": 0,
+    "likes": 1,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Técnica Coelba",
+    "Gerência de Qualidade",
+    "Satisfação do Cliente",
+    "Pesquisa Satisfação 2024.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-5",
+    "report_status": "approved",
+    "report": {
+      "name": "Pesquisa Satisfação 2024.pdf",
+      "description": "Resultado completo da pesquisa de satisfação anual com análise de todos os aspectos avaliados.",
+      "date": "2024-12-10",
+      "size_label": "4.1 MB",
+      "size_bytes": 4299162,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendência Técnica Coelba"
+      },
+      "management": {
+        "id": "ger-qualidade",
+        "name": "Gerência de Qualidade"
+      },
+      "project": {
+        "id": "proj-satisfacao",
+        "name": "Satisfação do Cliente"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-isqp",
+        "name": "ISQP - Índice de Satisfação",
+        "value": "78.5",
+        "unit": "%",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 2,
+      "comments": 0,
+      "likes": 1,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Técnica Coelba",
+      "Gerência de Qualidade",
+      "Satisfação do Cliente",
+      "Pesquisa Satisfação 2024.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-5",
+      "report_status": "approved",
+      "report": {
+        "name": "Pesquisa Satisfação 2024.pdf",
+        "description": "Resultado completo da pesquisa de satisfação anual com análise de todos os aspectos avaliados.",
+        "date": "2024-12-10",
+        "size_label": "4.1 MB",
+        "size_bytes": 4299162,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendência Técnica Coelba"
+        },
+        "management": {
+          "id": "ger-qualidade",
+          "name": "Gerência de Qualidade"
+        },
+        "project": {
+          "id": "proj-satisfacao",
+          "name": "Satisfação do Cliente"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-isqp",
+          "name": "ISQP - Índice de Satisfação",
+          "value": "78.5",
+          "unit": "%",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 2,
+        "comments": 0,
+        "likes": 1,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Técnica Coelba",
+        "Gerência de Qualidade",
+        "Satisfação do Cliente",
+        "Pesquisa Satisfação 2024.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-5",
+        "report_status": "approved",
+        "report": {
+          "name": "Pesquisa Satisfação 2024.pdf",
+          "description": "Resultado completo da pesquisa de satisfação anual com análise de todos os aspectos avaliados.",
+          "date": "2024-12-10",
+          "size_label": "4.1 MB",
+          "size_bytes": 4299162,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendência Técnica Coelba"
+          },
+          "management": {
+            "id": "ger-qualidade",
+            "name": "Gerência de Qualidade"
+          },
+          "project": {
+            "id": "proj-satisfacao",
+            "name": "Satisfação do Cliente"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-isqp",
+            "name": "ISQP - Índice de Satisfação",
+            "value": "78.5",
+            "unit": "%",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 2,
+          "comments": 0,
+          "likes": 1,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Técnica Coelba",
+          "Gerência de Qualidade",
+          "Satisfação do Cliente",
+          "Pesquisa Satisfação 2024.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-5",
+          "report_status": "approved",
+          "report": {
+            "name": "Pesquisa Satisfação 2024.pdf",
+            "description": "Resultado completo da pesquisa de satisfação anual com análise de todos os aspectos avaliados.",
+            "date": "2024-12-10",
+            "size_label": "4.1 MB",
+            "size_bytes": 4299162,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendência Técnica Coelba"
+            },
+            "management": {
+              "id": "ger-qualidade",
+              "name": "Gerência de Qualidade"
+            },
+            "project": {
+              "id": "proj-satisfacao",
+              "name": "Satisfação do Cliente"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-isqp",
+              "name": "ISQP - Índice de Satisfação",
+              "value": "78.5",
+              "unit": "%",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 2,
+            "comments": 0,
+            "likes": 1,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Técnica Coelba",
+            "Gerência de Qualidade",
+            "Satisfação do Cliente",
+            "Pesquisa Satisfação 2024.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-5",
+            "report_status": "approved",
+            "report": {
+              "name": "Pesquisa Satisfação 2024.pdf",
+              "description": "Resultado completo da pesquisa de satisfação anual com análise de todos os aspectos avaliados.",
+              "date": "2024-12-10",
+              "size_label": "4.1 MB",
+              "size_bytes": 4299162,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendência Técnica Coelba"
+              },
+              "management": {
+                "id": "ger-qualidade",
+                "name": "Gerência de Qualidade"
+              },
+              "project": {
+                "id": "proj-satisfacao",
+                "name": "Satisfação do Cliente"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-isqp",
+                "name": "ISQP - Índice de Satisfação",
+                "value": "78.5",
+                "unit": "%",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 2,
+              "comments": 0,
+              "likes": 1,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Técnica Coelba",
+              "Gerência de Qualidade",
+              "Satisfação do Cliente",
+              "Pesquisa Satisfação 2024.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-5",
+              "report_status": "approved",
+              "report": {
+                "name": "Pesquisa Satisfação 2024.pdf",
+                "description": "Resultado completo da pesquisa de satisfação anual com análise de todos os aspectos avaliados.",
+                "date": "2024-12-10",
+                "size_label": "4.1 MB",
+                "size_bytes": 4299162,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendência Técnica Coelba"
+                },
+                "management": {
+                  "id": "ger-qualidade",
+                  "name": "Gerência de Qualidade"
+                },
+                "project": {
+                  "id": "proj-satisfacao",
+                  "name": "Satisfação do Cliente"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-isqp",
+                  "name": "ISQP - Índice de Satisfação",
+                  "value": "78.5",
+                  "unit": "%",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 2,
+                "comments": 0,
+                "likes": 1,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Técnica Coelba",
+                "Gerência de Qualidade",
+                "Satisfação do Cliente",
+                "Pesquisa Satisfação 2024.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-5",
+                "report_status": "approved",
+                "report": {
+                  "name": "Pesquisa Satisfação 2024.pdf",
+                  "description": "Resultado completo da pesquisa de satisfação anual com análise de todos os aspectos avaliados.",
+                  "date": "2024-12-10",
+                  "size_label": "4.1 MB",
+                  "size_bytes": 4299162,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendência Técnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-qualidade",
+                    "name": "Gerência de Qualidade"
+                  },
+                  "project": {
+                    "id": "proj-satisfacao",
+                    "name": "Satisfação do Cliente"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-isqp",
+                    "name": "ISQP - Índice de Satisfação",
+                    "value": "78.5",
+                    "unit": "%",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 2,
+                  "comments": 0,
+                  "likes": 1,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Técnica Coelba",
+                  "Gerência de Qualidade",
+                  "Satisfação do Cliente",
+                  "Pesquisa Satisfação 2024.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-5",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Pesquisa Satisfação 2024.pdf",
+                    "description": "Resultado completo da pesquisa de satisfação anual com análise de todos os aspectos avaliados.",
+                    "date": "2024-12-10",
+                    "size_label": "4.1 MB",
+                    "size_bytes": 4299162,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendência Técnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-qualidade",
+                      "name": "Gerência de Qualidade"
+                    },
+                    "project": {
+                      "id": "proj-satisfacao",
+                      "name": "Satisfação do Cliente"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-isqp",
+                      "name": "ISQP - Índice de Satisfação",
+                      "value": "78.5",
+                      "unit": "%",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Técnica Coelba",
+                    "Gerência de Qualidade",
+                    "Satisfação do Cliente",
+                    "Pesquisa Satisfação 2024.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-5",
+                    "name": "Pesquisa Satisfação 2024.pdf",
+                    "date": "2024-12-10",
+                    "size": "4.1 MB",
+                    "description": "Resultado completo da pesquisa de satisfação anual com análise de todos os aspectos avaliados.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.373Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.519Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.949Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.102Z"
+          },
+          "generated_at": "2026-04-03T14:08:35.110Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.991Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.534Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.752Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.942Z"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Relatorio Financeiro Q1",
+  "company": "NeoView",
+  "period": "2026-Q1",
+  "highlights": [
+    "Receita cresceu 14 por cento em relacao ao trimestre anterior",
+    "Margem operacional estabilizada em 21 por cento",
+    "Foco em automacao de processos e analise preditiva"
+  ],
+  "risks": [
+    "Variacao cambial impactando custo de fornecedores globais",
+    "Dependencia de contratos enterprise com ciclo de venda longo"
+  ],
+  "recommendations": [
+    "Expandir carteira de clientes mid-market",
+    "Acelerar roll-out de dashboards de risco"
+  ]
+}

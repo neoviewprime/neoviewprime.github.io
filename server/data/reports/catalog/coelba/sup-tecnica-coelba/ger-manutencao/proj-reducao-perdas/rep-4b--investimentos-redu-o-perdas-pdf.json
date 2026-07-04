@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-4b",
+  "report_status": "approved",
+  "report": {
+    "name": "Investimentos Redução Perdas.pdf",
+    "description": "Análise de investimentos realizados e planejados para redução de perdas técnicas.",
+    "date": "2024-11-20",
+    "size_label": "2.3 MB",
+    "size_bytes": 2411725,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendência Técnica Coelba"
+    },
+    "management": {
+      "id": "ger-manutencao",
+      "name": "Gerência de Manutenção"
+    },
+    "project": {
+      "id": "proj-reducao-perdas",
+      "name": "Redução de Perdas Técnicas"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-perdas",
+      "name": "Índice de Perdas Técnicas",
+      "value": "6.8",
+      "unit": "%",
+      "trend": "down"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Técnica Coelba",
+    "Gerência de Manutenção",
+    "Redução de Perdas Técnicas",
+    "Investimentos Redução Perdas.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-4b",
+    "report_status": "approved",
+    "report": {
+      "name": "Investimentos Redução Perdas.pdf",
+      "description": "Análise de investimentos realizados e planejados para redução de perdas técnicas.",
+      "date": "2024-11-20",
+      "size_label": "2.3 MB",
+      "size_bytes": 2411725,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendência Técnica Coelba"
+      },
+      "management": {
+        "id": "ger-manutencao",
+        "name": "Gerência de Manutenção"
+      },
+      "project": {
+        "id": "proj-reducao-perdas",
+        "name": "Redução de Perdas Técnicas"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-perdas",
+        "name": "Índice de Perdas Técnicas",
+        "value": "6.8",
+        "unit": "%",
+        "trend": "down"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Técnica Coelba",
+      "Gerência de Manutenção",
+      "Redução de Perdas Técnicas",
+      "Investimentos Redução Perdas.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-4b",
+      "report_status": "approved",
+      "report": {
+        "name": "Investimentos Redução Perdas.pdf",
+        "description": "Análise de investimentos realizados e planejados para redução de perdas técnicas.",
+        "date": "2024-11-20",
+        "size_label": "2.3 MB",
+        "size_bytes": 2411725,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendência Técnica Coelba"
+        },
+        "management": {
+          "id": "ger-manutencao",
+          "name": "Gerência de Manutenção"
+        },
+        "project": {
+          "id": "proj-reducao-perdas",
+          "name": "Redução de Perdas Técnicas"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-perdas",
+          "name": "Índice de Perdas Técnicas",
+          "value": "6.8",
+          "unit": "%",
+          "trend": "down"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Técnica Coelba",
+        "Gerência de Manutenção",
+        "Redução de Perdas Técnicas",
+        "Investimentos Redução Perdas.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-4b",
+        "report_status": "approved",
+        "report": {
+          "name": "Investimentos Redução Perdas.pdf",
+          "description": "Análise de investimentos realizados e planejados para redução de perdas técnicas.",
+          "date": "2024-11-20",
+          "size_label": "2.3 MB",
+          "size_bytes": 2411725,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendência Técnica Coelba"
+          },
+          "management": {
+            "id": "ger-manutencao",
+            "name": "Gerência de Manutenção"
+          },
+          "project": {
+            "id": "proj-reducao-perdas",
+            "name": "Redução de Perdas Técnicas"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-perdas",
+            "name": "Índice de Perdas Técnicas",
+            "value": "6.8",
+            "unit": "%",
+            "trend": "down"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Técnica Coelba",
+          "Gerência de Manutenção",
+          "Redução de Perdas Técnicas",
+          "Investimentos Redução Perdas.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-4b",
+          "report_status": "approved",
+          "report": {
+            "name": "Investimentos Redução Perdas.pdf",
+            "description": "Análise de investimentos realizados e planejados para redução de perdas técnicas.",
+            "date": "2024-11-20",
+            "size_label": "2.3 MB",
+            "size_bytes": 2411725,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendência Técnica Coelba"
+            },
+            "management": {
+              "id": "ger-manutencao",
+              "name": "Gerência de Manutenção"
+            },
+            "project": {
+              "id": "proj-reducao-perdas",
+              "name": "Redução de Perdas Técnicas"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-perdas",
+              "name": "Índice de Perdas Técnicas",
+              "value": "6.8",
+              "unit": "%",
+              "trend": "down"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Técnica Coelba",
+            "Gerência de Manutenção",
+            "Redução de Perdas Técnicas",
+            "Investimentos Redução Perdas.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-4b",
+            "report_status": "approved",
+            "report": {
+              "name": "Investimentos Redução Perdas.pdf",
+              "description": "Análise de investimentos realizados e planejados para redução de perdas técnicas.",
+              "date": "2024-11-20",
+              "size_label": "2.3 MB",
+              "size_bytes": 2411725,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendência Técnica Coelba"
+              },
+              "management": {
+                "id": "ger-manutencao",
+                "name": "Gerência de Manutenção"
+              },
+              "project": {
+                "id": "proj-reducao-perdas",
+                "name": "Redução de Perdas Técnicas"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-perdas",
+                "name": "Índice de Perdas Técnicas",
+                "value": "6.8",
+                "unit": "%",
+                "trend": "down"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Técnica Coelba",
+              "Gerência de Manutenção",
+              "Redução de Perdas Técnicas",
+              "Investimentos Redução Perdas.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-4b",
+              "report_status": "approved",
+              "report": {
+                "name": "Investimentos Redução Perdas.pdf",
+                "description": "Análise de investimentos realizados e planejados para redução de perdas técnicas.",
+                "date": "2024-11-20",
+                "size_label": "2.3 MB",
+                "size_bytes": 2411725,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendência Técnica Coelba"
+                },
+                "management": {
+                  "id": "ger-manutencao",
+                  "name": "Gerência de Manutenção"
+                },
+                "project": {
+                  "id": "proj-reducao-perdas",
+                  "name": "Redução de Perdas Técnicas"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-perdas",
+                  "name": "Índice de Perdas Técnicas",
+                  "value": "6.8",
+                  "unit": "%",
+                  "trend": "down"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Técnica Coelba",
+                "Gerência de Manutenção",
+                "Redução de Perdas Técnicas",
+                "Investimentos Redução Perdas.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-4b",
+                "report_status": "approved",
+                "report": {
+                  "name": "Investimentos Redução Perdas.pdf",
+                  "description": "Análise de investimentos realizados e planejados para redução de perdas técnicas.",
+                  "date": "2024-11-20",
+                  "size_label": "2.3 MB",
+                  "size_bytes": 2411725,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendência Técnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-manutencao",
+                    "name": "Gerência de Manutenção"
+                  },
+                  "project": {
+                    "id": "proj-reducao-perdas",
+                    "name": "Redução de Perdas Técnicas"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-perdas",
+                    "name": "Índice de Perdas Técnicas",
+                    "value": "6.8",
+                    "unit": "%",
+                    "trend": "down"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Técnica Coelba",
+                  "Gerência de Manutenção",
+                  "Redução de Perdas Técnicas",
+                  "Investimentos Redução Perdas.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-4b",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Investimentos Redução Perdas.pdf",
+                    "description": "Análise de investimentos realizados e planejados para redução de perdas técnicas.",
+                    "date": "2024-11-20",
+                    "size_label": "2.3 MB",
+                    "size_bytes": 2411725,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendência Técnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-manutencao",
+                      "name": "Gerência de Manutenção"
+                    },
+                    "project": {
+                      "id": "proj-reducao-perdas",
+                      "name": "Redução de Perdas Técnicas"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-perdas",
+                      "name": "Índice de Perdas Técnicas",
+                      "value": "6.8",
+                      "unit": "%",
+                      "trend": "down"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Técnica Coelba",
+                    "Gerência de Manutenção",
+                    "Redução de Perdas Técnicas",
+                    "Investimentos Redução Perdas.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-4b",
+                    "name": "Investimentos Redução Perdas.pdf",
+                    "date": "2024-11-20",
+                    "size": "2.3 MB",
+                    "description": "Análise de investimentos realizados e planejados para redução de perdas técnicas.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.342Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.479Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.918Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.037Z"
+          },
+          "generated_at": "2026-04-03T14:08:35.070Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.958Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.503Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.719Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.925Z"
+}

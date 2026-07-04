@@ -1,0 +1,1008 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+  "report_status": "approved",
+  "report": {
+    "name": "Monitoramento de redes",
+    "description": "É um relatorio",
+    "date": "2026-03-28",
+    "size_label": "",
+    "size_bytes": 0,
+    "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-relacionamento-clientes",
+      "name": "Superintendência de Relacionamento com Clientes"
+    },
+    "management": {
+      "id": "ger-receita",
+      "name": "Gerência da Gestão da Receita"
+    },
+    "project": {
+      "id": "uni-recuperacao-credito",
+      "name": "Unidade de Recuperação de Crédito"
+    }
+  },
+  "indicators": [
+    {
+      "id": "",
+      "name": "IAR",
+      "value": "",
+      "unit": "",
+      "trend": "stable"
+    },
+    {
+      "id": "",
+      "name": "PCE",
+      "value": "",
+      "unit": "",
+      "trend": "stable"
+    }
+  ],
+  "metrics": {
+    "views": 2,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência de Relacionamento com Clientes",
+    "Gerência da Gestão da Receita",
+    "Unidade de Recuperação de Crédito",
+    "Monitoramento de redes"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+    "report_status": "approved",
+    "report": {
+      "name": "Monitoramento de redes",
+      "description": "É um relatorio",
+      "date": "2026-03-28",
+      "size_label": "",
+      "size_bytes": 0,
+      "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-relacionamento-clientes",
+        "name": "Superintendência de Relacionamento com Clientes"
+      },
+      "management": {
+        "id": "ger-receita",
+        "name": "Gerência da Gestão da Receita"
+      },
+      "project": {
+        "id": "uni-recuperacao-credito",
+        "name": "Unidade de Recuperação de Crédito"
+      }
+    },
+    "indicators": [
+      {
+        "id": "",
+        "name": "IAR",
+        "value": "",
+        "unit": "",
+        "trend": "stable"
+      },
+      {
+        "id": "",
+        "name": "PCE",
+        "value": "",
+        "unit": "",
+        "trend": "stable"
+      }
+    ],
+    "metrics": {
+      "views": 2,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência de Relacionamento com Clientes",
+      "Gerência da Gestão da Receita",
+      "Unidade de Recuperação de Crédito",
+      "Monitoramento de redes"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+      "report_status": "approved",
+      "report": {
+        "name": "Monitoramento de redes",
+        "description": "É um relatorio",
+        "date": "2026-03-28",
+        "size_label": "",
+        "size_bytes": 0,
+        "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-relacionamento-clientes",
+          "name": "Superintendência de Relacionamento com Clientes"
+        },
+        "management": {
+          "id": "ger-receita",
+          "name": "Gerência da Gestão da Receita"
+        },
+        "project": {
+          "id": "uni-recuperacao-credito",
+          "name": "Unidade de Recuperação de Crédito"
+        }
+      },
+      "indicators": [
+        {
+          "id": "",
+          "name": "IAR",
+          "value": "",
+          "unit": "",
+          "trend": "stable"
+        },
+        {
+          "id": "",
+          "name": "PCE",
+          "value": "",
+          "unit": "",
+          "trend": "stable"
+        }
+      ],
+      "metrics": {
+        "views": 2,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência de Relacionamento com Clientes",
+        "Gerência da Gestão da Receita",
+        "Unidade de Recuperação de Crédito",
+        "Monitoramento de redes"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+        "report_status": "approved",
+        "report": {
+          "name": "Monitoramento de redes",
+          "description": "É um relatorio",
+          "date": "2026-03-28",
+          "size_label": "",
+          "size_bytes": 0,
+          "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-relacionamento-clientes",
+            "name": "Superintendência de Relacionamento com Clientes"
+          },
+          "management": {
+            "id": "ger-receita",
+            "name": "Gerência da Gestão da Receita"
+          },
+          "project": {
+            "id": "uni-recuperacao-credito",
+            "name": "Unidade de Recuperação de Crédito"
+          }
+        },
+        "indicators": [
+          {
+            "id": "",
+            "name": "IAR",
+            "value": "",
+            "unit": "",
+            "trend": "stable"
+          },
+          {
+            "id": "",
+            "name": "PCE",
+            "value": "",
+            "unit": "",
+            "trend": "stable"
+          }
+        ],
+        "metrics": {
+          "views": 2,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência de Relacionamento com Clientes",
+          "Gerência da Gestão da Receita",
+          "Unidade de Recuperação de Crédito",
+          "Monitoramento de redes"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+          "report_status": "approved",
+          "report": {
+            "name": "Monitoramento de redes",
+            "description": "É um relatorio",
+            "date": "2026-03-28",
+            "size_label": "",
+            "size_bytes": 0,
+            "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-relacionamento-clientes",
+              "name": "Superintendência de Relacionamento com Clientes"
+            },
+            "management": {
+              "id": "ger-receita",
+              "name": "Gerência da Gestão da Receita"
+            },
+            "project": {
+              "id": "uni-recuperacao-credito",
+              "name": "Unidade de Recuperação de Crédito"
+            }
+          },
+          "indicators": [
+            {
+              "id": "",
+              "name": "IAR",
+              "value": "",
+              "unit": "",
+              "trend": "stable"
+            },
+            {
+              "id": "",
+              "name": "PCE",
+              "value": "",
+              "unit": "",
+              "trend": "stable"
+            }
+          ],
+          "metrics": {
+            "views": 2,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência de Relacionamento com Clientes",
+            "Gerência da Gestão da Receita",
+            "Unidade de Recuperação de Crédito",
+            "Monitoramento de redes"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+            "report_status": "approved",
+            "report": {
+              "name": "Monitoramento de redes",
+              "description": "É um relatorio",
+              "date": "2026-03-28",
+              "size_label": "",
+              "size_bytes": 0,
+              "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-relacionamento-clientes",
+                "name": "Superintendência de Relacionamento com Clientes"
+              },
+              "management": {
+                "id": "ger-receita",
+                "name": "Gerência da Gestão da Receita"
+              },
+              "project": {
+                "id": "uni-recuperacao-credito",
+                "name": "Unidade de Recuperação de Crédito"
+              }
+            },
+            "indicators": [
+              {
+                "id": "",
+                "name": "IAR",
+                "value": "",
+                "unit": "",
+                "trend": "stable"
+              },
+              {
+                "id": "",
+                "name": "PCE",
+                "value": "",
+                "unit": "",
+                "trend": "stable"
+              }
+            ],
+            "metrics": {
+              "views": 2,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência de Relacionamento com Clientes",
+              "Gerência da Gestão da Receita",
+              "Unidade de Recuperação de Crédito",
+              "Monitoramento de redes"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+              "report_status": "approved",
+              "report": {
+                "name": "Monitoramento de redes",
+                "description": "É um relatorio",
+                "date": "2026-03-28",
+                "size_label": "",
+                "size_bytes": 0,
+                "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-relacionamento-clientes",
+                  "name": "Superintendência de Relacionamento com Clientes"
+                },
+                "management": {
+                  "id": "ger-receita",
+                  "name": "Gerência da Gestão da Receita"
+                },
+                "project": {
+                  "id": "uni-recuperacao-credito",
+                  "name": "Unidade de Recuperação de Crédito"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "",
+                  "name": "IAR",
+                  "value": "",
+                  "unit": "",
+                  "trend": "stable"
+                },
+                {
+                  "id": "",
+                  "name": "PCE",
+                  "value": "",
+                  "unit": "",
+                  "trend": "stable"
+                }
+              ],
+              "metrics": {
+                "views": 2,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência de Relacionamento com Clientes",
+                "Gerência da Gestão da Receita",
+                "Unidade de Recuperação de Crédito",
+                "Monitoramento de redes"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+                "report_status": "approved",
+                "report": {
+                  "name": "Monitoramento de redes",
+                  "description": "É um relatorio",
+                  "date": "2026-03-28",
+                  "size_label": "",
+                  "size_bytes": 0,
+                  "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-relacionamento-clientes",
+                    "name": "Superintendência de Relacionamento com Clientes"
+                  },
+                  "management": {
+                    "id": "ger-receita",
+                    "name": "Gerência da Gestão da Receita"
+                  },
+                  "project": {
+                    "id": "uni-recuperacao-credito",
+                    "name": "Unidade de Recuperação de Crédito"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "",
+                    "name": "IAR",
+                    "value": "",
+                    "unit": "",
+                    "trend": "stable"
+                  },
+                  {
+                    "id": "",
+                    "name": "PCE",
+                    "value": "",
+                    "unit": "",
+                    "trend": "stable"
+                  }
+                ],
+                "metrics": {
+                  "views": 2,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência de Relacionamento com Clientes",
+                  "Gerência da Gestão da Receita",
+                  "Unidade de Recuperação de Crédito",
+                  "Monitoramento de redes"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Monitoramento de redes",
+                    "description": "É um relatorio",
+                    "date": "2026-03-28",
+                    "size_label": "",
+                    "size_bytes": 0,
+                    "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-relacionamento-clientes",
+                      "name": "Superintendência de Relacionamento com Clientes"
+                    },
+                    "management": {
+                      "id": "ger-receita",
+                      "name": "Gerência da Gestão da Receita"
+                    },
+                    "project": {
+                      "id": "uni-recuperacao-credito",
+                      "name": "Unidade de Recuperação de Crédito"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "",
+                      "name": "IAR",
+                      "value": "",
+                      "unit": "",
+                      "trend": "stable"
+                    },
+                    {
+                      "id": "",
+                      "name": "PCE",
+                      "value": "",
+                      "unit": "",
+                      "trend": "stable"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 2,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência de Relacionamento com Clientes",
+                    "Gerência da Gestão da Receita",
+                    "Unidade de Recuperação de Crédito",
+                    "Monitoramento de redes"
+                  ],
+                  "raw_json": {
+                    "schema": "neoview.report.v1",
+                    "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+                    "report_status": "approved",
+                    "report": {
+                      "name": "Monitoramento de redes",
+                      "description": "É um relatorio",
+                      "date": "2026-03-28",
+                      "size_label": "",
+                      "size_bytes": 0,
+                      "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+                    },
+                    "hierarchy": {
+                      "company": {
+                        "id": "coelba",
+                        "name": "Neoenergia Coelba"
+                      },
+                      "superintendence": {
+                        "id": "sup-relacionamento-clientes",
+                        "name": "Superintendência de Relacionamento com Clientes"
+                      },
+                      "management": {
+                        "id": "ger-receita",
+                        "name": "Gerência da Gestão da Receita"
+                      },
+                      "project": {
+                        "id": "uni-recuperacao-credito",
+                        "name": "Unidade de Recuperação de Crédito"
+                      }
+                    },
+                    "indicators": [
+                      {
+                        "id": "",
+                        "name": "IAR",
+                        "value": "",
+                        "unit": "",
+                        "trend": "stable"
+                      },
+                      {
+                        "id": "",
+                        "name": "PCE",
+                        "value": "",
+                        "unit": "",
+                        "trend": "stable"
+                      }
+                    ],
+                    "metrics": {
+                      "views": 2,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    },
+                    "path": [
+                      "Neoenergia Coelba",
+                      "Superintendência de Relacionamento com Clientes",
+                      "Gerência da Gestão da Receita",
+                      "Unidade de Recuperação de Crédito",
+                      "Monitoramento de redes"
+                    ],
+                    "raw_json": {
+                      "schema": "neoview.report.v1",
+                      "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+                      "report_status": "approved",
+                      "report": {
+                        "name": "Monitoramento de redes",
+                        "description": "É um relatorio",
+                        "date": "2026-03-28",
+                        "size_label": "",
+                        "size_bytes": 0,
+                        "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+                      },
+                      "hierarchy": {
+                        "company": {
+                          "id": "coelba",
+                          "name": "Neoenergia Coelba"
+                        },
+                        "superintendence": {
+                          "id": "sup-relacionamento-clientes",
+                          "name": "Superintendência de Relacionamento com Clientes"
+                        },
+                        "management": {
+                          "id": "ger-receita",
+                          "name": "Gerência da Gestão da Receita"
+                        },
+                        "project": {
+                          "id": "uni-recuperacao-credito",
+                          "name": "Unidade de Recuperação de Crédito"
+                        }
+                      },
+                      "indicators": [
+                        {
+                          "id": "",
+                          "name": "IAR",
+                          "value": "",
+                          "unit": "",
+                          "trend": "stable"
+                        },
+                        {
+                          "id": "",
+                          "name": "PCE",
+                          "value": "",
+                          "unit": "",
+                          "trend": "stable"
+                        }
+                      ],
+                      "metrics": {
+                        "views": 2,
+                        "comments": 0,
+                        "likes": 0,
+                        "shares": 0
+                      },
+                      "path": [
+                        "Neoenergia Coelba",
+                        "Superintendência de Relacionamento com Clientes",
+                        "Gerência da Gestão da Receita",
+                        "Unidade de Recuperação de Crédito",
+                        "Monitoramento de redes"
+                      ],
+                      "raw_json": {
+                        "schema": "neoview.report.v1",
+                        "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+                        "report_status": "approved",
+                        "report": {
+                          "name": "Monitoramento de redes",
+                          "description": "É um relatorio",
+                          "date": "2026-03-28",
+                          "size_label": "",
+                          "size_bytes": 0,
+                          "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+                        },
+                        "hierarchy": {
+                          "company": {
+                            "id": "coelba",
+                            "name": "Neoenergia Coelba"
+                          },
+                          "superintendence": {
+                            "id": "sup-relacionamento-clientes",
+                            "name": "Superintendência de Relacionamento com Clientes"
+                          },
+                          "management": {
+                            "id": "ger-receita",
+                            "name": "Gerência da Gestão da Receita"
+                          },
+                          "project": {
+                            "id": "uni-recuperacao-credito",
+                            "name": "Unidade de Recuperação de Crédito"
+                          }
+                        },
+                        "indicators": [
+                          {
+                            "id": "",
+                            "name": "IAR",
+                            "value": "",
+                            "unit": "",
+                            "trend": "stable"
+                          },
+                          {
+                            "id": "",
+                            "name": "PCE",
+                            "value": "",
+                            "unit": "",
+                            "trend": "stable"
+                          }
+                        ],
+                        "metrics": {
+                          "views": 2,
+                          "comments": 0,
+                          "likes": 0,
+                          "shares": 0
+                        },
+                        "path": [
+                          "Neoenergia Coelba",
+                          "Superintendência de Relacionamento com Clientes",
+                          "Gerência da Gestão da Receita",
+                          "Unidade de Recuperação de Crédito",
+                          "Monitoramento de redes"
+                        ],
+                        "raw_json": {
+                          "schema": "neoview.report.v1",
+                          "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+                          "report_status": "approved",
+                          "report": {
+                            "name": "Monitoramento de redes",
+                            "description": "É um relatorio",
+                            "date": "2026-03-28",
+                            "size_label": "",
+                            "size_bytes": 0,
+                            "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+                          },
+                          "hierarchy": {
+                            "company": {
+                              "id": "coelba",
+                              "name": "Neoenergia Coelba"
+                            },
+                            "superintendence": {
+                              "id": "sup-relacionamento-clientes",
+                              "name": "Superintendência de Relacionamento com Clientes"
+                            },
+                            "management": {
+                              "id": "ger-receita",
+                              "name": "Gerência da Gestão da Receita"
+                            },
+                            "project": {
+                              "id": "uni-recuperacao-credito",
+                              "name": "Unidade de Recuperação de Crédito"
+                            }
+                          },
+                          "indicators": [
+                            {
+                              "id": "",
+                              "name": "IAR",
+                              "value": "",
+                              "unit": "",
+                              "trend": "stable"
+                            },
+                            {
+                              "id": "",
+                              "name": "PCE",
+                              "value": "",
+                              "unit": "",
+                              "trend": "stable"
+                            }
+                          ],
+                          "metrics": {
+                            "views": 2,
+                            "comments": 0,
+                            "likes": 0,
+                            "shares": 0
+                          },
+                          "path": [
+                            "Neoenergia Coelba",
+                            "Superintendência de Relacionamento com Clientes",
+                            "Gerência da Gestão da Receita",
+                            "Unidade de Recuperação de Crédito",
+                            "Monitoramento de redes"
+                          ],
+                          "raw_json": {
+                            "schema": "neoview.report.v1",
+                            "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+                            "report_status": "approved",
+                            "report": {
+                              "name": "Monitoramento de redes",
+                              "description": "É um relatorio",
+                              "date": "2026-03-28",
+                              "size_label": "",
+                              "size_bytes": 0,
+                              "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+                            },
+                            "hierarchy": {
+                              "company": {
+                                "id": "coelba",
+                                "name": "Neoenergia Coelba"
+                              },
+                              "superintendence": {
+                                "id": "sup-relacionamento-clientes",
+                                "name": "Superintendência de Relacionamento com Clientes"
+                              },
+                              "management": {
+                                "id": "ger-receita",
+                                "name": "Gerência da Gestão da Receita"
+                              },
+                              "project": {
+                                "id": "uni-recuperacao-credito",
+                                "name": "Unidade de Recuperação de Crédito"
+                              }
+                            },
+                            "indicators": [
+                              {
+                                "id": "",
+                                "name": "IAR",
+                                "value": "",
+                                "unit": "",
+                                "trend": "stable"
+                              },
+                              {
+                                "id": "",
+                                "name": "PCE",
+                                "value": "",
+                                "unit": "",
+                                "trend": "stable"
+                              }
+                            ],
+                            "metrics": {
+                              "views": 2,
+                              "comments": 0,
+                              "likes": 0,
+                              "shares": 0
+                            },
+                            "path": [
+                              "Neoenergia Coelba",
+                              "Superintendência de Relacionamento com Clientes",
+                              "Gerência da Gestão da Receita",
+                              "Unidade de Recuperação de Crédito",
+                              "Monitoramento de redes"
+                            ],
+                            "raw_json": {
+                              "schema": "neoview.report.v1",
+                              "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+                              "report_status": "approved",
+                              "report": {
+                                "name": "Monitoramento de redes",
+                                "description": "É um relatorio",
+                                "date": "2026-03-28",
+                                "size_label": "",
+                                "size_bytes": 0,
+                                "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+                              },
+                              "hierarchy": {
+                                "company": {
+                                  "id": "coelba",
+                                  "name": "Neoenergia Coelba"
+                                },
+                                "superintendence": {
+                                  "id": "sup-relacionamento-clientes",
+                                  "name": "Superintendência de Relacionamento com Clientes"
+                                },
+                                "management": {
+                                  "id": "ger-receita",
+                                  "name": "Gerência da Gestão da Receita"
+                                },
+                                "project": {
+                                  "id": "uni-recuperacao-credito",
+                                  "name": "Unidade de Recuperação de Crédito"
+                                }
+                              },
+                              "indicators": [
+                                {
+                                  "id": "",
+                                  "name": "IAR",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": "stable"
+                                },
+                                {
+                                  "id": "",
+                                  "name": "PCE",
+                                  "value": "",
+                                  "unit": "",
+                                  "trend": "stable"
+                                }
+                              ],
+                              "metrics": {
+                                "views": 2,
+                                "comments": 0,
+                                "likes": 0,
+                                "shares": 0
+                              },
+                              "path": [
+                                "Neoenergia Coelba",
+                                "Superintendência de Relacionamento com Clientes",
+                                "Gerência da Gestão da Receita",
+                                "Unidade de Recuperação de Crédito",
+                                "Monitoramento de redes"
+                              ],
+                              "raw_json": {
+                                "schema": "neoview.report.v1",
+                                "source_report_id": "manual-e22a1942-b80c-464a-8df7-6357015f003b",
+                                "report_status": "approved",
+                                "report": {
+                                  "name": "Monitoramento de redes",
+                                  "description": "É um relatorio",
+                                  "date": "2026-03-28",
+                                  "size_label": "",
+                                  "size_bytes": 0,
+                                  "url": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb"
+                                },
+                                "hierarchy": {
+                                  "company": {
+                                    "id": "coelba",
+                                    "name": "Neoenergia Coelba"
+                                  },
+                                  "superintendence": {
+                                    "id": "sup-relacionamento-clientes",
+                                    "name": "Superintendência de Relacionamento com Clientes"
+                                  },
+                                  "management": {
+                                    "id": "ger-receita",
+                                    "name": "Gerência da Gestão da Receita"
+                                  },
+                                  "project": {
+                                    "id": "uni-recuperacao-credito",
+                                    "name": "Unidade de Recuperação de Crédito"
+                                  }
+                                },
+                                "indicators": [
+                                  {
+                                    "id": "",
+                                    "name": "IAR",
+                                    "value": "",
+                                    "unit": "",
+                                    "trend": "stable"
+                                  },
+                                  {
+                                    "id": "",
+                                    "name": "PCE",
+                                    "value": "",
+                                    "unit": "",
+                                    "trend": "stable"
+                                  }
+                                ],
+                                "metrics": {
+                                  "views": 1,
+                                  "comments": 0,
+                                  "likes": 0,
+                                  "shares": 0
+                                },
+                                "path": [
+                                  "Neoenergia Coelba",
+                                  "Superintendência de Relacionamento com Clientes",
+                                  "Gerência da Gestão da Receita",
+                                  "Unidade de Recuperação de Crédito",
+                                  "Monitoramento de redes"
+                                ],
+                                "raw_json": {
+                                  "assetType": "hyperlink",
+                                  "reportName": "Monitoramento de redes",
+                                  "reportDescription": "É um relatorio",
+                                  "reportDate": "2026-03-28",
+                                  "reportSizeLabel": "",
+                                  "reportUrl": "https://1drv.ms/w/c/668609ce6f1faa08/IQCnrxbQsWWsTKz5ahR4Mkc_ARMrV0e2DpFPOsTUW3J1TpU?e=GaY7bb",
+                                  "companyId": "coelba",
+                                  "companyName": "Neoenergia Coelba",
+                                  "superintendenceId": "sup-relacionamento-clientes",
+                                  "superintendenceName": "Superintendência de Relacionamento com Clientes",
+                                  "managementId": "ger-receita",
+                                  "managementName": "Gerência da Gestão da Receita",
+                                  "projectId": "uni-recuperacao-credito",
+                                  "projectName": "Unidade de Recuperação de Crédito",
+                                  "submittedByName": "Gabriel Nunes Barbosa Nogueira",
+                                  "submittedByEmail": "gabrielnbn@hotmail.com",
+                                  "indicators": [
+                                    {
+                                      "name": "IAR"
+                                    },
+                                    {
+                                      "name": "PCE"
+                                    }
+                                  ],
+                                  "metrics": {
+                                    "views": 0,
+                                    "comments": 0,
+                                    "likes": 0,
+                                    "shares": 0
+                                  }
+                                },
+                                "generated_at": "2026-03-28T22:00:10.059Z"
+                              },
+                              "generated_at": "2026-03-31T23:04:39.366Z"
+                            },
+                            "generated_at": "2026-03-31T23:07:13.541Z"
+                          },
+                          "generated_at": "2026-03-31T23:34:16.207Z"
+                        },
+                        "generated_at": "2026-03-31T23:36:59.301Z"
+                      },
+                      "generated_at": "2026-03-31T23:56:55.782Z"
+                    },
+                    "generated_at": "2026-04-01T07:33:54.389Z"
+                  },
+                  "generated_at": "2026-04-01T08:05:23.916Z"
+                },
+                "generated_at": "2026-04-01T08:09:41.027Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.483Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.772Z"
+          },
+          "generated_at": "2026-04-03T14:08:36.556Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.482Z"
+      },
+      "generated_at": "2026-04-03T14:44:32.137Z"
+    },
+    "generated_at": "2026-04-03T14:58:41.245Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.157Z"
+}

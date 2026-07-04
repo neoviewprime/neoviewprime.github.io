@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-10d",
+  "report_status": "approved",
+  "report": {
+    "name": "Regulamentação ANEEL GD.pdf",
+    "description": "Análise da regulamentação da ANEEL sobre geração distribuída.",
+    "date": "2024-11-20",
+    "size_label": "2.4 MB",
+    "size_bytes": 2516582,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "pernambuco",
+      "name": "Neoenergia Pernambuco"
+    },
+    "superintendence": {
+      "id": "sup-operacoes-pe",
+      "name": "Superintendência de Operações"
+    },
+    "management": {
+      "id": "ger-projetos-pe",
+      "name": "Gerência de Projetos"
+    },
+    "project": {
+      "id": "proj-energia-solar",
+      "name": "Energia Solar Distribuída"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-gd",
+      "name": "Conexões GD",
+      "value": "15420",
+      "unit": "unidades",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Pernambuco",
+    "Superintendência de Operações",
+    "Gerência de Projetos",
+    "Energia Solar Distribuída",
+    "Regulamentação ANEEL GD.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-10d",
+    "report_status": "approved",
+    "report": {
+      "name": "Regulamentação ANEEL GD.pdf",
+      "description": "Análise da regulamentação da ANEEL sobre geração distribuída.",
+      "date": "2024-11-20",
+      "size_label": "2.4 MB",
+      "size_bytes": 2516582,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "pernambuco",
+        "name": "Neoenergia Pernambuco"
+      },
+      "superintendence": {
+        "id": "sup-operacoes-pe",
+        "name": "Superintendência de Operações"
+      },
+      "management": {
+        "id": "ger-projetos-pe",
+        "name": "Gerência de Projetos"
+      },
+      "project": {
+        "id": "proj-energia-solar",
+        "name": "Energia Solar Distribuída"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-gd",
+        "name": "Conexões GD",
+        "value": "15420",
+        "unit": "unidades",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Pernambuco",
+      "Superintendência de Operações",
+      "Gerência de Projetos",
+      "Energia Solar Distribuída",
+      "Regulamentação ANEEL GD.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-10d",
+      "report_status": "approved",
+      "report": {
+        "name": "Regulamentação ANEEL GD.pdf",
+        "description": "Análise da regulamentação da ANEEL sobre geração distribuída.",
+        "date": "2024-11-20",
+        "size_label": "2.4 MB",
+        "size_bytes": 2516582,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "pernambuco",
+          "name": "Neoenergia Pernambuco"
+        },
+        "superintendence": {
+          "id": "sup-operacoes-pe",
+          "name": "Superintendência de Operações"
+        },
+        "management": {
+          "id": "ger-projetos-pe",
+          "name": "Gerência de Projetos"
+        },
+        "project": {
+          "id": "proj-energia-solar",
+          "name": "Energia Solar Distribuída"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-gd",
+          "name": "Conexões GD",
+          "value": "15420",
+          "unit": "unidades",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Pernambuco",
+        "Superintendência de Operações",
+        "Gerência de Projetos",
+        "Energia Solar Distribuída",
+        "Regulamentação ANEEL GD.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-10d",
+        "report_status": "approved",
+        "report": {
+          "name": "Regulamentação ANEEL GD.pdf",
+          "description": "Análise da regulamentação da ANEEL sobre geração distribuída.",
+          "date": "2024-11-20",
+          "size_label": "2.4 MB",
+          "size_bytes": 2516582,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "pernambuco",
+            "name": "Neoenergia Pernambuco"
+          },
+          "superintendence": {
+            "id": "sup-operacoes-pe",
+            "name": "Superintendência de Operações"
+          },
+          "management": {
+            "id": "ger-projetos-pe",
+            "name": "Gerência de Projetos"
+          },
+          "project": {
+            "id": "proj-energia-solar",
+            "name": "Energia Solar Distribuída"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-gd",
+            "name": "Conexões GD",
+            "value": "15420",
+            "unit": "unidades",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Pernambuco",
+          "Superintendência de Operações",
+          "Gerência de Projetos",
+          "Energia Solar Distribuída",
+          "Regulamentação ANEEL GD.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-10d",
+          "report_status": "approved",
+          "report": {
+            "name": "Regulamentação ANEEL GD.pdf",
+            "description": "Análise da regulamentação da ANEEL sobre geração distribuída.",
+            "date": "2024-11-20",
+            "size_label": "2.4 MB",
+            "size_bytes": 2516582,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "pernambuco",
+              "name": "Neoenergia Pernambuco"
+            },
+            "superintendence": {
+              "id": "sup-operacoes-pe",
+              "name": "Superintendência de Operações"
+            },
+            "management": {
+              "id": "ger-projetos-pe",
+              "name": "Gerência de Projetos"
+            },
+            "project": {
+              "id": "proj-energia-solar",
+              "name": "Energia Solar Distribuída"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-gd",
+              "name": "Conexões GD",
+              "value": "15420",
+              "unit": "unidades",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Pernambuco",
+            "Superintendência de Operações",
+            "Gerência de Projetos",
+            "Energia Solar Distribuída",
+            "Regulamentação ANEEL GD.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-10d",
+            "report_status": "approved",
+            "report": {
+              "name": "Regulamentação ANEEL GD.pdf",
+              "description": "Análise da regulamentação da ANEEL sobre geração distribuída.",
+              "date": "2024-11-20",
+              "size_label": "2.4 MB",
+              "size_bytes": 2516582,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "pernambuco",
+                "name": "Neoenergia Pernambuco"
+              },
+              "superintendence": {
+                "id": "sup-operacoes-pe",
+                "name": "Superintendência de Operações"
+              },
+              "management": {
+                "id": "ger-projetos-pe",
+                "name": "Gerência de Projetos"
+              },
+              "project": {
+                "id": "proj-energia-solar",
+                "name": "Energia Solar Distribuída"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-gd",
+                "name": "Conexões GD",
+                "value": "15420",
+                "unit": "unidades",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Pernambuco",
+              "Superintendência de Operações",
+              "Gerência de Projetos",
+              "Energia Solar Distribuída",
+              "Regulamentação ANEEL GD.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-10d",
+              "report_status": "approved",
+              "report": {
+                "name": "Regulamentação ANEEL GD.pdf",
+                "description": "Análise da regulamentação da ANEEL sobre geração distribuída.",
+                "date": "2024-11-20",
+                "size_label": "2.4 MB",
+                "size_bytes": 2516582,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "pernambuco",
+                  "name": "Neoenergia Pernambuco"
+                },
+                "superintendence": {
+                  "id": "sup-operacoes-pe",
+                  "name": "Superintendência de Operações"
+                },
+                "management": {
+                  "id": "ger-projetos-pe",
+                  "name": "Gerência de Projetos"
+                },
+                "project": {
+                  "id": "proj-energia-solar",
+                  "name": "Energia Solar Distribuída"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-gd",
+                  "name": "Conexões GD",
+                  "value": "15420",
+                  "unit": "unidades",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Pernambuco",
+                "Superintendência de Operações",
+                "Gerência de Projetos",
+                "Energia Solar Distribuída",
+                "Regulamentação ANEEL GD.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-10d",
+                "report_status": "approved",
+                "report": {
+                  "name": "Regulamentação ANEEL GD.pdf",
+                  "description": "Análise da regulamentação da ANEEL sobre geração distribuída.",
+                  "date": "2024-11-20",
+                  "size_label": "2.4 MB",
+                  "size_bytes": 2516582,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "pernambuco",
+                    "name": "Neoenergia Pernambuco"
+                  },
+                  "superintendence": {
+                    "id": "sup-operacoes-pe",
+                    "name": "Superintendência de Operações"
+                  },
+                  "management": {
+                    "id": "ger-projetos-pe",
+                    "name": "Gerência de Projetos"
+                  },
+                  "project": {
+                    "id": "proj-energia-solar",
+                    "name": "Energia Solar Distribuída"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-gd",
+                    "name": "Conexões GD",
+                    "value": "15420",
+                    "unit": "unidades",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Pernambuco",
+                  "Superintendência de Operações",
+                  "Gerência de Projetos",
+                  "Energia Solar Distribuída",
+                  "Regulamentação ANEEL GD.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-10d",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Regulamentação ANEEL GD.pdf",
+                    "description": "Análise da regulamentação da ANEEL sobre geração distribuída.",
+                    "date": "2024-11-20",
+                    "size_label": "2.4 MB",
+                    "size_bytes": 2516582,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "pernambuco",
+                      "name": "Neoenergia Pernambuco"
+                    },
+                    "superintendence": {
+                      "id": "sup-operacoes-pe",
+                      "name": "Superintendência de Operações"
+                    },
+                    "management": {
+                      "id": "ger-projetos-pe",
+                      "name": "Gerência de Projetos"
+                    },
+                    "project": {
+                      "id": "proj-energia-solar",
+                      "name": "Energia Solar Distribuída"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-gd",
+                      "name": "Conexões GD",
+                      "value": "15420",
+                      "unit": "unidades",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Pernambuco",
+                    "Superintendência de Operações",
+                    "Gerência de Projetos",
+                    "Energia Solar Distribuída",
+                    "Regulamentação ANEEL GD.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-10d",
+                    "name": "Regulamentação ANEEL GD.pdf",
+                    "date": "2024-11-20",
+                    "size": "2.4 MB",
+                    "description": "Análise da regulamentação da ANEEL sobre geração distribuída.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:22.987Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.283Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.752Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.825Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.841Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.793Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.340Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.550Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.836Z"
+}

@@ -1,0 +1,52 @@
+{
+  "companies": [
+    {
+      "id": "coelba",
+      "name": "Neoenergia Coelba",
+      "superintendences": [
+        {
+          "id": "sup-operacoes-ba",
+          "name": "Superintendencia Operacao Centro Norte",
+          "managements": [
+            {
+              "id": "ger-manutencao",
+              "name": "Gerencia de Manutencao",
+              "projects": [
+                {
+                  "id": "proj-eficiencia-rede",
+                  "name": "Eficiencia de Rede",
+                  "indicators": [
+                    {
+                      "id": "ind-dec",
+                      "name": "DEC - Duracao Equivalente por Consumidor",
+                      "value": "12.5",
+                      "unit": "horas",
+                      "trend": "down",
+                      "reports": [
+                        {
+                          "id": "rep-1",
+                          "name": "Relatorio DEC Q4 2024.pdf",
+                          "date": "2024-12-15",
+                          "size": "2.4 MB",
+                          "description": "Relatorio trimestral do indicador DEC.",
+                          "url": "https://example.com/relatorios/rep-1.pdf",
+                          "metrics": {
+                            "views": 0,
+                            "comments": 0,
+                            "likes": 0,
+                            "shares": 0
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

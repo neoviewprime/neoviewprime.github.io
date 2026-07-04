@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-2",
+  "report_status": "approved",
+  "report": {
+    "name": "Análise Comparativa DEC.pdf",
+    "description": "Comparativo do DEC entre distribuidoras do grupo Neoenergia e benchmark do setor.",
+    "date": "2024-11-30",
+    "size_label": "1.8 MB",
+    "size_bytes": 1887437,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendência Técnica Coelba"
+    },
+    "management": {
+      "id": "ger-manutencao",
+      "name": "Gerência de Manutenção"
+    },
+    "project": {
+      "id": "proj-eficiencia-rede",
+      "name": "Eficiência de Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-dec",
+      "name": "DEC - Duração Equivalente por Consumidor",
+      "value": "12.5",
+      "unit": "horas",
+      "trend": "down"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Técnica Coelba",
+    "Gerência de Manutenção",
+    "Eficiência de Rede",
+    "Análise Comparativa DEC.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-2",
+    "report_status": "approved",
+    "report": {
+      "name": "Análise Comparativa DEC.pdf",
+      "description": "Comparativo do DEC entre distribuidoras do grupo Neoenergia e benchmark do setor.",
+      "date": "2024-11-30",
+      "size_label": "1.8 MB",
+      "size_bytes": 1887437,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendência Técnica Coelba"
+      },
+      "management": {
+        "id": "ger-manutencao",
+        "name": "Gerência de Manutenção"
+      },
+      "project": {
+        "id": "proj-eficiencia-rede",
+        "name": "Eficiência de Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-dec",
+        "name": "DEC - Duração Equivalente por Consumidor",
+        "value": "12.5",
+        "unit": "horas",
+        "trend": "down"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Técnica Coelba",
+      "Gerência de Manutenção",
+      "Eficiência de Rede",
+      "Análise Comparativa DEC.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-2",
+      "report_status": "approved",
+      "report": {
+        "name": "Análise Comparativa DEC.pdf",
+        "description": "Comparativo do DEC entre distribuidoras do grupo Neoenergia e benchmark do setor.",
+        "date": "2024-11-30",
+        "size_label": "1.8 MB",
+        "size_bytes": 1887437,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendência Técnica Coelba"
+        },
+        "management": {
+          "id": "ger-manutencao",
+          "name": "Gerência de Manutenção"
+        },
+        "project": {
+          "id": "proj-eficiencia-rede",
+          "name": "Eficiência de Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-dec",
+          "name": "DEC - Duração Equivalente por Consumidor",
+          "value": "12.5",
+          "unit": "horas",
+          "trend": "down"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Técnica Coelba",
+        "Gerência de Manutenção",
+        "Eficiência de Rede",
+        "Análise Comparativa DEC.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-2",
+        "report_status": "approved",
+        "report": {
+          "name": "Análise Comparativa DEC.pdf",
+          "description": "Comparativo do DEC entre distribuidoras do grupo Neoenergia e benchmark do setor.",
+          "date": "2024-11-30",
+          "size_label": "1.8 MB",
+          "size_bytes": 1887437,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendência Técnica Coelba"
+          },
+          "management": {
+            "id": "ger-manutencao",
+            "name": "Gerência de Manutenção"
+          },
+          "project": {
+            "id": "proj-eficiencia-rede",
+            "name": "Eficiência de Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-dec",
+            "name": "DEC - Duração Equivalente por Consumidor",
+            "value": "12.5",
+            "unit": "horas",
+            "trend": "down"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Técnica Coelba",
+          "Gerência de Manutenção",
+          "Eficiência de Rede",
+          "Análise Comparativa DEC.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-2",
+          "report_status": "approved",
+          "report": {
+            "name": "Análise Comparativa DEC.pdf",
+            "description": "Comparativo do DEC entre distribuidoras do grupo Neoenergia e benchmark do setor.",
+            "date": "2024-11-30",
+            "size_label": "1.8 MB",
+            "size_bytes": 1887437,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendência Técnica Coelba"
+            },
+            "management": {
+              "id": "ger-manutencao",
+              "name": "Gerência de Manutenção"
+            },
+            "project": {
+              "id": "proj-eficiencia-rede",
+              "name": "Eficiência de Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-dec",
+              "name": "DEC - Duração Equivalente por Consumidor",
+              "value": "12.5",
+              "unit": "horas",
+              "trend": "down"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Técnica Coelba",
+            "Gerência de Manutenção",
+            "Eficiência de Rede",
+            "Análise Comparativa DEC.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-2",
+            "report_status": "approved",
+            "report": {
+              "name": "Análise Comparativa DEC.pdf",
+              "description": "Comparativo do DEC entre distribuidoras do grupo Neoenergia e benchmark do setor.",
+              "date": "2024-11-30",
+              "size_label": "1.8 MB",
+              "size_bytes": 1887437,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendência Técnica Coelba"
+              },
+              "management": {
+                "id": "ger-manutencao",
+                "name": "Gerência de Manutenção"
+              },
+              "project": {
+                "id": "proj-eficiencia-rede",
+                "name": "Eficiência de Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-dec",
+                "name": "DEC - Duração Equivalente por Consumidor",
+                "value": "12.5",
+                "unit": "horas",
+                "trend": "down"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Técnica Coelba",
+              "Gerência de Manutenção",
+              "Eficiência de Rede",
+              "Análise Comparativa DEC.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-2",
+              "report_status": "approved",
+              "report": {
+                "name": "Análise Comparativa DEC.pdf",
+                "description": "Comparativo do DEC entre distribuidoras do grupo Neoenergia e benchmark do setor.",
+                "date": "2024-11-30",
+                "size_label": "1.8 MB",
+                "size_bytes": 1887437,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendência Técnica Coelba"
+                },
+                "management": {
+                  "id": "ger-manutencao",
+                  "name": "Gerência de Manutenção"
+                },
+                "project": {
+                  "id": "proj-eficiencia-rede",
+                  "name": "Eficiência de Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-dec",
+                  "name": "DEC - Duração Equivalente por Consumidor",
+                  "value": "12.5",
+                  "unit": "horas",
+                  "trend": "down"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Técnica Coelba",
+                "Gerência de Manutenção",
+                "Eficiência de Rede",
+                "Análise Comparativa DEC.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-2",
+                "report_status": "approved",
+                "report": {
+                  "name": "Análise Comparativa DEC.pdf",
+                  "description": "Comparativo do DEC entre distribuidoras do grupo Neoenergia e benchmark do setor.",
+                  "date": "2024-11-30",
+                  "size_label": "1.8 MB",
+                  "size_bytes": 1887437,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendência Técnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-manutencao",
+                    "name": "Gerência de Manutenção"
+                  },
+                  "project": {
+                    "id": "proj-eficiencia-rede",
+                    "name": "Eficiência de Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-dec",
+                    "name": "DEC - Duração Equivalente por Consumidor",
+                    "value": "12.5",
+                    "unit": "horas",
+                    "trend": "down"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Técnica Coelba",
+                  "Gerência de Manutenção",
+                  "Eficiência de Rede",
+                  "Análise Comparativa DEC.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-2",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Análise Comparativa DEC.pdf",
+                    "description": "Comparativo do DEC entre distribuidoras do grupo Neoenergia e benchmark do setor.",
+                    "date": "2024-11-30",
+                    "size_label": "1.8 MB",
+                    "size_bytes": 1887437,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendência Técnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-manutencao",
+                      "name": "Gerência de Manutenção"
+                    },
+                    "project": {
+                      "id": "proj-eficiencia-rede",
+                      "name": "Eficiência de Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-dec",
+                      "name": "DEC - Duração Equivalente por Consumidor",
+                      "value": "12.5",
+                      "unit": "horas",
+                      "trend": "down"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Técnica Coelba",
+                    "Gerência de Manutenção",
+                    "Eficiência de Rede",
+                    "Análise Comparativa DEC.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-2",
+                    "name": "Análise Comparativa DEC.pdf",
+                    "date": "2024-11-30",
+                    "size": "1.8 MB",
+                    "description": "Comparativo do DEC entre distribuidoras do grupo Neoenergia e benchmark do setor.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.049Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.357Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.813Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.916Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.918Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.855Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.400Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.619Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.879Z"
+}

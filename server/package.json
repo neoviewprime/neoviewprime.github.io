@@ -1,0 +1,45 @@
+{
+  "name": "neoview-server",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "prebuild": "node scripts/ensurePrismaClient.cjs",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "push:hana": "tsx src/scripts/pushToHana.ts",
+    "sync:hana:full": "tsx src/scripts/pushToHana.ts --mode=full",
+    "sync:hana:incremental": "tsx src/scripts/pushToHana.ts --mode=incremental",
+    "migrate": "tsx src/db/migrate.ts",
+    "prisma:pull": "prisma db pull",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio",
+    "prisma:migrate:dev": "prisma migrate dev",
+    "postinstall": "node scripts/ensurePrismaClient.cjs",
+    "reset": "tsx src/scripts/resetBackend.ts",
+    "test": "tsx src/services/userManagementService.test.ts"
+  },
+  "devDependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.5.0",
+    "@prisma/client": "^7.5.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.10.2",
+    "prisma": "^7.5.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^12.8.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.24.1"
+  }
+}

@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-5a",
+  "report_status": "approved",
+  "report": {
+    "name": "ISQP Detalhado por Município.pdf",
+    "description": "Análise detalhada do ISQP por município da área de concessão.",
+    "date": "2024-12-08",
+    "size_label": "5.2 MB",
+    "size_bytes": 5452595,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendência Técnica Coelba"
+    },
+    "management": {
+      "id": "ger-qualidade",
+      "name": "Gerência de Qualidade"
+    },
+    "project": {
+      "id": "proj-satisfacao",
+      "name": "Satisfação do Cliente"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-isqp",
+      "name": "ISQP - Índice de Satisfação",
+      "value": "78.5",
+      "unit": "%",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Técnica Coelba",
+    "Gerência de Qualidade",
+    "Satisfação do Cliente",
+    "ISQP Detalhado por Município.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-5a",
+    "report_status": "approved",
+    "report": {
+      "name": "ISQP Detalhado por Município.pdf",
+      "description": "Análise detalhada do ISQP por município da área de concessão.",
+      "date": "2024-12-08",
+      "size_label": "5.2 MB",
+      "size_bytes": 5452595,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendência Técnica Coelba"
+      },
+      "management": {
+        "id": "ger-qualidade",
+        "name": "Gerência de Qualidade"
+      },
+      "project": {
+        "id": "proj-satisfacao",
+        "name": "Satisfação do Cliente"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-isqp",
+        "name": "ISQP - Índice de Satisfação",
+        "value": "78.5",
+        "unit": "%",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Técnica Coelba",
+      "Gerência de Qualidade",
+      "Satisfação do Cliente",
+      "ISQP Detalhado por Município.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-5a",
+      "report_status": "approved",
+      "report": {
+        "name": "ISQP Detalhado por Município.pdf",
+        "description": "Análise detalhada do ISQP por município da área de concessão.",
+        "date": "2024-12-08",
+        "size_label": "5.2 MB",
+        "size_bytes": 5452595,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendência Técnica Coelba"
+        },
+        "management": {
+          "id": "ger-qualidade",
+          "name": "Gerência de Qualidade"
+        },
+        "project": {
+          "id": "proj-satisfacao",
+          "name": "Satisfação do Cliente"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-isqp",
+          "name": "ISQP - Índice de Satisfação",
+          "value": "78.5",
+          "unit": "%",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Técnica Coelba",
+        "Gerência de Qualidade",
+        "Satisfação do Cliente",
+        "ISQP Detalhado por Município.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-5a",
+        "report_status": "approved",
+        "report": {
+          "name": "ISQP Detalhado por Município.pdf",
+          "description": "Análise detalhada do ISQP por município da área de concessão.",
+          "date": "2024-12-08",
+          "size_label": "5.2 MB",
+          "size_bytes": 5452595,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendência Técnica Coelba"
+          },
+          "management": {
+            "id": "ger-qualidade",
+            "name": "Gerência de Qualidade"
+          },
+          "project": {
+            "id": "proj-satisfacao",
+            "name": "Satisfação do Cliente"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-isqp",
+            "name": "ISQP - Índice de Satisfação",
+            "value": "78.5",
+            "unit": "%",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Técnica Coelba",
+          "Gerência de Qualidade",
+          "Satisfação do Cliente",
+          "ISQP Detalhado por Município.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-5a",
+          "report_status": "approved",
+          "report": {
+            "name": "ISQP Detalhado por Município.pdf",
+            "description": "Análise detalhada do ISQP por município da área de concessão.",
+            "date": "2024-12-08",
+            "size_label": "5.2 MB",
+            "size_bytes": 5452595,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendência Técnica Coelba"
+            },
+            "management": {
+              "id": "ger-qualidade",
+              "name": "Gerência de Qualidade"
+            },
+            "project": {
+              "id": "proj-satisfacao",
+              "name": "Satisfação do Cliente"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-isqp",
+              "name": "ISQP - Índice de Satisfação",
+              "value": "78.5",
+              "unit": "%",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Técnica Coelba",
+            "Gerência de Qualidade",
+            "Satisfação do Cliente",
+            "ISQP Detalhado por Município.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-5a",
+            "report_status": "approved",
+            "report": {
+              "name": "ISQP Detalhado por Município.pdf",
+              "description": "Análise detalhada do ISQP por município da área de concessão.",
+              "date": "2024-12-08",
+              "size_label": "5.2 MB",
+              "size_bytes": 5452595,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendência Técnica Coelba"
+              },
+              "management": {
+                "id": "ger-qualidade",
+                "name": "Gerência de Qualidade"
+              },
+              "project": {
+                "id": "proj-satisfacao",
+                "name": "Satisfação do Cliente"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-isqp",
+                "name": "ISQP - Índice de Satisfação",
+                "value": "78.5",
+                "unit": "%",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Técnica Coelba",
+              "Gerência de Qualidade",
+              "Satisfação do Cliente",
+              "ISQP Detalhado por Município.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-5a",
+              "report_status": "approved",
+              "report": {
+                "name": "ISQP Detalhado por Município.pdf",
+                "description": "Análise detalhada do ISQP por município da área de concessão.",
+                "date": "2024-12-08",
+                "size_label": "5.2 MB",
+                "size_bytes": 5452595,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendência Técnica Coelba"
+                },
+                "management": {
+                  "id": "ger-qualidade",
+                  "name": "Gerência de Qualidade"
+                },
+                "project": {
+                  "id": "proj-satisfacao",
+                  "name": "Satisfação do Cliente"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-isqp",
+                  "name": "ISQP - Índice de Satisfação",
+                  "value": "78.5",
+                  "unit": "%",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Técnica Coelba",
+                "Gerência de Qualidade",
+                "Satisfação do Cliente",
+                "ISQP Detalhado por Município.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-5a",
+                "report_status": "approved",
+                "report": {
+                  "name": "ISQP Detalhado por Município.pdf",
+                  "description": "Análise detalhada do ISQP por município da área de concessão.",
+                  "date": "2024-12-08",
+                  "size_label": "5.2 MB",
+                  "size_bytes": 5452595,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendência Técnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-qualidade",
+                    "name": "Gerência de Qualidade"
+                  },
+                  "project": {
+                    "id": "proj-satisfacao",
+                    "name": "Satisfação do Cliente"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-isqp",
+                    "name": "ISQP - Índice de Satisfação",
+                    "value": "78.5",
+                    "unit": "%",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Técnica Coelba",
+                  "Gerência de Qualidade",
+                  "Satisfação do Cliente",
+                  "ISQP Detalhado por Município.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-5a",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "ISQP Detalhado por Município.pdf",
+                    "description": "Análise detalhada do ISQP por município da área de concessão.",
+                    "date": "2024-12-08",
+                    "size_label": "5.2 MB",
+                    "size_bytes": 5452595,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendência Técnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-qualidade",
+                      "name": "Gerência de Qualidade"
+                    },
+                    "project": {
+                      "id": "proj-satisfacao",
+                      "name": "Satisfação do Cliente"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-isqp",
+                      "name": "ISQP - Índice de Satisfação",
+                      "value": "78.5",
+                      "unit": "%",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Técnica Coelba",
+                    "Gerência de Qualidade",
+                    "Satisfação do Cliente",
+                    "ISQP Detalhado por Município.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-5a",
+                    "name": "ISQP Detalhado por Município.pdf",
+                    "date": "2024-12-08",
+                    "size": "5.2 MB",
+                    "description": "Análise detalhada do ISQP por município da área de concessão.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.388Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.531Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.963Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.127Z"
+          },
+          "generated_at": "2026-04-03T14:08:35.126Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.012Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.554Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.767Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.947Z"
+}

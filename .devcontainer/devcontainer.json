@@ -1,0 +1,48 @@
+{
+  "name": "NeoView Codespaces",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "runServices": ["app", "postgres", "chromadb"],
+  "shutdownAction": "stopCompose",
+  "postCreateCommand": "bash .devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      },
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode.vscode-typescript-next"
+      ]
+    }
+  },
+  "forwardPorts": [8080, 3390, 5432, 8000],
+  "portsAttributes": {
+    "8080": {
+      "label": "NeoView Frontend",
+      "onAutoForward": "openPreview",
+      "visibility": "public",
+      "protocol": "http"
+    },
+    "3390": {
+      "label": "NeoView Backend",
+      "onAutoForward": "silent",
+      "visibility": "private",
+      "protocol": "http"
+    },
+    "5432": {
+      "label": "PostgreSQL",
+      "onAutoForward": "silent",
+      "visibility": "private"
+    },
+    "8000": {
+      "label": "ChromaDB",
+      "onAutoForward": "silent",
+      "visibility": "private",
+      "protocol": "http"
+    }
+  }
+}

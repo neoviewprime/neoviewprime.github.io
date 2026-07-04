@@ -1,0 +1,839 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "demo-pending-gd-impacto",
+  "report_status": "pending_approval",
+  "report": {
+    "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+    "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+    "date": "2026-03-12",
+    "size_label": "4.0 MB",
+    "size_bytes": 4194304,
+    "url": "https://example.com/demo/gd-impacto"
+  },
+  "hierarchy": {
+    "company": {
+      "id": "pernambuco",
+      "name": "Neoenergia Pernambuco"
+    },
+    "superintendence": {
+      "id": "sup-operacoes-pe",
+      "name": "Superintendencia de Operacoes"
+    },
+    "management": {
+      "id": "ger-projetos-pe",
+      "name": "Gerencia de Projetos"
+    },
+    "project": {
+      "id": "proj-energia-solar",
+      "name": "Energia Solar Distribuida"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-gd",
+      "name": "Conexoes GD",
+      "value": "15420",
+      "unit": "unidades",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Pernambuco",
+    "Superintendencia de Operacoes",
+    "Gerencia de Projetos",
+    "Energia Solar Distribuida",
+    "Impacto da GD no Carregamento de Alimentadores.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "demo-pending-gd-impacto",
+    "report_status": "pending_approval",
+    "report": {
+      "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+      "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+      "date": "2026-03-12",
+      "size_label": "4.0 MB",
+      "size_bytes": 4194304,
+      "url": "https://example.com/demo/gd-impacto"
+    },
+    "hierarchy": {
+      "company": {
+        "id": "pernambuco",
+        "name": "Neoenergia Pernambuco"
+      },
+      "superintendence": {
+        "id": "sup-operacoes-pe",
+        "name": "Superintendencia de Operacoes"
+      },
+      "management": {
+        "id": "ger-projetos-pe",
+        "name": "Gerencia de Projetos"
+      },
+      "project": {
+        "id": "proj-energia-solar",
+        "name": "Energia Solar Distribuida"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-gd",
+        "name": "Conexoes GD",
+        "value": "15420",
+        "unit": "unidades",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Pernambuco",
+      "Superintendencia de Operacoes",
+      "Gerencia de Projetos",
+      "Energia Solar Distribuida",
+      "Impacto da GD no Carregamento de Alimentadores.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "demo-pending-gd-impacto",
+      "report_status": "pending_approval",
+      "report": {
+        "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+        "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+        "date": "2026-03-12",
+        "size_label": "4.0 MB",
+        "size_bytes": 4194304,
+        "url": "https://example.com/demo/gd-impacto"
+      },
+      "hierarchy": {
+        "company": {
+          "id": "pernambuco",
+          "name": "Neoenergia Pernambuco"
+        },
+        "superintendence": {
+          "id": "sup-operacoes-pe",
+          "name": "Superintendencia de Operacoes"
+        },
+        "management": {
+          "id": "ger-projetos-pe",
+          "name": "Gerencia de Projetos"
+        },
+        "project": {
+          "id": "proj-energia-solar",
+          "name": "Energia Solar Distribuida"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-gd",
+          "name": "Conexoes GD",
+          "value": "15420",
+          "unit": "unidades",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Pernambuco",
+        "Superintendencia de Operacoes",
+        "Gerencia de Projetos",
+        "Energia Solar Distribuida",
+        "Impacto da GD no Carregamento de Alimentadores.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "demo-pending-gd-impacto",
+        "report_status": "pending_approval",
+        "report": {
+          "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+          "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+          "date": "2026-03-12",
+          "size_label": "4.0 MB",
+          "size_bytes": 4194304,
+          "url": "https://example.com/demo/gd-impacto"
+        },
+        "hierarchy": {
+          "company": {
+            "id": "pernambuco",
+            "name": "Neoenergia Pernambuco"
+          },
+          "superintendence": {
+            "id": "sup-operacoes-pe",
+            "name": "Superintendencia de Operacoes"
+          },
+          "management": {
+            "id": "ger-projetos-pe",
+            "name": "Gerencia de Projetos"
+          },
+          "project": {
+            "id": "proj-energia-solar",
+            "name": "Energia Solar Distribuida"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-gd",
+            "name": "Conexoes GD",
+            "value": "15420",
+            "unit": "unidades",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Pernambuco",
+          "Superintendencia de Operacoes",
+          "Gerencia de Projetos",
+          "Energia Solar Distribuida",
+          "Impacto da GD no Carregamento de Alimentadores.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "demo-pending-gd-impacto",
+          "report_status": "pending_approval",
+          "report": {
+            "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+            "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+            "date": "2026-03-12",
+            "size_label": "4.0 MB",
+            "size_bytes": 4194304,
+            "url": "https://example.com/demo/gd-impacto"
+          },
+          "hierarchy": {
+            "company": {
+              "id": "pernambuco",
+              "name": "Neoenergia Pernambuco"
+            },
+            "superintendence": {
+              "id": "sup-operacoes-pe",
+              "name": "Superintendencia de Operacoes"
+            },
+            "management": {
+              "id": "ger-projetos-pe",
+              "name": "Gerencia de Projetos"
+            },
+            "project": {
+              "id": "proj-energia-solar",
+              "name": "Energia Solar Distribuida"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-gd",
+              "name": "Conexoes GD",
+              "value": "15420",
+              "unit": "unidades",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Pernambuco",
+            "Superintendencia de Operacoes",
+            "Gerencia de Projetos",
+            "Energia Solar Distribuida",
+            "Impacto da GD no Carregamento de Alimentadores.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "demo-pending-gd-impacto",
+            "report_status": "pending_approval",
+            "report": {
+              "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+              "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+              "date": "2026-03-12",
+              "size_label": "4.0 MB",
+              "size_bytes": 4194304,
+              "url": "https://example.com/demo/gd-impacto"
+            },
+            "hierarchy": {
+              "company": {
+                "id": "pernambuco",
+                "name": "Neoenergia Pernambuco"
+              },
+              "superintendence": {
+                "id": "sup-operacoes-pe",
+                "name": "Superintendencia de Operacoes"
+              },
+              "management": {
+                "id": "ger-projetos-pe",
+                "name": "Gerencia de Projetos"
+              },
+              "project": {
+                "id": "proj-energia-solar",
+                "name": "Energia Solar Distribuida"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-gd",
+                "name": "Conexoes GD",
+                "value": "15420",
+                "unit": "unidades",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Pernambuco",
+              "Superintendencia de Operacoes",
+              "Gerencia de Projetos",
+              "Energia Solar Distribuida",
+              "Impacto da GD no Carregamento de Alimentadores.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "demo-pending-gd-impacto",
+              "report_status": "pending_approval",
+              "report": {
+                "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+                "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+                "date": "2026-03-12",
+                "size_label": "4.0 MB",
+                "size_bytes": 4194304,
+                "url": "https://example.com/demo/gd-impacto"
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "pernambuco",
+                  "name": "Neoenergia Pernambuco"
+                },
+                "superintendence": {
+                  "id": "sup-operacoes-pe",
+                  "name": "Superintendencia de Operacoes"
+                },
+                "management": {
+                  "id": "ger-projetos-pe",
+                  "name": "Gerencia de Projetos"
+                },
+                "project": {
+                  "id": "proj-energia-solar",
+                  "name": "Energia Solar Distribuida"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-gd",
+                  "name": "Conexoes GD",
+                  "value": "15420",
+                  "unit": "unidades",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Pernambuco",
+                "Superintendencia de Operacoes",
+                "Gerencia de Projetos",
+                "Energia Solar Distribuida",
+                "Impacto da GD no Carregamento de Alimentadores.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "demo-pending-gd-impacto",
+                "report_status": "pending_approval",
+                "report": {
+                  "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+                  "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+                  "date": "2026-03-12",
+                  "size_label": "4.0 MB",
+                  "size_bytes": 4194304,
+                  "url": "https://example.com/demo/gd-impacto"
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "pernambuco",
+                    "name": "Neoenergia Pernambuco"
+                  },
+                  "superintendence": {
+                    "id": "sup-operacoes-pe",
+                    "name": "Superintendencia de Operacoes"
+                  },
+                  "management": {
+                    "id": "ger-projetos-pe",
+                    "name": "Gerencia de Projetos"
+                  },
+                  "project": {
+                    "id": "proj-energia-solar",
+                    "name": "Energia Solar Distribuida"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-gd",
+                    "name": "Conexoes GD",
+                    "value": "15420",
+                    "unit": "unidades",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Pernambuco",
+                  "Superintendencia de Operacoes",
+                  "Gerencia de Projetos",
+                  "Energia Solar Distribuida",
+                  "Impacto da GD no Carregamento de Alimentadores.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "demo-pending-gd-impacto",
+                  "report_status": "pending_approval",
+                  "report": {
+                    "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+                    "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+                    "date": "2026-03-12",
+                    "size_label": "4.0 MB",
+                    "size_bytes": 4194304,
+                    "url": "https://example.com/demo/gd-impacto"
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "pernambuco",
+                      "name": "Neoenergia Pernambuco"
+                    },
+                    "superintendence": {
+                      "id": "sup-operacoes-pe",
+                      "name": "Superintendencia de Operacoes"
+                    },
+                    "management": {
+                      "id": "ger-projetos-pe",
+                      "name": "Gerencia de Projetos"
+                    },
+                    "project": {
+                      "id": "proj-energia-solar",
+                      "name": "Energia Solar Distribuida"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-gd",
+                      "name": "Conexoes GD",
+                      "value": "15420",
+                      "unit": "unidades",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Pernambuco",
+                    "Superintendencia de Operacoes",
+                    "Gerencia de Projetos",
+                    "Energia Solar Distribuida",
+                    "Impacto da GD no Carregamento de Alimentadores.pdf"
+                  ],
+                  "raw_json": {
+                    "schema": "neoview.report.v1",
+                    "source_report_id": "demo-pending-gd-impacto",
+                    "report_status": "pending_approval",
+                    "report": {
+                      "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+                      "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+                      "date": "2026-03-12",
+                      "size_label": "4.0 MB",
+                      "size_bytes": 4194304,
+                      "url": "https://example.com/demo/gd-impacto"
+                    },
+                    "hierarchy": {
+                      "company": {
+                        "id": "pernambuco",
+                        "name": "Neoenergia Pernambuco"
+                      },
+                      "superintendence": {
+                        "id": "sup-operacoes-pe",
+                        "name": "Superintendencia de Operacoes"
+                      },
+                      "management": {
+                        "id": "ger-projetos-pe",
+                        "name": "Gerencia de Projetos"
+                      },
+                      "project": {
+                        "id": "proj-energia-solar",
+                        "name": "Energia Solar Distribuida"
+                      }
+                    },
+                    "indicators": [
+                      {
+                        "id": "ind-gd",
+                        "name": "Conexoes GD",
+                        "value": "15420",
+                        "unit": "unidades",
+                        "trend": "up"
+                      }
+                    ],
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    },
+                    "path": [
+                      "Neoenergia Pernambuco",
+                      "Superintendencia de Operacoes",
+                      "Gerencia de Projetos",
+                      "Energia Solar Distribuida",
+                      "Impacto da GD no Carregamento de Alimentadores.pdf"
+                    ],
+                    "raw_json": {
+                      "schema": "neoview.report.v1",
+                      "source_report_id": "demo-pending-gd-impacto",
+                      "report_status": "pending_approval",
+                      "report": {
+                        "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+                        "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+                        "date": "2026-03-12",
+                        "size_label": "4.0 MB",
+                        "size_bytes": 4194304,
+                        "url": "https://example.com/demo/gd-impacto"
+                      },
+                      "hierarchy": {
+                        "company": {
+                          "id": "pernambuco",
+                          "name": "Neoenergia Pernambuco"
+                        },
+                        "superintendence": {
+                          "id": "sup-operacoes-pe",
+                          "name": "Superintendencia de Operacoes"
+                        },
+                        "management": {
+                          "id": "ger-projetos-pe",
+                          "name": "Gerencia de Projetos"
+                        },
+                        "project": {
+                          "id": "proj-energia-solar",
+                          "name": "Energia Solar Distribuida"
+                        }
+                      },
+                      "indicators": [
+                        {
+                          "id": "ind-gd",
+                          "name": "Conexoes GD",
+                          "value": "15420",
+                          "unit": "unidades",
+                          "trend": "up"
+                        }
+                      ],
+                      "metrics": {
+                        "views": 0,
+                        "comments": 0,
+                        "likes": 0,
+                        "shares": 0
+                      },
+                      "path": [
+                        "Neoenergia Pernambuco",
+                        "Superintendencia de Operacoes",
+                        "Gerencia de Projetos",
+                        "Energia Solar Distribuida",
+                        "Impacto da GD no Carregamento de Alimentadores.pdf"
+                      ],
+                      "raw_json": {
+                        "schema": "neoview.report.v1",
+                        "source_report_id": "demo-pending-gd-impacto",
+                        "report_status": "pending_approval",
+                        "report": {
+                          "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+                          "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+                          "date": "2026-03-12",
+                          "size_label": "4.0 MB",
+                          "size_bytes": 4194304,
+                          "url": "https://example.com/demo/gd-impacto"
+                        },
+                        "hierarchy": {
+                          "company": {
+                            "id": "pernambuco",
+                            "name": "Neoenergia Pernambuco"
+                          },
+                          "superintendence": {
+                            "id": "sup-operacoes-pe",
+                            "name": "Superintendencia de Operacoes"
+                          },
+                          "management": {
+                            "id": "ger-projetos-pe",
+                            "name": "Gerencia de Projetos"
+                          },
+                          "project": {
+                            "id": "proj-energia-solar",
+                            "name": "Energia Solar Distribuida"
+                          }
+                        },
+                        "indicators": [
+                          {
+                            "id": "ind-gd",
+                            "name": "Conexoes GD",
+                            "value": "15420",
+                            "unit": "unidades",
+                            "trend": "up"
+                          }
+                        ],
+                        "metrics": {
+                          "views": 0,
+                          "comments": 0,
+                          "likes": 0,
+                          "shares": 0
+                        },
+                        "path": [
+                          "Neoenergia Pernambuco",
+                          "Superintendencia de Operacoes",
+                          "Gerencia de Projetos",
+                          "Energia Solar Distribuida",
+                          "Impacto da GD no Carregamento de Alimentadores.pdf"
+                        ],
+                        "raw_json": {
+                          "schema": "neoview.report.v1",
+                          "source_report_id": "demo-pending-gd-impacto",
+                          "report_status": "pending_approval",
+                          "report": {
+                            "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+                            "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+                            "date": "2026-03-12",
+                            "size_label": "4.0 MB",
+                            "size_bytes": 4194304,
+                            "url": "https://example.com/demo/gd-impacto"
+                          },
+                          "hierarchy": {
+                            "company": {
+                              "id": "pernambuco",
+                              "name": "Neoenergia Pernambuco"
+                            },
+                            "superintendence": {
+                              "id": "sup-operacoes-pe",
+                              "name": "Superintendencia de Operacoes"
+                            },
+                            "management": {
+                              "id": "ger-projetos-pe",
+                              "name": "Gerencia de Projetos"
+                            },
+                            "project": {
+                              "id": "proj-energia-solar",
+                              "name": "Energia Solar Distribuida"
+                            }
+                          },
+                          "indicators": [
+                            {
+                              "id": "ind-gd",
+                              "name": "Conexoes GD",
+                              "value": "15420",
+                              "unit": "unidades",
+                              "trend": "up"
+                            }
+                          ],
+                          "metrics": {
+                            "views": 0,
+                            "comments": 0,
+                            "likes": 0,
+                            "shares": 0
+                          },
+                          "path": [
+                            "Neoenergia Pernambuco",
+                            "Superintendencia de Operacoes",
+                            "Gerencia de Projetos",
+                            "Energia Solar Distribuida",
+                            "Impacto da GD no Carregamento de Alimentadores.pdf"
+                          ],
+                          "raw_json": {
+                            "schema": "neoview.report.v1",
+                            "source_report_id": "demo-pending-gd-impacto",
+                            "report_status": "pending_approval",
+                            "report": {
+                              "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+                              "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+                              "date": "2026-03-12",
+                              "size_label": "4.0 MB",
+                              "size_bytes": 4194304,
+                              "url": "https://example.com/demo/gd-impacto"
+                            },
+                            "hierarchy": {
+                              "company": {
+                                "id": "pernambuco",
+                                "name": "Neoenergia Pernambuco"
+                              },
+                              "superintendence": {
+                                "id": "sup-operacoes-pe",
+                                "name": "Superintendencia de Operacoes"
+                              },
+                              "management": {
+                                "id": "ger-projetos-pe",
+                                "name": "Gerencia de Projetos"
+                              },
+                              "project": {
+                                "id": "proj-energia-solar",
+                                "name": "Energia Solar Distribuida"
+                              }
+                            },
+                            "indicators": [
+                              {
+                                "id": "ind-gd",
+                                "name": "Conexoes GD",
+                                "value": "15420",
+                                "unit": "unidades",
+                                "trend": "up"
+                              }
+                            ],
+                            "metrics": {
+                              "views": 0,
+                              "comments": 0,
+                              "likes": 0,
+                              "shares": 0
+                            },
+                            "path": [
+                              "Neoenergia Pernambuco",
+                              "Superintendencia de Operacoes",
+                              "Gerencia de Projetos",
+                              "Energia Solar Distribuida",
+                              "Impacto da GD no Carregamento de Alimentadores.pdf"
+                            ],
+                            "raw_json": {
+                              "schema": "neoview.report.v1",
+                              "source_report_id": "demo-pending-gd-impacto",
+                              "report_status": "pending_approval",
+                              "report": {
+                                "name": "Impacto da GD no Carregamento de Alimentadores.pdf",
+                                "description": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+                                "date": "2026-03-12",
+                                "size_label": "4.0 MB",
+                                "size_bytes": 4194304,
+                                "url": "https://example.com/demo/gd-impacto"
+                              },
+                              "hierarchy": {
+                                "company": {
+                                  "id": "pernambuco",
+                                  "name": "Neoenergia Pernambuco"
+                                },
+                                "superintendence": {
+                                  "id": "sup-operacoes-pe",
+                                  "name": "Superintendencia de Operacoes"
+                                },
+                                "management": {
+                                  "id": "ger-projetos-pe",
+                                  "name": "Gerencia de Projetos"
+                                },
+                                "project": {
+                                  "id": "proj-energia-solar",
+                                  "name": "Energia Solar Distribuida"
+                                }
+                              },
+                              "indicators": [
+                                {
+                                  "id": "ind-gd",
+                                  "name": "Conexoes GD",
+                                  "value": "15420",
+                                  "unit": "unidades",
+                                  "trend": "up"
+                                }
+                              ],
+                              "metrics": {
+                                "views": 0,
+                                "comments": 0,
+                                "likes": 0,
+                                "shares": 0
+                              },
+                              "path": [
+                                "Neoenergia Pernambuco",
+                                "Superintendencia de Operacoes",
+                                "Gerencia de Projetos",
+                                "Energia Solar Distribuida",
+                                "Impacto da GD no Carregamento de Alimentadores.pdf"
+                              ],
+                              "raw_json": {
+                                "sourceReportId": "demo-pending-gd-impacto",
+                                "reportName": "Impacto da GD no Carregamento de Alimentadores.pdf",
+                                "reportDescription": "Estudo de impacto da geracao distribuida sobre capacidade, perdas e expansao em Pernambuco.",
+                                "reportDate": "2026-03-12",
+                                "reportSizeLabel": "4.0 MB",
+                                "reportUrl": "https://example.com/demo/gd-impacto",
+                                "companyId": "pernambuco",
+                                "companyName": "Neoenergia Pernambuco",
+                                "superintendenceId": "sup-operacoes-pe",
+                                "superintendenceName": "Superintendencia de Operacoes",
+                                "managementId": "ger-projetos-pe",
+                                "managementName": "Gerencia de Projetos",
+                                "projectId": "proj-energia-solar",
+                                "projectName": "Energia Solar Distribuida",
+                                "indicators": [
+                                  {
+                                    "id": "ind-gd",
+                                    "name": "Conexoes GD",
+                                    "value": "15420",
+                                    "unit": "unidades",
+                                    "trend": "up"
+                                  }
+                                ],
+                                "submitterName": "Fernanda Rocha",
+                                "submitterEmail": "fernanda.rocha@neoview.local",
+                                "submittedByName": "Fernanda Rocha",
+                                "submittedByEmail": "fernanda.rocha@neoview.local"
+                              },
+                              "generated_at": "2026-03-31T23:04:39.440Z"
+                            },
+                            "generated_at": "2026-03-31T23:07:13.650Z"
+                          },
+                          "generated_at": "2026-03-31T23:34:16.258Z"
+                        },
+                        "generated_at": "2026-03-31T23:36:59.406Z"
+                      },
+                      "generated_at": "2026-03-31T23:56:55.940Z"
+                    },
+                    "generated_at": "2026-04-01T07:33:54.455Z"
+                  },
+                  "generated_at": "2026-04-01T08:05:23.972Z"
+                },
+                "generated_at": "2026-04-01T08:09:41.083Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.543Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.836Z"
+          },
+          "generated_at": "2026-04-03T14:08:36.729Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.550Z"
+      },
+      "generated_at": "2026-04-03T14:44:32.195Z"
+    },
+    "generated_at": "2026-04-03T14:58:41.296Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.182Z"
+}

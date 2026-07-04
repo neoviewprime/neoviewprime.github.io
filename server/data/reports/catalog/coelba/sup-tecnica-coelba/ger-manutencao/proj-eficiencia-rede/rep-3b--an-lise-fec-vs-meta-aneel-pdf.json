@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-3b",
+  "report_status": "approved",
+  "report": {
+    "name": "Análise FEC vs Meta ANEEL.pdf",
+    "description": "Comparativo do FEC realizado versus metas regulatórias da ANEEL.",
+    "date": "2024-12-05",
+    "size_label": "1.6 MB",
+    "size_bytes": 1677722,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendência Técnica Coelba"
+    },
+    "management": {
+      "id": "ger-manutencao",
+      "name": "Gerência de Manutenção"
+    },
+    "project": {
+      "id": "proj-eficiencia-rede",
+      "name": "Eficiência de Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-fec",
+      "name": "FEC - Frequência Equivalente por Consumidor",
+      "value": "8.2",
+      "unit": "interrupções",
+      "trend": "stable"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Técnica Coelba",
+    "Gerência de Manutenção",
+    "Eficiência de Rede",
+    "Análise FEC vs Meta ANEEL.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-3b",
+    "report_status": "approved",
+    "report": {
+      "name": "Análise FEC vs Meta ANEEL.pdf",
+      "description": "Comparativo do FEC realizado versus metas regulatórias da ANEEL.",
+      "date": "2024-12-05",
+      "size_label": "1.6 MB",
+      "size_bytes": 1677722,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendência Técnica Coelba"
+      },
+      "management": {
+        "id": "ger-manutencao",
+        "name": "Gerência de Manutenção"
+      },
+      "project": {
+        "id": "proj-eficiencia-rede",
+        "name": "Eficiência de Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-fec",
+        "name": "FEC - Frequência Equivalente por Consumidor",
+        "value": "8.2",
+        "unit": "interrupções",
+        "trend": "stable"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Técnica Coelba",
+      "Gerência de Manutenção",
+      "Eficiência de Rede",
+      "Análise FEC vs Meta ANEEL.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-3b",
+      "report_status": "approved",
+      "report": {
+        "name": "Análise FEC vs Meta ANEEL.pdf",
+        "description": "Comparativo do FEC realizado versus metas regulatórias da ANEEL.",
+        "date": "2024-12-05",
+        "size_label": "1.6 MB",
+        "size_bytes": 1677722,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendência Técnica Coelba"
+        },
+        "management": {
+          "id": "ger-manutencao",
+          "name": "Gerência de Manutenção"
+        },
+        "project": {
+          "id": "proj-eficiencia-rede",
+          "name": "Eficiência de Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-fec",
+          "name": "FEC - Frequência Equivalente por Consumidor",
+          "value": "8.2",
+          "unit": "interrupções",
+          "trend": "stable"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Técnica Coelba",
+        "Gerência de Manutenção",
+        "Eficiência de Rede",
+        "Análise FEC vs Meta ANEEL.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-3b",
+        "report_status": "approved",
+        "report": {
+          "name": "Análise FEC vs Meta ANEEL.pdf",
+          "description": "Comparativo do FEC realizado versus metas regulatórias da ANEEL.",
+          "date": "2024-12-05",
+          "size_label": "1.6 MB",
+          "size_bytes": 1677722,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendência Técnica Coelba"
+          },
+          "management": {
+            "id": "ger-manutencao",
+            "name": "Gerência de Manutenção"
+          },
+          "project": {
+            "id": "proj-eficiencia-rede",
+            "name": "Eficiência de Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-fec",
+            "name": "FEC - Frequência Equivalente por Consumidor",
+            "value": "8.2",
+            "unit": "interrupções",
+            "trend": "stable"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Técnica Coelba",
+          "Gerência de Manutenção",
+          "Eficiência de Rede",
+          "Análise FEC vs Meta ANEEL.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-3b",
+          "report_status": "approved",
+          "report": {
+            "name": "Análise FEC vs Meta ANEEL.pdf",
+            "description": "Comparativo do FEC realizado versus metas regulatórias da ANEEL.",
+            "date": "2024-12-05",
+            "size_label": "1.6 MB",
+            "size_bytes": 1677722,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendência Técnica Coelba"
+            },
+            "management": {
+              "id": "ger-manutencao",
+              "name": "Gerência de Manutenção"
+            },
+            "project": {
+              "id": "proj-eficiencia-rede",
+              "name": "Eficiência de Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-fec",
+              "name": "FEC - Frequência Equivalente por Consumidor",
+              "value": "8.2",
+              "unit": "interrupções",
+              "trend": "stable"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Técnica Coelba",
+            "Gerência de Manutenção",
+            "Eficiência de Rede",
+            "Análise FEC vs Meta ANEEL.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-3b",
+            "report_status": "approved",
+            "report": {
+              "name": "Análise FEC vs Meta ANEEL.pdf",
+              "description": "Comparativo do FEC realizado versus metas regulatórias da ANEEL.",
+              "date": "2024-12-05",
+              "size_label": "1.6 MB",
+              "size_bytes": 1677722,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendência Técnica Coelba"
+              },
+              "management": {
+                "id": "ger-manutencao",
+                "name": "Gerência de Manutenção"
+              },
+              "project": {
+                "id": "proj-eficiencia-rede",
+                "name": "Eficiência de Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-fec",
+                "name": "FEC - Frequência Equivalente por Consumidor",
+                "value": "8.2",
+                "unit": "interrupções",
+                "trend": "stable"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Técnica Coelba",
+              "Gerência de Manutenção",
+              "Eficiência de Rede",
+              "Análise FEC vs Meta ANEEL.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-3b",
+              "report_status": "approved",
+              "report": {
+                "name": "Análise FEC vs Meta ANEEL.pdf",
+                "description": "Comparativo do FEC realizado versus metas regulatórias da ANEEL.",
+                "date": "2024-12-05",
+                "size_label": "1.6 MB",
+                "size_bytes": 1677722,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendência Técnica Coelba"
+                },
+                "management": {
+                  "id": "ger-manutencao",
+                  "name": "Gerência de Manutenção"
+                },
+                "project": {
+                  "id": "proj-eficiencia-rede",
+                  "name": "Eficiência de Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-fec",
+                  "name": "FEC - Frequência Equivalente por Consumidor",
+                  "value": "8.2",
+                  "unit": "interrupções",
+                  "trend": "stable"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Técnica Coelba",
+                "Gerência de Manutenção",
+                "Eficiência de Rede",
+                "Análise FEC vs Meta ANEEL.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-3b",
+                "report_status": "approved",
+                "report": {
+                  "name": "Análise FEC vs Meta ANEEL.pdf",
+                  "description": "Comparativo do FEC realizado versus metas regulatórias da ANEEL.",
+                  "date": "2024-12-05",
+                  "size_label": "1.6 MB",
+                  "size_bytes": 1677722,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendência Técnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-manutencao",
+                    "name": "Gerência de Manutenção"
+                  },
+                  "project": {
+                    "id": "proj-eficiencia-rede",
+                    "name": "Eficiência de Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-fec",
+                    "name": "FEC - Frequência Equivalente por Consumidor",
+                    "value": "8.2",
+                    "unit": "interrupções",
+                    "trend": "stable"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Técnica Coelba",
+                  "Gerência de Manutenção",
+                  "Eficiência de Rede",
+                  "Análise FEC vs Meta ANEEL.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-3b",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Análise FEC vs Meta ANEEL.pdf",
+                    "description": "Comparativo do FEC realizado versus metas regulatórias da ANEEL.",
+                    "date": "2024-12-05",
+                    "size_label": "1.6 MB",
+                    "size_bytes": 1677722,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendência Técnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-manutencao",
+                      "name": "Gerência de Manutenção"
+                    },
+                    "project": {
+                      "id": "proj-eficiencia-rede",
+                      "name": "Eficiência de Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-fec",
+                      "name": "FEC - Frequência Equivalente por Consumidor",
+                      "value": "8.2",
+                      "unit": "interrupções",
+                      "trend": "stable"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Técnica Coelba",
+                    "Gerência de Manutenção",
+                    "Eficiência de Rede",
+                    "Análise FEC vs Meta ANEEL.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-3b",
+                    "name": "Análise FEC vs Meta ANEEL.pdf",
+                    "date": "2024-12-05",
+                    "size": "1.6 MB",
+                    "description": "Comparativo do FEC realizado versus metas regulatórias da ANEEL.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.294Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.416Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.863Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.980Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.992Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.906Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.452Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.673Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.903Z"
+}

@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-10c",
+  "report_status": "approved",
+  "report": {
+    "name": "Projeção Conexões 2025.pdf",
+    "description": "Projeção de crescimento de conexões de GD para 2025.",
+    "date": "2024-11-28",
+    "size_label": "1.8 MB",
+    "size_bytes": 1887437,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "pernambuco",
+      "name": "Neoenergia Pernambuco"
+    },
+    "superintendence": {
+      "id": "sup-operacoes-pe",
+      "name": "Superintendência de Operações"
+    },
+    "management": {
+      "id": "ger-projetos-pe",
+      "name": "Gerência de Projetos"
+    },
+    "project": {
+      "id": "proj-energia-solar",
+      "name": "Energia Solar Distribuída"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-gd",
+      "name": "Conexões GD",
+      "value": "15420",
+      "unit": "unidades",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Pernambuco",
+    "Superintendência de Operações",
+    "Gerência de Projetos",
+    "Energia Solar Distribuída",
+    "Projeção Conexões 2025.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-10c",
+    "report_status": "approved",
+    "report": {
+      "name": "Projeção Conexões 2025.pdf",
+      "description": "Projeção de crescimento de conexões de GD para 2025.",
+      "date": "2024-11-28",
+      "size_label": "1.8 MB",
+      "size_bytes": 1887437,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "pernambuco",
+        "name": "Neoenergia Pernambuco"
+      },
+      "superintendence": {
+        "id": "sup-operacoes-pe",
+        "name": "Superintendência de Operações"
+      },
+      "management": {
+        "id": "ger-projetos-pe",
+        "name": "Gerência de Projetos"
+      },
+      "project": {
+        "id": "proj-energia-solar",
+        "name": "Energia Solar Distribuída"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-gd",
+        "name": "Conexões GD",
+        "value": "15420",
+        "unit": "unidades",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Pernambuco",
+      "Superintendência de Operações",
+      "Gerência de Projetos",
+      "Energia Solar Distribuída",
+      "Projeção Conexões 2025.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-10c",
+      "report_status": "approved",
+      "report": {
+        "name": "Projeção Conexões 2025.pdf",
+        "description": "Projeção de crescimento de conexões de GD para 2025.",
+        "date": "2024-11-28",
+        "size_label": "1.8 MB",
+        "size_bytes": 1887437,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "pernambuco",
+          "name": "Neoenergia Pernambuco"
+        },
+        "superintendence": {
+          "id": "sup-operacoes-pe",
+          "name": "Superintendência de Operações"
+        },
+        "management": {
+          "id": "ger-projetos-pe",
+          "name": "Gerência de Projetos"
+        },
+        "project": {
+          "id": "proj-energia-solar",
+          "name": "Energia Solar Distribuída"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-gd",
+          "name": "Conexões GD",
+          "value": "15420",
+          "unit": "unidades",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Pernambuco",
+        "Superintendência de Operações",
+        "Gerência de Projetos",
+        "Energia Solar Distribuída",
+        "Projeção Conexões 2025.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-10c",
+        "report_status": "approved",
+        "report": {
+          "name": "Projeção Conexões 2025.pdf",
+          "description": "Projeção de crescimento de conexões de GD para 2025.",
+          "date": "2024-11-28",
+          "size_label": "1.8 MB",
+          "size_bytes": 1887437,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "pernambuco",
+            "name": "Neoenergia Pernambuco"
+          },
+          "superintendence": {
+            "id": "sup-operacoes-pe",
+            "name": "Superintendência de Operações"
+          },
+          "management": {
+            "id": "ger-projetos-pe",
+            "name": "Gerência de Projetos"
+          },
+          "project": {
+            "id": "proj-energia-solar",
+            "name": "Energia Solar Distribuída"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-gd",
+            "name": "Conexões GD",
+            "value": "15420",
+            "unit": "unidades",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Pernambuco",
+          "Superintendência de Operações",
+          "Gerência de Projetos",
+          "Energia Solar Distribuída",
+          "Projeção Conexões 2025.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-10c",
+          "report_status": "approved",
+          "report": {
+            "name": "Projeção Conexões 2025.pdf",
+            "description": "Projeção de crescimento de conexões de GD para 2025.",
+            "date": "2024-11-28",
+            "size_label": "1.8 MB",
+            "size_bytes": 1887437,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "pernambuco",
+              "name": "Neoenergia Pernambuco"
+            },
+            "superintendence": {
+              "id": "sup-operacoes-pe",
+              "name": "Superintendência de Operações"
+            },
+            "management": {
+              "id": "ger-projetos-pe",
+              "name": "Gerência de Projetos"
+            },
+            "project": {
+              "id": "proj-energia-solar",
+              "name": "Energia Solar Distribuída"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-gd",
+              "name": "Conexões GD",
+              "value": "15420",
+              "unit": "unidades",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Pernambuco",
+            "Superintendência de Operações",
+            "Gerência de Projetos",
+            "Energia Solar Distribuída",
+            "Projeção Conexões 2025.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-10c",
+            "report_status": "approved",
+            "report": {
+              "name": "Projeção Conexões 2025.pdf",
+              "description": "Projeção de crescimento de conexões de GD para 2025.",
+              "date": "2024-11-28",
+              "size_label": "1.8 MB",
+              "size_bytes": 1887437,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "pernambuco",
+                "name": "Neoenergia Pernambuco"
+              },
+              "superintendence": {
+                "id": "sup-operacoes-pe",
+                "name": "Superintendência de Operações"
+              },
+              "management": {
+                "id": "ger-projetos-pe",
+                "name": "Gerência de Projetos"
+              },
+              "project": {
+                "id": "proj-energia-solar",
+                "name": "Energia Solar Distribuída"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-gd",
+                "name": "Conexões GD",
+                "value": "15420",
+                "unit": "unidades",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Pernambuco",
+              "Superintendência de Operações",
+              "Gerência de Projetos",
+              "Energia Solar Distribuída",
+              "Projeção Conexões 2025.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-10c",
+              "report_status": "approved",
+              "report": {
+                "name": "Projeção Conexões 2025.pdf",
+                "description": "Projeção de crescimento de conexões de GD para 2025.",
+                "date": "2024-11-28",
+                "size_label": "1.8 MB",
+                "size_bytes": 1887437,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "pernambuco",
+                  "name": "Neoenergia Pernambuco"
+                },
+                "superintendence": {
+                  "id": "sup-operacoes-pe",
+                  "name": "Superintendência de Operações"
+                },
+                "management": {
+                  "id": "ger-projetos-pe",
+                  "name": "Gerência de Projetos"
+                },
+                "project": {
+                  "id": "proj-energia-solar",
+                  "name": "Energia Solar Distribuída"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-gd",
+                  "name": "Conexões GD",
+                  "value": "15420",
+                  "unit": "unidades",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Pernambuco",
+                "Superintendência de Operações",
+                "Gerência de Projetos",
+                "Energia Solar Distribuída",
+                "Projeção Conexões 2025.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-10c",
+                "report_status": "approved",
+                "report": {
+                  "name": "Projeção Conexões 2025.pdf",
+                  "description": "Projeção de crescimento de conexões de GD para 2025.",
+                  "date": "2024-11-28",
+                  "size_label": "1.8 MB",
+                  "size_bytes": 1887437,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "pernambuco",
+                    "name": "Neoenergia Pernambuco"
+                  },
+                  "superintendence": {
+                    "id": "sup-operacoes-pe",
+                    "name": "Superintendência de Operações"
+                  },
+                  "management": {
+                    "id": "ger-projetos-pe",
+                    "name": "Gerência de Projetos"
+                  },
+                  "project": {
+                    "id": "proj-energia-solar",
+                    "name": "Energia Solar Distribuída"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-gd",
+                    "name": "Conexões GD",
+                    "value": "15420",
+                    "unit": "unidades",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Pernambuco",
+                  "Superintendência de Operações",
+                  "Gerência de Projetos",
+                  "Energia Solar Distribuída",
+                  "Projeção Conexões 2025.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-10c",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Projeção Conexões 2025.pdf",
+                    "description": "Projeção de crescimento de conexões de GD para 2025.",
+                    "date": "2024-11-28",
+                    "size_label": "1.8 MB",
+                    "size_bytes": 1887437,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "pernambuco",
+                      "name": "Neoenergia Pernambuco"
+                    },
+                    "superintendence": {
+                      "id": "sup-operacoes-pe",
+                      "name": "Superintendência de Operações"
+                    },
+                    "management": {
+                      "id": "ger-projetos-pe",
+                      "name": "Gerência de Projetos"
+                    },
+                    "project": {
+                      "id": "proj-energia-solar",
+                      "name": "Energia Solar Distribuída"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-gd",
+                      "name": "Conexões GD",
+                      "value": "15420",
+                      "unit": "unidades",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Pernambuco",
+                    "Superintendência de Operações",
+                    "Gerência de Projetos",
+                    "Energia Solar Distribuída",
+                    "Projeção Conexões 2025.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-10c",
+                    "name": "Projeção Conexões 2025.pdf",
+                    "date": "2024-11-28",
+                    "size": "1.8 MB",
+                    "description": "Projeção de crescimento de conexões de GD para 2025.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:22.970Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.263Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.734Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.798Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.817Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.775Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.321Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.531Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.828Z"
+}

@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-9c",
+  "report_status": "approved",
+  "report": {
+    "name": "Análise Falhas Recorrentes.pdf",
+    "description": "Estudo de falhas recorrentes e plano de ação corretiva.",
+    "date": "2024-12-01",
+    "size_label": "2.8 MB",
+    "size_bytes": 2936013,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "elektro",
+      "name": "Neoenergia Elektro"
+    },
+    "superintendence": {
+      "id": "sup-operacoes-sp",
+      "name": "Superintendência de Operações"
+    },
+    "management": {
+      "id": "ger-manutencao-sp",
+      "name": "Gerência de Manutenção"
+    },
+    "project": {
+      "id": "proj-preventiva",
+      "name": "Manutenção Preventiva"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-disponibilidade",
+      "name": "Disponibilidade da Rede",
+      "value": "99.7",
+      "unit": "%",
+      "trend": "stable"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Elektro",
+    "Superintendência de Operações",
+    "Gerência de Manutenção",
+    "Manutenção Preventiva",
+    "Análise Falhas Recorrentes.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-9c",
+    "report_status": "approved",
+    "report": {
+      "name": "Análise Falhas Recorrentes.pdf",
+      "description": "Estudo de falhas recorrentes e plano de ação corretiva.",
+      "date": "2024-12-01",
+      "size_label": "2.8 MB",
+      "size_bytes": 2936013,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "elektro",
+        "name": "Neoenergia Elektro"
+      },
+      "superintendence": {
+        "id": "sup-operacoes-sp",
+        "name": "Superintendência de Operações"
+      },
+      "management": {
+        "id": "ger-manutencao-sp",
+        "name": "Gerência de Manutenção"
+      },
+      "project": {
+        "id": "proj-preventiva",
+        "name": "Manutenção Preventiva"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-disponibilidade",
+        "name": "Disponibilidade da Rede",
+        "value": "99.7",
+        "unit": "%",
+        "trend": "stable"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Elektro",
+      "Superintendência de Operações",
+      "Gerência de Manutenção",
+      "Manutenção Preventiva",
+      "Análise Falhas Recorrentes.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-9c",
+      "report_status": "approved",
+      "report": {
+        "name": "Análise Falhas Recorrentes.pdf",
+        "description": "Estudo de falhas recorrentes e plano de ação corretiva.",
+        "date": "2024-12-01",
+        "size_label": "2.8 MB",
+        "size_bytes": 2936013,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "elektro",
+          "name": "Neoenergia Elektro"
+        },
+        "superintendence": {
+          "id": "sup-operacoes-sp",
+          "name": "Superintendência de Operações"
+        },
+        "management": {
+          "id": "ger-manutencao-sp",
+          "name": "Gerência de Manutenção"
+        },
+        "project": {
+          "id": "proj-preventiva",
+          "name": "Manutenção Preventiva"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-disponibilidade",
+          "name": "Disponibilidade da Rede",
+          "value": "99.7",
+          "unit": "%",
+          "trend": "stable"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Elektro",
+        "Superintendência de Operações",
+        "Gerência de Manutenção",
+        "Manutenção Preventiva",
+        "Análise Falhas Recorrentes.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-9c",
+        "report_status": "approved",
+        "report": {
+          "name": "Análise Falhas Recorrentes.pdf",
+          "description": "Estudo de falhas recorrentes e plano de ação corretiva.",
+          "date": "2024-12-01",
+          "size_label": "2.8 MB",
+          "size_bytes": 2936013,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "elektro",
+            "name": "Neoenergia Elektro"
+          },
+          "superintendence": {
+            "id": "sup-operacoes-sp",
+            "name": "Superintendência de Operações"
+          },
+          "management": {
+            "id": "ger-manutencao-sp",
+            "name": "Gerência de Manutenção"
+          },
+          "project": {
+            "id": "proj-preventiva",
+            "name": "Manutenção Preventiva"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-disponibilidade",
+            "name": "Disponibilidade da Rede",
+            "value": "99.7",
+            "unit": "%",
+            "trend": "stable"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Elektro",
+          "Superintendência de Operações",
+          "Gerência de Manutenção",
+          "Manutenção Preventiva",
+          "Análise Falhas Recorrentes.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-9c",
+          "report_status": "approved",
+          "report": {
+            "name": "Análise Falhas Recorrentes.pdf",
+            "description": "Estudo de falhas recorrentes e plano de ação corretiva.",
+            "date": "2024-12-01",
+            "size_label": "2.8 MB",
+            "size_bytes": 2936013,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "elektro",
+              "name": "Neoenergia Elektro"
+            },
+            "superintendence": {
+              "id": "sup-operacoes-sp",
+              "name": "Superintendência de Operações"
+            },
+            "management": {
+              "id": "ger-manutencao-sp",
+              "name": "Gerência de Manutenção"
+            },
+            "project": {
+              "id": "proj-preventiva",
+              "name": "Manutenção Preventiva"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-disponibilidade",
+              "name": "Disponibilidade da Rede",
+              "value": "99.7",
+              "unit": "%",
+              "trend": "stable"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Elektro",
+            "Superintendência de Operações",
+            "Gerência de Manutenção",
+            "Manutenção Preventiva",
+            "Análise Falhas Recorrentes.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-9c",
+            "report_status": "approved",
+            "report": {
+              "name": "Análise Falhas Recorrentes.pdf",
+              "description": "Estudo de falhas recorrentes e plano de ação corretiva.",
+              "date": "2024-12-01",
+              "size_label": "2.8 MB",
+              "size_bytes": 2936013,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "elektro",
+                "name": "Neoenergia Elektro"
+              },
+              "superintendence": {
+                "id": "sup-operacoes-sp",
+                "name": "Superintendência de Operações"
+              },
+              "management": {
+                "id": "ger-manutencao-sp",
+                "name": "Gerência de Manutenção"
+              },
+              "project": {
+                "id": "proj-preventiva",
+                "name": "Manutenção Preventiva"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-disponibilidade",
+                "name": "Disponibilidade da Rede",
+                "value": "99.7",
+                "unit": "%",
+                "trend": "stable"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Elektro",
+              "Superintendência de Operações",
+              "Gerência de Manutenção",
+              "Manutenção Preventiva",
+              "Análise Falhas Recorrentes.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-9c",
+              "report_status": "approved",
+              "report": {
+                "name": "Análise Falhas Recorrentes.pdf",
+                "description": "Estudo de falhas recorrentes e plano de ação corretiva.",
+                "date": "2024-12-01",
+                "size_label": "2.8 MB",
+                "size_bytes": 2936013,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "elektro",
+                  "name": "Neoenergia Elektro"
+                },
+                "superintendence": {
+                  "id": "sup-operacoes-sp",
+                  "name": "Superintendência de Operações"
+                },
+                "management": {
+                  "id": "ger-manutencao-sp",
+                  "name": "Gerência de Manutenção"
+                },
+                "project": {
+                  "id": "proj-preventiva",
+                  "name": "Manutenção Preventiva"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-disponibilidade",
+                  "name": "Disponibilidade da Rede",
+                  "value": "99.7",
+                  "unit": "%",
+                  "trend": "stable"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Elektro",
+                "Superintendência de Operações",
+                "Gerência de Manutenção",
+                "Manutenção Preventiva",
+                "Análise Falhas Recorrentes.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-9c",
+                "report_status": "approved",
+                "report": {
+                  "name": "Análise Falhas Recorrentes.pdf",
+                  "description": "Estudo de falhas recorrentes e plano de ação corretiva.",
+                  "date": "2024-12-01",
+                  "size_label": "2.8 MB",
+                  "size_bytes": 2936013,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "elektro",
+                    "name": "Neoenergia Elektro"
+                  },
+                  "superintendence": {
+                    "id": "sup-operacoes-sp",
+                    "name": "Superintendência de Operações"
+                  },
+                  "management": {
+                    "id": "ger-manutencao-sp",
+                    "name": "Gerência de Manutenção"
+                  },
+                  "project": {
+                    "id": "proj-preventiva",
+                    "name": "Manutenção Preventiva"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-disponibilidade",
+                    "name": "Disponibilidade da Rede",
+                    "value": "99.7",
+                    "unit": "%",
+                    "trend": "stable"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Elektro",
+                  "Superintendência de Operações",
+                  "Gerência de Manutenção",
+                  "Manutenção Preventiva",
+                  "Análise Falhas Recorrentes.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-9c",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Análise Falhas Recorrentes.pdf",
+                    "description": "Estudo de falhas recorrentes e plano de ação corretiva.",
+                    "date": "2024-12-01",
+                    "size_label": "2.8 MB",
+                    "size_bytes": 2936013,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "elektro",
+                      "name": "Neoenergia Elektro"
+                    },
+                    "superintendence": {
+                      "id": "sup-operacoes-sp",
+                      "name": "Superintendência de Operações"
+                    },
+                    "management": {
+                      "id": "ger-manutencao-sp",
+                      "name": "Gerência de Manutenção"
+                    },
+                    "project": {
+                      "id": "proj-preventiva",
+                      "name": "Manutenção Preventiva"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-disponibilidade",
+                      "name": "Disponibilidade da Rede",
+                      "value": "99.7",
+                      "unit": "%",
+                      "trend": "stable"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Elektro",
+                    "Superintendência de Operações",
+                    "Gerência de Manutenção",
+                    "Manutenção Preventiva",
+                    "Análise Falhas Recorrentes.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-9c",
+                    "name": "Análise Falhas Recorrentes.pdf",
+                    "date": "2024-12-01",
+                    "size": "2.8 MB",
+                    "description": "Estudo de falhas recorrentes e plano de ação corretiva.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.779Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.894Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.339Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.628Z"
+          },
+          "generated_at": "2026-04-03T14:08:35.942Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.342Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.969Z"
+    },
+    "generated_at": "2026-04-03T14:58:41.106Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.102Z"
+}

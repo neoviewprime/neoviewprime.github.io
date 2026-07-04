@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-sla-2",
+  "report_status": "approved",
+  "report": {
+    "name": "Dashboard Operacional Dezembro.pdf",
+    "description": "Dashboard mensal com indicadores operacionais e comerciais consolidados.",
+    "date": "2024-12-28",
+    "size_label": "2.1 MB",
+    "size_bytes": 2202010,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-relacionamento-clientes",
+      "name": "Superintendência de Relacionamento com Clientes"
+    },
+    "management": {
+      "id": "ger-receita",
+      "name": "Gerência da Gestão da Receita"
+    },
+    "project": {
+      "id": "uni-gestao-operacional-comercial",
+      "name": "Unidade Gestão Operacional Comercial"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-sla-comercial",
+      "name": "SLA Comercial",
+      "value": "94.2",
+      "unit": "%",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 7,
+    "comments": 1,
+    "likes": 2,
+    "shares": 3
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência de Relacionamento com Clientes",
+    "Gerência da Gestão da Receita",
+    "Unidade Gestão Operacional Comercial",
+    "Dashboard Operacional Dezembro.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-sla-2",
+    "report_status": "approved",
+    "report": {
+      "name": "Dashboard Operacional Dezembro.pdf",
+      "description": "Dashboard mensal com indicadores operacionais e comerciais consolidados.",
+      "date": "2024-12-28",
+      "size_label": "2.1 MB",
+      "size_bytes": 2202010,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-relacionamento-clientes",
+        "name": "Superintendência de Relacionamento com Clientes"
+      },
+      "management": {
+        "id": "ger-receita",
+        "name": "Gerência da Gestão da Receita"
+      },
+      "project": {
+        "id": "uni-gestao-operacional-comercial",
+        "name": "Unidade Gestão Operacional Comercial"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-sla-comercial",
+        "name": "SLA Comercial",
+        "value": "94.2",
+        "unit": "%",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 7,
+      "comments": 1,
+      "likes": 2,
+      "shares": 3
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência de Relacionamento com Clientes",
+      "Gerência da Gestão da Receita",
+      "Unidade Gestão Operacional Comercial",
+      "Dashboard Operacional Dezembro.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-sla-2",
+      "report_status": "approved",
+      "report": {
+        "name": "Dashboard Operacional Dezembro.pdf",
+        "description": "Dashboard mensal com indicadores operacionais e comerciais consolidados.",
+        "date": "2024-12-28",
+        "size_label": "2.1 MB",
+        "size_bytes": 2202010,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-relacionamento-clientes",
+          "name": "Superintendência de Relacionamento com Clientes"
+        },
+        "management": {
+          "id": "ger-receita",
+          "name": "Gerência da Gestão da Receita"
+        },
+        "project": {
+          "id": "uni-gestao-operacional-comercial",
+          "name": "Unidade Gestão Operacional Comercial"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-sla-comercial",
+          "name": "SLA Comercial",
+          "value": "94.2",
+          "unit": "%",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 7,
+        "comments": 1,
+        "likes": 2,
+        "shares": 3
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência de Relacionamento com Clientes",
+        "Gerência da Gestão da Receita",
+        "Unidade Gestão Operacional Comercial",
+        "Dashboard Operacional Dezembro.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-sla-2",
+        "report_status": "approved",
+        "report": {
+          "name": "Dashboard Operacional Dezembro.pdf",
+          "description": "Dashboard mensal com indicadores operacionais e comerciais consolidados.",
+          "date": "2024-12-28",
+          "size_label": "2.1 MB",
+          "size_bytes": 2202010,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-relacionamento-clientes",
+            "name": "Superintendência de Relacionamento com Clientes"
+          },
+          "management": {
+            "id": "ger-receita",
+            "name": "Gerência da Gestão da Receita"
+          },
+          "project": {
+            "id": "uni-gestao-operacional-comercial",
+            "name": "Unidade Gestão Operacional Comercial"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-sla-comercial",
+            "name": "SLA Comercial",
+            "value": "94.2",
+            "unit": "%",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 7,
+          "comments": 1,
+          "likes": 2,
+          "shares": 3
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência de Relacionamento com Clientes",
+          "Gerência da Gestão da Receita",
+          "Unidade Gestão Operacional Comercial",
+          "Dashboard Operacional Dezembro.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-sla-2",
+          "report_status": "approved",
+          "report": {
+            "name": "Dashboard Operacional Dezembro.pdf",
+            "description": "Dashboard mensal com indicadores operacionais e comerciais consolidados.",
+            "date": "2024-12-28",
+            "size_label": "2.1 MB",
+            "size_bytes": 2202010,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-relacionamento-clientes",
+              "name": "Superintendência de Relacionamento com Clientes"
+            },
+            "management": {
+              "id": "ger-receita",
+              "name": "Gerência da Gestão da Receita"
+            },
+            "project": {
+              "id": "uni-gestao-operacional-comercial",
+              "name": "Unidade Gestão Operacional Comercial"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-sla-comercial",
+              "name": "SLA Comercial",
+              "value": "94.2",
+              "unit": "%",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 7,
+            "comments": 1,
+            "likes": 2,
+            "shares": 3
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência de Relacionamento com Clientes",
+            "Gerência da Gestão da Receita",
+            "Unidade Gestão Operacional Comercial",
+            "Dashboard Operacional Dezembro.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-sla-2",
+            "report_status": "approved",
+            "report": {
+              "name": "Dashboard Operacional Dezembro.pdf",
+              "description": "Dashboard mensal com indicadores operacionais e comerciais consolidados.",
+              "date": "2024-12-28",
+              "size_label": "2.1 MB",
+              "size_bytes": 2202010,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-relacionamento-clientes",
+                "name": "Superintendência de Relacionamento com Clientes"
+              },
+              "management": {
+                "id": "ger-receita",
+                "name": "Gerência da Gestão da Receita"
+              },
+              "project": {
+                "id": "uni-gestao-operacional-comercial",
+                "name": "Unidade Gestão Operacional Comercial"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-sla-comercial",
+                "name": "SLA Comercial",
+                "value": "94.2",
+                "unit": "%",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 7,
+              "comments": 1,
+              "likes": 2,
+              "shares": 3
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência de Relacionamento com Clientes",
+              "Gerência da Gestão da Receita",
+              "Unidade Gestão Operacional Comercial",
+              "Dashboard Operacional Dezembro.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-sla-2",
+              "report_status": "approved",
+              "report": {
+                "name": "Dashboard Operacional Dezembro.pdf",
+                "description": "Dashboard mensal com indicadores operacionais e comerciais consolidados.",
+                "date": "2024-12-28",
+                "size_label": "2.1 MB",
+                "size_bytes": 2202010,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-relacionamento-clientes",
+                  "name": "Superintendência de Relacionamento com Clientes"
+                },
+                "management": {
+                  "id": "ger-receita",
+                  "name": "Gerência da Gestão da Receita"
+                },
+                "project": {
+                  "id": "uni-gestao-operacional-comercial",
+                  "name": "Unidade Gestão Operacional Comercial"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-sla-comercial",
+                  "name": "SLA Comercial",
+                  "value": "94.2",
+                  "unit": "%",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 7,
+                "comments": 1,
+                "likes": 2,
+                "shares": 3
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência de Relacionamento com Clientes",
+                "Gerência da Gestão da Receita",
+                "Unidade Gestão Operacional Comercial",
+                "Dashboard Operacional Dezembro.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-sla-2",
+                "report_status": "approved",
+                "report": {
+                  "name": "Dashboard Operacional Dezembro.pdf",
+                  "description": "Dashboard mensal com indicadores operacionais e comerciais consolidados.",
+                  "date": "2024-12-28",
+                  "size_label": "2.1 MB",
+                  "size_bytes": 2202010,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-relacionamento-clientes",
+                    "name": "Superintendência de Relacionamento com Clientes"
+                  },
+                  "management": {
+                    "id": "ger-receita",
+                    "name": "Gerência da Gestão da Receita"
+                  },
+                  "project": {
+                    "id": "uni-gestao-operacional-comercial",
+                    "name": "Unidade Gestão Operacional Comercial"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-sla-comercial",
+                    "name": "SLA Comercial",
+                    "value": "94.2",
+                    "unit": "%",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 7,
+                  "comments": 1,
+                  "likes": 2,
+                  "shares": 3
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência de Relacionamento com Clientes",
+                  "Gerência da Gestão da Receita",
+                  "Unidade Gestão Operacional Comercial",
+                  "Dashboard Operacional Dezembro.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-sla-2",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Dashboard Operacional Dezembro.pdf",
+                    "description": "Dashboard mensal com indicadores operacionais e comerciais consolidados.",
+                    "date": "2024-12-28",
+                    "size_label": "2.1 MB",
+                    "size_bytes": 2202010,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-relacionamento-clientes",
+                      "name": "Superintendência de Relacionamento com Clientes"
+                    },
+                    "management": {
+                      "id": "ger-receita",
+                      "name": "Gerência da Gestão da Receita"
+                    },
+                    "project": {
+                      "id": "uni-gestao-operacional-comercial",
+                      "name": "Unidade Gestão Operacional Comercial"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-sla-comercial",
+                      "name": "SLA Comercial",
+                      "value": "94.2",
+                      "unit": "%",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência de Relacionamento com Clientes",
+                    "Gerência da Gestão da Receita",
+                    "Unidade Gestão Operacional Comercial",
+                    "Dashboard Operacional Dezembro.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-sla-2",
+                    "name": "Dashboard Operacional Dezembro.pdf",
+                    "date": "2024-12-28",
+                    "size": "2.1 MB",
+                    "description": "Dashboard mensal com indicadores operacionais e comerciais consolidados.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.899Z"
+                },
+                "generated_at": "2026-04-01T08:09:41.008Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.464Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.754Z"
+          },
+          "generated_at": "2026-04-03T14:08:36.490Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.462Z"
+      },
+      "generated_at": "2026-04-03T14:44:32.118Z"
+    },
+    "generated_at": "2026-04-03T14:58:41.219Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.149Z"
+}

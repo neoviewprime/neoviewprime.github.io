@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-7a",
+  "report_status": "approved",
+  "report": {
+    "name": "Mapa Cobertura RN 2024.pdf",
+    "description": "Mapa georreferenciado da cobertura da rede no estado.",
+    "date": "2024-12-01",
+    "size_label": "6.2 MB",
+    "size_bytes": 6501171,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "cosern",
+      "name": "Neoenergia Cosern"
+    },
+    "superintendence": {
+      "id": "sup-operacoes-rn",
+      "name": "Superintendência de Operações"
+    },
+    "management": {
+      "id": "ger-distribuicao-rn",
+      "name": "Gerência de Distribuição"
+    },
+    "project": {
+      "id": "proj-expansao-rn",
+      "name": "Expansão da Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-cobertura",
+      "name": "Índice de Cobertura",
+      "value": "98.2",
+      "unit": "%",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Cosern",
+    "Superintendência de Operações",
+    "Gerência de Distribuição",
+    "Expansão da Rede",
+    "Mapa Cobertura RN 2024.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-7a",
+    "report_status": "approved",
+    "report": {
+      "name": "Mapa Cobertura RN 2024.pdf",
+      "description": "Mapa georreferenciado da cobertura da rede no estado.",
+      "date": "2024-12-01",
+      "size_label": "6.2 MB",
+      "size_bytes": 6501171,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "cosern",
+        "name": "Neoenergia Cosern"
+      },
+      "superintendence": {
+        "id": "sup-operacoes-rn",
+        "name": "Superintendência de Operações"
+      },
+      "management": {
+        "id": "ger-distribuicao-rn",
+        "name": "Gerência de Distribuição"
+      },
+      "project": {
+        "id": "proj-expansao-rn",
+        "name": "Expansão da Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-cobertura",
+        "name": "Índice de Cobertura",
+        "value": "98.2",
+        "unit": "%",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Cosern",
+      "Superintendência de Operações",
+      "Gerência de Distribuição",
+      "Expansão da Rede",
+      "Mapa Cobertura RN 2024.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-7a",
+      "report_status": "approved",
+      "report": {
+        "name": "Mapa Cobertura RN 2024.pdf",
+        "description": "Mapa georreferenciado da cobertura da rede no estado.",
+        "date": "2024-12-01",
+        "size_label": "6.2 MB",
+        "size_bytes": 6501171,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "cosern",
+          "name": "Neoenergia Cosern"
+        },
+        "superintendence": {
+          "id": "sup-operacoes-rn",
+          "name": "Superintendência de Operações"
+        },
+        "management": {
+          "id": "ger-distribuicao-rn",
+          "name": "Gerência de Distribuição"
+        },
+        "project": {
+          "id": "proj-expansao-rn",
+          "name": "Expansão da Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-cobertura",
+          "name": "Índice de Cobertura",
+          "value": "98.2",
+          "unit": "%",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Cosern",
+        "Superintendência de Operações",
+        "Gerência de Distribuição",
+        "Expansão da Rede",
+        "Mapa Cobertura RN 2024.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-7a",
+        "report_status": "approved",
+        "report": {
+          "name": "Mapa Cobertura RN 2024.pdf",
+          "description": "Mapa georreferenciado da cobertura da rede no estado.",
+          "date": "2024-12-01",
+          "size_label": "6.2 MB",
+          "size_bytes": 6501171,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "cosern",
+            "name": "Neoenergia Cosern"
+          },
+          "superintendence": {
+            "id": "sup-operacoes-rn",
+            "name": "Superintendência de Operações"
+          },
+          "management": {
+            "id": "ger-distribuicao-rn",
+            "name": "Gerência de Distribuição"
+          },
+          "project": {
+            "id": "proj-expansao-rn",
+            "name": "Expansão da Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-cobertura",
+            "name": "Índice de Cobertura",
+            "value": "98.2",
+            "unit": "%",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Cosern",
+          "Superintendência de Operações",
+          "Gerência de Distribuição",
+          "Expansão da Rede",
+          "Mapa Cobertura RN 2024.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-7a",
+          "report_status": "approved",
+          "report": {
+            "name": "Mapa Cobertura RN 2024.pdf",
+            "description": "Mapa georreferenciado da cobertura da rede no estado.",
+            "date": "2024-12-01",
+            "size_label": "6.2 MB",
+            "size_bytes": 6501171,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "cosern",
+              "name": "Neoenergia Cosern"
+            },
+            "superintendence": {
+              "id": "sup-operacoes-rn",
+              "name": "Superintendência de Operações"
+            },
+            "management": {
+              "id": "ger-distribuicao-rn",
+              "name": "Gerência de Distribuição"
+            },
+            "project": {
+              "id": "proj-expansao-rn",
+              "name": "Expansão da Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-cobertura",
+              "name": "Índice de Cobertura",
+              "value": "98.2",
+              "unit": "%",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Cosern",
+            "Superintendência de Operações",
+            "Gerência de Distribuição",
+            "Expansão da Rede",
+            "Mapa Cobertura RN 2024.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-7a",
+            "report_status": "approved",
+            "report": {
+              "name": "Mapa Cobertura RN 2024.pdf",
+              "description": "Mapa georreferenciado da cobertura da rede no estado.",
+              "date": "2024-12-01",
+              "size_label": "6.2 MB",
+              "size_bytes": 6501171,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "cosern",
+                "name": "Neoenergia Cosern"
+              },
+              "superintendence": {
+                "id": "sup-operacoes-rn",
+                "name": "Superintendência de Operações"
+              },
+              "management": {
+                "id": "ger-distribuicao-rn",
+                "name": "Gerência de Distribuição"
+              },
+              "project": {
+                "id": "proj-expansao-rn",
+                "name": "Expansão da Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-cobertura",
+                "name": "Índice de Cobertura",
+                "value": "98.2",
+                "unit": "%",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Cosern",
+              "Superintendência de Operações",
+              "Gerência de Distribuição",
+              "Expansão da Rede",
+              "Mapa Cobertura RN 2024.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-7a",
+              "report_status": "approved",
+              "report": {
+                "name": "Mapa Cobertura RN 2024.pdf",
+                "description": "Mapa georreferenciado da cobertura da rede no estado.",
+                "date": "2024-12-01",
+                "size_label": "6.2 MB",
+                "size_bytes": 6501171,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "cosern",
+                  "name": "Neoenergia Cosern"
+                },
+                "superintendence": {
+                  "id": "sup-operacoes-rn",
+                  "name": "Superintendência de Operações"
+                },
+                "management": {
+                  "id": "ger-distribuicao-rn",
+                  "name": "Gerência de Distribuição"
+                },
+                "project": {
+                  "id": "proj-expansao-rn",
+                  "name": "Expansão da Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-cobertura",
+                  "name": "Índice de Cobertura",
+                  "value": "98.2",
+                  "unit": "%",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Cosern",
+                "Superintendência de Operações",
+                "Gerência de Distribuição",
+                "Expansão da Rede",
+                "Mapa Cobertura RN 2024.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-7a",
+                "report_status": "approved",
+                "report": {
+                  "name": "Mapa Cobertura RN 2024.pdf",
+                  "description": "Mapa georreferenciado da cobertura da rede no estado.",
+                  "date": "2024-12-01",
+                  "size_label": "6.2 MB",
+                  "size_bytes": 6501171,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "cosern",
+                    "name": "Neoenergia Cosern"
+                  },
+                  "superintendence": {
+                    "id": "sup-operacoes-rn",
+                    "name": "Superintendência de Operações"
+                  },
+                  "management": {
+                    "id": "ger-distribuicao-rn",
+                    "name": "Gerência de Distribuição"
+                  },
+                  "project": {
+                    "id": "proj-expansao-rn",
+                    "name": "Expansão da Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-cobertura",
+                    "name": "Índice de Cobertura",
+                    "value": "98.2",
+                    "unit": "%",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Cosern",
+                  "Superintendência de Operações",
+                  "Gerência de Distribuição",
+                  "Expansão da Rede",
+                  "Mapa Cobertura RN 2024.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-7a",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Mapa Cobertura RN 2024.pdf",
+                    "description": "Mapa georreferenciado da cobertura da rede no estado.",
+                    "date": "2024-12-01",
+                    "size_label": "6.2 MB",
+                    "size_bytes": 6501171,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "cosern",
+                      "name": "Neoenergia Cosern"
+                    },
+                    "superintendence": {
+                      "id": "sup-operacoes-rn",
+                      "name": "Superintendência de Operações"
+                    },
+                    "management": {
+                      "id": "ger-distribuicao-rn",
+                      "name": "Gerência de Distribuição"
+                    },
+                    "project": {
+                      "id": "proj-expansao-rn",
+                      "name": "Expansão da Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-cobertura",
+                      "name": "Índice de Cobertura",
+                      "value": "98.2",
+                      "unit": "%",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Cosern",
+                    "Superintendência de Operações",
+                    "Gerência de Distribuição",
+                    "Expansão da Rede",
+                    "Mapa Cobertura RN 2024.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-7a",
+                    "name": "Mapa Cobertura RN 2024.pdf",
+                    "date": "2024-12-01",
+                    "size": "6.2 MB",
+                    "description": "Mapa georreferenciado da cobertura da rede no estado.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.574Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.667Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.105Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.286Z"
+          },
+          "generated_at": "2026-04-03T14:08:35.315Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.141Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.691Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.895Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.014Z"
+}

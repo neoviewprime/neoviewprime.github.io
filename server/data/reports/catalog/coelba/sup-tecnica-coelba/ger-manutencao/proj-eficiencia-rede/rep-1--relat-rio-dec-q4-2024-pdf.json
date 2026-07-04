@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-1",
+  "report_status": "approved",
+  "report": {
+    "name": "Relatório DEC Q4 2024.pdf",
+    "description": "Relatório trimestral do indicador DEC com análise detalhada por região e causas das interrupções.",
+    "date": "2024-12-15",
+    "size_label": "2.4 MB",
+    "size_bytes": 2516582,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendência Técnica Coelba"
+    },
+    "management": {
+      "id": "ger-manutencao",
+      "name": "Gerência de Manutenção"
+    },
+    "project": {
+      "id": "proj-eficiencia-rede",
+      "name": "Eficiência de Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-dec",
+      "name": "DEC - Duração Equivalente por Consumidor",
+      "value": "12.5",
+      "unit": "horas",
+      "trend": "down"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Técnica Coelba",
+    "Gerência de Manutenção",
+    "Eficiência de Rede",
+    "Relatório DEC Q4 2024.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-1",
+    "report_status": "approved",
+    "report": {
+      "name": "Relatório DEC Q4 2024.pdf",
+      "description": "Relatório trimestral do indicador DEC com análise detalhada por região e causas das interrupções.",
+      "date": "2024-12-15",
+      "size_label": "2.4 MB",
+      "size_bytes": 2516582,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendência Técnica Coelba"
+      },
+      "management": {
+        "id": "ger-manutencao",
+        "name": "Gerência de Manutenção"
+      },
+      "project": {
+        "id": "proj-eficiencia-rede",
+        "name": "Eficiência de Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-dec",
+        "name": "DEC - Duração Equivalente por Consumidor",
+        "value": "12.5",
+        "unit": "horas",
+        "trend": "down"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Técnica Coelba",
+      "Gerência de Manutenção",
+      "Eficiência de Rede",
+      "Relatório DEC Q4 2024.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-1",
+      "report_status": "approved",
+      "report": {
+        "name": "Relatório DEC Q4 2024.pdf",
+        "description": "Relatório trimestral do indicador DEC com análise detalhada por região e causas das interrupções.",
+        "date": "2024-12-15",
+        "size_label": "2.4 MB",
+        "size_bytes": 2516582,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendência Técnica Coelba"
+        },
+        "management": {
+          "id": "ger-manutencao",
+          "name": "Gerência de Manutenção"
+        },
+        "project": {
+          "id": "proj-eficiencia-rede",
+          "name": "Eficiência de Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-dec",
+          "name": "DEC - Duração Equivalente por Consumidor",
+          "value": "12.5",
+          "unit": "horas",
+          "trend": "down"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Técnica Coelba",
+        "Gerência de Manutenção",
+        "Eficiência de Rede",
+        "Relatório DEC Q4 2024.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-1",
+        "report_status": "approved",
+        "report": {
+          "name": "Relatório DEC Q4 2024.pdf",
+          "description": "Relatório trimestral do indicador DEC com análise detalhada por região e causas das interrupções.",
+          "date": "2024-12-15",
+          "size_label": "2.4 MB",
+          "size_bytes": 2516582,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendência Técnica Coelba"
+          },
+          "management": {
+            "id": "ger-manutencao",
+            "name": "Gerência de Manutenção"
+          },
+          "project": {
+            "id": "proj-eficiencia-rede",
+            "name": "Eficiência de Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-dec",
+            "name": "DEC - Duração Equivalente por Consumidor",
+            "value": "12.5",
+            "unit": "horas",
+            "trend": "down"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Técnica Coelba",
+          "Gerência de Manutenção",
+          "Eficiência de Rede",
+          "Relatório DEC Q4 2024.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-1",
+          "report_status": "approved",
+          "report": {
+            "name": "Relatório DEC Q4 2024.pdf",
+            "description": "Relatório trimestral do indicador DEC com análise detalhada por região e causas das interrupções.",
+            "date": "2024-12-15",
+            "size_label": "2.4 MB",
+            "size_bytes": 2516582,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendência Técnica Coelba"
+            },
+            "management": {
+              "id": "ger-manutencao",
+              "name": "Gerência de Manutenção"
+            },
+            "project": {
+              "id": "proj-eficiencia-rede",
+              "name": "Eficiência de Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-dec",
+              "name": "DEC - Duração Equivalente por Consumidor",
+              "value": "12.5",
+              "unit": "horas",
+              "trend": "down"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Técnica Coelba",
+            "Gerência de Manutenção",
+            "Eficiência de Rede",
+            "Relatório DEC Q4 2024.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-1",
+            "report_status": "approved",
+            "report": {
+              "name": "Relatório DEC Q4 2024.pdf",
+              "description": "Relatório trimestral do indicador DEC com análise detalhada por região e causas das interrupções.",
+              "date": "2024-12-15",
+              "size_label": "2.4 MB",
+              "size_bytes": 2516582,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendência Técnica Coelba"
+              },
+              "management": {
+                "id": "ger-manutencao",
+                "name": "Gerência de Manutenção"
+              },
+              "project": {
+                "id": "proj-eficiencia-rede",
+                "name": "Eficiência de Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-dec",
+                "name": "DEC - Duração Equivalente por Consumidor",
+                "value": "12.5",
+                "unit": "horas",
+                "trend": "down"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Técnica Coelba",
+              "Gerência de Manutenção",
+              "Eficiência de Rede",
+              "Relatório DEC Q4 2024.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-1",
+              "report_status": "approved",
+              "report": {
+                "name": "Relatório DEC Q4 2024.pdf",
+                "description": "Relatório trimestral do indicador DEC com análise detalhada por região e causas das interrupções.",
+                "date": "2024-12-15",
+                "size_label": "2.4 MB",
+                "size_bytes": 2516582,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendência Técnica Coelba"
+                },
+                "management": {
+                  "id": "ger-manutencao",
+                  "name": "Gerência de Manutenção"
+                },
+                "project": {
+                  "id": "proj-eficiencia-rede",
+                  "name": "Eficiência de Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-dec",
+                  "name": "DEC - Duração Equivalente por Consumidor",
+                  "value": "12.5",
+                  "unit": "horas",
+                  "trend": "down"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Técnica Coelba",
+                "Gerência de Manutenção",
+                "Eficiência de Rede",
+                "Relatório DEC Q4 2024.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-1",
+                "report_status": "approved",
+                "report": {
+                  "name": "Relatório DEC Q4 2024.pdf",
+                  "description": "Relatório trimestral do indicador DEC com análise detalhada por região e causas das interrupções.",
+                  "date": "2024-12-15",
+                  "size_label": "2.4 MB",
+                  "size_bytes": 2516582,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendência Técnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-manutencao",
+                    "name": "Gerência de Manutenção"
+                  },
+                  "project": {
+                    "id": "proj-eficiencia-rede",
+                    "name": "Eficiência de Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-dec",
+                    "name": "DEC - Duração Equivalente por Consumidor",
+                    "value": "12.5",
+                    "unit": "horas",
+                    "trend": "down"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Técnica Coelba",
+                  "Gerência de Manutenção",
+                  "Eficiência de Rede",
+                  "Relatório DEC Q4 2024.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-1",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Relatório DEC Q4 2024.pdf",
+                    "description": "Relatório trimestral do indicador DEC com análise detalhada por região e causas das interrupções.",
+                    "date": "2024-12-15",
+                    "size_label": "2.4 MB",
+                    "size_bytes": 2516582,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendência Técnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-manutencao",
+                      "name": "Gerência de Manutenção"
+                    },
+                    "project": {
+                      "id": "proj-eficiencia-rede",
+                      "name": "Eficiência de Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-dec",
+                      "name": "DEC - Duração Equivalente por Consumidor",
+                      "value": "12.5",
+                      "unit": "horas",
+                      "trend": "down"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Técnica Coelba",
+                    "Gerência de Manutenção",
+                    "Eficiência de Rede",
+                    "Relatório DEC Q4 2024.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-1",
+                    "name": "Relatório DEC Q4 2024.pdf",
+                    "date": "2024-12-15",
+                    "size": "2.4 MB",
+                    "description": "Relatório trimestral do indicador DEC com análise detalhada por região e causas das interrupções.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:22.907Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.180Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.668Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.703Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.737Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.712Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.256Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.471Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.792Z"
+}

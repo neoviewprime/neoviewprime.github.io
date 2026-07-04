@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-6b",
+  "report_status": "approved",
+  "report": {
+    "name": "Relatório Produtividade Agentes.pdf",
+    "description": "Relatório de produtividade individual e por equipe dos agentes de atendimento.",
+    "date": "2024-12-12",
+    "size_label": "2.4 MB",
+    "size_bytes": 2516582,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-expancao-ba",
+      "name": "Superintendência Expansão e Preservação"
+    },
+    "management": {
+      "id": "ger-atendimento",
+      "name": "Gerência de Atendimento"
+    },
+    "project": {
+      "id": "proj-call-center",
+      "name": "Melhoria Call Center"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-tma",
+      "name": "TMA - Tempo Médio de Atendimento",
+      "value": "180",
+      "unit": "segundos",
+      "trend": "down"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Expansão e Preservação",
+    "Gerência de Atendimento",
+    "Melhoria Call Center",
+    "Relatório Produtividade Agentes.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-6b",
+    "report_status": "approved",
+    "report": {
+      "name": "Relatório Produtividade Agentes.pdf",
+      "description": "Relatório de produtividade individual e por equipe dos agentes de atendimento.",
+      "date": "2024-12-12",
+      "size_label": "2.4 MB",
+      "size_bytes": 2516582,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-expancao-ba",
+        "name": "Superintendência Expansão e Preservação"
+      },
+      "management": {
+        "id": "ger-atendimento",
+        "name": "Gerência de Atendimento"
+      },
+      "project": {
+        "id": "proj-call-center",
+        "name": "Melhoria Call Center"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-tma",
+        "name": "TMA - Tempo Médio de Atendimento",
+        "value": "180",
+        "unit": "segundos",
+        "trend": "down"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Expansão e Preservação",
+      "Gerência de Atendimento",
+      "Melhoria Call Center",
+      "Relatório Produtividade Agentes.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-6b",
+      "report_status": "approved",
+      "report": {
+        "name": "Relatório Produtividade Agentes.pdf",
+        "description": "Relatório de produtividade individual e por equipe dos agentes de atendimento.",
+        "date": "2024-12-12",
+        "size_label": "2.4 MB",
+        "size_bytes": 2516582,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-expancao-ba",
+          "name": "Superintendência Expansão e Preservação"
+        },
+        "management": {
+          "id": "ger-atendimento",
+          "name": "Gerência de Atendimento"
+        },
+        "project": {
+          "id": "proj-call-center",
+          "name": "Melhoria Call Center"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-tma",
+          "name": "TMA - Tempo Médio de Atendimento",
+          "value": "180",
+          "unit": "segundos",
+          "trend": "down"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Expansão e Preservação",
+        "Gerência de Atendimento",
+        "Melhoria Call Center",
+        "Relatório Produtividade Agentes.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-6b",
+        "report_status": "approved",
+        "report": {
+          "name": "Relatório Produtividade Agentes.pdf",
+          "description": "Relatório de produtividade individual e por equipe dos agentes de atendimento.",
+          "date": "2024-12-12",
+          "size_label": "2.4 MB",
+          "size_bytes": 2516582,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-expancao-ba",
+            "name": "Superintendência Expansão e Preservação"
+          },
+          "management": {
+            "id": "ger-atendimento",
+            "name": "Gerência de Atendimento"
+          },
+          "project": {
+            "id": "proj-call-center",
+            "name": "Melhoria Call Center"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-tma",
+            "name": "TMA - Tempo Médio de Atendimento",
+            "value": "180",
+            "unit": "segundos",
+            "trend": "down"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Expansão e Preservação",
+          "Gerência de Atendimento",
+          "Melhoria Call Center",
+          "Relatório Produtividade Agentes.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-6b",
+          "report_status": "approved",
+          "report": {
+            "name": "Relatório Produtividade Agentes.pdf",
+            "description": "Relatório de produtividade individual e por equipe dos agentes de atendimento.",
+            "date": "2024-12-12",
+            "size_label": "2.4 MB",
+            "size_bytes": 2516582,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-expancao-ba",
+              "name": "Superintendência Expansão e Preservação"
+            },
+            "management": {
+              "id": "ger-atendimento",
+              "name": "Gerência de Atendimento"
+            },
+            "project": {
+              "id": "proj-call-center",
+              "name": "Melhoria Call Center"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-tma",
+              "name": "TMA - Tempo Médio de Atendimento",
+              "value": "180",
+              "unit": "segundos",
+              "trend": "down"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Expansão e Preservação",
+            "Gerência de Atendimento",
+            "Melhoria Call Center",
+            "Relatório Produtividade Agentes.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-6b",
+            "report_status": "approved",
+            "report": {
+              "name": "Relatório Produtividade Agentes.pdf",
+              "description": "Relatório de produtividade individual e por equipe dos agentes de atendimento.",
+              "date": "2024-12-12",
+              "size_label": "2.4 MB",
+              "size_bytes": 2516582,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-expancao-ba",
+                "name": "Superintendência Expansão e Preservação"
+              },
+              "management": {
+                "id": "ger-atendimento",
+                "name": "Gerência de Atendimento"
+              },
+              "project": {
+                "id": "proj-call-center",
+                "name": "Melhoria Call Center"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-tma",
+                "name": "TMA - Tempo Médio de Atendimento",
+                "value": "180",
+                "unit": "segundos",
+                "trend": "down"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Expansão e Preservação",
+              "Gerência de Atendimento",
+              "Melhoria Call Center",
+              "Relatório Produtividade Agentes.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-6b",
+              "report_status": "approved",
+              "report": {
+                "name": "Relatório Produtividade Agentes.pdf",
+                "description": "Relatório de produtividade individual e por equipe dos agentes de atendimento.",
+                "date": "2024-12-12",
+                "size_label": "2.4 MB",
+                "size_bytes": 2516582,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-expancao-ba",
+                  "name": "Superintendência Expansão e Preservação"
+                },
+                "management": {
+                  "id": "ger-atendimento",
+                  "name": "Gerência de Atendimento"
+                },
+                "project": {
+                  "id": "proj-call-center",
+                  "name": "Melhoria Call Center"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-tma",
+                  "name": "TMA - Tempo Médio de Atendimento",
+                  "value": "180",
+                  "unit": "segundos",
+                  "trend": "down"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Expansão e Preservação",
+                "Gerência de Atendimento",
+                "Melhoria Call Center",
+                "Relatório Produtividade Agentes.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-6b",
+                "report_status": "approved",
+                "report": {
+                  "name": "Relatório Produtividade Agentes.pdf",
+                  "description": "Relatório de produtividade individual e por equipe dos agentes de atendimento.",
+                  "date": "2024-12-12",
+                  "size_label": "2.4 MB",
+                  "size_bytes": 2516582,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-expancao-ba",
+                    "name": "Superintendência Expansão e Preservação"
+                  },
+                  "management": {
+                    "id": "ger-atendimento",
+                    "name": "Gerência de Atendimento"
+                  },
+                  "project": {
+                    "id": "proj-call-center",
+                    "name": "Melhoria Call Center"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-tma",
+                    "name": "TMA - Tempo Médio de Atendimento",
+                    "value": "180",
+                    "unit": "segundos",
+                    "trend": "down"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Expansão e Preservação",
+                  "Gerência de Atendimento",
+                  "Melhoria Call Center",
+                  "Relatório Produtividade Agentes.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-6b",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Relatório Produtividade Agentes.pdf",
+                    "description": "Relatório de produtividade individual e por equipe dos agentes de atendimento.",
+                    "date": "2024-12-12",
+                    "size_label": "2.4 MB",
+                    "size_bytes": 2516582,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-expancao-ba",
+                      "name": "Superintendência Expansão e Preservação"
+                    },
+                    "management": {
+                      "id": "ger-atendimento",
+                      "name": "Gerência de Atendimento"
+                    },
+                    "project": {
+                      "id": "proj-call-center",
+                      "name": "Melhoria Call Center"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-tma",
+                      "name": "TMA - Tempo Médio de Atendimento",
+                      "value": "180",
+                      "unit": "segundos",
+                      "trend": "down"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Expansão e Preservação",
+                    "Gerência de Atendimento",
+                    "Melhoria Call Center",
+                    "Relatório Produtividade Agentes.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-6b",
+                    "name": "Relatório Produtividade Agentes.pdf",
+                    "date": "2024-12-12",
+                    "size": "2.4 MB",
+                    "description": "Relatório de produtividade individual e por equipe dos agentes de atendimento.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.475Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.611Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.049Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.235Z"
+          },
+          "generated_at": "2026-04-03T14:08:35.233Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.091Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.635Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.849Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.989Z"
+}

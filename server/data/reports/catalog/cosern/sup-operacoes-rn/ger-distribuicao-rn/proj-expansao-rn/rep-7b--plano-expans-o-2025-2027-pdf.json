@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-7b",
+  "report_status": "approved",
+  "report": {
+    "name": "Plano Expansão 2025-2027.pdf",
+    "description": "Plano trienal de expansão com investimentos previstos.",
+    "date": "2024-11-28",
+    "size_label": "3.9 MB",
+    "size_bytes": 4089446,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "cosern",
+      "name": "Neoenergia Cosern"
+    },
+    "superintendence": {
+      "id": "sup-operacoes-rn",
+      "name": "Superintendência de Operações"
+    },
+    "management": {
+      "id": "ger-distribuicao-rn",
+      "name": "Gerência de Distribuição"
+    },
+    "project": {
+      "id": "proj-expansao-rn",
+      "name": "Expansão da Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-cobertura",
+      "name": "Índice de Cobertura",
+      "value": "98.2",
+      "unit": "%",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Cosern",
+    "Superintendência de Operações",
+    "Gerência de Distribuição",
+    "Expansão da Rede",
+    "Plano Expansão 2025-2027.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-7b",
+    "report_status": "approved",
+    "report": {
+      "name": "Plano Expansão 2025-2027.pdf",
+      "description": "Plano trienal de expansão com investimentos previstos.",
+      "date": "2024-11-28",
+      "size_label": "3.9 MB",
+      "size_bytes": 4089446,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "cosern",
+        "name": "Neoenergia Cosern"
+      },
+      "superintendence": {
+        "id": "sup-operacoes-rn",
+        "name": "Superintendência de Operações"
+      },
+      "management": {
+        "id": "ger-distribuicao-rn",
+        "name": "Gerência de Distribuição"
+      },
+      "project": {
+        "id": "proj-expansao-rn",
+        "name": "Expansão da Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-cobertura",
+        "name": "Índice de Cobertura",
+        "value": "98.2",
+        "unit": "%",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Cosern",
+      "Superintendência de Operações",
+      "Gerência de Distribuição",
+      "Expansão da Rede",
+      "Plano Expansão 2025-2027.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-7b",
+      "report_status": "approved",
+      "report": {
+        "name": "Plano Expansão 2025-2027.pdf",
+        "description": "Plano trienal de expansão com investimentos previstos.",
+        "date": "2024-11-28",
+        "size_label": "3.9 MB",
+        "size_bytes": 4089446,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "cosern",
+          "name": "Neoenergia Cosern"
+        },
+        "superintendence": {
+          "id": "sup-operacoes-rn",
+          "name": "Superintendência de Operações"
+        },
+        "management": {
+          "id": "ger-distribuicao-rn",
+          "name": "Gerência de Distribuição"
+        },
+        "project": {
+          "id": "proj-expansao-rn",
+          "name": "Expansão da Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-cobertura",
+          "name": "Índice de Cobertura",
+          "value": "98.2",
+          "unit": "%",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Cosern",
+        "Superintendência de Operações",
+        "Gerência de Distribuição",
+        "Expansão da Rede",
+        "Plano Expansão 2025-2027.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-7b",
+        "report_status": "approved",
+        "report": {
+          "name": "Plano Expansão 2025-2027.pdf",
+          "description": "Plano trienal de expansão com investimentos previstos.",
+          "date": "2024-11-28",
+          "size_label": "3.9 MB",
+          "size_bytes": 4089446,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "cosern",
+            "name": "Neoenergia Cosern"
+          },
+          "superintendence": {
+            "id": "sup-operacoes-rn",
+            "name": "Superintendência de Operações"
+          },
+          "management": {
+            "id": "ger-distribuicao-rn",
+            "name": "Gerência de Distribuição"
+          },
+          "project": {
+            "id": "proj-expansao-rn",
+            "name": "Expansão da Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-cobertura",
+            "name": "Índice de Cobertura",
+            "value": "98.2",
+            "unit": "%",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Cosern",
+          "Superintendência de Operações",
+          "Gerência de Distribuição",
+          "Expansão da Rede",
+          "Plano Expansão 2025-2027.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-7b",
+          "report_status": "approved",
+          "report": {
+            "name": "Plano Expansão 2025-2027.pdf",
+            "description": "Plano trienal de expansão com investimentos previstos.",
+            "date": "2024-11-28",
+            "size_label": "3.9 MB",
+            "size_bytes": 4089446,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "cosern",
+              "name": "Neoenergia Cosern"
+            },
+            "superintendence": {
+              "id": "sup-operacoes-rn",
+              "name": "Superintendência de Operações"
+            },
+            "management": {
+              "id": "ger-distribuicao-rn",
+              "name": "Gerência de Distribuição"
+            },
+            "project": {
+              "id": "proj-expansao-rn",
+              "name": "Expansão da Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-cobertura",
+              "name": "Índice de Cobertura",
+              "value": "98.2",
+              "unit": "%",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Cosern",
+            "Superintendência de Operações",
+            "Gerência de Distribuição",
+            "Expansão da Rede",
+            "Plano Expansão 2025-2027.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-7b",
+            "report_status": "approved",
+            "report": {
+              "name": "Plano Expansão 2025-2027.pdf",
+              "description": "Plano trienal de expansão com investimentos previstos.",
+              "date": "2024-11-28",
+              "size_label": "3.9 MB",
+              "size_bytes": 4089446,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "cosern",
+                "name": "Neoenergia Cosern"
+              },
+              "superintendence": {
+                "id": "sup-operacoes-rn",
+                "name": "Superintendência de Operações"
+              },
+              "management": {
+                "id": "ger-distribuicao-rn",
+                "name": "Gerência de Distribuição"
+              },
+              "project": {
+                "id": "proj-expansao-rn",
+                "name": "Expansão da Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-cobertura",
+                "name": "Índice de Cobertura",
+                "value": "98.2",
+                "unit": "%",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Cosern",
+              "Superintendência de Operações",
+              "Gerência de Distribuição",
+              "Expansão da Rede",
+              "Plano Expansão 2025-2027.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-7b",
+              "report_status": "approved",
+              "report": {
+                "name": "Plano Expansão 2025-2027.pdf",
+                "description": "Plano trienal de expansão com investimentos previstos.",
+                "date": "2024-11-28",
+                "size_label": "3.9 MB",
+                "size_bytes": 4089446,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "cosern",
+                  "name": "Neoenergia Cosern"
+                },
+                "superintendence": {
+                  "id": "sup-operacoes-rn",
+                  "name": "Superintendência de Operações"
+                },
+                "management": {
+                  "id": "ger-distribuicao-rn",
+                  "name": "Gerência de Distribuição"
+                },
+                "project": {
+                  "id": "proj-expansao-rn",
+                  "name": "Expansão da Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-cobertura",
+                  "name": "Índice de Cobertura",
+                  "value": "98.2",
+                  "unit": "%",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Cosern",
+                "Superintendência de Operações",
+                "Gerência de Distribuição",
+                "Expansão da Rede",
+                "Plano Expansão 2025-2027.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-7b",
+                "report_status": "approved",
+                "report": {
+                  "name": "Plano Expansão 2025-2027.pdf",
+                  "description": "Plano trienal de expansão com investimentos previstos.",
+                  "date": "2024-11-28",
+                  "size_label": "3.9 MB",
+                  "size_bytes": 4089446,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "cosern",
+                    "name": "Neoenergia Cosern"
+                  },
+                  "superintendence": {
+                    "id": "sup-operacoes-rn",
+                    "name": "Superintendência de Operações"
+                  },
+                  "management": {
+                    "id": "ger-distribuicao-rn",
+                    "name": "Gerência de Distribuição"
+                  },
+                  "project": {
+                    "id": "proj-expansao-rn",
+                    "name": "Expansão da Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-cobertura",
+                    "name": "Índice de Cobertura",
+                    "value": "98.2",
+                    "unit": "%",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Cosern",
+                  "Superintendência de Operações",
+                  "Gerência de Distribuição",
+                  "Expansão da Rede",
+                  "Plano Expansão 2025-2027.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-7b",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Plano Expansão 2025-2027.pdf",
+                    "description": "Plano trienal de expansão com investimentos previstos.",
+                    "date": "2024-11-28",
+                    "size_label": "3.9 MB",
+                    "size_bytes": 4089446,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "cosern",
+                      "name": "Neoenergia Cosern"
+                    },
+                    "superintendence": {
+                      "id": "sup-operacoes-rn",
+                      "name": "Superintendência de Operações"
+                    },
+                    "management": {
+                      "id": "ger-distribuicao-rn",
+                      "name": "Gerência de Distribuição"
+                    },
+                    "project": {
+                      "id": "proj-expansao-rn",
+                      "name": "Expansão da Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-cobertura",
+                      "name": "Índice de Cobertura",
+                      "value": "98.2",
+                      "unit": "%",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Cosern",
+                    "Superintendência de Operações",
+                    "Gerência de Distribuição",
+                    "Expansão da Rede",
+                    "Plano Expansão 2025-2027.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-7b",
+                    "name": "Plano Expansão 2025-2027.pdf",
+                    "date": "2024-11-28",
+                    "size": "3.9 MB",
+                    "description": "Plano trienal de expansão com investimentos previstos.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.609Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.692Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.131Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.316Z"
+          },
+          "generated_at": "2026-04-03T14:08:35.338Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.165Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.718Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.916Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.023Z"
+}

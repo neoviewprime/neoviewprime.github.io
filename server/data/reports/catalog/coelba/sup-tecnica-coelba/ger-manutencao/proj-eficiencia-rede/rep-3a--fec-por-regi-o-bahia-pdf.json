@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-3a",
+  "report_status": "approved",
+  "report": {
+    "name": "FEC por Região Bahia.pdf",
+    "description": "Análise regionalizada do FEC no estado da Bahia.",
+    "date": "2024-12-10",
+    "size_label": "2.2 MB",
+    "size_bytes": 2306867,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendência Técnica Coelba"
+    },
+    "management": {
+      "id": "ger-manutencao",
+      "name": "Gerência de Manutenção"
+    },
+    "project": {
+      "id": "proj-eficiencia-rede",
+      "name": "Eficiência de Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-fec",
+      "name": "FEC - Frequência Equivalente por Consumidor",
+      "value": "8.2",
+      "unit": "interrupções",
+      "trend": "stable"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendência Técnica Coelba",
+    "Gerência de Manutenção",
+    "Eficiência de Rede",
+    "FEC por Região Bahia.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-3a",
+    "report_status": "approved",
+    "report": {
+      "name": "FEC por Região Bahia.pdf",
+      "description": "Análise regionalizada do FEC no estado da Bahia.",
+      "date": "2024-12-10",
+      "size_label": "2.2 MB",
+      "size_bytes": 2306867,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendência Técnica Coelba"
+      },
+      "management": {
+        "id": "ger-manutencao",
+        "name": "Gerência de Manutenção"
+      },
+      "project": {
+        "id": "proj-eficiencia-rede",
+        "name": "Eficiência de Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-fec",
+        "name": "FEC - Frequência Equivalente por Consumidor",
+        "value": "8.2",
+        "unit": "interrupções",
+        "trend": "stable"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendência Técnica Coelba",
+      "Gerência de Manutenção",
+      "Eficiência de Rede",
+      "FEC por Região Bahia.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-3a",
+      "report_status": "approved",
+      "report": {
+        "name": "FEC por Região Bahia.pdf",
+        "description": "Análise regionalizada do FEC no estado da Bahia.",
+        "date": "2024-12-10",
+        "size_label": "2.2 MB",
+        "size_bytes": 2306867,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendência Técnica Coelba"
+        },
+        "management": {
+          "id": "ger-manutencao",
+          "name": "Gerência de Manutenção"
+        },
+        "project": {
+          "id": "proj-eficiencia-rede",
+          "name": "Eficiência de Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-fec",
+          "name": "FEC - Frequência Equivalente por Consumidor",
+          "value": "8.2",
+          "unit": "interrupções",
+          "trend": "stable"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendência Técnica Coelba",
+        "Gerência de Manutenção",
+        "Eficiência de Rede",
+        "FEC por Região Bahia.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-3a",
+        "report_status": "approved",
+        "report": {
+          "name": "FEC por Região Bahia.pdf",
+          "description": "Análise regionalizada do FEC no estado da Bahia.",
+          "date": "2024-12-10",
+          "size_label": "2.2 MB",
+          "size_bytes": 2306867,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendência Técnica Coelba"
+          },
+          "management": {
+            "id": "ger-manutencao",
+            "name": "Gerência de Manutenção"
+          },
+          "project": {
+            "id": "proj-eficiencia-rede",
+            "name": "Eficiência de Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-fec",
+            "name": "FEC - Frequência Equivalente por Consumidor",
+            "value": "8.2",
+            "unit": "interrupções",
+            "trend": "stable"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendência Técnica Coelba",
+          "Gerência de Manutenção",
+          "Eficiência de Rede",
+          "FEC por Região Bahia.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-3a",
+          "report_status": "approved",
+          "report": {
+            "name": "FEC por Região Bahia.pdf",
+            "description": "Análise regionalizada do FEC no estado da Bahia.",
+            "date": "2024-12-10",
+            "size_label": "2.2 MB",
+            "size_bytes": 2306867,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendência Técnica Coelba"
+            },
+            "management": {
+              "id": "ger-manutencao",
+              "name": "Gerência de Manutenção"
+            },
+            "project": {
+              "id": "proj-eficiencia-rede",
+              "name": "Eficiência de Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-fec",
+              "name": "FEC - Frequência Equivalente por Consumidor",
+              "value": "8.2",
+              "unit": "interrupções",
+              "trend": "stable"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendência Técnica Coelba",
+            "Gerência de Manutenção",
+            "Eficiência de Rede",
+            "FEC por Região Bahia.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-3a",
+            "report_status": "approved",
+            "report": {
+              "name": "FEC por Região Bahia.pdf",
+              "description": "Análise regionalizada do FEC no estado da Bahia.",
+              "date": "2024-12-10",
+              "size_label": "2.2 MB",
+              "size_bytes": 2306867,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendência Técnica Coelba"
+              },
+              "management": {
+                "id": "ger-manutencao",
+                "name": "Gerência de Manutenção"
+              },
+              "project": {
+                "id": "proj-eficiencia-rede",
+                "name": "Eficiência de Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-fec",
+                "name": "FEC - Frequência Equivalente por Consumidor",
+                "value": "8.2",
+                "unit": "interrupções",
+                "trend": "stable"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendência Técnica Coelba",
+              "Gerência de Manutenção",
+              "Eficiência de Rede",
+              "FEC por Região Bahia.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-3a",
+              "report_status": "approved",
+              "report": {
+                "name": "FEC por Região Bahia.pdf",
+                "description": "Análise regionalizada do FEC no estado da Bahia.",
+                "date": "2024-12-10",
+                "size_label": "2.2 MB",
+                "size_bytes": 2306867,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendência Técnica Coelba"
+                },
+                "management": {
+                  "id": "ger-manutencao",
+                  "name": "Gerência de Manutenção"
+                },
+                "project": {
+                  "id": "proj-eficiencia-rede",
+                  "name": "Eficiência de Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-fec",
+                  "name": "FEC - Frequência Equivalente por Consumidor",
+                  "value": "8.2",
+                  "unit": "interrupções",
+                  "trend": "stable"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendência Técnica Coelba",
+                "Gerência de Manutenção",
+                "Eficiência de Rede",
+                "FEC por Região Bahia.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-3a",
+                "report_status": "approved",
+                "report": {
+                  "name": "FEC por Região Bahia.pdf",
+                  "description": "Análise regionalizada do FEC no estado da Bahia.",
+                  "date": "2024-12-10",
+                  "size_label": "2.2 MB",
+                  "size_bytes": 2306867,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendência Técnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-manutencao",
+                    "name": "Gerência de Manutenção"
+                  },
+                  "project": {
+                    "id": "proj-eficiencia-rede",
+                    "name": "Eficiência de Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-fec",
+                    "name": "FEC - Frequência Equivalente por Consumidor",
+                    "value": "8.2",
+                    "unit": "interrupções",
+                    "trend": "stable"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendência Técnica Coelba",
+                  "Gerência de Manutenção",
+                  "Eficiência de Rede",
+                  "FEC por Região Bahia.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-3a",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "FEC por Região Bahia.pdf",
+                    "description": "Análise regionalizada do FEC no estado da Bahia.",
+                    "date": "2024-12-10",
+                    "size_label": "2.2 MB",
+                    "size_bytes": 2306867,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendência Técnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-manutencao",
+                      "name": "Gerência de Manutenção"
+                    },
+                    "project": {
+                      "id": "proj-eficiencia-rede",
+                      "name": "Eficiência de Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-fec",
+                      "name": "FEC - Frequência Equivalente por Consumidor",
+                      "value": "8.2",
+                      "unit": "interrupções",
+                      "trend": "stable"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendência Técnica Coelba",
+                    "Gerência de Manutenção",
+                    "Eficiência de Rede",
+                    "FEC por Região Bahia.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-3a",
+                    "name": "FEC por Região Bahia.pdf",
+                    "date": "2024-12-10",
+                    "size": "2.2 MB",
+                    "description": "Análise regionalizada do FEC no estado da Bahia.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.270Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.395Z"
+              },
+              "generated_at": "2026-04-03T13:57:26.846Z"
+            },
+            "generated_at": "2026-04-03T14:03:37.951Z"
+          },
+          "generated_at": "2026-04-03T14:08:34.961Z"
+        },
+        "generated_at": "2026-04-03T14:42:07.887Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.432Z"
+    },
+    "generated_at": "2026-04-03T14:58:40.655Z"
+  },
+  "generated_at": "2026-06-05T22:06:43.896Z"
+}

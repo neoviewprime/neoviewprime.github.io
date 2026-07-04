@@ -1,0 +1,839 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "demo-pending-dec-plano-acao",
+  "report_status": "approved",
+  "report": {
+    "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+    "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+    "date": "2026-03-11",
+    "size_label": "3.1 MB",
+    "size_bytes": 3250586,
+    "url": "https://example.com/demo/plano-dec"
+  },
+  "hierarchy": {
+    "company": {
+      "id": "coelba",
+      "name": "Neoenergia Coelba"
+    },
+    "superintendence": {
+      "id": "sup-tecnica-coelba",
+      "name": "Superintendencia Tecnica Coelba"
+    },
+    "management": {
+      "id": "ger-manutencao",
+      "name": "Gerencia de Manutencao"
+    },
+    "project": {
+      "id": "proj-eficiencia-rede",
+      "name": "Eficiencia de Rede"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-dec",
+      "name": "DEC - Duracao Equivalente por Consumidor",
+      "value": "12.1",
+      "unit": "horas",
+      "trend": "down"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendencia Tecnica Coelba",
+    "Gerencia de Manutencao",
+    "Eficiencia de Rede",
+    "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "demo-pending-dec-plano-acao",
+    "report_status": "approved",
+    "report": {
+      "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+      "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+      "date": "2026-03-11",
+      "size_label": "3.1 MB",
+      "size_bytes": 3250586,
+      "url": "https://example.com/demo/plano-dec"
+    },
+    "hierarchy": {
+      "company": {
+        "id": "coelba",
+        "name": "Neoenergia Coelba"
+      },
+      "superintendence": {
+        "id": "sup-tecnica-coelba",
+        "name": "Superintendencia Tecnica Coelba"
+      },
+      "management": {
+        "id": "ger-manutencao",
+        "name": "Gerencia de Manutencao"
+      },
+      "project": {
+        "id": "proj-eficiencia-rede",
+        "name": "Eficiencia de Rede"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-dec",
+        "name": "DEC - Duracao Equivalente por Consumidor",
+        "value": "12.1",
+        "unit": "horas",
+        "trend": "down"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Coelba",
+      "Superintendencia Tecnica Coelba",
+      "Gerencia de Manutencao",
+      "Eficiencia de Rede",
+      "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "demo-pending-dec-plano-acao",
+      "report_status": "approved",
+      "report": {
+        "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+        "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+        "date": "2026-03-11",
+        "size_label": "3.1 MB",
+        "size_bytes": 3250586,
+        "url": "https://example.com/demo/plano-dec"
+      },
+      "hierarchy": {
+        "company": {
+          "id": "coelba",
+          "name": "Neoenergia Coelba"
+        },
+        "superintendence": {
+          "id": "sup-tecnica-coelba",
+          "name": "Superintendencia Tecnica Coelba"
+        },
+        "management": {
+          "id": "ger-manutencao",
+          "name": "Gerencia de Manutencao"
+        },
+        "project": {
+          "id": "proj-eficiencia-rede",
+          "name": "Eficiencia de Rede"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-dec",
+          "name": "DEC - Duracao Equivalente por Consumidor",
+          "value": "12.1",
+          "unit": "horas",
+          "trend": "down"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Coelba",
+        "Superintendencia Tecnica Coelba",
+        "Gerencia de Manutencao",
+        "Eficiencia de Rede",
+        "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "demo-pending-dec-plano-acao",
+        "report_status": "approved",
+        "report": {
+          "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+          "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+          "date": "2026-03-11",
+          "size_label": "3.1 MB",
+          "size_bytes": 3250586,
+          "url": "https://example.com/demo/plano-dec"
+        },
+        "hierarchy": {
+          "company": {
+            "id": "coelba",
+            "name": "Neoenergia Coelba"
+          },
+          "superintendence": {
+            "id": "sup-tecnica-coelba",
+            "name": "Superintendencia Tecnica Coelba"
+          },
+          "management": {
+            "id": "ger-manutencao",
+            "name": "Gerencia de Manutencao"
+          },
+          "project": {
+            "id": "proj-eficiencia-rede",
+            "name": "Eficiencia de Rede"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-dec",
+            "name": "DEC - Duracao Equivalente por Consumidor",
+            "value": "12.1",
+            "unit": "horas",
+            "trend": "down"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Coelba",
+          "Superintendencia Tecnica Coelba",
+          "Gerencia de Manutencao",
+          "Eficiencia de Rede",
+          "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "demo-pending-dec-plano-acao",
+          "report_status": "approved",
+          "report": {
+            "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+            "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+            "date": "2026-03-11",
+            "size_label": "3.1 MB",
+            "size_bytes": 3250586,
+            "url": "https://example.com/demo/plano-dec"
+          },
+          "hierarchy": {
+            "company": {
+              "id": "coelba",
+              "name": "Neoenergia Coelba"
+            },
+            "superintendence": {
+              "id": "sup-tecnica-coelba",
+              "name": "Superintendencia Tecnica Coelba"
+            },
+            "management": {
+              "id": "ger-manutencao",
+              "name": "Gerencia de Manutencao"
+            },
+            "project": {
+              "id": "proj-eficiencia-rede",
+              "name": "Eficiencia de Rede"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-dec",
+              "name": "DEC - Duracao Equivalente por Consumidor",
+              "value": "12.1",
+              "unit": "horas",
+              "trend": "down"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Coelba",
+            "Superintendencia Tecnica Coelba",
+            "Gerencia de Manutencao",
+            "Eficiencia de Rede",
+            "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "demo-pending-dec-plano-acao",
+            "report_status": "approved",
+            "report": {
+              "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+              "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+              "date": "2026-03-11",
+              "size_label": "3.1 MB",
+              "size_bytes": 3250586,
+              "url": "https://example.com/demo/plano-dec"
+            },
+            "hierarchy": {
+              "company": {
+                "id": "coelba",
+                "name": "Neoenergia Coelba"
+              },
+              "superintendence": {
+                "id": "sup-tecnica-coelba",
+                "name": "Superintendencia Tecnica Coelba"
+              },
+              "management": {
+                "id": "ger-manutencao",
+                "name": "Gerencia de Manutencao"
+              },
+              "project": {
+                "id": "proj-eficiencia-rede",
+                "name": "Eficiencia de Rede"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-dec",
+                "name": "DEC - Duracao Equivalente por Consumidor",
+                "value": "12.1",
+                "unit": "horas",
+                "trend": "down"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Coelba",
+              "Superintendencia Tecnica Coelba",
+              "Gerencia de Manutencao",
+              "Eficiencia de Rede",
+              "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "demo-pending-dec-plano-acao",
+              "report_status": "approved",
+              "report": {
+                "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+                "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+                "date": "2026-03-11",
+                "size_label": "3.1 MB",
+                "size_bytes": 3250586,
+                "url": "https://example.com/demo/plano-dec"
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "coelba",
+                  "name": "Neoenergia Coelba"
+                },
+                "superintendence": {
+                  "id": "sup-tecnica-coelba",
+                  "name": "Superintendencia Tecnica Coelba"
+                },
+                "management": {
+                  "id": "ger-manutencao",
+                  "name": "Gerencia de Manutencao"
+                },
+                "project": {
+                  "id": "proj-eficiencia-rede",
+                  "name": "Eficiencia de Rede"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-dec",
+                  "name": "DEC - Duracao Equivalente por Consumidor",
+                  "value": "12.1",
+                  "unit": "horas",
+                  "trend": "down"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Coelba",
+                "Superintendencia Tecnica Coelba",
+                "Gerencia de Manutencao",
+                "Eficiencia de Rede",
+                "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "demo-pending-dec-plano-acao",
+                "report_status": "approved",
+                "report": {
+                  "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+                  "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+                  "date": "2026-03-11",
+                  "size_label": "3.1 MB",
+                  "size_bytes": 3250586,
+                  "url": "https://example.com/demo/plano-dec"
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "coelba",
+                    "name": "Neoenergia Coelba"
+                  },
+                  "superintendence": {
+                    "id": "sup-tecnica-coelba",
+                    "name": "Superintendencia Tecnica Coelba"
+                  },
+                  "management": {
+                    "id": "ger-manutencao",
+                    "name": "Gerencia de Manutencao"
+                  },
+                  "project": {
+                    "id": "proj-eficiencia-rede",
+                    "name": "Eficiencia de Rede"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-dec",
+                    "name": "DEC - Duracao Equivalente por Consumidor",
+                    "value": "12.1",
+                    "unit": "horas",
+                    "trend": "down"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Coelba",
+                  "Superintendencia Tecnica Coelba",
+                  "Gerencia de Manutencao",
+                  "Eficiencia de Rede",
+                  "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "demo-pending-dec-plano-acao",
+                  "report_status": "pending_approval",
+                  "report": {
+                    "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+                    "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+                    "date": "2026-03-11",
+                    "size_label": "3.1 MB",
+                    "size_bytes": 3250586,
+                    "url": "https://example.com/demo/plano-dec"
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "coelba",
+                      "name": "Neoenergia Coelba"
+                    },
+                    "superintendence": {
+                      "id": "sup-tecnica-coelba",
+                      "name": "Superintendencia Tecnica Coelba"
+                    },
+                    "management": {
+                      "id": "ger-manutencao",
+                      "name": "Gerencia de Manutencao"
+                    },
+                    "project": {
+                      "id": "proj-eficiencia-rede",
+                      "name": "Eficiencia de Rede"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-dec",
+                      "name": "DEC - Duracao Equivalente por Consumidor",
+                      "value": "12.1",
+                      "unit": "horas",
+                      "trend": "down"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Coelba",
+                    "Superintendencia Tecnica Coelba",
+                    "Gerencia de Manutencao",
+                    "Eficiencia de Rede",
+                    "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+                  ],
+                  "raw_json": {
+                    "schema": "neoview.report.v1",
+                    "source_report_id": "demo-pending-dec-plano-acao",
+                    "report_status": "pending_approval",
+                    "report": {
+                      "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+                      "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+                      "date": "2026-03-11",
+                      "size_label": "3.1 MB",
+                      "size_bytes": 3250586,
+                      "url": "https://example.com/demo/plano-dec"
+                    },
+                    "hierarchy": {
+                      "company": {
+                        "id": "coelba",
+                        "name": "Neoenergia Coelba"
+                      },
+                      "superintendence": {
+                        "id": "sup-tecnica-coelba",
+                        "name": "Superintendencia Tecnica Coelba"
+                      },
+                      "management": {
+                        "id": "ger-manutencao",
+                        "name": "Gerencia de Manutencao"
+                      },
+                      "project": {
+                        "id": "proj-eficiencia-rede",
+                        "name": "Eficiencia de Rede"
+                      }
+                    },
+                    "indicators": [
+                      {
+                        "id": "ind-dec",
+                        "name": "DEC - Duracao Equivalente por Consumidor",
+                        "value": "12.1",
+                        "unit": "horas",
+                        "trend": "down"
+                      }
+                    ],
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    },
+                    "path": [
+                      "Neoenergia Coelba",
+                      "Superintendencia Tecnica Coelba",
+                      "Gerencia de Manutencao",
+                      "Eficiencia de Rede",
+                      "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+                    ],
+                    "raw_json": {
+                      "schema": "neoview.report.v1",
+                      "source_report_id": "demo-pending-dec-plano-acao",
+                      "report_status": "pending_approval",
+                      "report": {
+                        "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+                        "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+                        "date": "2026-03-11",
+                        "size_label": "3.1 MB",
+                        "size_bytes": 3250586,
+                        "url": "https://example.com/demo/plano-dec"
+                      },
+                      "hierarchy": {
+                        "company": {
+                          "id": "coelba",
+                          "name": "Neoenergia Coelba"
+                        },
+                        "superintendence": {
+                          "id": "sup-tecnica-coelba",
+                          "name": "Superintendencia Tecnica Coelba"
+                        },
+                        "management": {
+                          "id": "ger-manutencao",
+                          "name": "Gerencia de Manutencao"
+                        },
+                        "project": {
+                          "id": "proj-eficiencia-rede",
+                          "name": "Eficiencia de Rede"
+                        }
+                      },
+                      "indicators": [
+                        {
+                          "id": "ind-dec",
+                          "name": "DEC - Duracao Equivalente por Consumidor",
+                          "value": "12.1",
+                          "unit": "horas",
+                          "trend": "down"
+                        }
+                      ],
+                      "metrics": {
+                        "views": 0,
+                        "comments": 0,
+                        "likes": 0,
+                        "shares": 0
+                      },
+                      "path": [
+                        "Neoenergia Coelba",
+                        "Superintendencia Tecnica Coelba",
+                        "Gerencia de Manutencao",
+                        "Eficiencia de Rede",
+                        "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+                      ],
+                      "raw_json": {
+                        "schema": "neoview.report.v1",
+                        "source_report_id": "demo-pending-dec-plano-acao",
+                        "report_status": "pending_approval",
+                        "report": {
+                          "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+                          "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+                          "date": "2026-03-11",
+                          "size_label": "3.1 MB",
+                          "size_bytes": 3250586,
+                          "url": "https://example.com/demo/plano-dec"
+                        },
+                        "hierarchy": {
+                          "company": {
+                            "id": "coelba",
+                            "name": "Neoenergia Coelba"
+                          },
+                          "superintendence": {
+                            "id": "sup-tecnica-coelba",
+                            "name": "Superintendencia Tecnica Coelba"
+                          },
+                          "management": {
+                            "id": "ger-manutencao",
+                            "name": "Gerencia de Manutencao"
+                          },
+                          "project": {
+                            "id": "proj-eficiencia-rede",
+                            "name": "Eficiencia de Rede"
+                          }
+                        },
+                        "indicators": [
+                          {
+                            "id": "ind-dec",
+                            "name": "DEC - Duracao Equivalente por Consumidor",
+                            "value": "12.1",
+                            "unit": "horas",
+                            "trend": "down"
+                          }
+                        ],
+                        "metrics": {
+                          "views": 0,
+                          "comments": 0,
+                          "likes": 0,
+                          "shares": 0
+                        },
+                        "path": [
+                          "Neoenergia Coelba",
+                          "Superintendencia Tecnica Coelba",
+                          "Gerencia de Manutencao",
+                          "Eficiencia de Rede",
+                          "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+                        ],
+                        "raw_json": {
+                          "schema": "neoview.report.v1",
+                          "source_report_id": "demo-pending-dec-plano-acao",
+                          "report_status": "pending_approval",
+                          "report": {
+                            "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+                            "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+                            "date": "2026-03-11",
+                            "size_label": "3.1 MB",
+                            "size_bytes": 3250586,
+                            "url": "https://example.com/demo/plano-dec"
+                          },
+                          "hierarchy": {
+                            "company": {
+                              "id": "coelba",
+                              "name": "Neoenergia Coelba"
+                            },
+                            "superintendence": {
+                              "id": "sup-tecnica-coelba",
+                              "name": "Superintendencia Tecnica Coelba"
+                            },
+                            "management": {
+                              "id": "ger-manutencao",
+                              "name": "Gerencia de Manutencao"
+                            },
+                            "project": {
+                              "id": "proj-eficiencia-rede",
+                              "name": "Eficiencia de Rede"
+                            }
+                          },
+                          "indicators": [
+                            {
+                              "id": "ind-dec",
+                              "name": "DEC - Duracao Equivalente por Consumidor",
+                              "value": "12.1",
+                              "unit": "horas",
+                              "trend": "down"
+                            }
+                          ],
+                          "metrics": {
+                            "views": 0,
+                            "comments": 0,
+                            "likes": 0,
+                            "shares": 0
+                          },
+                          "path": [
+                            "Neoenergia Coelba",
+                            "Superintendencia Tecnica Coelba",
+                            "Gerencia de Manutencao",
+                            "Eficiencia de Rede",
+                            "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+                          ],
+                          "raw_json": {
+                            "schema": "neoview.report.v1",
+                            "source_report_id": "demo-pending-dec-plano-acao",
+                            "report_status": "pending_approval",
+                            "report": {
+                              "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+                              "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+                              "date": "2026-03-11",
+                              "size_label": "3.1 MB",
+                              "size_bytes": 3250586,
+                              "url": "https://example.com/demo/plano-dec"
+                            },
+                            "hierarchy": {
+                              "company": {
+                                "id": "coelba",
+                                "name": "Neoenergia Coelba"
+                              },
+                              "superintendence": {
+                                "id": "sup-tecnica-coelba",
+                                "name": "Superintendencia Tecnica Coelba"
+                              },
+                              "management": {
+                                "id": "ger-manutencao",
+                                "name": "Gerencia de Manutencao"
+                              },
+                              "project": {
+                                "id": "proj-eficiencia-rede",
+                                "name": "Eficiencia de Rede"
+                              }
+                            },
+                            "indicators": [
+                              {
+                                "id": "ind-dec",
+                                "name": "DEC - Duracao Equivalente por Consumidor",
+                                "value": "12.1",
+                                "unit": "horas",
+                                "trend": "down"
+                              }
+                            ],
+                            "metrics": {
+                              "views": 0,
+                              "comments": 0,
+                              "likes": 0,
+                              "shares": 0
+                            },
+                            "path": [
+                              "Neoenergia Coelba",
+                              "Superintendencia Tecnica Coelba",
+                              "Gerencia de Manutencao",
+                              "Eficiencia de Rede",
+                              "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+                            ],
+                            "raw_json": {
+                              "schema": "neoview.report.v1",
+                              "source_report_id": "demo-pending-dec-plano-acao",
+                              "report_status": "pending_approval",
+                              "report": {
+                                "name": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+                                "description": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+                                "date": "2026-03-11",
+                                "size_label": "3.1 MB",
+                                "size_bytes": 3250586,
+                                "url": "https://example.com/demo/plano-dec"
+                              },
+                              "hierarchy": {
+                                "company": {
+                                  "id": "coelba",
+                                  "name": "Neoenergia Coelba"
+                                },
+                                "superintendence": {
+                                  "id": "sup-tecnica-coelba",
+                                  "name": "Superintendencia Tecnica Coelba"
+                                },
+                                "management": {
+                                  "id": "ger-manutencao",
+                                  "name": "Gerencia de Manutencao"
+                                },
+                                "project": {
+                                  "id": "proj-eficiencia-rede",
+                                  "name": "Eficiencia de Rede"
+                                }
+                              },
+                              "indicators": [
+                                {
+                                  "id": "ind-dec",
+                                  "name": "DEC - Duracao Equivalente por Consumidor",
+                                  "value": "12.1",
+                                  "unit": "horas",
+                                  "trend": "down"
+                                }
+                              ],
+                              "metrics": {
+                                "views": 0,
+                                "comments": 0,
+                                "likes": 0,
+                                "shares": 0
+                              },
+                              "path": [
+                                "Neoenergia Coelba",
+                                "Superintendencia Tecnica Coelba",
+                                "Gerencia de Manutencao",
+                                "Eficiencia de Rede",
+                                "Plano de Acao DEC Regiao Norte Abril 2026.pdf"
+                              ],
+                              "raw_json": {
+                                "sourceReportId": "demo-pending-dec-plano-acao",
+                                "reportName": "Plano de Acao DEC Regiao Norte Abril 2026.pdf",
+                                "reportDescription": "Consolidado executivo das ocorrencias de DEC com propostas de contingencia e metas por equipe.",
+                                "reportDate": "2026-03-11",
+                                "reportSizeLabel": "3.1 MB",
+                                "reportUrl": "https://example.com/demo/plano-dec",
+                                "companyId": "coelba",
+                                "companyName": "Neoenergia Coelba",
+                                "superintendenceId": "sup-tecnica-coelba",
+                                "superintendenceName": "Superintendencia Tecnica Coelba",
+                                "managementId": "ger-manutencao",
+                                "managementName": "Gerencia de Manutencao",
+                                "projectId": "proj-eficiencia-rede",
+                                "projectName": "Eficiencia de Rede",
+                                "indicators": [
+                                  {
+                                    "id": "ind-dec",
+                                    "name": "DEC - Duracao Equivalente por Consumidor",
+                                    "value": "12.1",
+                                    "unit": "horas",
+                                    "trend": "down"
+                                  }
+                                ],
+                                "submitterName": "Carlos Nogueira",
+                                "submitterEmail": "carlos.nogueira@neoview.local",
+                                "submittedByName": "Carlos Nogueira",
+                                "submittedByEmail": "carlos.nogueira@neoview.local"
+                              },
+                              "generated_at": "2026-03-31T23:04:39.413Z"
+                            },
+                            "generated_at": "2026-03-31T23:07:13.628Z"
+                          },
+                          "generated_at": "2026-03-31T23:34:16.241Z"
+                        },
+                        "generated_at": "2026-03-31T23:36:59.369Z"
+                      },
+                      "generated_at": "2026-03-31T23:56:55.915Z"
+                    },
+                    "generated_at": "2026-04-01T07:33:54.433Z"
+                  },
+                  "generated_at": "2026-04-01T08:05:23.955Z"
+                },
+                "generated_at": "2026-04-01T08:09:41.066Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.524Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.818Z"
+          },
+          "generated_at": "2026-04-03T14:08:36.680Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.533Z"
+      },
+      "generated_at": "2026-04-03T14:44:32.175Z"
+    },
+    "generated_at": "2026-04-03T14:58:41.277Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.177Z"
+}

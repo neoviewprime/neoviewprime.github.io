@@ -1,0 +1,46 @@
+﻿{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-sla-4",
+  "report": {
+    "name": "Painel Operacional Comercial Fev 2025.pdf",
+    "description": "Painel consolidado operacional comercial de fevereiro de 2025.",
+    "date": "2025-02-20",
+    "size_label": "2.0 MB",
+    "size_bytes": 2097152,
+    "url": null
+  },
+  "hierarchy": {
+    "company": { "id": "coelba", "name": "Neoenergia Coelba" },
+    "superintendence": { "id": "sup-relacionamento-clientes", "name": "Superintendencia de Relacionamento com Clientes" },
+    "management": { "id": "ger-receita", "name": "Gerencia da Gestao da Receita" },
+    "project": { "id": "uni-gestao-operacional-comercial", "name": "Unidade Gestao Operacional Comercial" }
+  },
+  "indicators": [
+    { "id": "ind-sla-comercial", "name": "SLA Comercial", "value": "94.2", "unit": "%", "trend": "up" }
+  ],
+  "metrics": { "views": 0, "comments": 0, "likes": 0, "shares": 0 },
+  "path": [
+    "Neoenergia Coelba",
+    "Superintendencia de Relacionamento com Clientes",
+    "Gerencia da Gestao da Receita",
+    "Unidade Gestao Operacional Comercial",
+    "SLA Comercial",
+    "Painel Operacional Comercial Fev 2025.pdf"
+  ],
+  "raw_json": {
+    "reportId": "rep-sla-4",
+    "reportName": "Painel Operacional Comercial Fev 2025.pdf",
+    "reportDescription": "Painel consolidado operacional comercial de fevereiro de 2025.",
+    "companyId": "coelba",
+    "companyName": "Neoenergia Coelba",
+    "superintendenceId": "sup-relacionamento-clientes",
+    "superintendenceName": "Superintendencia de Relacionamento com Clientes",
+    "managementId": "ger-receita",
+    "managementName": "Gerencia da Gestao da Receita",
+    "projectId": "uni-gestao-operacional-comercial",
+    "projectName": "Unidade Gestao Operacional Comercial",
+    "indicators": [{ "id": "ind-sla-comercial", "name": "SLA Comercial", "value": "94.2", "unit": "%", "trend": "up" }],
+    "metrics": { "views": 0, "comments": 0, "likes": 0, "shares": 0 }
+  },
+  "generated_at": "2026-03-08T00:00:00.000Z"
+}

@@ -1,0 +1,499 @@
+{
+  "schema": "neoview.report.v1",
+  "source_report_id": "rep-8d",
+  "report_status": "approved",
+  "report": {
+    "name": "Estudo Viabilidade Técnica.pdf",
+    "description": "Estudo de viabilidade técnica e econômica do projeto.",
+    "date": "2024-11-10",
+    "size_label": "3.6 MB",
+    "size_bytes": 3774874,
+    "url": null
+  },
+  "hierarchy": {
+    "company": {
+      "id": "brasilia",
+      "name": "Neoenergia Brasília"
+    },
+    "superintendence": {
+      "id": "sup-operacoes-df",
+      "name": "Superintendência de Operações"
+    },
+    "management": {
+      "id": "ger-tecnica-df",
+      "name": "Gerência Técnica"
+    },
+    "project": {
+      "id": "proj-smart-grid",
+      "name": "Smart Grid"
+    }
+  },
+  "indicators": [
+    {
+      "id": "ind-automacao",
+      "name": "Nível de Automação",
+      "value": "45",
+      "unit": "%",
+      "trend": "up"
+    }
+  ],
+  "metrics": {
+    "views": 0,
+    "comments": 0,
+    "likes": 0,
+    "shares": 0
+  },
+  "path": [
+    "Neoenergia Brasília",
+    "Superintendência de Operações",
+    "Gerência Técnica",
+    "Smart Grid",
+    "Estudo Viabilidade Técnica.pdf"
+  ],
+  "raw_json": {
+    "schema": "neoview.report.v1",
+    "source_report_id": "rep-8d",
+    "report_status": "approved",
+    "report": {
+      "name": "Estudo Viabilidade Técnica.pdf",
+      "description": "Estudo de viabilidade técnica e econômica do projeto.",
+      "date": "2024-11-10",
+      "size_label": "3.6 MB",
+      "size_bytes": 3774874,
+      "url": null
+    },
+    "hierarchy": {
+      "company": {
+        "id": "brasilia",
+        "name": "Neoenergia Brasília"
+      },
+      "superintendence": {
+        "id": "sup-operacoes-df",
+        "name": "Superintendência de Operações"
+      },
+      "management": {
+        "id": "ger-tecnica-df",
+        "name": "Gerência Técnica"
+      },
+      "project": {
+        "id": "proj-smart-grid",
+        "name": "Smart Grid"
+      }
+    },
+    "indicators": [
+      {
+        "id": "ind-automacao",
+        "name": "Nível de Automação",
+        "value": "45",
+        "unit": "%",
+        "trend": "up"
+      }
+    ],
+    "metrics": {
+      "views": 0,
+      "comments": 0,
+      "likes": 0,
+      "shares": 0
+    },
+    "path": [
+      "Neoenergia Brasília",
+      "Superintendência de Operações",
+      "Gerência Técnica",
+      "Smart Grid",
+      "Estudo Viabilidade Técnica.pdf"
+    ],
+    "raw_json": {
+      "schema": "neoview.report.v1",
+      "source_report_id": "rep-8d",
+      "report_status": "approved",
+      "report": {
+        "name": "Estudo Viabilidade Técnica.pdf",
+        "description": "Estudo de viabilidade técnica e econômica do projeto.",
+        "date": "2024-11-10",
+        "size_label": "3.6 MB",
+        "size_bytes": 3774874,
+        "url": null
+      },
+      "hierarchy": {
+        "company": {
+          "id": "brasilia",
+          "name": "Neoenergia Brasília"
+        },
+        "superintendence": {
+          "id": "sup-operacoes-df",
+          "name": "Superintendência de Operações"
+        },
+        "management": {
+          "id": "ger-tecnica-df",
+          "name": "Gerência Técnica"
+        },
+        "project": {
+          "id": "proj-smart-grid",
+          "name": "Smart Grid"
+        }
+      },
+      "indicators": [
+        {
+          "id": "ind-automacao",
+          "name": "Nível de Automação",
+          "value": "45",
+          "unit": "%",
+          "trend": "up"
+        }
+      ],
+      "metrics": {
+        "views": 0,
+        "comments": 0,
+        "likes": 0,
+        "shares": 0
+      },
+      "path": [
+        "Neoenergia Brasília",
+        "Superintendência de Operações",
+        "Gerência Técnica",
+        "Smart Grid",
+        "Estudo Viabilidade Técnica.pdf"
+      ],
+      "raw_json": {
+        "schema": "neoview.report.v1",
+        "source_report_id": "rep-8d",
+        "report_status": "approved",
+        "report": {
+          "name": "Estudo Viabilidade Técnica.pdf",
+          "description": "Estudo de viabilidade técnica e econômica do projeto.",
+          "date": "2024-11-10",
+          "size_label": "3.6 MB",
+          "size_bytes": 3774874,
+          "url": null
+        },
+        "hierarchy": {
+          "company": {
+            "id": "brasilia",
+            "name": "Neoenergia Brasília"
+          },
+          "superintendence": {
+            "id": "sup-operacoes-df",
+            "name": "Superintendência de Operações"
+          },
+          "management": {
+            "id": "ger-tecnica-df",
+            "name": "Gerência Técnica"
+          },
+          "project": {
+            "id": "proj-smart-grid",
+            "name": "Smart Grid"
+          }
+        },
+        "indicators": [
+          {
+            "id": "ind-automacao",
+            "name": "Nível de Automação",
+            "value": "45",
+            "unit": "%",
+            "trend": "up"
+          }
+        ],
+        "metrics": {
+          "views": 0,
+          "comments": 0,
+          "likes": 0,
+          "shares": 0
+        },
+        "path": [
+          "Neoenergia Brasília",
+          "Superintendência de Operações",
+          "Gerência Técnica",
+          "Smart Grid",
+          "Estudo Viabilidade Técnica.pdf"
+        ],
+        "raw_json": {
+          "schema": "neoview.report.v1",
+          "source_report_id": "rep-8d",
+          "report_status": "approved",
+          "report": {
+            "name": "Estudo Viabilidade Técnica.pdf",
+            "description": "Estudo de viabilidade técnica e econômica do projeto.",
+            "date": "2024-11-10",
+            "size_label": "3.6 MB",
+            "size_bytes": 3774874,
+            "url": null
+          },
+          "hierarchy": {
+            "company": {
+              "id": "brasilia",
+              "name": "Neoenergia Brasília"
+            },
+            "superintendence": {
+              "id": "sup-operacoes-df",
+              "name": "Superintendência de Operações"
+            },
+            "management": {
+              "id": "ger-tecnica-df",
+              "name": "Gerência Técnica"
+            },
+            "project": {
+              "id": "proj-smart-grid",
+              "name": "Smart Grid"
+            }
+          },
+          "indicators": [
+            {
+              "id": "ind-automacao",
+              "name": "Nível de Automação",
+              "value": "45",
+              "unit": "%",
+              "trend": "up"
+            }
+          ],
+          "metrics": {
+            "views": 0,
+            "comments": 0,
+            "likes": 0,
+            "shares": 0
+          },
+          "path": [
+            "Neoenergia Brasília",
+            "Superintendência de Operações",
+            "Gerência Técnica",
+            "Smart Grid",
+            "Estudo Viabilidade Técnica.pdf"
+          ],
+          "raw_json": {
+            "schema": "neoview.report.v1",
+            "source_report_id": "rep-8d",
+            "report_status": "approved",
+            "report": {
+              "name": "Estudo Viabilidade Técnica.pdf",
+              "description": "Estudo de viabilidade técnica e econômica do projeto.",
+              "date": "2024-11-10",
+              "size_label": "3.6 MB",
+              "size_bytes": 3774874,
+              "url": null
+            },
+            "hierarchy": {
+              "company": {
+                "id": "brasilia",
+                "name": "Neoenergia Brasília"
+              },
+              "superintendence": {
+                "id": "sup-operacoes-df",
+                "name": "Superintendência de Operações"
+              },
+              "management": {
+                "id": "ger-tecnica-df",
+                "name": "Gerência Técnica"
+              },
+              "project": {
+                "id": "proj-smart-grid",
+                "name": "Smart Grid"
+              }
+            },
+            "indicators": [
+              {
+                "id": "ind-automacao",
+                "name": "Nível de Automação",
+                "value": "45",
+                "unit": "%",
+                "trend": "up"
+              }
+            ],
+            "metrics": {
+              "views": 0,
+              "comments": 0,
+              "likes": 0,
+              "shares": 0
+            },
+            "path": [
+              "Neoenergia Brasília",
+              "Superintendência de Operações",
+              "Gerência Técnica",
+              "Smart Grid",
+              "Estudo Viabilidade Técnica.pdf"
+            ],
+            "raw_json": {
+              "schema": "neoview.report.v1",
+              "source_report_id": "rep-8d",
+              "report_status": "approved",
+              "report": {
+                "name": "Estudo Viabilidade Técnica.pdf",
+                "description": "Estudo de viabilidade técnica e econômica do projeto.",
+                "date": "2024-11-10",
+                "size_label": "3.6 MB",
+                "size_bytes": 3774874,
+                "url": null
+              },
+              "hierarchy": {
+                "company": {
+                  "id": "brasilia",
+                  "name": "Neoenergia Brasília"
+                },
+                "superintendence": {
+                  "id": "sup-operacoes-df",
+                  "name": "Superintendência de Operações"
+                },
+                "management": {
+                  "id": "ger-tecnica-df",
+                  "name": "Gerência Técnica"
+                },
+                "project": {
+                  "id": "proj-smart-grid",
+                  "name": "Smart Grid"
+                }
+              },
+              "indicators": [
+                {
+                  "id": "ind-automacao",
+                  "name": "Nível de Automação",
+                  "value": "45",
+                  "unit": "%",
+                  "trend": "up"
+                }
+              ],
+              "metrics": {
+                "views": 0,
+                "comments": 0,
+                "likes": 0,
+                "shares": 0
+              },
+              "path": [
+                "Neoenergia Brasília",
+                "Superintendência de Operações",
+                "Gerência Técnica",
+                "Smart Grid",
+                "Estudo Viabilidade Técnica.pdf"
+              ],
+              "raw_json": {
+                "schema": "neoview.report.v1",
+                "source_report_id": "rep-8d",
+                "report_status": "approved",
+                "report": {
+                  "name": "Estudo Viabilidade Técnica.pdf",
+                  "description": "Estudo de viabilidade técnica e econômica do projeto.",
+                  "date": "2024-11-10",
+                  "size_label": "3.6 MB",
+                  "size_bytes": 3774874,
+                  "url": null
+                },
+                "hierarchy": {
+                  "company": {
+                    "id": "brasilia",
+                    "name": "Neoenergia Brasília"
+                  },
+                  "superintendence": {
+                    "id": "sup-operacoes-df",
+                    "name": "Superintendência de Operações"
+                  },
+                  "management": {
+                    "id": "ger-tecnica-df",
+                    "name": "Gerência Técnica"
+                  },
+                  "project": {
+                    "id": "proj-smart-grid",
+                    "name": "Smart Grid"
+                  }
+                },
+                "indicators": [
+                  {
+                    "id": "ind-automacao",
+                    "name": "Nível de Automação",
+                    "value": "45",
+                    "unit": "%",
+                    "trend": "up"
+                  }
+                ],
+                "metrics": {
+                  "views": 0,
+                  "comments": 0,
+                  "likes": 0,
+                  "shares": 0
+                },
+                "path": [
+                  "Neoenergia Brasília",
+                  "Superintendência de Operações",
+                  "Gerência Técnica",
+                  "Smart Grid",
+                  "Estudo Viabilidade Técnica.pdf"
+                ],
+                "raw_json": {
+                  "schema": "neoview.report.v1",
+                  "source_report_id": "rep-8d",
+                  "report_status": "approved",
+                  "report": {
+                    "name": "Estudo Viabilidade Técnica.pdf",
+                    "description": "Estudo de viabilidade técnica e econômica do projeto.",
+                    "date": "2024-11-10",
+                    "size_label": "3.6 MB",
+                    "size_bytes": 3774874,
+                    "url": null
+                  },
+                  "hierarchy": {
+                    "company": {
+                      "id": "brasilia",
+                      "name": "Neoenergia Brasília"
+                    },
+                    "superintendence": {
+                      "id": "sup-operacoes-df",
+                      "name": "Superintendência de Operações"
+                    },
+                    "management": {
+                      "id": "ger-tecnica-df",
+                      "name": "Gerência Técnica"
+                    },
+                    "project": {
+                      "id": "proj-smart-grid",
+                      "name": "Smart Grid"
+                    }
+                  },
+                  "indicators": [
+                    {
+                      "id": "ind-automacao",
+                      "name": "Nível de Automação",
+                      "value": "45",
+                      "unit": "%",
+                      "trend": "up"
+                    }
+                  ],
+                  "metrics": {
+                    "views": 0,
+                    "comments": 0,
+                    "likes": 0,
+                    "shares": 0
+                  },
+                  "path": [
+                    "Neoenergia Brasília",
+                    "Superintendência de Operações",
+                    "Gerência Técnica",
+                    "Smart Grid",
+                    "Estudo Viabilidade Técnica.pdf"
+                  ],
+                  "raw_json": {
+                    "id": "rep-8d",
+                    "name": "Estudo Viabilidade Técnica.pdf",
+                    "date": "2024-11-10",
+                    "size": "3.6 MB",
+                    "description": "Estudo de viabilidade técnica e econômica do projeto.",
+                    "metrics": {
+                      "views": 0,
+                      "comments": 0,
+                      "likes": 0,
+                      "shares": 0
+                    }
+                  },
+                  "generated_at": "2026-04-01T08:05:23.723Z"
+                },
+                "generated_at": "2026-04-01T08:09:40.814Z"
+              },
+              "generated_at": "2026-04-03T13:57:27.237Z"
+            },
+            "generated_at": "2026-04-03T14:03:38.495Z"
+          },
+          "generated_at": "2026-04-03T14:08:35.514Z"
+        },
+        "generated_at": "2026-04-03T14:42:08.268Z"
+      },
+      "generated_at": "2026-04-03T14:44:31.825Z"
+    },
+    "generated_at": "2026-04-03T14:58:41.019Z"
+  },
+  "generated_at": "2026-06-05T22:06:44.069Z"
+}
