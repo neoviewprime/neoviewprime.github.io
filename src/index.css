@@ -8,11 +8,11 @@
 @layer base {
   :root {
     /* NeoView Corporate Design System */
-    --background: 210 20% 98%;
-    --foreground: 220 20% 20%;
+    --background: 210 38% 97%;
+    --foreground: 222 47% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 20%;
+    --card-foreground: 222 47% 13%;
 
     --popover: 0 0% 100%;
     --popover-foreground: 220 20% 20%;
@@ -27,79 +27,79 @@
     --accent: 36 100% 55%; /* Orange #FF9C1A */
     --accent-foreground: 0 0% 100%;
 
-    --muted: 210 15% 95%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 214 32% 92%;
+    --muted-foreground: 215 16% 42%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 20% 90%;
-    --input: 214 20% 90%;
+    --border: 214 28% 86%;
+    --input: 214 28% 86%;
     --ring: 145 100% 32%;
 
     --radius: 0.5rem;
 
     /* Sidebar (tema claro) — cinza claro */
-    --sidebar-background: 0 0% 90%;
-    --sidebar-foreground: 220 20% 20%;
-    --sidebar-border: 0 0% 88%;
-    --sidebar-accent: 0 0% 90%;
-    --sidebar-accent-foreground: 220 20% 20%;
+    --sidebar-background: 214 44% 96%;
+    --sidebar-foreground: 222 47% 16%;
+    --sidebar-border: 214 28% 84%;
+    --sidebar-accent: 145 70% 92%;
+    --sidebar-accent-foreground: 145 65% 20%;
     --sidebar-primary: 145 100% 32%;
     --sidebar-primary-foreground: 0 0% 100%;
     --sidebar-ring: 145 100% 32%;
 
     /* Custom gradients */
     --gradient-hero: linear-gradient(135deg, hsl(145 100% 32%) 0%, hsl(199 99% 52%) 100%);
-    --gradient-card-hover: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 20% 98%) 100%);
+    --gradient-card-hover: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 38% 97%) 100%);
     
     /* Shadows */
-    --shadow-card: 0 2px 8px -2px hsl(220 20% 20% / 0.08), 0 4px 16px -4px hsl(220 20% 20% / 0.06);
-    --shadow-card-hover: 0 4px 16px -4px hsl(145 100% 32% / 0.15), 0 8px 24px -8px hsl(220 20% 20% / 0.1);
-    --shadow-navbar: 0 1px 3px hsl(220 20% 20% / 0.08);
+    --shadow-card: 0 10px 30px -22px hsl(222 47% 13% / 0.26), 0 2px 8px -4px hsl(222 47% 13% / 0.12);
+    --shadow-card-hover: 0 18px 42px -26px hsl(145 100% 32% / 0.22), 0 8px 24px -18px hsl(222 47% 13% / 0.20);
+    --shadow-navbar: 0 10px 30px -24px hsl(222 47% 13% / 0.28);
   }
 
   .dark {
-    --background: 220 20% 10%;
-    --foreground: 210 15% 95%;
+    --background: 214 58% 6%;
+    --foreground: 210 40% 96%;
 
-    --card: 220 20% 14%;
-    --card-foreground: 210 15% 95%;
+    --card: 214 42% 11%;
+    --card-foreground: 210 40% 96%;
 
     --popover: 220 20% 14%;
     --popover-foreground: 210 15% 95%;
 
     /* Verde mais escuro para dark mode (seu atual) */
-    --primary: 145 70% 28%;
+    --primary: 145 90% 38%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 199 80% 45%;
+    --secondary: 199 90% 56%;
     --secondary-foreground: 0 0% 100%;
 
-    --accent: 36 90% 50%;
+    --accent: 36 95% 54%;
     --accent-foreground: 0 0% 100%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 210 10% 60%;
+    --muted: 214 30% 16%;
+    --muted-foreground: 215 16% 72%;
 
     --destructive: 0 62% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 25%;
-    --input: 220 15% 25%;
+    --border: 211 30% 22%;
+    --input: 211 30% 22%;
     --ring: 145 70% 28%;
 
-    --sidebar-background: 220 20% 8%;
-    --sidebar-foreground: 210 15% 85%;
-    --sidebar-primary: 145 70% 28%;
+    --sidebar-background: 214 62% 7%;
+    --sidebar-foreground: 210 40% 92%;
+    --sidebar-primary: 145 90% 38%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 220 15% 16%;
-    --sidebar-accent-foreground: 210 15% 95%;
-    --sidebar-border: 220 15% 18%;
-    --sidebar-ring: 145 70% 28%;
+    --sidebar-accent: 214 35% 14%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 211 30% 18%;
+    --sidebar-ring: 145 90% 38%;
 
     /* ✅ Só no tema escuro: variável para contorno verde dos cards */
-    --primary-border: 145 70% 28%;
+    --primary-border: 145 90% 38%;
   }
 }
 
@@ -156,7 +156,7 @@
   }
 
   .search-input {
-    @apply w-full px-4 py-3 bg-card border border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200;
+    @apply w-full rounded-2xl border border-border bg-card/90 px-4 py-3 text-foreground shadow-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 dark:bg-white/[0.06];
   }
 
   .breadcrumb-link {
@@ -173,6 +173,80 @@
 
   .hero-gradient {
     background: var(--gradient-hero);
+  }
+
+  .app-shell-bg {
+    background:
+      linear-gradient(180deg, hsl(var(--background)) 0%, hsl(207 42% 95%) 54%, hsl(var(--background)) 100%);
+  }
+
+  .dark .app-shell-bg {
+    background:
+      linear-gradient(180deg, hsl(214 58% 6%) 0%, hsl(213 48% 8%) 48%, hsl(214 58% 6%) 100%);
+  }
+
+  .neo-page {
+    @apply min-h-screen px-4 py-5 sm:px-6 sm:py-7 lg:px-8;
+  }
+
+  .neo-page-inner {
+    @apply mx-auto w-full max-w-[1500px];
+  }
+
+  .neo-surface {
+    @apply border border-border/80 bg-card/90 text-card-foreground shadow-sm backdrop-blur-xl dark:bg-white/[0.055];
+    box-shadow: var(--shadow-card);
+  }
+
+  .neo-surface-strong {
+    @apply border border-border/80 bg-card text-card-foreground shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.075];
+    box-shadow: var(--shadow-card);
+  }
+
+  .neo-card {
+    @apply neo-surface rounded-2xl;
+  }
+
+  .neo-card-hover {
+    @apply transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/30;
+  }
+
+  .neo-card-hover:hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  .neo-page-header {
+    @apply neo-surface-strong rounded-[28px] p-5 sm:p-6 lg:p-7;
+  }
+
+  .neo-control {
+    @apply rounded-2xl border border-border/80 bg-background/70 text-foreground shadow-sm placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-primary/25 dark:bg-white/[0.055];
+  }
+
+  .neo-pill {
+    @apply rounded-full border border-border/80 bg-background/70 text-foreground dark:bg-white/[0.055];
+  }
+
+  .neo-sidebar {
+    @apply border-sidebar-border bg-sidebar text-sidebar-foreground;
+    box-shadow: 18px 0 44px -34px hsl(var(--foreground) / 0.42);
+  }
+
+  .dark .neo-sidebar {
+    background:
+      linear-gradient(180deg, hsl(214 62% 7%) 0%, hsl(214 53% 8%) 100%);
+  }
+
+  .neo-topbar {
+    @apply border-border/80 bg-card/90 text-foreground shadow-navbar backdrop-blur-xl dark:bg-[hsl(214_42%_9%/0.92)];
+  }
+
+  .neo-bottom-nav {
+    @apply border-border/80 bg-card/95 text-foreground shadow-[0_-10px_30px_hsl(var(--foreground)/0.08)] backdrop-blur-xl dark:bg-[hsl(214_42%_9%/0.96)];
+  }
+
+  .neo-table-row {
+    @apply border-border/70 transition-colors hover:bg-muted/60 dark:hover:bg-white/[0.055];
   }
 }
 

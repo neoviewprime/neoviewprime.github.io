@@ -18,6 +18,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
+import { NeoLogo } from '@/components/NeoLogo';
 
 interface AppSidebarProps {
   isOpen: boolean;
@@ -25,9 +26,8 @@ interface AppSidebarProps {
   onLogout: () => void;
 }
 
-const DESKTOP_EXPANDED = 192;
-const DESKTOP_COLLAPSED = 64;
-const MOBILE_HEADER_OFFSET = 'calc(env(safe-area-inset-top) + 7.5rem)';
+const DESKTOP_EXPANDED = 256;
+const DESKTOP_COLLAPSED = 72;
 
 export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogout }) => {
   const navigate = useNavigate();
@@ -85,7 +85,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogou
         {overlayVisible && (
           <motion.div
             key="overlay"
-            className="fixed inset-0 z-40 bg-foreground/20 backdrop-blur-sm lg:hidden"
+            className="fixed inset-0 z-40 bg-foreground/35 backdrop-blur-sm lg:hidden"
             onClick={handleCloseMobile}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -96,33 +96,46 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogou
 
       <motion.aside
         className={cn(
-          'fixed left-0 z-50 overflow-hidden border-r border-sidebar-border bg-sidebar',
+          'neo-sidebar fixed left-0 z-50 overflow-hidden border-r',
           isDesktop
             ? 'top-16 block h-[calc(100dvh-4rem)]'
-            : 'w-[min(86vw,320px)]'
+            : 'top-0 h-dvh w-[min(84vw,340px)]'
         )}
         initial={false}
         variants={sidebarVariants}
         animate={isDesktop ? (isOpen ? 'desktopExpanded' : 'desktopCollapsed') : isOpen ? 'mobileOpen' : 'mobileClosed'}
         style={{
           willChange: isDesktop ? 'width' : 'transform',
-          ...(isDesktop
-            ? {}
-            : {
-                top: MOBILE_HEADER_OFFSET,
-                height: `calc(100dvh - ${MOBILE_HEADER_OFFSET})`
-              })
         }}
       >
         <div className="flex h-full flex-col pb-[calc(env(safe-area-inset-bottom)+0.75rem)]">
-          <div className="flex justify-end p-2 lg:hidden">
-            <button onClick={handleCloseMobile} className="rounded-lg p-2 hover:bg-sidebar-accent">
+          <div
+            className={cn(
+              'flex items-center border-b border-sidebar-border p-3',
+              isDesktop && !isOpen ? 'justify-center' : 'justify-between'
+            )}
+          >
+            <div className={cn(isDesktop && !isOpen ? 'hidden' : 'block')}>
+              <NeoLogo size="sm" />
+            </div>
+            {!isDesktop ? (
+            <button onClick={handleCloseMobile} className="rounded-xl p-2 hover:bg-sidebar-accent">
               <X className="h-5 w-5 text-sidebar-foreground" />
             </button>
+            ) : null}
           </div>
 
+          <motion.p
+            className="px-4 pt-4 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-sidebar-foreground/55"
+            variants={labelVariants}
+            initial={false}
+            animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
+          >
+            Navegacao
+          </motion.p>
+
           <motion.nav
-            className="flex-1 space-y-1 overflow-y-auto p-2"
+            className="flex-1 space-y-1 overflow-y-auto p-2 pt-3"
             variants={listVariants}
             initial={false}
             animate="animate"
@@ -139,15 +152,17 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogou
                     if (!isDesktop) handleCloseMobile();
                   }}
                   className={cn(
-                    'flex w-full items-center gap-3 rounded-lg px-3 py-2.5',
+                    'relative flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left transition-all',
                     isActive
-                      ? 'bg-sidebar-primary text-sidebar-primary-foreground'
-                      : 'text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground'
+                      ? 'bg-sidebar-primary/15 text-sidebar-accent-foreground ring-1 ring-sidebar-primary/35 shadow-[0_10px_28px_-22px_hsl(var(--sidebar-primary))]'
+                      : 'text-sidebar-foreground/78 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
+                    isDesktop && !isOpen ? 'justify-center px-0' : ''
                   )}
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: 'spring', stiffness: 500, damping: 35 }}
                 >
-                  <Icon className="h-5 w-5 shrink-0" />
+                  {isActive ? <span className="absolute left-0 top-1/2 h-7 w-1 -translate-y-1/2 rounded-r-full bg-sidebar-primary" /> : null}
+                  <Icon className={cn('h-5 w-5 shrink-0', isActive ? 'text-sidebar-primary' : '')} />
                   <motion.span
                     className="overflow-hidden whitespace-nowrap text-sm"
                     variants={labelVariants}
@@ -166,7 +181,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onClose, onLogou
               <div className="mb-3">
                 <div
                   className={cn(
-                    'flex items-center rounded-xl border border-sidebar-border bg-sidebar-accent/40 text-sidebar-foreground',
+                    'flex items-center rounded-2xl border border-sidebar-border bg-sidebar-accent/50 text-sidebar-foreground',
                     isDesktop && !isOpen ? 'justify-center px-0 py-3' : 'gap-3 px-3 py-3'
                   )}
                   title={user.full_name}

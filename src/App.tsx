@@ -30,7 +30,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 const queryClient = new QueryClient();
 
 const App = () => (
-  <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+  <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <TooltipProvider>
@@ -39,7 +39,7 @@ const App = () => (
           <HashRouter>
             <Suspense
               fallback={
-                <div className="grid min-h-dvh place-items-center bg-background px-6 text-center text-sm text-muted-foreground">
+                <div className="app-shell-bg grid min-h-dvh place-items-center px-6 text-center text-sm text-muted-foreground">
                   Carregando NeoView...
                 </div>
               }

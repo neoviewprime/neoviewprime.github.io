@@ -29,7 +29,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenMenu }) 
   if (!isAuthenticated) return null;
 
   return (
-    <nav className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-card/95 px-2 pb-[max(0.45rem,env(safe-area-inset-bottom))] pt-2 shadow-[0_-8px_24px_hsl(var(--foreground)/0.08)] backdrop-blur md:hidden">
+    <nav className="neo-bottom-nav fixed inset-x-0 bottom-0 z-50 border-t px-2 pb-[max(0.45rem,env(safe-area-inset-bottom))] pt-2 md:hidden">
       <div className="mx-auto grid max-w-md grid-cols-5 items-end gap-1">
         {primaryItems.map((item) => {
           const Icon = item.icon;
@@ -41,9 +41,9 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenMenu }) 
               type="button"
               onClick={() => navigate(item.path)}
               className={cn(
-                'flex min-h-[3.35rem] flex-col items-center justify-center gap-1 rounded-xl px-1 text-[0.68rem] font-medium transition-colors',
+                'flex min-h-[3.35rem] flex-col items-center justify-center gap-1 rounded-2xl px-1 text-[0.68rem] font-medium transition-colors',
                 isActive
-                  ? 'bg-primary/10 text-primary'
+                  ? 'bg-primary/15 text-primary ring-1 ring-primary/25'
                   : 'text-muted-foreground hover:bg-muted hover:text-foreground'
               )}
               aria-current={isActive ? 'page' : undefined}
@@ -59,8 +59,8 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({ onOpenMenu }) 
           variant="ghost"
           onClick={onOpenMenu}
           className={cn(
-            'flex min-h-[3.35rem] flex-col items-center justify-center gap-1 rounded-xl px-1 text-[0.68rem] font-medium',
-            isUtilityActive ? 'bg-primary/10 text-primary' : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+            'flex min-h-[3.35rem] flex-col items-center justify-center gap-1 rounded-2xl px-1 text-[0.68rem] font-medium',
+            isUtilityActive ? 'bg-primary/15 text-primary ring-1 ring-primary/25' : 'text-muted-foreground hover:bg-muted hover:text-foreground'
           )}
           aria-label="Abrir menu"
         >

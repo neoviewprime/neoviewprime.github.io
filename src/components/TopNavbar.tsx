@@ -44,14 +44,14 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-card shadow-navbar">
+    <header className="sticky top-0 z-50 border-b neo-topbar">
       <div className="px-3 pb-2 pt-[max(0.65rem,env(safe-area-inset-top))] sm:px-4 sm:pb-0 sm:pt-0">
         <div className="flex min-h-14 items-center justify-between gap-2 sm:min-h-16 sm:gap-4">
           <div className="flex min-w-0 items-center gap-2 sm:gap-4">
             {isAuthenticated ? (
               <button
                 onClick={onToggleSidebar}
-                className="rounded-lg p-2 transition-colors hover:bg-muted"
+                className="rounded-xl p-2 text-foreground transition-colors hover:bg-muted"
                 aria-label="Toggle sidebar"
               >
                 <Menu className="h-5 w-5 text-foreground" />
@@ -90,7 +90,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
                   <Button
                     variant="ghost"
                     size="icon"
-                    className="relative rounded-lg text-foreground hover:bg-muted"
+                    className="relative rounded-xl text-foreground hover:bg-muted"
                     aria-label="Notificacoes"
                   >
                     <Bell className="h-5 w-5" />
@@ -101,7 +101,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
                 </PopoverTrigger>
                 <PopoverContent
                   align="end"
-                  className="w-[min(92vw,360px)] overflow-hidden p-0"
+                  className="neo-surface-strong w-[min(92vw,360px)] overflow-hidden rounded-2xl p-0"
                   onInteractOutside={(event) => {
                     const target = event.target as HTMLElement | null;
                     if (target?.closest('[data-theme-toggle="true"]')) {
@@ -170,21 +170,21 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
                   <>
                     <button
                       onClick={() => navigate('/home')}
-                      className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
+                    className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
                     >
                       <Home className="h-4 w-4" />
                       <span className="hidden sm:inline">Inicio</span>
                     </button>
                     <button
                       onClick={() => navigate('/favorites')}
-                      className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
+                    className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
                     >
                       <Star className="h-4 w-4" />
                       <span className="hidden sm:inline">Favoritos</span>
                     </button>
                     <button
                       onClick={() => navigate('/help')}
-                      className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
+                    className="flex items-center gap-2 rounded-xl px-3 py-2 text-sm text-foreground transition-colors hover:bg-muted"
                     >
                       <HelpCircle className="h-4 w-4" />
                       <span className="hidden sm:inline">Ajuda</span>
@@ -195,7 +195,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
                 {!isMobile ? (
                   <button
                     onClick={onLogout}
-                    className="flex items-center gap-2 rounded-lg px-2 py-2 text-sm text-destructive transition-colors hover:bg-destructive/10 sm:px-3"
+                    className="flex items-center gap-2 rounded-xl px-2 py-2 text-sm text-destructive transition-colors hover:bg-destructive/10 sm:px-3"
                   >
                     <LogOut className="h-4 w-4" />
                     <span className="hidden md:inline">Sair</span>
@@ -205,7 +205,7 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
             ) : (
               <button
                 onClick={() => navigate('/login')}
-                className="rounded-lg bg-primary px-4 py-2 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                className="rounded-xl bg-primary px-4 py-2 font-medium text-primary-foreground transition-colors hover:bg-primary/90"
               >
                 Entrar
               </button>

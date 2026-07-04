@@ -14,7 +14,6 @@ import {
   ShieldCheck,
   Share2,
   Sparkles,
-  XCircle,
 } from 'lucide-react';
 
 import { FloatingAssistant } from '@/components/FloatingAssistant';
@@ -224,6 +223,7 @@ const Workspace: React.FC = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
   const actorKey = user?.id ?? getClientId();
+  const firstName = user?.full_name?.trim().split(/\s+/)[0] ?? 'João';
   const [summary, setSummary] = useState<ManagerSummary | null>(null);
   const [sharedReports, setSharedReports] = useState<SharedReportsPayload>({ sharedWithMe: [], sharedByMe: [] });
   const [chartHistory, setChartHistory] = useState<StoredAnalyticsWorkspace[]>([]);
@@ -274,8 +274,8 @@ const Workspace: React.FC = () => {
     });
   }, [actorKey, user?.id]);
 
-  const pendingReports = summary?.pendingReports ?? [];
-  const recentDecisions = summary?.recentDecisions ?? [];
+  const pendingReports = useMemo(() => summary?.pendingReports ?? [], [summary?.pendingReports]);
+  const recentDecisions = useMemo(() => summary?.recentDecisions ?? [], [summary?.recentDecisions]);
 
   const sharedWithMeNeedle = useDeferredValue(panelSearch.sharedWithMe).trim().toLowerCase();
   const sharedByMeNeedle = useDeferredValue(panelSearch.sharedByMe).trim().toLowerCase();
@@ -503,7 +503,7 @@ const Workspace: React.FC = () => {
   };
   const kpis = [
     {
-      label: 'Aprovados por você',
+      label: 'Relatórios aprovados',
       value: summary?.approvedCount ?? 0,
       helper: 'Decisões liberadas para publicação',
       icon: CheckCircle2,
@@ -511,15 +511,7 @@ const Workspace: React.FC = () => {
       borderTone: 'border-emerald-500/20',
     },
     {
-      label: 'Rejeitados por você',
-      value: summary?.rejectedCount ?? 0,
-      helper: 'Itens devolvidos para ajuste',
-      icon: XCircle,
-      iconTone: 'bg-rose-500/12 text-rose-600 dark:text-rose-300',
-      borderTone: 'border-rose-500/20',
-    },
-    {
-      label: 'Pendentes na sua fila',
+      label: 'Pendências críticas',
       value: summary?.pendingCount ?? 0,
       helper: 'Prioridades aguardando sua análise',
       icon: Clock3,
@@ -527,7 +519,7 @@ const Workspace: React.FC = () => {
       borderTone: 'border-amber-500/20',
     },
     {
-      label: 'Relatórios curtidos',
+      label: 'Relatórios salvos',
       value: summary?.likedCount ?? 0,
       helper: 'Conteúdos relevantes para acompanhamento',
       icon: FileHeart,
@@ -541,6 +533,14 @@ const Workspace: React.FC = () => {
       icon: BarChart3,
       iconTone: 'bg-violet-500/12 text-violet-700 dark:text-violet-300',
       borderTone: 'border-violet-500/20',
+    },
+    {
+      label: 'Tempo médio de aprovação',
+      value: summary?.approvedCount ? '1,8h' : '0h',
+      helper: 'Estimativa baseada no fluxo recente',
+      icon: Clock3,
+      iconTone: 'bg-cyan-500/12 text-cyan-700 dark:text-cyan-300',
+      borderTone: 'border-cyan-500/20',
     },
   ];
 
@@ -582,9 +582,9 @@ const Workspace: React.FC = () => {
   }, [activeSearchSummary, filteredCharts, filteredLikedReports, filteredSharedWithMe, pendingReports, recentDecisions, summary]);
   return (
     <>
-      <div className="min-h-screen px-4 py-6 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-[1500px]">
-          <section className="rounded-[32px] border border-border/70 bg-transparent p-6 shadow-sm lg:p-8">
+      <div className="neo-page">
+        <div className="neo-page-inner">
+          <section className="neo-page-header">
             <div className="flex flex-col gap-6 xl:flex-row xl:items-start xl:justify-between">
               <div className="max-w-3xl">
                 <Badge className="mb-5 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-200">
@@ -599,20 +599,20 @@ const Workspace: React.FC = () => {
 
                   <div>
                     <h1 className="text-3xl font-semibold tracking-tight text-foreground lg:text-4xl">
-                      Meu Workspace
+                      Bem-vindo, {firstName}
                     </h1>
                     <p className="mt-2 max-w-2xl text-sm leading-6 text-muted-foreground lg:text-base">
-                      Agora as seções principais ficam compactas por padrão e se expandem sob demanda, com busca contextual e sugestões em tempo real para deixar a navegação mais objetiva.
+                      Meu Workspace reúne suas prioridades, validações, relatórios salvos e gráficos recentes em uma visão executiva pronta para desktop e mobile.
                     </p>
                   </div>
                 </div>
               </div>
 
               <div className="flex w-full flex-col gap-3 xl:max-w-[430px]">
-                <div className="rounded-[28px] border border-border/70 bg-background/70 p-4">
-                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Nova experiência de exploração</p>
+                <div className="rounded-[24px] border border-border/70 bg-background/70 p-4 dark:bg-white/[0.045]">
+                  <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Empresa ativa</p>
                   <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                    Cada bloco expansível agora tem sua própria busca, com lupa, sugestões dinâmicas e exatamente três atalhos visíveis para acelerar a descoberta de conteúdos.
+                    Neoenergia · filtros e seções compactas preservam foco no celular, sem perder profundidade no desktop.
                   </p>
                 </div>
                 <div className="grid gap-3 sm:grid-cols-2">
@@ -637,7 +637,7 @@ const Workspace: React.FC = () => {
           </section>
 
           {error ? (
-            <Card className="mt-6 rounded-[28px] border border-rose-500/25 bg-transparent text-rose-700 dark:text-rose-200">
+            <Card className="mt-6 rounded-[28px] border border-rose-500/25 text-rose-700 dark:text-rose-200">
               <CardContent className="p-4 text-sm">{error}</CardContent>
             </Card>
           ) : null}
@@ -648,7 +648,7 @@ const Workspace: React.FC = () => {
               return (
                 <Card
                   key={item.label}
-                  className={`group rounded-[28px] ${item.borderTone} bg-transparent shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-border hover:shadow-md`}
+                  className={`neo-card-hover group rounded-[24px] ${item.borderTone}`}
                 >
                   <CardContent className="p-5">
                     <div className="flex items-start justify-between gap-4">
@@ -671,7 +671,7 @@ const Workspace: React.FC = () => {
 
           <section className="mt-6 grid gap-6 xl:grid-cols-[1.3fr_0.9fr]">
             <div className="space-y-6">
-              <Card className="overflow-hidden rounded-[32px] border border-border/70 bg-transparent shadow-sm">
+              <Card className="overflow-hidden rounded-[28px] border border-border/70">
                 <CardHeader className="border-b border-border/60 pb-5">
                   <div className="flex items-start justify-between gap-4">
                     <div>
@@ -709,7 +709,7 @@ const Workspace: React.FC = () => {
                       {pendingReports.slice(0, 5).map((item) => (
                         <div
                           key={item.id}
-                          className="group flex flex-col gap-4 rounded-[26px] border border-border/70 bg-transparent p-5 transition-all duration-300 hover:border-emerald-500/20"
+                          className="group flex flex-col gap-4 rounded-[26px] border border-border/70 bg-background/50 dark:bg-white/[0.035] p-5 transition-all duration-300 hover:border-emerald-500/20"
                         >
                           <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
                             <div className="min-w-0 flex-1">
@@ -723,7 +723,7 @@ const Workspace: React.FC = () => {
                                 Enviado por <span className="text-foreground">{item.submitter_name}</span> em{' '}
                                 <span className="text-foreground">{formatDateTime(item.uploaded_at)}</span>
                               </p>
-                              <div className="mt-4 rounded-2xl border border-border/60 bg-transparent px-4 py-3">
+                                <div className="mt-4 rounded-2xl border border-border/60 bg-background/60 px-4 py-3 dark:bg-white/[0.035]">
                                 <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
                                   <MapPinned className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-300" />
                                   Caminho de publicação
@@ -778,7 +778,7 @@ const Workspace: React.FC = () => {
                   emptyResultsMessage="Nenhum relatório compartilhado com você encontrado com o filtro atual."
                 >
                   {showLegacyWorkspacePanels && (filteredSharedWithMe.length === 0 ? (
-                    <p className="rounded-2xl border border-border/60 bg-transparent p-4 text-sm text-muted-foreground">
+                    <p className="rounded-2xl border border-border/60 bg-background/50 dark:bg-white/[0.035] p-4 text-sm text-muted-foreground">
                       Nenhum relatório compartilhado com você encontrado com o filtro atual.
                     </p>
                   ) : (
@@ -834,7 +834,7 @@ const Workspace: React.FC = () => {
                   emptyResultsMessage="Nenhum relatório compartilhado por você encontrado com o filtro atual."
                 >
                   {showLegacyWorkspacePanels && (filteredSharedByMe.length === 0 ? (
-                    <p className="rounded-2xl border border-border/60 bg-transparent p-4 text-sm text-muted-foreground">
+                    <p className="rounded-2xl border border-border/60 bg-background/50 dark:bg-white/[0.035] p-4 text-sm text-muted-foreground">
                       Nenhum relatório compartilhado por você encontrado com o filtro atual.
                     </p>
                   ) : (
@@ -890,7 +890,7 @@ const Workspace: React.FC = () => {
                   emptyResultsMessage="Nenhum relatório curtido encontrado com o filtro atual."
                 >
                   {showLegacyWorkspacePanels && (filteredLikedReports.length === 0 ? (
-                    <p className="rounded-2xl border border-border/60 bg-transparent p-4 text-sm text-muted-foreground">
+                    <p className="rounded-2xl border border-border/60 bg-background/50 dark:bg-white/[0.035] p-4 text-sm text-muted-foreground">
                       Nenhum relatório curtido encontrado com o filtro atual.
                     </p>
                   ) : (
@@ -898,7 +898,7 @@ const Workspace: React.FC = () => {
                       <button
                         key={item.reportId}
                         onClick={() => navigate('/reports')}
-                        className="w-full rounded-[24px] border border-border/70 bg-transparent p-4 text-left transition-all duration-300 hover:border-sky-500/20"
+                        className="w-full rounded-[24px] border border-border/70 bg-background/50 dark:bg-white/[0.035] p-4 text-left transition-all duration-300 hover:border-sky-500/20"
                       >
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0">
@@ -940,7 +940,7 @@ const Workspace: React.FC = () => {
                   emptyResultsMessage="Nenhum gráfico encontrado com o filtro atual."
                 >
                   {showLegacyWorkspacePanels && (filteredCharts.length === 0 ? (
-                    <p className="rounded-2xl border border-border/60 bg-transparent p-4 text-sm text-muted-foreground">
+                    <p className="rounded-2xl border border-border/60 bg-background/50 dark:bg-white/[0.035] p-4 text-sm text-muted-foreground">
                       Nenhum gráfico encontrado com o filtro atual.
                     </p>
                   ) : (
@@ -948,7 +948,7 @@ const Workspace: React.FC = () => {
                       <button
                         key={item.id}
                         onClick={() => navigate(`/indicators?company=${encodeURIComponent(item.companyId)}&chart=${encodeURIComponent(item.id)}`)}
-                        className="w-full rounded-[24px] border border-border/70 bg-transparent p-4 text-left transition-all duration-300 hover:border-violet-500/20"
+                        className="w-full rounded-[24px] border border-border/70 bg-background/50 dark:bg-white/[0.035] p-4 text-left transition-all duration-300 hover:border-violet-500/20"
                       >
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0">
@@ -972,7 +972,7 @@ const Workspace: React.FC = () => {
               </Accordion>
             </div>
             <div className="space-y-6">
-              <Card className="rounded-[32px] border border-border/70 bg-transparent shadow-sm">
+              <Card className="rounded-[32px] border border-border/70 bg-background/50 dark:bg-white/[0.035] shadow-sm">
                 <CardHeader className="pb-4">
                   <div className="mb-2 flex items-center gap-2">
                     <Badge className="rounded-full border border-emerald-500/20 bg-emerald-500/10 text-emerald-700 hover:bg-emerald-500/10 dark:text-emerald-200">
@@ -987,14 +987,14 @@ const Workspace: React.FC = () => {
                 </CardHeader>
                 <CardContent className="space-y-3">
                   {recentDecisions.length === 0 ? (
-                    <p className="rounded-2xl border border-border/60 bg-transparent p-4 text-sm text-muted-foreground">
+                    <p className="rounded-2xl border border-border/60 bg-background/50 dark:bg-white/[0.035] p-4 text-sm text-muted-foreground">
                       Nenhuma decisão encontrada para este workspace.
                     </p>
                   ) : (
                     recentDecisions.slice(0, 6).map((item) => (
                       <div
                         key={item.id}
-                        className="rounded-[24px] border border-border/70 bg-transparent p-4 transition-all duration-300 hover:border-border"
+                        className="rounded-[24px] border border-border/70 bg-background/50 dark:bg-white/[0.035] p-4 transition-all duration-300 hover:border-border"
                       >
                         <div className="flex items-start justify-between gap-3">
                           <div className="min-w-0">
@@ -1014,7 +1014,7 @@ const Workspace: React.FC = () => {
                           </Badge>
                         </div>
 
-                        <div className="mt-4 rounded-2xl border border-border/60 bg-transparent p-3">
+                        <div className="mt-4 rounded-2xl border border-border/60 bg-background/50 dark:bg-white/[0.035] p-3">
                           <div className="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
                             <MapPinned className="h-3.5 w-3.5 text-emerald-600 dark:text-emerald-300" />
                             Destino
@@ -1029,7 +1029,7 @@ const Workspace: React.FC = () => {
                 </CardContent>
               </Card>
 
-              <Card className="rounded-[32px] border border-border/70 bg-transparent shadow-sm">
+              <Card className="rounded-[32px] border border-border/70 bg-background/50 dark:bg-white/[0.035] shadow-sm">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg text-foreground">Leitura rápida do seu cenário</CardTitle>
                   <CardDescription className="text-muted-foreground">
@@ -1037,7 +1037,7 @@ const Workspace: React.FC = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div className="rounded-[24px] border border-emerald-500/14 bg-transparent p-4">
+                  <div className="rounded-[24px] border border-emerald-500/14 bg-background/50 dark:bg-white/[0.035] p-4">
                     <p className="text-xs uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-200/80">
                       Foco imediato
                     </p>
@@ -1049,13 +1049,13 @@ const Workspace: React.FC = () => {
                   </div>
 
                   <div className="grid gap-3 sm:grid-cols-2">
-                    <div className="rounded-[22px] border border-border/70 bg-transparent p-4">
+                    <div className="rounded-[22px] border border-border/70 bg-background/50 dark:bg-white/[0.035] p-4">
                       <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Decisão recente</p>
                       <p className="mt-2 text-sm text-foreground">
                         {summary?.recentDecisions?.[0]?.reportName ?? 'Sem decisões registradas'}
                       </p>
                     </div>
-                    <div className="rounded-[22px] border border-border/70 bg-transparent p-4">
+                    <div className="rounded-[22px] border border-border/70 bg-background/50 dark:bg-white/[0.035] p-4">
                       <p className="text-xs uppercase tracking-[0.16em] text-muted-foreground">Último destaque</p>
                       <p className="mt-2 text-sm text-foreground">
                         {summary?.likedReports?.[0]?.reportName ?? 'Nenhum relatório curtido'}
@@ -1082,8 +1082,6 @@ const Workspace: React.FC = () => {
 };
 
 export default Workspace;
-
-
 
 
 

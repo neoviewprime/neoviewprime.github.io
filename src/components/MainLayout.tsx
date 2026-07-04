@@ -8,8 +8,8 @@ import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { HierarchyNavProvider } from '@/context/HierarchyNavContext';
 import { useAuth } from '@/hooks/useAuth';
 
-const DESKTOP_EXPANDED = 192;
-const DESKTOP_COLLAPSED = 64;
+const DESKTOP_EXPANDED = 256;
+const DESKTOP_COLLAPSED = 72;
 
 export default function MainLayout() {
   const navigate = useNavigate();
@@ -71,14 +71,14 @@ export default function MainLayout() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-muted-foreground">
+      <div className="app-shell-bg flex min-h-screen items-center justify-center text-muted-foreground">
         Validando sessão...
       </div>
     );
   }
 
   return (
-    <div className="flex min-h-dvh flex-col bg-background">
+    <div className="app-shell-bg flex min-h-dvh flex-col bg-background">
       <HierarchyNavProvider>
         <TopNavbar
           isAuthenticated={isAuthenticated}
@@ -88,7 +88,7 @@ export default function MainLayout() {
         <AppSidebar isOpen={sidebarOpen} onClose={closeSidebar} onLogout={handleLogout} />
 
         <motion.main
-          className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-clip px-0 pb-[calc(env(safe-area-inset-bottom)+5.75rem)] pt-3 sm:pb-[calc(env(safe-area-inset-bottom)+1rem)] sm:pt-4"
+          className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-clip px-0 pb-[calc(env(safe-area-inset-bottom)+5.75rem)] pt-2 sm:pb-[calc(env(safe-area-inset-bottom)+1rem)] sm:pt-4"
           initial={false}
           animate={{ marginLeft: targetMarginLeft }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}

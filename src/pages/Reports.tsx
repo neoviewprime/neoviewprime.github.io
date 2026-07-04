@@ -8,7 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { FileText, Link as LinkIcon, Search, Upload, Filter, Clock, CheckCircle, XCircle, AlertCircle, AlertTriangle, Heart, MessageCircle, Share2, Trash2 } from 'lucide-react';
+import { FileText, Link as LinkIcon, Search, Upload, Filter, Clock, CheckCircle, XCircle, AlertCircle, AlertTriangle, Heart, MessageCircle, Share2, Trash2, TrendingUp } from 'lucide-react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { useReports, type ReportsListItem } from '@/hooks/useReports';
@@ -246,12 +246,30 @@ const Reports: React.FC = () => {
     });
   }, [combinedReports, searchQuery, activeTab, searchParams]);
 
-  const stats = {
-    total: combinedReports.length,
-    pending: combinedReports.filter((r) => r.status === 'pending_approval').length,
-    approved: combinedReports.filter((r) => r.status === 'approved').length,
-    rejected: combinedReports.filter((r) => r.status === 'rejected').length
-  };
+  const stats = useMemo(
+    () => ({
+      total: combinedReports.length,
+      pending: combinedReports.filter((r) => r.status === 'pending_approval').length,
+      approved: combinedReports.filter((r) => r.status === 'approved').length,
+      rejected: combinedReports.filter((r) => r.status === 'rejected').length
+    }),
+    [combinedReports]
+  );
+  const engagementAverage = combinedReports.length
+    ? Math.round(
+        combinedReports.reduce(
+          (total, report) =>
+            total +
+            report.metrics.visualizacoes +
+            report.metrics.comentarios +
+            report.metrics.curtidas +
+            report.metrics.compartilhamentos,
+          0
+        ) / combinedReports.length
+      )
+    : 0;
+  const reportHighlight = filteredReports[0] ?? combinedReports[0] ?? null;
+  const recentActivity = combinedReports.slice(0, 4);
   const highlightedSource = searchParams.get('source');
   const highlightedLabel = searchParams.get('label');
 
@@ -505,11 +523,12 @@ const Reports: React.FC = () => {
 
   return (
     <>
-      <div className="container mx-auto px-4 py-6 sm:px-6 sm:py-8">
-        <div className="mb-6 flex flex-col gap-4 rounded-[28px] border border-border/70 bg-card/70 p-4 shadow-sm sm:mb-8 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+      <div className="neo-page">
+        <div className="neo-page-inner">
+        <div className="neo-page-header mb-6 flex flex-col gap-4 sm:mb-8 sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <h1 className="text-2xl lg:text-3xl font-bold text-foreground">Meus Relatórios</h1>
-            <p className="mt-1 text-sm text-muted-foreground sm:text-base">Envie relatorios por link externo valido e acompanhe o fluxo de rascunho e aprovacao.</p>
+            <h1 className="text-2xl font-bold text-foreground lg:text-3xl">Meus Relatórios</h1>
+            <p className="mt-1 text-sm text-muted-foreground sm:text-base">Envie relatórios por link externo válido e acompanhe status, engajamento e fluxo de aprovação.</p>
           </div>
           <Button className="h-11 gap-2 rounded-2xl" onClick={() => setIsUploadOpen(true)}>
             <Upload className="w-4 h-4" />
@@ -517,17 +536,18 @@ const Reports: React.FC = () => {
           </Button>
         </div>
 
-        <div className="mb-6 grid grid-cols-2 gap-3 md:grid-cols-4 sm:gap-4">
-          <Card className="rounded-3xl"><CardContent className="p-4"><p className="text-2xl font-bold">{stats.total}</p><p className="text-xs text-muted-foreground">Total</p></CardContent></Card>
-          <Card className="rounded-3xl"><CardContent className="p-4"><p className="text-2xl font-bold">{stats.pending}</p><p className="text-xs text-muted-foreground">Pendentes</p></CardContent></Card>
-          <Card className="rounded-3xl"><CardContent className="p-4"><p className="text-2xl font-bold">{stats.approved}</p><p className="text-xs text-muted-foreground">Aprovados</p></CardContent></Card>
-          <Card className="rounded-3xl"><CardContent className="p-4"><p className="text-2xl font-bold">{stats.rejected}</p><p className="text-xs text-muted-foreground">Rejeitados</p></CardContent></Card>
+        <div className="mb-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
+          <Card className="neo-card-hover rounded-[24px]"><CardContent className="p-4"><p className="text-2xl font-bold">{stats.total}</p><p className="text-xs text-muted-foreground">Total</p></CardContent></Card>
+          <Card className="neo-card-hover rounded-[24px] border-amber-500/20"><CardContent className="p-4"><p className="text-2xl font-bold">{stats.pending}</p><p className="text-xs text-muted-foreground">Pendentes</p></CardContent></Card>
+          <Card className="neo-card-hover rounded-[24px] border-emerald-500/20"><CardContent className="p-4"><p className="text-2xl font-bold">{stats.approved}</p><p className="text-xs text-muted-foreground">Aprovados</p></CardContent></Card>
+          <Card className="neo-card-hover rounded-[24px] border-rose-500/20"><CardContent className="p-4"><p className="text-2xl font-bold">{stats.rejected}</p><p className="text-xs text-muted-foreground">Rejeitados</p></CardContent></Card>
+          <Card className="neo-card-hover rounded-[24px] border-sky-500/20"><CardContent className="p-4"><p className="text-2xl font-bold">{engagementAverage}</p><p className="text-xs text-muted-foreground">Engajamento médio</p></CardContent></Card>
         </div>
 
-        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+        <div className="mb-6 flex flex-col gap-3 rounded-[24px] border border-border/70 bg-card/80 p-3 shadow-sm dark:bg-white/[0.045] sm:flex-row sm:items-center sm:gap-4">
           <div className="relative flex-1 sm:max-w-md">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-            <Input placeholder="Buscar relatórios..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="h-11 rounded-2xl pl-10" />
+            <Input placeholder="Buscar relatórios..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} className="neo-control h-11 pl-10" />
           </div>
           <Button variant="outline" className="h-11 gap-2 rounded-2xl"><Filter className="w-4 h-4" />Filtros</Button>
         </div>
@@ -570,6 +590,7 @@ const Reports: React.FC = () => {
 
         {error && <p className="text-sm text-yellow-700 mb-4">{error}</p>}
 
+        <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_330px]">
         <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as ReportStatus | 'all')} className="space-y-4">
           <TabsList className="mb-0 flex h-auto w-full flex-nowrap gap-2 overflow-x-auto rounded-2xl bg-muted/60 p-1">
             <TabsTrigger value="all">Todos</TabsTrigger>
@@ -580,7 +601,7 @@ const Reports: React.FC = () => {
           </TabsList>
 
           <TabsContent value={activeTab}>
-            <Card className="overflow-hidden rounded-3xl">
+            <Card className="overflow-hidden rounded-[28px]">
               <CardContent className="p-0">
                 {isLoading ? (
                   <div className="p-8 text-center">Carregando relatórios...</div>
@@ -592,7 +613,7 @@ const Reports: React.FC = () => {
                       const status = statusConfig[report.status];
                       const StatusIcon = status.icon;
                       return (
-                        <div key={report.id} className="rounded-[26px] border border-border/70 bg-card p-4 shadow-sm">
+                        <div key={report.id} className="rounded-[24px] border border-border/70 bg-card p-4 shadow-sm dark:bg-white/[0.045]">
                           <div className="flex items-start gap-3">
                             <FileText className="mt-1 h-5 w-5 shrink-0 text-red-500" />
                             <div className="min-w-0 flex-1">
@@ -664,7 +685,7 @@ const Reports: React.FC = () => {
                           <TableRow
                             key={report.id}
                             ref={isHighlighted ? focusRowRef : null}
-                            className={isHighlighted ? 'bg-primary/10 ring-1 ring-primary/30' : undefined}
+                            className={isHighlighted ? 'bg-primary/10 ring-1 ring-primary/30' : 'neo-table-row'}
                           >
                             <TableCell>
                               <div className="flex items-center gap-3">
@@ -725,6 +746,59 @@ const Reports: React.FC = () => {
             </Card>
           </TabsContent>
         </Tabs>
+        <aside className="space-y-4">
+          <Card className="rounded-[28px] border-primary/20">
+            <CardContent className="p-5">
+              <div className="mb-4 flex items-center justify-between gap-3">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">Destaque</p>
+                  <h2 className="mt-1 text-lg font-semibold text-foreground">Relatório em foco</h2>
+                </div>
+                <FileText className="h-5 w-5 text-primary" />
+              </div>
+              <p className="text-sm font-medium text-foreground">{reportHighlight?.name ?? 'Nenhum relatório disponível'}</p>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                {reportHighlight?.description ?? 'Quando novos relatórios forem enviados, o principal destaque aparece aqui.'}
+              </p>
+              {reportHighlight?.file_url ? (
+                <Button variant="outline" className="mt-4 w-full rounded-2xl" onClick={() => void handleOpenReport(reportHighlight)}>
+                  <LinkIcon className="mr-2 h-4 w-4" />
+                  Abrir relatório
+                </Button>
+              ) : null}
+            </CardContent>
+          </Card>
+
+          <Card className="rounded-[28px]">
+            <CardContent className="p-5">
+              <div className="mb-4 flex items-center gap-2">
+                <TrendingUp className="h-4 w-4 text-secondary" />
+                <h2 className="text-lg font-semibold text-foreground">Atividade recente</h2>
+              </div>
+              <div className="space-y-3">
+                {recentActivity.length ? recentActivity.map((report) => (
+                  <div key={`recent-${report.id}`} className="rounded-2xl border border-border/70 bg-background/60 p-3 dark:bg-white/[0.035]">
+                    <p className="line-clamp-1 text-sm font-medium text-foreground">{report.name}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">{formatDisplayDate(report.uploaded_at, `${report.id}-${report.name}`)} · {statusConfig[report.status].label}</p>
+                  </div>
+                )) : (
+                  <p className="text-sm text-muted-foreground">Sem atividade recente.</p>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card className="rounded-[28px] border-emerald-500/20">
+            <CardContent className="p-5">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-emerald-700 dark:text-emerald-200">Insight rápido</p>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                Use busca e abas para reduzir a tabela no mobile; no desktop, acompanhe destaque e atividade sem sair da listagem.
+              </p>
+            </CardContent>
+          </Card>
+        </aside>
+        </div>
+        </div>
       </div>
 
       <Dialog open={isUploadOpen} onOpenChange={handleOpenChange}>
@@ -854,4 +928,3 @@ const Reports: React.FC = () => {
 };
 
 export default Reports;
-
