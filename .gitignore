@@ -20,6 +20,10 @@ server/data/*.sqlite-shm
 server/data/*.sqlite-wal
 tmp_*
 
+# Visual reference exports kept locally; named PNGs in MELHORIAS remain versioned.
+MELHORIAS/Redesenho de Site Profissional.html
+MELHORIAS/Redesenho de Site Profissional_files/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

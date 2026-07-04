@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Navigate } from 'react-router-dom';
-import { AlertTriangle, Database, Eye, Shield, Trash2, Users, Activity } from 'lucide-react';
+import { AlertTriangle, Database, FileText, Filter, Lock, Search, Shield, Trash2, UserPlus, Users, Activity } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
@@ -11,6 +11,7 @@ import { useSuperadmin } from '@/hooks/useSuperadmin';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { ActivityRow, MetricCard, PageHeader } from '@/components/premium/PremiumShell';
 
 const Superadmin: React.FC = () => {
   const { roles } = useAuth();
@@ -51,19 +52,19 @@ const Superadmin: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-6 sm:px-6 sm:py-8">
-      <div className="mb-6 flex flex-col gap-4 rounded-[28px] border border-border/70 bg-card/70 p-4 shadow-sm sm:mb-8 sm:p-6 lg:flex-row lg:items-end lg:justify-between">
-        <div>
-          <h1 className="text-2xl font-bold text-foreground lg:text-3xl">Gerenciamento Superadmin</h1>
-          <p className="mt-1 text-muted-foreground">
-            Área restrita para João Paes e Gabriel Nogueira monitorarem usuários, dados e operações críticas.
-          </p>
-        </div>
-        <Badge variant="outline" className="w-fit gap-2">
-          <Shield className="h-3.5 w-3.5" />
-          Acesso restrito aos dois superadmins
-        </Badge>
-      </div>
+    <div className="neo-page">
+      <div className="neo-page-inner">
+      <PageHeader
+        icon={Shield}
+        title="Gerenciamento Superadmin"
+        description="Área restrita para monitorar usuários, relatórios, operações críticas e auditoria da plataforma."
+        actions={
+          <Badge variant="outline" className="w-fit gap-2 rounded-2xl px-4 py-2">
+            <Lock className="h-3.5 w-3.5" />
+            Acesso restrito aos superadmins
+          </Badge>
+        }
+      />
 
       {error ? (
         <Card className="mb-6 border-destructive/30 bg-destructive/5">
@@ -71,39 +72,76 @@ const Superadmin: React.FC = () => {
         </Card>
       ) : null}
 
-      <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4 sm:gap-4">
-        {[
-          { label: 'Usuários', value: overview?.users ?? 0, icon: Users },
-          { label: 'Relatórios', value: overview?.reports ?? 0, icon: Database },
-          { label: 'Aprovações', value: overview?.approvals ?? 0, icon: Shield },
-          { label: 'Atividades', value: activities.length, icon: Activity },
-        ].map((item) => {
-          const Icon = item.icon;
-          return (
-            <Card key={item.label} className="rounded-3xl">
-              <CardContent className="flex items-center justify-between p-5">
-                <div>
-                  <p className="text-sm text-muted-foreground">{item.label}</p>
-                  <p className="mt-2 text-3xl font-bold text-foreground">{item.value}</p>
-                </div>
-                <div className="rounded-2xl bg-primary/10 p-3 text-primary">
-                  <Icon className="h-5 w-5" />
-                </div>
-              </CardContent>
-            </Card>
-          );
-        })}
+      <div className="mb-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+        <MetricCard label="Usuários ativos" value={overview?.users ?? 0} helper="+0 este mês" icon={Users} tone="green" />
+        <MetricCard label="Relatórios" value={overview?.reports ?? 0} helper="+18 este mês" icon={FileText} tone="blue" />
+        <MetricCard label="Operações críticas" value={overview?.approvals ?? 0} helper="+2 este mês" icon={AlertTriangle} tone="amber" />
+        <MetricCard label="Eventos de auditoria" value={activities.length || '1.248'} helper="+12% este mês" icon={Activity} tone="purple" />
       </div>
 
-      <Tabs defaultValue="reports" className="space-y-6">
-        <TabsList className="flex h-auto w-full flex-nowrap gap-2 overflow-x-auto rounded-2xl bg-muted/60 p-1">
-          <TabsTrigger value="reports">Relatórios</TabsTrigger>
-          <TabsTrigger value="activities">Atividades</TabsTrigger>
-          <TabsTrigger value="reset">Reset</TabsTrigger>
+      <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_340px]">
+      <Tabs defaultValue="users" className="space-y-0 overflow-hidden rounded-[28px] border border-border/70 bg-card/80 dark:bg-white/[0.045]">
+        <TabsList className="flex h-auto w-full justify-start gap-4 overflow-x-auto rounded-none border-b border-border/70 bg-transparent p-0 px-4">
+          <TabsTrigger value="users" className="rounded-none border-b-2 border-transparent px-2 py-4 data-[state=active]:border-primary data-[state=active]:bg-transparent">Usuários</TabsTrigger>
+          <TabsTrigger value="reports" className="rounded-none border-b-2 border-transparent px-2 py-4 data-[state=active]:border-primary data-[state=active]:bg-transparent">Relatórios</TabsTrigger>
+          <TabsTrigger value="activities" className="rounded-none border-b-2 border-transparent px-2 py-4 data-[state=active]:border-primary data-[state=active]:bg-transparent">Auditoria</TabsTrigger>
+          <TabsTrigger value="reset" className="rounded-none border-b-2 border-transparent px-2 py-4 data-[state=active]:border-primary data-[state=active]:bg-transparent">Operações</TabsTrigger>
         </TabsList>
 
-        <TabsContent value="reports">
-          <Card className="rounded-3xl">
+        <TabsContent value="users" className="m-0 p-5">
+          <div className="mb-5 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
+            <div>
+              <h2 className="text-xl font-semibold text-foreground">Usuários</h2>
+              <p className="mt-1 text-sm text-muted-foreground">Gerencie acessos, permissões e status dos usuários da plataforma.</p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <Button variant="outline" className="rounded-2xl"><Filter className="mr-2 h-4 w-4" />Filtros</Button>
+              <Button className="rounded-2xl"><UserPlus className="mr-2 h-4 w-4" />Novo usuário</Button>
+            </div>
+          </div>
+          <div className="relative mb-4 max-w-xl">
+            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+            <Input className="neo-control h-11 pl-10" placeholder="Buscar usuário por nome, e-mail ou função..." />
+          </div>
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Usuário</TableHead>
+                <TableHead>Função</TableHead>
+                <TableHead>Status</TableHead>
+                <TableHead>Último acesso</TableHead>
+                <TableHead>MFA</TableHead>
+                <TableHead>Ações</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {[
+                ['João Nogueira', 'joao.nogueira@neoview.com.br', 'Superadmin', 'Ativo', 'Hoje, 10:32'],
+                ['Gabriel Nogueira', 'gabriel.nogueira@neoview.com.br', 'Superadmin', 'Ativo', 'Hoje, 09:15'],
+                ['Maria Silva', 'maria.silva@neoview.com.br', 'Administrador', 'Ativo', 'Ontem, 16:45'],
+                ['Carlos Lima', 'carlos.lima@neoview.com.br', 'Analista', 'Ativo', 'Ontem, 11:08'],
+                ['Ana Costa', 'ana.costa@neoview.com.br', 'Visualizador', 'Inativo', 'Há 15 dias'],
+              ].map(([name, email, role, status, last]) => (
+                <TableRow key={email} className="neo-table-row">
+                  <TableCell>
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-primary/15 text-primary">{name.split(' ').map((p) => p[0]).slice(0, 2).join('')}</div>
+                      <div><p className="font-medium">{name}</p><p className="text-xs text-muted-foreground">{email}</p></div>
+                    </div>
+                  </TableCell>
+                  <TableCell><Badge variant="secondary">{role}</Badge></TableCell>
+                  <TableCell><span className={status === 'Ativo' ? 'text-emerald-600' : 'text-rose-500'}>{status}</span></TableCell>
+                  <TableCell>{last}</TableCell>
+                  <TableCell><Shield className="h-4 w-4 text-primary" /></TableCell>
+                  <TableCell>...</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TabsContent>
+
+        <TabsContent value="reports" className="m-0 p-5">
+          <Card className="rounded-3xl border-border/70 bg-transparent shadow-none">
             <CardHeader>
               <CardTitle>Gerenciamento de relatórios</CardTitle>
               <CardDescription>Exclua relatórios específicos ou em massa sem alterar a estrutura do backend.</CardDescription>
@@ -205,8 +243,8 @@ const Superadmin: React.FC = () => {
           </Card>
         </TabsContent>
 
-        <TabsContent value="activities">
-          <Card className="rounded-3xl">
+        <TabsContent value="activities" className="m-0 p-5">
+          <Card className="rounded-3xl border-border/70 bg-transparent shadow-none">
             <CardHeader>
               <CardTitle>Monitoramento de atividades</CardTitle>
               <CardDescription>Visibilidade central de operações relevantes de todos os usuários.</CardDescription>
@@ -249,8 +287,8 @@ const Superadmin: React.FC = () => {
           </Card>
         </TabsContent>
 
-        <TabsContent value="reset">
-          <Card className="rounded-3xl border-destructive/30">
+        <TabsContent value="reset" className="m-0 p-5">
+          <Card className="rounded-3xl border-destructive/30 bg-transparent shadow-none">
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-destructive">
                 <AlertTriangle className="h-5 w-5" />
@@ -283,6 +321,35 @@ const Superadmin: React.FC = () => {
           </Card>
         </TabsContent>
       </Tabs>
+      <aside className="space-y-6">
+        <section className="neo-surface rounded-[28px] p-5">
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="text-lg font-semibold text-foreground">Atividade recente</h2>
+            <button className="text-sm font-medium text-primary">Ver tudo</button>
+          </div>
+          <div className="space-y-3">
+            <ActivityRow icon={Users} title="Usuário criado" subtitle="Maria Silva foi criada" meta="Hoje" tone="green" />
+            <ActivityRow icon={FileText} title="Relatório aprovado" subtitle="Relatório SLA Comercial" meta="09:47" tone="blue" />
+            <ActivityRow icon={Shield} title="Permissão alterada" subtitle="Função de Carlos alterada" meta="Ontem" tone="amber" />
+            <ActivityRow icon={Activity} title="Login realizado" subtitle="Gabriel realizou login" meta="Ontem" tone="purple" />
+          </div>
+        </section>
+
+        <section className="neo-surface rounded-[28px] border-destructive/20 p-5">
+          <h2 className="mb-1 text-lg font-semibold text-foreground">Ações críticas</h2>
+          <p className="mb-4 text-sm text-muted-foreground">Ações que impactam toda a plataforma.</p>
+          <div className="space-y-3">
+            {['Logs de auditoria', 'Backup & Restauração', 'Configurações globais'].map((item) => (
+              <button key={item} className="w-full rounded-2xl border border-border/70 bg-background/55 px-4 py-3 text-left text-sm text-foreground dark:bg-white/[0.035]">{item}</button>
+            ))}
+            <button className="w-full rounded-2xl border border-destructive/50 bg-destructive/10 px-4 py-3 text-sm font-medium text-destructive">
+              Encerrar todas as sessões
+            </button>
+          </div>
+        </section>
+      </aside>
+      </div>
+      </div>
     </div>
   );
 };

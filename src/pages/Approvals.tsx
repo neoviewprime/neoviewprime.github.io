@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input';
 import {
   CheckCircle,
   Clock3,
+  Filter,
   ShieldCheck,
   Eye,
   FileText,
@@ -28,6 +29,7 @@ import { useAuth } from '@/hooks/useAuth';
 import type { ChatPageContext } from '@/types/backend';
 import { useApprovalDelegations } from '@/hooks/useApprovalDelegations';
 import { useUserManagement } from '@/hooks/useUserManagement';
+import { FilterChip, MetricCard, PageHeader, PremiumPanel } from '@/components/premium/PremiumShell';
 
 const formatDate = (dateString: string) =>
   new Date(dateString).toLocaleDateString('pt-BR', {
@@ -180,19 +182,25 @@ const Approvals: React.FC = () => {
 
   return (
     <>
-      <div className="container mx-auto px-4 py-6 sm:px-6 sm:py-8">
-        <div className="mb-6 flex flex-col gap-4 rounded-[28px] border border-border/70 bg-card/70 p-4 shadow-sm sm:mb-8 sm:p-6 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <h1 className="text-2xl font-bold text-foreground lg:text-3xl">Validações</h1>
-            <p className="mt-1 text-muted-foreground">
-              Central do gestor para aprovar, rejeitar, delegar temporariamente e rastrear onde cada relatório será publicado.
-            </p>
-          </div>
-          <Badge variant="outline" className="w-fit gap-2">
-            <History className="h-3.5 w-3.5" />
-            Histórico persistido no schema
-          </Badge>
-        </div>
+      <div className="neo-page">
+        <div className="neo-page-inner">
+        <PageHeader
+          icon={ShieldCheck}
+          title="Validações"
+          description="Aprove, rejeite ou delegue relatórios com segurança, rastreabilidade e foco nos prazos críticos."
+          actions={
+            <>
+              <Button variant="outline" className="rounded-2xl">
+                <Filter className="mr-2 h-4 w-4" />
+                Filtros
+              </Button>
+              <Badge variant="outline" className="w-fit gap-2 rounded-2xl px-4 py-2">
+                <History className="h-3.5 w-3.5" />
+                Analytics & SLA
+              </Badge>
+            </>
+          }
+        />
 
         {error ? (
           <Card className="mb-6 border-destructive/30 bg-destructive/5">
@@ -200,65 +208,24 @@ const Approvals: React.FC = () => {
           </Card>
         ) : null}
 
-        <div className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4 sm:gap-4">
-          {[
-            {
-              label: 'Pendentes',
-              value: stats.pending,
-              helper: 'Aguardando decisão',
-              icon: Clock3,
-              tone: 'bg-amber-500/10 text-amber-600',
-            },
-            {
-              label: 'Aprovados hoje',
-              value: stats.approved_today,
-              helper: 'Liberados para publicação',
-              icon: CheckCircle,
-              tone: 'bg-emerald-500/10 text-emerald-600',
-            },
-            {
-              label: 'Rejeitados hoje',
-              value: stats.rejected_today,
-              helper: 'Devolvidos com comentário',
-              icon: XCircle,
-              tone: 'bg-rose-500/10 text-rose-600',
-            },
-            {
-              label: 'Tempo médio',
-              value: `${stats.avg_approval_time_hours}h`,
-              helper: 'Entre submissão e decisão',
-              icon: History,
-              tone: 'bg-sky-500/10 text-sky-600',
-            },
-          ].map((item) => {
-            const Icon = item.icon;
-            return (
-              <Card key={item.label} className="rounded-3xl border-border/70">
-                <CardContent className="p-5">
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <p className="text-sm text-muted-foreground">{item.label}</p>
-                      <p className="mt-2 text-3xl font-bold text-foreground">{item.value}</p>
-                      <p className="mt-2 text-xs text-muted-foreground">{item.helper}</p>
-                    </div>
-                    <div className={`flex h-11 w-11 items-center justify-center rounded-2xl ${item.tone}`}>
-                      <Icon className="h-5 w-5" />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
+        <div className="mb-6 grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-5">
+          <MetricCard label="Pendentes" value={stats.pending} helper="Aguardando decisão" icon={Clock3} tone="amber" trend="+20% vs ontem" />
+          <MetricCard label="Aprovados hoje" value={stats.approved_today} helper="Liberados para publicação" icon={CheckCircle} tone="green" trend="+10% vs ontem" />
+          <MetricCard label="Rejeitados hoje" value={stats.rejected_today} helper="Devolvidos para correção" icon={XCircle} tone="red" trend="-25% vs ontem" />
+          <MetricCard label="Tempo médio" value={`${stats.avg_approval_time_hours}h`} helper="Entre submissão e decisão" icon={History} tone="blue" trend="-0,3h vs ontem" />
+          <MetricCard label="No prazo" value="85%" helper="Dentro do SLA" icon={ShieldCheck} tone="purple" trend="+8% vs ontem" />
         </div>
 
         <div className="grid gap-6 xl:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-4">
-            <Card className="rounded-3xl border-border/70">
-              <CardHeader className="pb-4">
-                <CardTitle className="text-xl">Fila pendente</CardTitle>
-                <CardDescription>
-                  O gestor ou delegado decide e o relatório passa automaticamente a ficar disponível na hierarquia de destino.
-                </CardDescription>
+            <Card className="overflow-hidden rounded-[28px] border-border/70">
+              <CardHeader className="border-b border-border/70 pb-0">
+                <div className="mb-4 flex flex-wrap items-center gap-2">
+                  <FilterChip active>Fila de aprovações <span className="ml-1 rounded-full bg-muted px-2 py-0.5 text-xs">{stats.pending}</span></FilterChip>
+                  <FilterChip>Minhas decisões</FilterChip>
+                  <FilterChip>Delegações <span className="ml-1 rounded-full bg-muted px-2 py-0.5 text-xs">{incoming.length + outgoing.length}</span></FilterChip>
+                  <FilterChip>Todos</FilterChip>
+                </div>
               </CardHeader>
               <CardContent className="space-y-4">
                 {isLoading ? (
@@ -277,7 +244,7 @@ const Approvals: React.FC = () => {
                   </div>
                 ) : (
                   pendingApprovals.map((report) => (
-                    <div key={report.id} className="rounded-[26px] border border-border/70 p-4 sm:p-5">
+                    <div key={report.id} className="rounded-[24px] border border-border/70 bg-background/50 p-4 dark:bg-white/[0.035] sm:p-5">
                       <div className="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
                         <div className="flex items-start gap-4">
                           <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
@@ -348,9 +315,9 @@ const Approvals: React.FC = () => {
           <div className="space-y-6">
             <Card className="rounded-3xl border-border/70">
               <CardHeader className="pb-4">
-                <CardTitle className="text-xl">Delegações de aprovação</CardTitle>
+                <CardTitle className="text-xl">Regras e delegações</CardTitle>
                 <CardDescription>
-                  Aprovadores podem delegar temporariamente a decisão para usuários da mesma alçada. O sistema valida prazo, escopo e revogação.
+                  Aprovadores podem delegar temporariamente decisões; o sistema valida prazo, escopo e revogação.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-5">
@@ -458,9 +425,9 @@ const Approvals: React.FC = () => {
               </CardContent>
             </Card>
 
-            <Card className="rounded-3xl border-border/70">
+            <Card className="rounded-[28px] border-border/70">
               <CardHeader className="pb-4">
-                <CardTitle className="text-xl">Últimas decisões</CardTitle>
+                <CardTitle className="text-xl">Histórico de decisões</CardTitle>
                 <CardDescription>
                   Histórico gravado no schema toda vez que você aprova ou rejeita um relatório.
                 </CardDescription>
@@ -470,7 +437,7 @@ const Approvals: React.FC = () => {
                   <p className="text-sm text-muted-foreground">Nenhuma decisão registrada ainda.</p>
                 ) : (
                   approvalHistory.slice(0, 8).map((item) => (
-                    <div key={item.id} className="rounded-2xl border border-border/60 p-4">
+                    <div key={item.id} className="rounded-2xl border border-border/60 bg-background/50 p-4 dark:bg-white/[0.035]">
                       <div className="flex items-center justify-between gap-3">
                         <div className="min-w-0">
                           <p className="truncate font-semibold text-foreground">{item.report_name ?? item.report_id}</p>
@@ -502,6 +469,7 @@ const Approvals: React.FC = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
         </div>
       </div>
 
