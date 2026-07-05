@@ -236,6 +236,11 @@
     box-shadow: var(--shadow-card);
   }
 
+  .neo-surface,
+  .neo-surface * {
+    min-width: 0;
+  }
+
   .neo-surface-strong {
     @apply border text-card-foreground shadow-sm backdrop-blur-xl;
     background:
@@ -311,11 +316,11 @@
   }
 
   .neo-action-button {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-border/80 bg-white/[0.045] px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/40 hover:bg-white/[0.07];
+    @apply inline-flex max-w-full items-center justify-center gap-2 rounded-xl border border-border/80 bg-white/[0.045] px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/40 hover:bg-white/[0.07];
   }
 
   .neo-primary-button {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/15 transition-colors hover:bg-primary/90;
+    @apply inline-flex max-w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/15 transition-colors hover:bg-primary/90;
   }
 }
 

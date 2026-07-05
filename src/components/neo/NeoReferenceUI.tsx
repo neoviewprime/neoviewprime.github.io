@@ -48,16 +48,16 @@ export function PageTitle({
   iconTone?: 'green' | 'amber' | 'blue' | 'purple' | 'red';
 }) {
   return (
-    <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+    <div className="mb-6 flex min-w-0 flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
       <div className="flex min-w-0 items-center gap-4">
         {Icon ? (
           <div className={cn('hidden h-12 w-12 shrink-0 items-center justify-center rounded-full sm:flex', toneBg(iconTone))}>
             <Icon className="h-6 w-6" />
           </div>
         ) : null}
-        <div>
-          <h1 className="text-3xl font-semibold tracking-tight text-foreground">{title}</h1>
-          <p className="mt-2 text-base text-muted-foreground">{description}</p>
+        <div className="min-w-0">
+          <h1 className="break-words text-3xl font-semibold tracking-tight text-foreground">{title}</h1>
+          <p className="mt-2 max-w-4xl break-words text-base text-muted-foreground">{description}</p>
         </div>
       </div>
       {actions ? <div className="flex flex-wrap items-center gap-3">{actions}</div> : null}
@@ -81,16 +81,16 @@ export function StatCard({
   tone?: 'green' | 'amber' | 'blue' | 'purple' | 'red';
 }) {
   return (
-    <div className="neo-surface rounded-xl p-5">
-      <div className="flex items-center gap-4">
+    <div className="neo-surface min-w-0 rounded-xl p-5">
+      <div className="flex min-w-0 items-center gap-4">
         <div className={cn('flex h-14 w-14 shrink-0 items-center justify-center rounded-full', toneBg(tone))}>
           <Icon className="h-7 w-7" />
         </div>
         <div className="min-w-0">
-          <p className="text-sm text-muted-foreground">{label}</p>
+          <p className="truncate text-sm text-muted-foreground">{label}</p>
           <p className="mt-1 text-3xl font-semibold tracking-tight text-foreground">{value}</p>
-          {helper ? <p className="mt-2 text-xs text-muted-foreground">{helper}</p> : null}
-          {trend ? <p className={cn('mt-3 text-xs font-medium', trend.includes('-') ? 'text-emerald-400' : tone === 'amber' ? 'text-amber-400' : 'text-emerald-400')}>{trend}</p> : null}
+          {helper ? <p className="mt-2 line-clamp-2 text-xs text-muted-foreground">{helper}</p> : null}
+          {trend ? <p className={cn('mt-3 line-clamp-2 text-xs font-medium', trend.includes('-') ? 'text-emerald-400' : tone === 'amber' ? 'text-amber-400' : 'text-emerald-400')}>{trend}</p> : null}
         </div>
       </div>
     </div>
@@ -99,11 +99,11 @@ export function StatCard({
 
 export function Panel({ title, children, action, className }: { title?: string; children: ReactNode; action?: ReactNode; className?: string }) {
   return (
-    <section className={cn('neo-surface rounded-xl p-5', className)}>
+    <section className={cn('neo-surface min-w-0 overflow-hidden rounded-xl p-5', className)}>
       {title ? (
-        <div className="mb-4 flex items-center justify-between gap-4">
-          <h2 className="text-lg font-semibold text-foreground">{title}</h2>
-          {action ?? null}
+        <div className="mb-4 flex min-w-0 items-center justify-between gap-4">
+          <h2 className="min-w-0 truncate text-lg font-semibold text-foreground">{title}</h2>
+          {action ? <div className="shrink-0">{action}</div> : null}
         </div>
       ) : null}
       {children}
@@ -115,7 +115,7 @@ export function SearchControl({ placeholder = 'Buscar relatórios, indicadores o
   return (
     <div className="relative">
       <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-      <input className="neo-control h-12 w-full px-12 text-sm" placeholder={placeholder} />
+      <input className="neo-control h-12 w-full pl-12 pr-20 text-sm" placeholder={placeholder} />
       <span className="absolute right-3 top-1/2 -translate-y-1/2 rounded-md bg-white/[0.06] px-2 py-1 text-xs text-muted-foreground">⌘ K</span>
     </div>
   );
@@ -123,7 +123,7 @@ export function SearchControl({ placeholder = 'Buscar relatórios, indicadores o
 
 export function FilterButton({ children = 'Filtros' }: { children?: ReactNode }) {
   return (
-    <button className="neo-action-button">
+    <button className="neo-action-button min-w-0">
       <Search className="h-4 w-4" />
       {children}
       <ChevronDown className="h-4 w-4" />
@@ -155,7 +155,7 @@ export function StatusPill({ status }: { status: string }) {
 
 export function ReportsTable({ approvals = false }: { approvals?: boolean }) {
   return (
-    <div className="overflow-hidden rounded-xl border border-border/70">
+    <div className="overflow-x-auto rounded-xl border border-border/70">
       <table className="w-full min-w-[920px] text-left text-sm">
         <thead className="bg-white/[0.035] text-muted-foreground">
           <tr>
@@ -188,9 +188,9 @@ export function ReportsTable({ approvals = false }: { approvals?: boolean }) {
               <td className="px-4 py-3">
                 <div className="flex items-center gap-3">
                   {!approvals ? <FileBadge type={row.type} color={row.color} /> : null}
-                  <div>
-                    <p className="font-medium text-foreground">{row.name}</p>
-                    <p className="mt-1 text-xs text-muted-foreground">{approvals ? row.area : row.desc}</p>
+                  <div className="min-w-0">
+                    <p className="max-w-[260px] truncate font-medium text-foreground">{row.name}</p>
+                    <p className="mt-1 max-w-[260px] truncate text-xs text-muted-foreground">{approvals ? row.area : row.desc}</p>
                   </div>
                 </div>
               </td>
@@ -198,9 +198,9 @@ export function ReportsTable({ approvals = false }: { approvals?: boolean }) {
                 <td className="px-4 py-3">
                   <div className="flex items-center gap-2">
                     <Avatar initials={['MS', 'CL', 'AC', 'JN', 'PR', 'MS'][index]} tone={index % 3 === 0 ? 'green' : 'slate'} />
-                    <div>
-                      <p className="text-foreground">{['Maria Silva', 'Carlos Lima', 'Ana Costa', 'João Nogueira', 'Paula Rodrigues', 'Marina Souza'][index]}</p>
-                      <p className="text-xs text-muted-foreground">{row.area}</p>
+                    <div className="min-w-0">
+                      <p className="max-w-[140px] truncate text-foreground">{['Maria Silva', 'Carlos Lima', 'Ana Costa', 'João Nogueira', 'Paula Rodrigues', 'Marina Souza'][index]}</p>
+                      <p className="truncate text-xs text-muted-foreground">{row.area}</p>
                     </div>
                   </div>
                 </td>
@@ -239,10 +239,10 @@ export function DecisionList() {
           <div className={cn('mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full', toneBg(item.tone as 'green' | 'amber' | 'red'))}>
             {item.tone === 'red' ? <XCircle className="h-5 w-5" /> : <CheckCircle2 className="h-5 w-5" />}
           </div>
-          <div>
+          <div className="min-w-0">
             <p className={cn('text-sm font-medium', item.tone === 'red' ? 'text-red-300' : 'text-emerald-300')}>{item.status}</p>
-            <p className="text-sm font-medium text-foreground">{item.title}</p>
-            <p className="mt-1 text-xs text-muted-foreground">{item.meta}</p>
+            <p className="truncate text-sm font-medium text-foreground">{item.title}</p>
+            <p className="line-clamp-2 text-xs text-muted-foreground">{item.meta}</p>
           </div>
         </div>
       ))}
@@ -312,7 +312,7 @@ function fileBg(color: string) {
 
 export function SmallArrowRow({ icon: Icon = ChevronRight, title, subtitle, tone = 'green' }: { icon?: ElementType; title: string; subtitle?: string; tone?: 'green' | 'amber' | 'blue' | 'purple' | 'red' }) {
   return (
-    <button className="flex w-full items-center gap-3 rounded-xl border border-border/60 bg-white/[0.025] p-3 text-left transition-colors hover:bg-white/[0.045]">
+    <button className="flex w-full min-w-0 items-center gap-3 rounded-xl border border-border/60 bg-white/[0.025] p-3 text-left transition-colors hover:bg-white/[0.045]">
       <div className={cn('flex h-9 w-9 items-center justify-center rounded-full', toneBg(tone))}>
         <Icon className="h-4 w-4" />
       </div>
@@ -320,15 +320,15 @@ export function SmallArrowRow({ icon: Icon = ChevronRight, title, subtitle, tone
         <p className="truncate text-sm font-medium text-foreground">{title}</p>
         {subtitle ? <p className="truncate text-xs text-muted-foreground">{subtitle}</p> : null}
       </div>
-      <ArrowRight className="h-4 w-4 text-muted-foreground" />
+      <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground" />
     </button>
   );
 }
 
 export function CompanySelect() {
   return (
-    <button className="neo-action-button min-w-[260px] justify-between">
-      <span className="flex items-center gap-2"><Building2 className="h-5 w-5 text-primary" /> Neoenergia Coelba</span>
+    <button className="neo-action-button min-w-0 justify-between sm:min-w-[260px]">
+      <span className="flex min-w-0 items-center gap-2"><Building2 className="h-5 w-5 shrink-0 text-primary" /> <span className="truncate">Neoenergia Coelba</span></span>
       <ChevronDown className="h-4 w-4" />
     </button>
   );
@@ -336,9 +336,9 @@ export function CompanySelect() {
 
 export function QuickTabs({ items, active = 0 }: { items: string[]; active?: number }) {
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex min-w-0 flex-wrap gap-2">
       {items.map((item, index) => (
-        <button key={item} className={cn('rounded-lg border px-4 py-2 text-sm transition-colors', index === active ? 'border-primary/30 bg-primary text-primary-foreground' : 'border-border/70 bg-white/[0.035] text-muted-foreground hover:text-foreground')}>
+        <button key={item} className={cn('min-w-0 max-w-full truncate rounded-lg border px-4 py-2 text-sm transition-colors', index === active ? 'border-primary/30 bg-primary text-primary-foreground' : 'border-border/70 bg-white/[0.035] text-muted-foreground hover:text-foreground')}>
           {item}
         </button>
       ))}

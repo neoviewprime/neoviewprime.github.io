@@ -120,8 +120,8 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
               isDesktop && !isOpen ? 'justify-center' : 'justify-between'
             )}
           >
-            <div className={cn(isDesktop && !isOpen ? 'hidden' : 'block')}>
-              <NeoLogo size="sm" />
+            <div className="min-w-0">
+              <NeoLogo size="sm" showText={!(isDesktop && !isOpen)} />
             </div>
             {!isDesktop ? (
             <button onClick={handleCloseMobile} className="rounded-xl p-2 hover:bg-sidebar-accent">
@@ -131,7 +131,10 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
           </div>
 
           <motion.p
-            className="px-4 pt-4 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-sidebar-foreground/55"
+            className={cn(
+              'px-4 pt-4 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-sidebar-foreground/55',
+              isDesktop && !isOpen ? 'sr-only' : ''
+            )}
             variants={labelVariants}
             initial={false}
             animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
@@ -140,7 +143,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
           </motion.p>
 
           <motion.nav
-            className="flex-1 space-y-1 overflow-y-auto p-3 pt-3"
+            className={cn('flex-1 space-y-1 overflow-y-auto p-3 pt-3', isDesktop && !isOpen ? 'px-2' : '')}
             variants={listVariants}
             initial={false}
             animate="animate"
@@ -157,19 +160,20 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
                     if (!isDesktop) handleCloseMobile();
                   }}
                   className={cn(
-                    'relative flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left transition-all',
+                    'relative flex h-11 w-full min-w-0 items-center gap-3 rounded-xl px-3 text-left transition-all',
                     isActive
                       ? 'bg-sidebar-primary/15 text-sidebar-accent-foreground ring-1 ring-sidebar-primary/35 shadow-[0_10px_28px_-22px_hsl(var(--sidebar-primary))]'
                       : 'text-sidebar-foreground/78 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
-                    isDesktop && !isOpen ? 'justify-center px-0' : ''
+                    isDesktop && !isOpen ? 'mx-auto justify-center px-0' : ''
                   )}
+                  title={isDesktop && !isOpen ? item.label : undefined}
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: 'spring', stiffness: 500, damping: 35 }}
                 >
                   {isActive ? <span className="absolute left-0 top-1/2 h-7 w-1 -translate-y-1/2 rounded-r-full bg-sidebar-primary" /> : null}
                   <Icon className={cn('h-5 w-5 shrink-0', isActive ? 'text-sidebar-primary' : '')} />
                   <motion.span
-                    className="overflow-hidden whitespace-nowrap text-sm"
+                    className="min-w-0 overflow-hidden truncate whitespace-nowrap text-sm"
                     variants={labelVariants}
                     initial={false}
                     animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
@@ -181,9 +185,12 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
             })}
 
             {adminItems.length ? (
-              <div className="pt-5">
+              <div className={cn('pt-5', isDesktop && !isOpen ? 'border-t border-sidebar-border/70 pt-3' : '')}>
                 <motion.p
-                  className="mb-2 px-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-sidebar-foreground/55"
+                  className={cn(
+                    'mb-2 px-1 text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-sidebar-foreground/55',
+                    isDesktop && !isOpen ? 'sr-only' : ''
+                  )}
                   variants={labelVariants}
                   initial={false}
                   animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
@@ -201,17 +208,18 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
                         if (!isDesktop) handleCloseMobile();
                       }}
                       className={cn(
-                        'relative flex w-full items-center gap-3 rounded-xl px-3 py-3 text-left transition-all',
+                        'relative flex h-11 w-full min-w-0 items-center gap-3 rounded-xl px-3 text-left transition-all',
                         isActive
                           ? 'bg-sidebar-primary/15 text-sidebar-accent-foreground ring-1 ring-sidebar-primary/35'
                           : 'text-sidebar-foreground/78 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
-                        isDesktop && !isOpen ? 'justify-center px-0' : ''
+                        isDesktop && !isOpen ? 'mx-auto justify-center px-0' : ''
                       )}
+                      title={isDesktop && !isOpen ? item.label : undefined}
                     >
                       {isActive ? <span className="absolute left-0 top-1/2 h-7 w-1 -translate-y-1/2 rounded-r-full bg-sidebar-primary" /> : null}
                       <Icon className={cn('h-5 w-5 shrink-0', isActive ? 'text-sidebar-primary' : '')} />
                       <motion.span
-                        className="overflow-hidden whitespace-nowrap text-sm"
+                        className="min-w-0 overflow-hidden truncate whitespace-nowrap text-sm"
                         variants={labelVariants}
                         initial={false}
                         animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
@@ -225,13 +233,13 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
             ) : null}
           </motion.nav>
 
-          <div className="border-t border-sidebar-border p-3">
+          <div className={cn('border-t border-sidebar-border p-3', isDesktop && !isOpen ? 'px-2' : '')}>
             {user ? (
               <div className="mb-3">
                 <div
                   className={cn(
                     'flex items-center rounded-2xl border border-sidebar-border bg-sidebar-accent/50 text-sidebar-foreground',
-                    isDesktop && !isOpen ? 'justify-center px-0 py-3' : 'gap-3 px-3 py-3'
+                    isDesktop && !isOpen ? 'h-11 justify-center rounded-xl px-0 py-0' : 'gap-3 px-3 py-3'
                   )}
                   title={user.full_name}
                 >
@@ -239,12 +247,12 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
                     <User className="h-4 w-4" />
                   </div>
                   <motion.div
-                    className="overflow-hidden"
+                    className="min-w-0 overflow-hidden"
                     variants={labelVariants}
                     initial={false}
                     animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
                   >
-                    <p className="whitespace-nowrap text-sm font-medium">{firstName}</p>
+                    <p className="truncate whitespace-nowrap text-sm font-medium">{firstName}</p>
                     <p className="whitespace-nowrap text-xs text-sidebar-foreground/70">
                       {user.employee_id ? `Matrícula ${user.employee_id}` : 'Matrícula não informada'}
                     </p>
@@ -253,7 +261,10 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
               </div>
             ) : null}
             <motion.div
-              className="mb-3 overflow-hidden rounded-2xl border border-sidebar-border bg-sidebar-accent/35"
+              className={cn(
+                'mb-3 overflow-hidden rounded-2xl border border-sidebar-border bg-sidebar-accent/35',
+                isDesktop && !isOpen ? 'hidden' : ''
+              )}
               variants={labelVariants}
               initial={false}
               animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
@@ -269,7 +280,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
               </button>
             </motion.div>
             <motion.p
-              className="whitespace-nowrap text-xs text-sidebar-foreground/60"
+              className={cn('whitespace-nowrap text-xs text-sidebar-foreground/60', isDesktop && !isOpen ? 'sr-only' : '')}
               variants={labelVariants}
               initial={false}
               animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
@@ -280,7 +291,10 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
               <button
                 type="button"
                 onClick={onToggle}
-                className="mt-3 flex w-full items-center justify-center rounded-xl border border-sidebar-border px-3 py-2.5 text-sidebar-foreground/75 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                className={cn(
+                  'mt-3 flex w-full items-center justify-center rounded-xl border border-sidebar-border px-3 py-2.5 text-sidebar-foreground/75 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
+                  isDesktop && !isOpen ? 'h-11 px-0' : ''
+                )}
                 aria-label={isOpen ? 'Recolher sidebar' : 'Expandir sidebar'}
               >
                 {isOpen ? <ChevronsLeft className="h-4 w-4" /> : <ChevronsRight className="h-4 w-4" />}
