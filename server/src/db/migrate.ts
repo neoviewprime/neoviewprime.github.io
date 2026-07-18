@@ -345,6 +345,21 @@ const sqliteMigrationStatements: string[] = [
     message TEXT NOT NULL,
     created_at TEXT DEFAULT CURRENT_TIMESTAMP
   )`,
+  `CREATE TABLE IF NOT EXISTS chat_feedback (
+    id TEXT PRIMARY KEY,
+    user_id TEXT NOT NULL,
+    session_id TEXT,
+    message_id TEXT,
+    rating TEXT NOT NULL,
+    split TEXT NOT NULL,
+    question TEXT,
+    answer TEXT,
+    intent TEXT,
+    retrieval_mode TEXT,
+    source_ids TEXT DEFAULT '[]',
+    metadata TEXT DEFAULT '{}',
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP
+  )`,
   `CREATE TABLE IF NOT EXISTS audit_logs (
     id TEXT PRIMARY KEY,
     user_id TEXT,
@@ -385,6 +400,7 @@ const sqliteMigrationStatements: string[] = [
   `CREATE INDEX IF NOT EXISTS idx_utd_flow_reports_catalog_id ON utd_flow_reports(report_catalog_id)`,
   `CREATE INDEX IF NOT EXISTS idx_chat_sessions_user_id ON chat_sessions(user_id)`,
   `CREATE INDEX IF NOT EXISTS idx_chat_messages_session_id ON chat_messages(session_id)`,
+  `CREATE INDEX IF NOT EXISTS idx_chat_feedback_user_split ON chat_feedback(user_id, split, created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_audit_logs_created_at ON audit_logs(created_at)`,
   `CREATE INDEX IF NOT EXISTS idx_audit_logs_user_id ON audit_logs(user_id)`,
   `CREATE INDEX IF NOT EXISTS idx_user_roles_user_id ON user_roles(user_id)`,
@@ -675,5 +691,4 @@ if (require.main === module) {
       process.exit(1);
     });
 }
-
 

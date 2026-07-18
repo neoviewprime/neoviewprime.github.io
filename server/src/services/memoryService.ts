@@ -20,6 +20,18 @@ export interface ChatSessionSummary {
   message_count: number;
 }
 
+export interface ChatFeedbackPayload {
+  sessionId?: string;
+  messageId?: string;
+  rating: "positive" | "negative";
+  question?: string;
+  answer?: string;
+  intent?: string;
+  retrievalMode?: string;
+  sourceIds?: string[];
+  metadata?: Record<string, unknown>;
+}
+
 export const memoryService = {
   async createSession(userId: string): Promise<string> {
     const db = await getDbClient();
@@ -119,5 +131,70 @@ export const memoryService = {
       "INSERT INTO chat_messages (id, session_id, role, message) VALUES ($1, $2, $3, $4)",
       [randomUUID(), sessionId, role, message]
     );
+  },
+
+  async storeFeedback(userId: string, payload: ChatFeedbackPayload) {
+    const db = await getDbClient();
+    const countResult = await db.query<{ total: number }>(
+      "SELECT COUNT(*) AS total FROM chat_feedback WHERE user_id = $1",
+      [userId]
+    );
+    const nextIndex = Number(countResult.rows[0]?.total ?? 0) + 1;
+    const split = nextIndex % 5 === 0 ? "test" : "train";
+    const id = randomUUID();
+
+    await db.query(
+      `INSERT INTO chat_feedback (
+        id,
+        user_id,
+        session_id,
+        message_id,
+        rating,
+        split,
+        question,
+        answer,
+        intent,
+        retrieval_mode,
+        source_ids,
+        metadata
+      ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)`,
+      [
+        id,
+        userId,
+        payload.sessionId ?? null,
+        payload.messageId ?? null,
+        payload.rating,
+        split,
+        payload.question ?? null,
+        payload.answer ?? null,
+        payload.intent ?? null,
+        payload.retrievalMode ?? null,
+        JSON.stringify(payload.sourceIds ?? []),
+        JSON.stringify(payload.metadata ?? {})
+      ]
+    );
+
+    return { id, split };
+  },
+
+  async getFeedbackSummary(userId: string) {
+    const db = await getDbClient();
+    const result = await db.query<{ rating: "positive" | "negative"; split: "train" | "test"; created_at: string }>(
+      `SELECT rating, split, created_at
+       FROM chat_feedback
+       WHERE user_id = $1
+       ORDER BY created_at DESC`,
+      [userId]
+    );
+    const rows = result.rows;
+
+    return {
+      total: rows.length,
+      train: rows.filter((entry) => entry.split === "train").length,
+      test: rows.filter((entry) => entry.split === "test").length,
+      positive: rows.filter((entry) => entry.rating === "positive").length,
+      negative: rows.filter((entry) => entry.rating === "negative").length,
+      recent: rows.slice(0, 10)
+    };
   }
 };

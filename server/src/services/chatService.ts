@@ -18,6 +18,19 @@ type ContextUser = {
   email?: string;
 };
 
+type ChatFeedbackRequest = {
+  sessionId?: string;
+  messageId?: string;
+  rating: "positive" | "negative";
+  question?: string;
+  answer?: string;
+  metadata?: {
+    sources?: Array<{ id?: unknown }>;
+    intent?: string;
+    retrievalMode?: string;
+  } & Record<string, unknown>;
+};
+
 const toTokenStream = async function* (text: string): AsyncGenerator<string> {
   const parts = text.split(/\s+/).filter(Boolean);
   for (const part of parts) {
@@ -127,6 +140,29 @@ export const chatService = {
     }
 
     return session;
+  },
+
+  async storeFeedback(payload: ChatFeedbackRequest, authUser: JwtPayload) {
+    const safeUserId = await ensureChatUser(authUser);
+    const sourceIds = (payload.metadata?.sources ?? [])
+      .map((source) => String(source.id ?? ""))
+      .filter(Boolean);
+
+    return memoryService.storeFeedback(safeUserId, {
+      sessionId: payload.sessionId,
+      messageId: payload.messageId,
+      rating: payload.rating,
+      question: payload.question,
+      answer: payload.answer,
+      intent: payload.metadata?.intent,
+      retrievalMode: payload.metadata?.retrievalMode,
+      sourceIds,
+      metadata: payload.metadata
+    });
+  },
+
+  async getLearningSummary(authUser: JwtPayload) {
+    const safeUserId = await ensureChatUser(authUser);
+    return memoryService.getFeedbackSummary(safeUserId);
   }
 };
-

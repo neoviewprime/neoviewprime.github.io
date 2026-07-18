@@ -25,6 +25,21 @@ const sessionParamsSchema = z.object({
   sessionId: z.string().uuid()
 });
 
+const feedbackMetadataSchema = z.object({
+  sources: z.array(z.object({ id: z.unknown().optional() }).passthrough()).optional(),
+  intent: z.string().optional(),
+  retrievalMode: z.string().optional()
+}).passthrough();
+
+const feedbackBodySchema = z.object({
+  messageId: z.string().max(120).optional(),
+  sessionId: z.string().max(120).optional(),
+  rating: z.enum(["positive", "negative"]),
+  question: z.string().max(4000).optional(),
+  answer: z.string().max(12000).optional(),
+  metadata: feedbackMetadataSchema.optional()
+});
+
 export const chatRoutes = Router();
 
 chatRoutes.get("/sessions", authMiddleware, async (req: AuthenticatedRequest, res) => {
@@ -96,6 +111,40 @@ chatRoutes.post("/", authMiddleware, async (req: AuthenticatedRequest, res) => {
     res.json(response);
   } catch (error) {
     res.status(500).json({ error: `Chat processing failed: ${(error as Error).message}` });
+  }
+});
+
+chatRoutes.post("/feedback", authMiddleware, async (req: AuthenticatedRequest, res) => {
+  try {
+    const parsed = feedbackBodySchema.safeParse(req.body);
+    if (!parsed.success) {
+      res.status(400).json({ error: "Invalid payload", details: parsed.error.flatten() });
+      return;
+    }
+
+    if (!req.user) {
+      res.status(401).json({ error: "Unauthorized" });
+      return;
+    }
+
+    const feedback = await chatService.storeFeedback(parsed.data, req.user);
+    res.json({ success: true, ...feedback });
+  } catch (error) {
+    res.status(500).json({ error: `Chat feedback failed: ${(error as Error).message}` });
+  }
+});
+
+chatRoutes.get("/learning", authMiddleware, async (req: AuthenticatedRequest, res) => {
+  try {
+    if (!req.user) {
+      res.status(401).json({ error: "Unauthorized" });
+      return;
+    }
+
+    const summary = await chatService.getLearningSummary(req.user);
+    res.json(summary);
+  } catch (error) {
+    res.status(500).json({ error: `Chat learning summary failed: ${(error as Error).message}` });
   }
 });
 

@@ -11,13 +11,11 @@ import {
   HelpCircle,
   Shield,
   User,
-  X,
-  LogOut,
   ChevronsLeft,
   ChevronsRight,
   Building2,
 } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
@@ -26,14 +24,12 @@ import { NeoLogo } from '@/components/NeoLogo';
 interface AppSidebarProps {
   isOpen: boolean;
   onToggle: () => void;
-  onClose: () => void;
-  onLogout: () => void;
 }
 
 const DESKTOP_EXPANDED = 266;
 const DESKTOP_COLLAPSED = 72;
 
-export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClose, onLogout }) => {
+export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const isDesktop = useMediaQuery('(min-width: 1024px)');
@@ -63,8 +59,6 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
   const sidebarVariants = {
     desktopExpanded: { width: DESKTOP_EXPANDED, x: 0, transition: { type: 'spring', stiffness: 300, damping: 30 } },
     desktopCollapsed: { width: DESKTOP_COLLAPSED, x: 0, transition: { type: 'spring', stiffness: 300, damping: 30 } },
-    mobileOpen: { x: 0, transition: { type: 'spring', stiffness: 280, damping: 28 } },
-    mobileClosed: { x: '-100%', transition: { type: 'spring', stiffness: 280, damping: 28 } },
   } as const;
 
   const labelVariants = {
@@ -78,41 +72,20 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
     },
   } as const;
 
-  const handleCloseMobile = () => {
-    if (!isDesktop) {
-      localStorage.setItem('sidebar_open', 'false');
-      onClose();
-    }
-  };
-
-  const overlayVisible = !isDesktop && isOpen;
+  if (!isDesktop) return null;
 
   return (
-    <>
-      <AnimatePresence>
-        {overlayVisible && (
-          <motion.div
-            key="overlay"
-            className="fixed inset-0 z-40 bg-foreground/35 backdrop-blur-sm lg:hidden"
-            onClick={handleCloseMobile}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          />
-        )}
-      </AnimatePresence>
-
-      <motion.aside
+    <motion.aside
         className={cn(
           'neo-sidebar fixed left-0 z-50 overflow-hidden border-r',
-          isDesktop ? 'top-0 block h-dvh' : 'top-0 h-dvh w-[min(84vw,340px)]',
+          'top-0 block h-dvh',
           isCollapsed ? 'neo-sidebar-collapsed' : ''
         )}
         initial={false}
         variants={sidebarVariants}
-        animate={isDesktop ? (isOpen ? 'desktopExpanded' : 'desktopCollapsed') : isOpen ? 'mobileOpen' : 'mobileClosed'}
+        animate={isOpen ? 'desktopExpanded' : 'desktopCollapsed'}
         style={{
-          willChange: isDesktop ? 'width' : 'transform',
+          willChange: 'width',
         }}
       >
         <div className={cn('flex h-full flex-col pb-[calc(env(safe-area-inset-bottom)+0.75rem)]', isCollapsed ? 'items-center' : '')}>
@@ -125,11 +98,6 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
             <div className="min-w-0">
               <NeoLogo size="sm" showText={!isCollapsed} />
             </div>
-            {!isDesktop ? (
-            <button onClick={handleCloseMobile} className="rounded-xl p-2 hover:bg-sidebar-accent">
-              <X className="h-5 w-5 text-sidebar-foreground" />
-            </button>
-            ) : null}
           </div>
 
           {!isCollapsed ? (
@@ -161,7 +129,6 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
                   key={item.path}
                   onClick={() => {
                     navigate(item.path);
-                    if (!isDesktop) handleCloseMobile();
                   }}
                   className={cn(
                     'relative flex h-11 w-full min-w-0 items-center gap-3 rounded-xl px-3 text-left transition-all',
@@ -210,7 +177,6 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
                       key={item.path}
                       onClick={() => {
                         navigate(item.path);
-                        if (!isDesktop) handleCloseMobile();
                       }}
                       className={cn(
                         'relative flex h-11 w-full min-w-0 items-center gap-3 rounded-xl px-3 text-left transition-all',
@@ -276,7 +242,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
               )}
               variants={labelVariants}
               initial={false}
-              animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
+              animate={isOpen ? 'show' : 'hide'}
             >
               <button className="flex w-full items-center gap-3 px-3 py-3 text-left text-sidebar-foreground">
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sidebar-primary/15">
@@ -292,37 +258,24 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle, onClos
               className={cn('whitespace-nowrap text-xs text-sidebar-foreground/60', isCollapsed ? 'sr-only' : '')}
               variants={labelVariants}
               initial={false}
-              animate={isDesktop ? (isOpen ? 'show' : 'hide') : 'show'}
+              animate={isOpen ? 'show' : 'hide'}
             >
               NeoView v2.0.0
             </motion.p>
-            {isDesktop ? (
-              <button
-                type="button"
-                onClick={onToggle}
-                className={cn(
-                  'mt-3 flex w-full items-center justify-center rounded-xl border border-sidebar-border px-3 py-2.5 text-sidebar-foreground/75 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
-                  isCollapsed ? 'mx-auto h-10 w-11 px-0' : ''
-                )}
-                aria-label={isOpen ? 'Recolher sidebar' : 'Expandir sidebar'}
-              >
-                {isOpen ? <ChevronsLeft className="h-4 w-4" /> : <ChevronsRight className="h-4 w-4" />}
-              </button>
-            ) : null}
-            {!isDesktop ? (
-              <button
-                type="button"
-                onClick={onLogout}
-                className="mt-3 flex w-full items-center justify-center gap-2 rounded-lg border border-destructive/30 px-3 py-2.5 text-sm font-medium text-destructive hover:bg-destructive/10"
-              >
-                <LogOut className="h-4 w-4" />
-                Sair
-              </button>
-            ) : null}
+            <button
+              type="button"
+              onClick={onToggle}
+              className={cn(
+                'mt-3 flex w-full items-center justify-center rounded-xl border border-sidebar-border px-3 py-2.5 text-sidebar-foreground/75 transition-colors hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
+                isCollapsed ? 'mx-auto h-10 w-11 px-0' : ''
+              )}
+              aria-label={isOpen ? 'Recolher sidebar' : 'Expandir sidebar'}
+            >
+              {isOpen ? <ChevronsLeft className="h-4 w-4" /> : <ChevronsRight className="h-4 w-4" />}
+            </button>
           </div>
         </div>
-      </motion.aside>
-    </>
+    </motion.aside>
   );
 };
 

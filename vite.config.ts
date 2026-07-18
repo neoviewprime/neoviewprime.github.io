@@ -33,14 +33,44 @@ export default defineConfig(({ mode }) => {
       },
     },
     plugins: [react()],
+    modulePreload: {
+      polyfill: false,
+      resolveDependencies: () => [],
+    },
     build: {
       rollupOptions: {
         output: {
-          manualChunks: {
-            react: ["react", "react-dom", "react-router-dom"],
-            ui: ["@radix-ui/react-dialog", "@radix-ui/react-dropdown-menu", "@radix-ui/react-popover", "@radix-ui/react-tooltip"],
-            charts: ["recharts"],
-            motion: ["framer-motion"],
+          manualChunks(id) {
+            const normalizedId = id.split(path.sep).join("/");
+
+            if (
+              normalizedId.includes("/node_modules/react/") ||
+              normalizedId.includes("/node_modules/react-dom/") ||
+              normalizedId.includes("/node_modules/react-router-dom/") ||
+              normalizedId.includes("react/jsx-runtime") ||
+              normalizedId.includes("react-jsx-runtime")
+            ) {
+              return "react";
+            }
+
+            if (normalizedId.includes("/node_modules/framer-motion/")) {
+              return "motion";
+            }
+
+            if (normalizedId.includes("/node_modules/recharts/")) {
+              return "charts";
+            }
+
+            if (
+              normalizedId.includes("/node_modules/@radix-ui/react-dialog/") ||
+              normalizedId.includes("/node_modules/@radix-ui/react-dropdown-menu/") ||
+              normalizedId.includes("/node_modules/@radix-ui/react-popover/") ||
+              normalizedId.includes("/node_modules/@radix-ui/react-tooltip/")
+            ) {
+              return "ui";
+            }
+
+            return undefined;
           },
         },
       },

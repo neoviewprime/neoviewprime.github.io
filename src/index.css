@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -309,6 +307,15 @@
   .neo-bottom-nav {
     @apply border-border/80 text-foreground shadow-[0_-10px_30px_hsl(var(--foreground)/0.08)] backdrop-blur-xl;
     background: color-mix(in srgb, var(--bg-surface) 96%, transparent);
+  }
+
+  @media (max-width: 767px) {
+    .neo-topbar,
+    .neo-bottom-nav {
+      background: var(--bg-surface);
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
   }
 
   .neo-section-title {

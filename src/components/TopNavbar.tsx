@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, HelpCircle, ChevronLeft, Bell, Share2, ShieldCheck, Clock3 } from 'lucide-react';
+import { HelpCircle, ChevronLeft, Bell, Share2, ShieldCheck, Clock3 } from 'lucide-react';
 import { NeoLogo } from './NeoLogo';
 import { GlobalSearch } from './GlobalSearch';
 import { ThemeToggle } from './ThemeToggle';
@@ -13,20 +13,16 @@ import { useAuth } from '@/hooks/useAuth';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 interface TopNavbarProps {
-  onToggleSidebar: () => void;
   isAuthenticated: boolean;
-  onLogout: () => void;
 }
 
 export const TopNavbar: React.FC<TopNavbarProps> = ({
-  onToggleSidebar,
   isAuthenticated,
 }) => {
   const navigate = useNavigate();
   const { canGoBack, triggerBack } = useHierarchyNav();
   const { user } = useAuth();
   const isMobile = useMediaQuery('(max-width: 767px)');
-  const isDesktop = useMediaQuery('(min-width: 1024px)');
   const { items, unreadCount, isLoading, markAllAsRead, markAsRead } = useNotifications(isAuthenticated && Boolean(user?.id));
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
@@ -55,16 +51,6 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
       <div className="px-3 pb-2 pt-[max(0.65rem,env(safe-area-inset-top))] sm:px-6 sm:pb-0 sm:pt-0">
         <div className="flex min-h-14 items-center justify-between gap-2 sm:min-h-16 sm:gap-4">
           <div className="flex min-w-0 items-center gap-2 sm:gap-4">
-            {isAuthenticated && !isDesktop ? (
-              <button
-                onClick={onToggleSidebar}
-                className="rounded-xl p-2 text-foreground transition-colors hover:bg-muted"
-                aria-label="Toggle sidebar"
-              >
-                <Menu className="h-5 w-5 text-foreground" />
-              </button>
-            ) : null}
-
             <button onClick={() => navigate(isAuthenticated ? '/home' : '/')} className="shrink-0 lg:hidden">
               <NeoLogo size="md" />
             </button>

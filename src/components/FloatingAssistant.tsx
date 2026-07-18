@@ -9,7 +9,17 @@ import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 interface FloatingAssistantProps {
   variant?: "both" | "chat" | "ranking";
-  currentLevel?: "companies" | "superintendences" | "managements" | "projects" | "indicators";
+  currentLevel?:
+    | "companies"
+    | "superintendences"
+    | "managements"
+    | "projects"
+    | "indicators"
+    | "reports"
+    | "approvals"
+    | "favorites"
+    | "settings"
+    | "help";
   selectedCompanyId?: string | number | null;
   selectedSupId?: string | number | null;
   selectedMgmtId?: string | number | null;

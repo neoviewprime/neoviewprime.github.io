@@ -1,6 +1,7 @@
 ﻿import { useState, useCallback, useRef } from 'react';
 import type { ChatMessage, ChatPageContext, ChatSession, SearchSource } from '@/types/backend';
 import { API_URL } from '@/lib/api';
+import { buildDemoChatAnswer } from '@/lib/demoApi';
 
 const getAuthHeaders = (): HeadersInit => {
   const token = typeof window !== 'undefined' ? window.localStorage.getItem('neoview_token') : null;
@@ -325,9 +326,37 @@ export function useChatbot(pageContext?: ChatPageContext | null): UseChatbotRetu
         }
       });
     } catch (err) {
-      setMessages((prev) => prev.filter((message) => message.id !== pendingAssistantId));
-      if ((err as Error).name !== 'AbortError') {
-        setError(`Erro ao processar mensagem: ${(err as Error).message}`);
+      if ((err as Error).name === 'AbortError') {
+        setMessages((prev) => prev.filter((message) => message.id !== pendingAssistantId));
+      } else {
+        const fallback = buildDemoChatAnswer(content.trim(), pageContext);
+        const sources = (fallback.sources ?? []).map(mapSource);
+        const finalAnswer = [
+          'Tive instabilidade na resposta em streaming, entao usei a IRIS local para nao deixar voce sem retorno.',
+          fallback.answer
+        ].join('\n\n');
+
+        setMessages((prev) =>
+          prev.map((message) =>
+            message.id === pendingAssistantId
+              ? {
+                  ...message,
+                  session_id: activeSessionId,
+                  content: finalAnswer,
+                  metadata: {
+                    sources,
+                    model: 'local-rag',
+                    tokens_used: undefined,
+                    totalSources: fallback.totalSources,
+                    intent: fallback.intent,
+                    confidence: fallback.confidence,
+                    retrievalMode: fallback.retrievalMode
+                  }
+                }
+              : message
+          )
+        );
+        setError(null);
       }
     } finally {
       setIsLoading(false);
@@ -376,10 +405,10 @@ export function useChatbot(pageContext?: ChatPageContext | null): UseChatbotRetu
 
   const rateMessage = useCallback(async (messageId: string, rating: 'positive' | 'negative') => {
     const message = messages.find((item) => item.id === messageId);
-    const previousUserMessage = [...messages]
-      .slice(0, messages.findIndex((item) => item.id === messageId))
-      .reverse()
-      .find((item) => item.role === 'user');
+    const messageIndex = messages.findIndex((item) => item.id === messageId);
+    const previousUserMessage = messageIndex > -1
+      ? [...messages].slice(0, messageIndex).reverse().find((item) => item.role === 'user')
+      : undefined;
 
     setMessages((prev) =>
       prev.map((item) =>

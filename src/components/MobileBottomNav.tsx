@@ -4,10 +4,6 @@ import { BarChart3, FileText, Home, Star, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
 
-type MobileBottomNavProps = {
-  onOpenMenu: () => void;
-};
-
 const primaryItems = [
   { icon: Home, label: 'Inicio', path: '/home' },
   { icon: FileText, label: 'Relatorios', path: '/reports' },
@@ -16,7 +12,7 @@ const primaryItems = [
   { icon: User, label: 'Perfil', path: '/settings' },
 ];
 
-export const MobileBottomNav: React.FC<MobileBottomNavProps> = () => {
+export const MobileBottomNav: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { isAuthenticated } = useAuth();

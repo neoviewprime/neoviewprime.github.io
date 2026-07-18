@@ -148,29 +148,116 @@ const normalizeText = (value: string) =>
     .replace(/\s+/g, ' ')
     .trim();
 
+const chatStopWords = new Set([
+  'a',
+  'as',
+  'ao',
+  'aos',
+  'da',
+  'das',
+  'de',
+  'do',
+  'dos',
+  'e',
+  'em',
+  'eu',
+  'me',
+  'minha',
+  'meu',
+  'na',
+  'nas',
+  'no',
+  'nos',
+  'o',
+  'os',
+  'para',
+  'por',
+  'qual',
+  'quais',
+  'que',
+  'um',
+  'uma'
+]);
+
+const tokenAliases: Record<string, string> = {
+  aprovacoes: 'aprovacao',
+  aprovados: 'aprovado',
+  arquivos: 'arquivo',
+  dashboards: 'dashboard',
+  docs: 'documento',
+  documentos: 'documento',
+  empresas: 'empresa',
+  estatistica: 'estatisticas',
+  filtros: 'filtro',
+  graficos: 'grafico',
+  gerencias: 'gerencia',
+  indicadores: 'indicador',
+  metricas: 'metrica',
+  pendencias: 'pendencia',
+  permissoes: 'permissao',
+  relatorios: 'relatorio',
+  salvos: 'salvo',
+  superintendencias: 'superintendencia',
+  unidades: 'unidade',
+  usuarios: 'usuario',
+  validacoes: 'validacao',
+  visualizacoes: 'views'
+};
+
+const normalizeTokenVariant = (token: string) => tokenAliases[token] ?? token;
+
 const tokenize = (value: string) =>
   normalizeText(value)
+    .replace(/-/g, ' ')
     .split(/\s+/)
-    .filter((token) => token.length > 1);
+    .map(normalizeTokenVariant)
+    .filter((token) => token.length > 1 && !chatStopWords.has(token));
 
 const synonymGroups = [
-  ['dec', 'duracao', 'interrupcao', 'continuidade'],
-  ['fec', 'frequencia', 'interrupcao', 'continuidade'],
-  ['iar', 'arrecadacao', 'receita'],
-  ['ipce', 'perdas', 'credito', 'cobranca'],
-  ['dce', 'comercial', 'distribuicao'],
-  ['relatorio', 'documento', 'pdf', 'arquivo'],
-  ['indicador', 'kpi', 'metrica', 'indice'],
-  ['empresa', 'companhia', 'distribuidora'],
-  ['aprovacao', 'validacao', 'pendencia', 'aprovar']
+  ['dec', 'duracao', 'equivalente', 'consumidor', 'interrupcao', 'continuidade', 'fornecimento', 'qualidade'],
+  ['fec', 'frequencia', 'equivalente', 'consumidor', 'interrupcao', 'continuidade', 'fornecimento'],
+  ['iar', 'arrecadacao', 'receita', 'faturamento'],
+  ['ipce', 'perdas', 'credito', 'cobranca', 'inadimplencia'],
+  ['dce', 'comercial', 'distribuicao', 'energia'],
+  ['gd', 'geracao', 'distribuida', 'solar'],
+  ['sla', 'nivel', 'servico', 'prazo', 'atendimento'],
+  ['isqp', 'satisfacao', 'qualidade', 'percebida', 'cliente'],
+  ['tma', 'tempo', 'medio', 'atendimento', 'chamada'],
+  ['mtbf', 'falha', 'confiabilidade', 'manutencao'],
+  ['mttr', 'reparo', 'manutencao', 'falha'],
+  ['relatorio', 'documento', 'pdf', 'arquivo', 'anexo', 'material'],
+  ['indicador', 'kpi', 'metrica', 'indice', 'grafico', 'estatisticas'],
+  ['empresa', 'companhia', 'distribuidora', 'regional', 'concessionaria'],
+  ['aprovacao', 'validacao', 'pendencia', 'fila', 'decisao', 'aprovar', 'rejeitar'],
+  ['workspace', 'inicio', 'home', 'painel', 'panorama', 'visao', 'resumo'],
+  ['favorito', 'salvo', 'estrela', 'favoritar'],
+  ['ajuda', 'suporte', 'duvida', 'tutorial', 'orientacao'],
+  ['configuracao', 'perfil', 'tema', 'notificacao', 'preferencia', 'senha'],
+  ['superadmin', 'administracao', 'usuario', 'permissao', 'acesso', 'restrito']
 ];
 
-const expandQueryTokens = (tokens: string[]) => {
+const phraseExpansions: Array<{ pattern: RegExp; tokens: string[] }> = [
+  { pattern: /\b(meu workspace|area de trabalho|pagina inicial|tela inicial|visao geral|painel executivo)\b/u, tokens: ['workspace', 'inicio', 'painel', 'panorama'] },
+  { pattern: /\b(meus relatorios|lista de relatorios|catalogo|documentos|pdfs)\b/u, tokens: ['relatorio', 'documento', 'catalogo', 'pdf'] },
+  { pattern: /\b(relatorios salvos|salvos|favoritos|favoritar|estrela)\b/u, tokens: ['favorito', 'salvo'] },
+  { pattern: /\b(fila de aprovacao|fila de validacao|pendencias criticas|decisoes recentes|aprovar relatorio|rejeitar relatorio)\b/u, tokens: ['aprovacao', 'validacao', 'pendencia', 'decisao'] },
+  { pattern: /\b(o que voce faz|o que consegue|como voce ajuda|como funciona|me orienta|me guie)\b/u, tokens: ['capacidades', 'ajuda', 'orientacao'] },
+  { pattern: /\b(perfil de acesso|controle de acesso|permissao|permissoes|cadastro de usuario|usuarios)\b/u, tokens: ['superadmin', 'usuario', 'permissao', 'acesso'] },
+  { pattern: /\b(tema claro|tema escuro|modo claro|modo escuro|notificacoes|preferencias)\b/u, tokens: ['configuracao', 'perfil', 'tema', 'notificacao'] }
+];
+
+const expandQueryTokens = (tokens: string[], rawQuestion = '') => {
   const expanded = new Set(tokens);
   tokens.forEach((token) => {
     synonymGroups.forEach((group) => {
       if (group.includes(token)) group.forEach((entry) => expanded.add(entry));
     });
+  });
+  const normalizedQuestion = normalizeText(rawQuestion);
+  phraseExpansions.forEach((item) => {
+    if (item.pattern.test(normalizedQuestion)) {
+      item.tokens.forEach((token) => expanded.add(token));
+    }
   });
   return Array.from(expanded);
 };
@@ -513,15 +600,44 @@ const buildWorkspaceSummary = () => {
 const readChatLearning = () => readStorage<ChatLearningItem[]>(CHAT_LEARNING_STORAGE_KEY, []);
 const writeChatLearning = (items: ChatLearningItem[]) => writeStorage(CHAT_LEARNING_STORAGE_KEY, items.slice(-250));
 
-const detectChatIntent = (question: string) => {
+type ChatIntent =
+  | 'saudacao'
+  | 'agradecimento'
+  | 'capacidades'
+  | 'aprendizado'
+  | 'workspace'
+  | 'favoritos'
+  | 'ajuda'
+  | 'configuracoes'
+  | 'administracao'
+  | 'aprovacoes'
+  | 'metricas'
+  | 'comparacao'
+  | 'indicadores'
+  | 'relatorios'
+  | 'busca_semantica';
+
+const hasAny = (normalizedQuestion: string, tokens: string[], terms: string[]) =>
+  terms.some((term) => normalizedQuestion.includes(term) || tokens.includes(term));
+
+const detectChatIntent = (question: string): ChatIntent => {
   const q = normalizeText(question);
-  if (/^(oi|ola|bom dia|boa tarde|boa noite)\b/.test(q)) return 'saudacao';
-  if (q.includes('o que voce faz') || q.includes('como voce ajuda') || q.includes('capacidades')) return 'capacidades';
-  if (q.includes('aprova') || q.includes('validacao') || q.includes('pendencia')) return 'aprovacoes';
-  if (q.includes('metrica') || q.includes('views') || q.includes('curtida') || q.includes('comentario') || q.includes('compartilh')) return 'metricas';
-  if (q.includes('compara') || q.includes('comparar') || q.includes('versus') || q.includes(' vs ')) return 'comparacao';
-  if (q.includes('indicador') || /\b(dec|fec|iar|ipce|dce)\b/.test(q)) return 'indicadores';
-  if (q.includes('relatorio') || q.includes('pdf') || q.includes('documento')) return 'relatorios';
+  const tokens = tokenize(question);
+
+  if (/^(oi|ola|bom dia|boa tarde|boa noite|e ai|opa)\b/u.test(q)) return 'saudacao';
+  if (hasAny(q, tokens, ['obrigado', 'obrigada', 'valeu', 'vlw'])) return 'agradecimento';
+  if (hasAny(q, tokens, ['aprendizado', 'treino', 'teste', 'feedback', 'avaliacao', 'aprendeu'])) return 'aprendizado';
+  if (hasAny(q, tokens, ['o que voce faz', 'como voce ajuda', 'capacidades', 'como funciona', 'o que consegue', 'me orienta', 'me guie'])) return 'capacidades';
+  if (hasAny(q, tokens, ['ajuda', 'suporte', 'duvida', 'tutorial', 'orientacao', 'manual'])) return 'ajuda';
+  if (hasAny(q, tokens, ['configuracao', 'perfil', 'tema', 'notificacao', 'preferencia', 'senha'])) return 'configuracoes';
+  if (hasAny(q, tokens, ['superadmin', 'administracao', 'usuario', 'permissao', 'acesso', 'cadastro'])) return 'administracao';
+  if (hasAny(q, tokens, ['favorito', 'salvo', 'estrela', 'favoritar'])) return 'favoritos';
+  if (hasAny(q, tokens, ['workspace', 'inicio', 'home', 'painel', 'panorama', 'visao geral', 'area de trabalho'])) return 'workspace';
+  if (hasAny(q, tokens, ['aprova', 'aprovacao', 'validacao', 'pendencia', 'fila', 'decisao', 'rejeitar'])) return 'aprovacoes';
+  if (hasAny(q, tokens, ['metrica', 'views', 'curtida', 'comentario', 'compartilh', 'engajamento', 'visualizacao', 'grafico', 'estatisticas'])) return 'metricas';
+  if (hasAny(q, tokens, ['compara', 'comparar', 'comparativo', 'versus', ' vs ', 'contra'])) return 'comparacao';
+  if (hasAny(q, tokens, ['indicador', 'kpi', 'indice']) || /\b(dec|fec|iar|ipce|dce|gd|sla|isqp|tma|mtbf|mttr)\b/u.test(q)) return 'indicadores';
+  if (hasAny(q, tokens, ['relatorio', 'pdf', 'documento', 'arquivo', 'catalogo'])) return 'relatorios';
   return 'busca_semantica';
 };
 
@@ -546,20 +662,27 @@ const sourceFromEntry = (entry: CatalogEntry, score: number) => ({
 });
 
 const scoreCatalogEntry = (entry: CatalogEntry, queryTokens: string[], learning: ChatLearningItem[]) => {
-  const haystack = normalizeText([
-    entry.source_report_id,
-    entry.report_name,
-    entry.report_description ?? '',
+  const reportText = normalizeText([entry.source_report_id, entry.report_name].join(' ')).replace(/-/g, ' ');
+  const descriptionText = normalizeText(entry.report_description ?? '');
+  const hierarchyText = normalizeText([
     entry.company_name,
     entry.superintendence_name ?? '',
     entry.management_name ?? '',
     entry.project_name ?? '',
-    entry.indicator_names.join(' ')
+    entry.path.join(' ')
   ].join(' '));
+  const indicatorText = normalizeText(entry.indicator_names.join(' ')).replace(/-/g, ' ');
+  const haystack = [reportText, descriptionText, hierarchyText, indicatorText].join(' ');
 
   let score = 0;
   queryTokens.forEach((token) => {
-    if (haystack.includes(token)) score += token.length <= 3 ? 5 : 3;
+    if (indicatorText.includes(token)) score += token.length <= 3 ? 10 : 7;
+    if (reportText.includes(token)) score += token.length <= 3 ? 8 : 5;
+    if (hierarchyText.includes(token)) score += 5;
+    if (descriptionText.includes(token)) score += 3;
+    if (!indicatorText.includes(token) && !reportText.includes(token) && !hierarchyText.includes(token) && haystack.includes(token)) {
+      score += 1.5;
+    }
   });
 
   learning.forEach((item) => {
@@ -572,8 +695,12 @@ const scoreCatalogEntry = (entry: CatalogEntry, queryTokens: string[], learning:
   return score;
 };
 
-const buildSemanticMatches = (question: string) => {
-  const queryTokens = expandQueryTokens(tokenize(question));
+const buildSemanticMatches = (question: string, pageContext?: { title?: string; summary?: string; hints?: string[] } | null) => {
+  const contextTerms =
+    pageContext?.title || pageContext?.summary || pageContext?.hints?.length
+      ? ` ${pageContext.title ?? ''} ${(pageContext.hints ?? []).join(' ')}`
+      : '';
+  const queryTokens = expandQueryTokens(tokenize(`${question}${contextTerms}`), question);
   const learning = readChatLearning();
   return listCatalogEntries()
     .map((entry) => ({ entry, score: scoreCatalogEntry(entry, queryTokens, learning) }))
@@ -592,16 +719,114 @@ const buildCapabilitiesAnswer = () =>
     '- Aprender com sua avaliacao de resposta util ou nao util, separando exemplos em treino e teste no navegador.'
   ].join('\n');
 
-const buildChatAnswer = (question: string, pageContext?: { title?: string; summary?: string } | null) => {
+const buildLearningAnswer = () => {
+  const learning = readChatLearning();
+  const train = learning.filter((entry) => entry.split === 'train').length;
+  const test = learning.filter((entry) => entry.split === 'test').length;
+  const positive = learning.filter((entry) => entry.rating === 'positive').length;
+  const negative = learning.filter((entry) => entry.rating === 'negative').length;
+
+  if (learning.length === 0) {
+    return 'Ainda nao tenho avaliacoes salvas nesta instalacao. Quando voce marcar uma resposta como util ou nao util, eu separo esse exemplo em treino/teste e uso isso para ajustar a busca local nas proximas perguntas.';
+  }
+
+  return [
+    `Tenho ${learning.length} exemplo(s) de avaliacao local: ${train} em treino e ${test} em teste.`,
+    `Sinal do usuario: ${positive} positivo(s) e ${negative} negativo(s).`,
+    'Uso esse historico para reforcar fontes bem avaliadas e reduzir a prioridade de fontes marcadas como pouco uteis quando a pergunta for parecida.'
+  ].join('\n');
+};
+
+const directIntentAnswers: Partial<Record<ChatIntent, { title: string; route: string; details: string[] }>> = {
+  workspace: {
+    title: 'Use o Inicio para escolher empresas e o Meu Workspace para a visao executiva.',
+    route: '/workspace',
+    details: [
+      'No mobile, a barra inferior leva aos principais pontos sem abrir menu lateral.',
+      'O Workspace concentra pendencias, aprovacoes recentes, graficos e panorama da empresa selecionada.'
+    ]
+  },
+  favoritos: {
+    title: 'A tela Favoritos reune relatorios salvos para acesso rapido.',
+    route: '/favorites',
+    details: [
+      'Use o icone de estrela nos relatorios para salvar itens importantes.',
+      'Eu tambem consigo buscar por "salvos", "favoritos" ou "relatorios marcados".'
+    ]
+  },
+  ajuda: {
+    title: 'A tela Ajuda centraliza duvidas frequentes e orientacoes de uso.',
+    route: '/help',
+    details: [
+      'Posso explicar fluxo de relatorios, indicadores, validacoes e cadastro.',
+      'Se voce disser em que tela esta, eu respondo com o contexto da pagina.'
+    ]
+  },
+  configuracoes: {
+    title: 'Em Configuracoes voce ajusta perfil, tema, preferencias e notificacoes.',
+    route: '/settings',
+    details: [
+      'Tambem interpreto pedidos como "modo claro", "modo escuro", "perfil" e "notificacoes".',
+      'No mobile, o atalho Perfil da barra inferior leva para essa area.'
+    ]
+  },
+  administracao: {
+    title: 'Superadmin concentra gestao de usuarios, perfis e permissoes.',
+    route: '/superadmin',
+    details: [
+      'Esse acesso depende do perfil do usuario.',
+      'Para cadastro comum, use a tela de Cadastro de usuarios quando disponivel ao seu perfil.'
+    ]
+  },
+  aprovacoes: {
+    title: 'Validacoes e aprovacoes ficam na fila de decisao.',
+    route: '/approvals',
+    details: [
+      'Procure por pendencias criticas, aprovados, rejeitados ou decisoes recentes.',
+      'Se voce citar empresa, unidade ou relatorio, eu tento filtrar as fontes relacionadas.'
+    ]
+  }
+};
+
+const buildDirectIntentAnswer = (intent: ChatIntent, pageContext?: { title?: string; summary?: string; hints?: string[] } | null) => {
+  const info = directIntentAnswers[intent];
+  if (!info) return null;
+
+  return [
+    info.title,
+    `Caminho sugerido: ${info.route}.`,
+    ...info.details.map((detail) => `- ${detail}`),
+    pageContext?.title ? `Contexto atual considerado: ${pageContext.title}.` : ''
+  ]
+    .filter(Boolean)
+    .join('\n');
+};
+
+export const buildDemoChatAnswer = (question: string, pageContext?: { title?: string; summary?: string; hints?: string[] } | null) => {
   const intent = detectChatIntent(question);
-  const matches = buildSemanticMatches(question);
+  const matches = buildSemanticMatches(question, pageContext);
   const topMatches = matches.slice(0, 6);
   const total = matches.length;
   const confidence = topMatches[0] ? Math.min(0.98, Math.max(0.35, topMatches[0].score / 24)) : 0.25;
+  const normalizedQuestion = normalizeText(question);
+  const questionTokens = tokenize(question);
+  const isNavigationLike = hasAny(normalizedQuestion, questionTokens, ['onde', 'abrir', 'acessar', 'entrar', 'ir para', 'caminho', 'tela', 'menu']);
+  const isRouteIntent = ['workspace', 'favoritos', 'ajuda', 'configuracoes', 'administracao'].includes(intent);
 
   if (intent === 'saudacao') {
     return {
       answer: 'Ola. Sou a IRIS. Posso buscar relatorios, indicadores, metricas e pendencias no catalogo do NeoView. Me diga uma empresa, sigla ou tema para eu começar.',
+      sources: [],
+      totalSources: 0,
+      intent,
+      confidence: 0.9,
+      retrievalMode: 'intencao-direta'
+    };
+  }
+
+  if (intent === 'agradecimento') {
+    return {
+      answer: 'Por nada. Quando quiser, posso refinar por empresa, indicador, periodo, gerencia, unidade ou status do relatorio.',
       sources: [],
       totalSources: 0,
       intent,
@@ -621,13 +846,36 @@ const buildChatAnswer = (question: string, pageContext?: { title?: string; summa
     };
   }
 
+  if (intent === 'aprendizado') {
+    return {
+      answer: buildLearningAnswer(),
+      sources: [],
+      totalSources: 0,
+      intent,
+      confidence: 0.95,
+      retrievalMode: 'aprendizado-local'
+    };
+  }
+
+  const directAnswer = buildDirectIntentAnswer(intent, pageContext);
+  if (directAnswer && (topMatches.length === 0 || isNavigationLike || isRouteIntent)) {
+    return {
+      answer: directAnswer,
+      sources: [],
+      totalSources: 0,
+      intent,
+      confidence: 0.86,
+      retrievalMode: 'intencao-direta'
+    };
+  }
+
   if (topMatches.length === 0) {
     const contextHint = pageContext?.title ? ` Estou considerando tambem a tela "${pageContext.title}".` : '';
     return {
       answer: [
         `Nao encontrei fontes fortes para "${question}".${contextHint}`,
         'Tente informar empresa, indicador, sigla, gerencia, projeto ou parte do nome do relatorio.',
-        'Exemplos: "relatorios de DEC da Coelba", "metricas de FEC", "pendencias de aprovacao" ou "indicadores da Pernambuco".'
+        'Exemplos: "relatorios de DEC da Coelba", "metricas de FEC", "pendencias de aprovacao", "onde vejo favoritos" ou "indicadores da Pernambuco".'
       ].join('\n'),
       sources: [],
       totalSources: 0,
@@ -650,10 +898,15 @@ const buildChatAnswer = (question: string, pageContext?: { title?: string; summa
 
   const intentLead: Record<string, string> = {
     aprovacoes: 'Priorizei itens que ajudam a localizar relatorios e contexto para decisao/aprovacao.',
+    favoritos: 'Priorizei relatorios salvos, recorrentes ou associados ao seu historico local.',
+    workspace: 'Priorizei fontes que ajudam a montar o panorama executivo do workspace.',
     metricas: 'Priorizei resultados com leitura de engajamento e indicadores operacionais.',
     comparacao: 'Separei fontes comparaveis por empresa e hierarquia.',
     indicadores: 'Priorizei relatorios associados aos indicadores e siglas detectadas.',
     relatorios: 'Priorizei documentos catalogados com melhor aderencia textual.',
+    administracao: 'Priorizei informacoes relacionadas a usuarios, permissoes e hierarquia.',
+    configuracoes: 'Priorizei contexto de perfil, preferencias e notificacoes.',
+    ajuda: 'Priorizei orientacoes praticas sobre o uso do NeoView.',
     busca_semantica: 'Usei busca semantica local com sinonimos e aprendizado por avaliacao.'
   };
 
@@ -675,9 +928,9 @@ const buildChatAnswer = (question: string, pageContext?: { title?: string; summa
   };
 };
 
-const buildChatStreamResponse = (question: string, pageContext?: { title?: string; summary?: string } | null) => {
+const buildChatStreamResponse = (question: string, pageContext?: { title?: string; summary?: string; hints?: string[] } | null) => {
   const sessionId = `sess-demo-${Date.now()}`;
-  const result = buildChatAnswer(question, pageContext);
+  const result = buildDemoChatAnswer(question, pageContext);
   const answer = result.answer;
 
   const encoder = new TextEncoder();
@@ -1028,7 +1281,7 @@ const tryHandleDemoApiRequest = async (request: Request): Promise<Response | nul
     const body = await request.clone().json().catch(() => ({} as Record<string, unknown>));
     return buildChatStreamResponse(
       String((body as { message?: string }).message ?? ''),
-      (body as { pageContext?: { title?: string; summary?: string } }).pageContext
+      (body as { pageContext?: { title?: string; summary?: string; hints?: string[] } }).pageContext
     );
   }
 

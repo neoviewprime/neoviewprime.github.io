@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NeoLogo } from '@/components/NeoLogo';
 import { ThemeToggle } from '@/components/ThemeToggle';
@@ -6,7 +6,22 @@ import { Building2, FileText, Search, ArrowRight, Shield, BarChart3 } from 'luci
 
 const Landing: React.FC = () => {
   const navigate = useNavigate();
+  const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const [videoFailed, setVideoFailed] = useState(false);
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isMobile = window.matchMedia('(max-width: 767px)').matches;
+    const connection = (navigator as Navigator & {
+      connection?: { saveData?: boolean; effectiveType?: string };
+    }).connection;
+    const isSlowConnection = Boolean(connection?.saveData || /2g/u.test(connection?.effectiveType ?? ''));
+
+    if (prefersReducedMotion || isMobile || isSlowConnection) return;
+
+    const timer = window.setTimeout(() => setShouldLoadVideo(true), 900);
+    return () => window.clearTimeout(timer);
+  }, []);
 
   const features = [
     {
@@ -50,14 +65,14 @@ const Landing: React.FC = () => {
 
       <section className="relative overflow-hidden py-12 sm:py-20 lg:py-28">
         <div className="absolute inset-0">
-          {!videoFailed ? (
+          {shouldLoadVideo && !videoFailed ? (
             <video
-              className="h-full w-full scale-[1.03] object-cover blur-[3px]"
+              className="h-full w-full scale-[1.02] object-cover"
               autoPlay
               muted
               loop
               playsInline
-              preload="metadata"
+              preload="none"
               aria-hidden="true"
               onError={() => setVideoFailed(true)}
             >

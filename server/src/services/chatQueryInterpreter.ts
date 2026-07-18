@@ -31,8 +31,12 @@ const knownIndicatorAliases: Record<string, string[]> = {
   sla: ["sla", "nivel de servico", "service level agreement"],
   isqp: ["isqp", "indice de satisfacao", "indice de satisfacao com a qualidade percebida"],
   tma: ["tma", "tempo medio de atendimento"],
-  mtbf: ["mtbf", "tempo medio entre falhas"],
-  mttr: ["mttr", "tempo medio de reparo"]
+  mtbf: ["mtbf", "tempo medio entre falhas", "confiabilidade"],
+  mttr: ["mttr", "tempo medio de reparo"],
+  perdas: ["perdas", "perdas tecnicas", "indice de perdas"],
+  cobertura: ["cobertura", "indice de cobertura"],
+  disponibilidade: ["disponibilidade", "disponibilidade da rede"],
+  satisfacao: ["satisfacao", "clientes corporativos", "nps"]
 };
 
 const buildAcronym = (value: string): string => {
@@ -203,19 +207,31 @@ export const chatQueryInterpreter = {
       wantsMetrics:
         normalizedQuestion.includes("metrica") ||
         normalizedQuestion.includes("metricas") ||
+        normalizedQuestion.includes("engajamento") ||
+        normalizedQuestion.includes("visualizacao") ||
+        normalizedQuestion.includes("visualizacoes") ||
         normalizedQuestion.includes("views") ||
+        normalizedQuestion.includes("curtida") ||
+        normalizedQuestion.includes("curtidas") ||
         normalizedQuestion.includes("likes") ||
+        normalizedQuestion.includes("comentario") ||
+        normalizedQuestion.includes("comentarios") ||
         normalizedQuestion.includes("comments") ||
+        normalizedQuestion.includes("compartilhamento") ||
+        normalizedQuestion.includes("compartilhamentos") ||
         normalizedQuestion.includes("shares"),
-      isGreeting: ["oi", "ola", "bom dia", "boa tarde", "boa noite", "e ai"].some((greeting) =>
+      isGreeting: ["oi", "ola", "bom dia", "boa tarde", "boa noite", "e ai", "opa"].some((greeting) =>
         normalizedQuestion.includes(greeting)
       ),
       asksCapabilities:
         normalizedQuestion.includes("o que voce faz") ||
         normalizedQuestion.includes("como voce ajuda") ||
+        normalizedQuestion.includes("o que consegue") ||
+        normalizedQuestion.includes("me orienta") ||
+        normalizedQuestion.includes("me guie") ||
         normalizedQuestion.includes("capacidades") ||
         normalizedQuestion.includes("como funciona"),
-      isThanks: ["obrigado", "obrigada", "valeu", "vlw"].some((token) => normalizedQuestion.includes(token)),
+      isThanks: ["obrigado", "obrigada", "valeu", "vlw", "show", "perfeito"].some((token) => normalizedQuestion.includes(token)),
       requestedIndicatorTerms,
       matchedIndicators,
       matchedCompanies

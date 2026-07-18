@@ -15,7 +15,7 @@ const SIDEBAR_STORAGE_KEY = 'neoview_sidebar_open_v2';
 export default function MainLayout() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { isAuthenticated, isLoading, signOut } = useAuth();
+  const { isAuthenticated, isLoading } = useAuth();
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(() => {
     const saved = localStorage.getItem(SIDEBAR_STORAGE_KEY);
     return saved === null ? true : saved === 'true';
@@ -43,31 +43,6 @@ export default function MainLayout() {
     });
   };
 
-  const closeSidebar = () => {
-    localStorage.setItem(SIDEBAR_STORAGE_KEY, 'false');
-    setSidebarOpen(false);
-  };
-
-  const handleLogout = async () => {
-    await signOut();
-    localStorage.removeItem('neoview_user');
-    localStorage.removeItem('sidebar_open');
-    localStorage.removeItem(SIDEBAR_STORAGE_KEY);
-    localStorage.removeItem('neoview_client_id');
-    localStorage.removeItem('neoview-report-upload-draft');
-    Object.keys(localStorage)
-      .filter(
-        (key) =>
-          key === 'neoview-reports-cache' ||
-          key.startsWith('neoview-reports-cache:') ||
-          key === 'neoview-report-upload-draft' ||
-          key.startsWith('neoview-report-upload-draft:')
-      )
-      .forEach((key) => localStorage.removeItem(key));
-    setSidebarOpen(false);
-    navigate('/login', { replace: true });
-  };
-
   const targetMarginLeft = isDesktop
     ? (sidebarOpen ? DESKTOP_EXPANDED : DESKTOP_COLLAPSED)
     : 0;
@@ -83,7 +58,7 @@ export default function MainLayout() {
   return (
     <div className="app-shell-bg min-h-dvh bg-background">
       <HierarchyNavProvider>
-        <AppSidebar isOpen={sidebarOpen} onToggle={toggleSidebar} onClose={closeSidebar} onLogout={handleLogout} />
+        {isDesktop ? <AppSidebar isOpen={sidebarOpen} onToggle={toggleSidebar} /> : null}
 
         <motion.div
           className="flex min-h-dvh min-w-0 flex-1 flex-col"
@@ -91,16 +66,12 @@ export default function MainLayout() {
           animate={{ marginLeft: targetMarginLeft }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         >
-          <TopNavbar
-            isAuthenticated={isAuthenticated}
-            onToggleSidebar={toggleSidebar}
-            onLogout={handleLogout}
-          />
+          <TopNavbar isAuthenticated={isAuthenticated} />
           <main className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-clip px-0 pb-[calc(env(safe-area-inset-bottom)+5.75rem)] pt-0 sm:pb-[calc(env(safe-area-inset-bottom)+1rem)]">
             <Outlet />
           </main>
         </motion.div>
-        <MobileBottomNav onOpenMenu={toggleSidebar} />
+        <MobileBottomNav />
       </HierarchyNavProvider>
     </div>
   );
