@@ -9,21 +9,23 @@ const Settings: React.FC = () => (
       <div className="neo-page-inner">
         <PageTitle title="Configurações" description="Gerencie suas informações, preferências e segurança da conta." />
 
-        <div className="neo-surface mb-5 grid overflow-hidden rounded-xl md:grid-cols-5">
-          {[
-            [User, 'Perfil'],
-            [Shield, 'Preferências'],
-            [Lock, 'Segurança'],
-            [Bell, 'Notificações'],
-            [BookOpen, 'Workspace'],
-          ].map(([Icon, label], index) => {
-            const TabIcon = Icon as typeof User;
-            return (
-              <button key={label as string} className={`flex items-center justify-center gap-3 border-b px-4 py-5 text-sm ${index === 0 ? 'border-primary text-primary' : 'border-transparent text-muted-foreground'}`}>
-                <TabIcon className="h-5 w-5" />{label as string}
-              </button>
-            );
-          })}
+        <div className="neo-surface neo-mobile-scroll mb-5 rounded-xl">
+          <div className="neo-scroll-content grid grid-cols-5 text-center">
+            {[
+              [User, 'Perfil'],
+              [Shield, 'Preferências'],
+              [Lock, 'Segurança'],
+              [Bell, 'Notificações'],
+              [BookOpen, 'Workspace'],
+            ].map(([Icon, label], index) => {
+              const TabIcon = Icon as typeof User;
+              return (
+                <button key={label as string} className={`flex min-w-[8.5rem] items-center justify-center gap-3 border-b px-4 py-5 text-sm ${index === 0 ? 'border-primary text-primary' : 'border-transparent text-muted-foreground'}`}>
+                  <TabIcon className="h-5 w-5 shrink-0" />{label as string}
+                </button>
+              );
+            })}
+          </div>
         </div>
 
         <div className="grid gap-5 xl:grid-cols-[1fr_580px]">
@@ -47,7 +49,7 @@ const Settings: React.FC = () => (
                 </div>
               </div>
             </div>
-            <div className="mt-6 flex justify-end"><button className="neo-primary-button"><Save className="h-4 w-4" /> Salvar alterações</button></div>
+            <div className="mt-6 flex justify-end"><button className="neo-primary-button sm:w-auto"><Save className="h-4 w-4" /> Salvar alterações</button></div>
           </Panel>
 
           <aside className="space-y-4">
@@ -58,7 +60,7 @@ const Settings: React.FC = () => (
                 ['Membro desde', '19/12/2024'],
                 ['Status da conta', 'Ativa'],
               ].map(([label, value]) => (
-                <div key={label} className="flex justify-between border-b border-border/60 py-3 text-sm last:border-0"><span className="text-muted-foreground">{label}</span><span className="text-foreground">{value}</span></div>
+                <div key={label} className="flex flex-wrap justify-between gap-2 border-b border-border/60 py-3 text-sm last:border-0"><span className="text-muted-foreground">{label}</span><span className="break-words text-foreground">{value}</span></div>
               ))}
               <button className="neo-action-button mt-4 w-full justify-between">Ver sessões ativas <span>›</span></button>
             </Panel>
@@ -67,7 +69,7 @@ const Settings: React.FC = () => (
               <SmallArrowRow icon={Shield} title="Configurar 2FA" subtitle="Aumente a segurança da sua conta" tone="green" />
             </Panel>
             <Panel title="Precisa de ajuda?">
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid gap-3 sm:grid-cols-2">
                 <button className="neo-action-button"><BookOpen className="h-4 w-4" /> Ver documentação</button>
                 <button className="neo-action-button"><Headphones className="h-4 w-4" /> Abrir chamado</button>
               </div>

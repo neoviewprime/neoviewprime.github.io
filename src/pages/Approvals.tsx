@@ -24,19 +24,23 @@ const Approvals: React.FC = () => {
 
           <div className="grid gap-4 xl:grid-cols-[1fr_380px]">
             <Panel>
-              <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                <div className="flex gap-6 text-sm">
-                  {['Fila de aprovações 12', 'Minhas decisões', 'Delegações 2', 'Todos 56'].map((tab, index) => (
-                    <button key={tab} className={index === 0 ? 'border-b-2 border-primary pb-3 text-foreground' : 'pb-3 text-muted-foreground'}>{tab}</button>
-                  ))}
+              <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+                <div className="neo-mobile-scroll -mx-1 px-1 text-sm">
+                  <div className="neo-scroll-content flex gap-6">
+                    {['Fila de aprovações 12', 'Minhas decisões', 'Delegações 2', 'Todos 56'].map((tab, index) => (
+                      <button key={tab} className={`min-w-max ${index === 0 ? 'border-b-2 border-primary pb-3 text-foreground' : 'pb-3 text-muted-foreground'}`}>{tab}</button>
+                    ))}
+                  </div>
                 </div>
                 <FilterButton />
               </div>
               <ReportsTable approvals />
-              <div className="mt-4 flex items-center justify-between text-sm text-muted-foreground">
+              <div className="mt-4 flex flex-col gap-3 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
                 <span>Mostrando 1 a 6 de 12 aprovações</span>
-                <div className="flex gap-2">
-                  {['‹', '1', '2', '›'].map((item) => <button key={item} className={`neo-icon-button h-9 w-9 ${item === '1' ? 'bg-primary text-primary-foreground' : ''}`}>{item}</button>)}
+                <div className="neo-mobile-scroll -mx-1 px-1">
+                  <div className="neo-scroll-content flex gap-2">
+                    {['‹', '1', '2', '›'].map((item) => <button key={item} className={`neo-icon-button h-9 w-9 ${item === '1' ? 'bg-primary text-primary-foreground' : ''}`}>{item}</button>)}
+                  </div>
                 </div>
               </div>
             </Panel>

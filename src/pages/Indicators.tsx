@@ -35,11 +35,11 @@ const Indicators: React.FC = () => {
           </Panel>
 
           <Panel className="mb-3">
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <span className="text-sm font-medium text-foreground">Período</span>
               <button className="neo-action-button">01/05/2024 - 31/05/2024</button>
               <QuickTabs items={['7D', '30D', '3M', '6M', '12M', 'Personalizado']} active={1} />
-              <span className="ml-auto text-sm font-medium text-foreground">Comparar com</span>
+              <span className="text-sm font-medium text-foreground sm:ml-auto">Comparar com</span>
               <button className="neo-action-button">Período anterior</button>
             </div>
           </Panel>
@@ -54,12 +54,12 @@ const Indicators: React.FC = () => {
               </div>
 
               <Panel>
-                <div className="mb-4 flex items-start justify-between gap-4">
-                  <div>
+                <div className="mb-4 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
+                  <div className="min-w-0">
                     <h2 className="text-xl font-semibold text-foreground">Evolução de aprovações e rejeições</h2>
-                    <p className="mt-1 text-sm text-muted-foreground">Período: 01/05/2024 a 31/05/2024 • Comparação: Período anterior</p>
+                    <p className="mt-1 break-words text-sm text-muted-foreground">Período: 01/05/2024 a 31/05/2024 • Comparação: Período anterior</p>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="flex flex-col gap-2 sm:flex-row">
                     <button className="neo-action-button"><LineChart className="h-4 w-4" /> Linha</button>
                     <button className="neo-action-button">Por dia</button>
                   </div>
@@ -68,11 +68,11 @@ const Indicators: React.FC = () => {
                 <div className="mt-4 grid gap-3 md:grid-cols-2">
                   <div className="rounded-xl border border-border/60 bg-white/[0.025] p-4">
                     <p className="text-sm text-muted-foreground">Média diária de aprovações</p>
-                    <p className="mt-2 text-2xl font-semibold text-foreground">46,2 <span className="text-sm text-emerald-300">↗ 11% vs período anterior</span></p>
+                    <p className="mt-2 break-words text-2xl font-semibold text-foreground">46,2 <span className="text-sm text-emerald-300">↗ 11% vs período anterior</span></p>
                   </div>
                   <div className="rounded-xl border border-border/60 bg-white/[0.025] p-4">
                     <p className="text-sm text-muted-foreground">Média diária de rejeições</p>
-                    <p className="mt-2 text-2xl font-semibold text-foreground">3,1 <span className="text-sm text-red-300">↘ 9% vs período anterior</span></p>
+                    <p className="mt-2 break-words text-2xl font-semibold text-foreground">3,1 <span className="text-sm text-red-300">↘ 9% vs período anterior</span></p>
                   </div>
                 </div>
               </Panel>

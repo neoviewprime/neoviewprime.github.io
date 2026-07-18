@@ -67,7 +67,7 @@ export default function MainLayout() {
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         >
           <TopNavbar isAuthenticated={isAuthenticated} />
-          <main className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-clip px-0 pb-[calc(env(safe-area-inset-bottom)+5.75rem)] pt-0 sm:pb-[calc(env(safe-area-inset-bottom)+1rem)]">
+          <main className="min-h-0 min-w-0 flex-1 overflow-y-auto overflow-x-hidden px-0 pb-[calc(env(safe-area-inset-bottom)+5.75rem)] pt-0 sm:pb-[calc(env(safe-area-inset-bottom)+1rem)]">
             <Outlet />
           </main>
         </motion.div>

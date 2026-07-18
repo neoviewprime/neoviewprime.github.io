@@ -26,7 +26,7 @@ const Workspace: React.FC = () => {
     <>
       <div className="neo-page">
         <div className="neo-page-inner">
-          <div className="mb-6 flex justify-end gap-3">
+          <div className="mb-6 flex flex-col justify-end gap-3 sm:flex-row">
             <CompanySelect />
             <button className="neo-action-button">Filtros</button>
           </div>
@@ -52,19 +52,19 @@ const Workspace: React.FC = () => {
                   ['Dashboard Operacional Dezembro.pdf', 'Enviado por Carlos Lima  •  18/12/2024', 'Média prioridade', 'text-amber-300 bg-amber-500/16'],
                   ['Estratégias Recuperação Crédito.pdf', 'Enviado por Ana Costa  •  17/12/2024', 'Baixa prioridade', 'text-sky-300 bg-sky-500/16'],
                 ].map(([title, meta, tag, tagClass]) => (
-                  <div key={title} className="flex items-center gap-3 border-b border-border/60 py-3 last:border-0">
+                  <div key={title} className="flex flex-col gap-3 border-b border-border/60 py-3 last:border-0 sm:flex-row sm:items-center">
                     <span className="h-2 w-2 rounded-full bg-red-400" />
-                    <FileText className="h-5 w-5 text-red-300" />
+                    <FileText className="hidden h-5 w-5 shrink-0 text-red-300 sm:block" />
                     <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-medium text-foreground">{title}</p>
-                      <p className="mt-1 truncate text-xs text-muted-foreground">{meta}</p>
+                      <p className="break-words text-sm font-medium text-foreground">{title}</p>
+                      <p className="mt-1 break-words text-xs text-muted-foreground">{meta}</p>
                     </div>
-                    <span className={`rounded-lg px-2 py-1 text-xs ${tagClass}`}>{tag}</span>
-                    <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                    <span className={`w-fit rounded-lg px-2 py-1 text-xs ${tagClass}`}>{tag}</span>
+                    <ArrowRight className="hidden h-4 w-4 shrink-0 text-muted-foreground sm:block" />
                   </div>
                 ))}
               </div>
-              <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
+              <div className="mt-4 flex flex-col gap-3 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
                 <span>Atualizado agora há poucos minutos</span>
                 <button className="neo-action-button py-2 text-xs"><Users className="h-4 w-4" /> Atribuir delegações</button>
               </div>
@@ -83,10 +83,10 @@ const Workspace: React.FC = () => {
 
           <div className="mt-4 grid gap-4 xl:grid-cols-[0.92fr_0.98fr_1fr]">
             <Panel title="Relatórios de destaque" action={<button className="text-sm font-medium text-emerald-400">Ver todos</button>}>
-              <div className="flex items-center gap-4 rounded-xl border border-border/60 bg-white/[0.025] p-4">
-                <div className="h-24 w-20 rounded-md bg-gradient-to-br from-white to-emerald-500 p-2 text-[9px] font-bold text-emerald-950">RELATÓRIO SLA COMERCIAL Q4</div>
+              <div className="flex flex-col gap-4 rounded-xl border border-border/60 bg-white/[0.025] p-4 sm:flex-row sm:items-center">
+                <div className="flex h-24 w-full items-center justify-center rounded-md bg-gradient-to-br from-white to-emerald-500 p-2 text-center text-[9px] font-bold leading-3 text-emerald-950 sm:w-20 sm:shrink-0">RELATÓRIO SLA COMERCIAL Q4</div>
                 <div className="min-w-0 flex-1">
-                  <p className="font-medium text-foreground">Relatório SLA Comercial Q4 2024.pdf</p>
+                  <p className="break-words font-medium text-foreground">Relatório SLA Comercial Q4 2024.pdf</p>
                   <p className="mt-2 text-sm text-muted-foreground">Neoenergia Coelba</p>
                   <p className="mt-3 text-xs text-muted-foreground">v1 · PDF · 19/12/2024</p>
                   <button className="neo-action-button mt-3">Abrir relatório <ArrowRight className="h-4 w-4" /></button>
@@ -111,8 +111,8 @@ const Workspace: React.FC = () => {
             </Panel>
           </div>
 
-          <div className="neo-surface mt-4 flex items-center justify-between rounded-xl p-4 text-sm text-muted-foreground">
-            <span className="flex items-center gap-2"><Lightbulb className="h-5 w-5 text-amber-300" /> Dica: Use delegações para garantir agilidade nas aprovações durante ausências e férias.</span>
+          <div className="neo-surface mt-4 flex flex-col gap-3 rounded-xl p-4 text-sm text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+            <span className="flex min-w-0 items-start gap-2"><Lightbulb className="mt-0.5 h-5 w-5 shrink-0 text-amber-300" /> <span className="break-words">Dica: Use delegações para garantir agilidade nas aprovações durante ausências e férias.</span></span>
             <button className="neo-action-button">Configurar delegações <ArrowRight className="h-4 w-4" /></button>
           </div>
         </div>

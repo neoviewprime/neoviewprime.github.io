@@ -465,7 +465,7 @@ export function ChartBuilder({ companyId, initialWorkspaceId }: ChartBuilderProp
   };
 
   return (
-    <div className="min-w-0 space-y-5 overflow-x-clip">
+    <div className="min-w-0 space-y-5 overflow-x-hidden">
       <Card className="border-primary/40 bg-card">
         <CardContent className="space-y-5 p-4 sm:p-5">
           <div className="flex min-w-0 flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">

@@ -43,13 +43,15 @@ const Superadmin: React.FC = () => {
 
         <div className="grid gap-4 xl:grid-cols-[1fr_320px]">
           <Panel>
-            <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-              <div className="flex gap-8 text-sm">
-                {['Usuários', 'Relatórios', 'Auditoria', 'Operações'].map((tab, index) => (
-                  <button key={tab} className={index === 0 ? 'border-b-2 border-primary pb-3 text-primary' : 'pb-3 text-muted-foreground'}>{tab}</button>
-                ))}
+            <div className="mb-5 flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+              <div className="neo-mobile-scroll -mx-1 px-1">
+                <div className="neo-scroll-content flex gap-6 text-sm sm:gap-8">
+                  {['Usuários', 'Relatórios', 'Auditoria', 'Operações'].map((tab, index) => (
+                    <button key={tab} className={index === 0 ? 'border-b-2 border-primary pb-3 text-primary' : 'pb-3 text-muted-foreground'}>{tab}</button>
+                  ))}
+                </div>
               </div>
-              <div className="flex gap-3">
+              <div className="flex flex-col gap-3 sm:flex-row">
                 <button className="neo-action-button"><Search className="h-4 w-4" /> Filtros</button>
                 <button className="neo-primary-button"><UserPlus className="h-4 w-4" /> Novo usuário</button>
               </div>
@@ -57,7 +59,7 @@ const Superadmin: React.FC = () => {
             <h2 className="text-2xl font-semibold text-foreground">Usuários</h2>
             <p className="mt-1 text-sm text-muted-foreground">Gerencie acessos, permissões e status dos usuários da plataforma.</p>
             <div className="my-5 max-w-xl"><SearchControl placeholder="Buscar usuário por nome, e-mail ou função..." /></div>
-            <div className="overflow-hidden rounded-xl border border-border/70">
+            <div className="neo-mobile-scroll rounded-xl border border-border/70">
               <table className="w-full min-w-[820px] text-left text-sm">
                 <thead className="bg-white/[0.035] text-muted-foreground">
                   <tr><th className="px-4 py-3">Usuário</th><th className="px-4 py-3">Função</th><th className="px-4 py-3">Status</th><th className="px-4 py-3">Último acesso</th><th className="px-4 py-3">MFA</th><th className="px-4 py-3">Ações</th></tr>

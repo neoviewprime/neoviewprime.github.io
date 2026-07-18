@@ -56,11 +56,11 @@ export function PageTitle({
           </div>
         ) : null}
         <div className="min-w-0">
-          <h1 className="break-words text-3xl font-semibold tracking-tight text-foreground">{title}</h1>
+          <h1 className="break-words text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">{title}</h1>
           <p className="mt-2 max-w-4xl break-words text-base text-muted-foreground">{description}</p>
         </div>
       </div>
-      {actions ? <div className="flex flex-wrap items-center gap-3">{actions}</div> : null}
+      {actions ? <div className="flex w-full flex-wrap items-center gap-3 sm:w-auto">{actions}</div> : null}
     </div>
   );
 }
@@ -99,10 +99,10 @@ export function StatCard({
 
 export function Panel({ title, children, action, className }: { title?: string; children: ReactNode; action?: ReactNode; className?: string }) {
   return (
-    <section className={cn('neo-surface min-w-0 overflow-hidden rounded-xl p-5', className)}>
+    <section className={cn('neo-surface min-w-0 overflow-visible rounded-xl p-4 sm:p-5', className)}>
       {title ? (
-        <div className="mb-4 flex min-w-0 items-center justify-between gap-4">
-          <h2 className="min-w-0 truncate text-lg font-semibold text-foreground">{title}</h2>
+        <div className="mb-4 flex min-w-0 flex-wrap items-center justify-between gap-3">
+          <h2 className="min-w-0 break-words text-lg font-semibold text-foreground">{title}</h2>
           {action ? <div className="shrink-0">{action}</div> : null}
         </div>
       ) : null}
@@ -113,10 +113,10 @@ export function Panel({ title, children, action, className }: { title?: string; 
 
 export function SearchControl({ placeholder = 'Buscar relatórios, indicadores ou usuários...' }: { placeholder?: string }) {
   return (
-    <div className="relative">
+    <div className="relative min-w-0">
       <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-      <input className="neo-control h-12 w-full pl-12 pr-20 text-sm" placeholder={placeholder} />
-      <span className="absolute right-3 top-1/2 -translate-y-1/2 rounded-md bg-white/[0.06] px-2 py-1 text-xs text-muted-foreground">⌘ K</span>
+      <input className="neo-control h-12 w-full pl-12 pr-4 text-sm sm:pr-20" placeholder={placeholder} />
+      <span className="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md bg-white/[0.06] px-2 py-1 text-xs text-muted-foreground sm:inline-flex">⌘ K</span>
     </div>
   );
 }
@@ -155,8 +155,72 @@ export function StatusPill({ status }: { status: string }) {
 
 export function ReportsTable({ approvals = false }: { approvals?: boolean }) {
   return (
-    <div className="overflow-x-auto rounded-xl border border-border/70">
-      <table className="w-full min-w-[920px] text-left text-sm">
+    <>
+      <div className="space-y-3 md:hidden">
+        {reportRows.map((row, index) => (
+          <div key={row.name} className="rounded-xl border border-border/70 bg-background/55 p-4 dark:bg-white/[0.025]">
+            <div className="flex min-w-0 items-start gap-3">
+              <FileBadge type={row.type} color={row.color} />
+              <div className="min-w-0 flex-1">
+                <p className="break-words text-sm font-semibold text-foreground">{row.name}</p>
+                <p className="mt-1 break-words text-xs text-muted-foreground">{approvals ? row.area : row.desc}</p>
+              </div>
+              {row.favorite && !approvals ? <Star className="h-5 w-5 shrink-0 fill-amber-400 text-amber-400" /> : null}
+            </div>
+
+            <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
+              {approvals ? (
+                <>
+                  <div className="rounded-lg bg-muted/50 p-2">
+                    <p className="text-muted-foreground">Prioridade</p>
+                    <p className={cn('mt-1 font-medium', index < 2 ? 'text-red-300' : index === 2 ? 'text-amber-300' : 'text-muted-foreground')}>
+                      {index < 2 ? 'Alta' : index === 2 ? 'Média' : 'Baixa'}
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-muted/50 p-2">
+                    <p className="text-muted-foreground">Solicitante</p>
+                    <p className="mt-1 font-medium text-foreground">{['Maria Silva', 'Carlos Lima', 'Ana Costa', 'João Nogueira', 'Paula Rodrigues', 'Marina Souza'][index]}</p>
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="rounded-lg bg-muted/50 p-2">
+                    <p className="text-muted-foreground">Status</p>
+                    <div className="mt-1"><StatusPill status={row.status} /></div>
+                  </div>
+                  <div className="rounded-lg bg-muted/50 p-2">
+                    <p className="text-muted-foreground">Destino</p>
+                    <p className="mt-1 font-medium text-foreground">{row.area}</p>
+                  </div>
+                </>
+              )}
+              <div className="rounded-lg bg-muted/50 p-2">
+                <p className="text-muted-foreground">Data</p>
+                <p className="mt-1 font-medium text-foreground">{row.date} · {row.time}</p>
+              </div>
+              <div className="rounded-lg bg-muted/50 p-2">
+                <p className="text-muted-foreground">{approvals ? 'Prazo' : 'Engajamento'}</p>
+                {approvals ? (
+                  <div className="mt-1 font-medium text-foreground"><Deadline index={index} /></div>
+                ) : (
+                  <p className="mt-1 font-medium text-foreground">{row.views} views · {row.comments} comentários</p>
+                )}
+              </div>
+            </div>
+
+            <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
+              {approvals ? <StatusPill status="Pendente" /> : <span className="text-xs text-muted-foreground">{index + 2} destinatários</span>}
+              <button className="neo-action-button py-2 text-xs">
+                {approvals ? 'Analisar' : 'Abrir ações'}
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="neo-mobile-scroll hidden rounded-xl border border-border/70 md:block">
+        <table className="w-full min-w-[920px] text-left text-sm">
         <thead className="bg-white/[0.035] text-muted-foreground">
           <tr>
             {approvals ? <th className="px-4 py-3"><input type="checkbox" className="rounded border-border bg-transparent" /></th> : null}
@@ -227,7 +291,8 @@ export function ReportsTable({ approvals = false }: { approvals?: boolean }) {
           ))}
         </tbody>
       </table>
-    </div>
+      </div>
+    </>
   );
 }
 
@@ -241,7 +306,7 @@ export function DecisionList() {
           </div>
           <div className="min-w-0">
             <p className={cn('text-sm font-medium', item.tone === 'red' ? 'text-red-300' : 'text-emerald-300')}>{item.status}</p>
-            <p className="truncate text-sm font-medium text-foreground">{item.title}</p>
+            <p className="break-words text-sm font-medium text-foreground">{item.title}</p>
             <p className="line-clamp-2 text-xs text-muted-foreground">{item.meta}</p>
           </div>
         </div>
@@ -313,12 +378,12 @@ function fileBg(color: string) {
 export function SmallArrowRow({ icon: Icon = ChevronRight, title, subtitle, tone = 'green' }: { icon?: ElementType; title: string; subtitle?: string; tone?: 'green' | 'amber' | 'blue' | 'purple' | 'red' }) {
   return (
     <button className="flex w-full min-w-0 items-center gap-3 rounded-xl border border-border/60 bg-white/[0.025] p-3 text-left transition-colors hover:bg-white/[0.045]">
-      <div className={cn('flex h-9 w-9 items-center justify-center rounded-full', toneBg(tone))}>
+      <div className={cn('flex h-9 w-9 shrink-0 items-center justify-center rounded-full', toneBg(tone))}>
         <Icon className="h-4 w-4" />
       </div>
       <div className="min-w-0 flex-1">
-        <p className="truncate text-sm font-medium text-foreground">{title}</p>
-        {subtitle ? <p className="truncate text-xs text-muted-foreground">{subtitle}</p> : null}
+        <p className="break-words text-sm font-medium text-foreground">{title}</p>
+        {subtitle ? <p className="mt-0.5 break-words text-xs text-muted-foreground">{subtitle}</p> : null}
       </div>
       <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground" />
     </button>

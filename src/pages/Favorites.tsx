@@ -15,9 +15,9 @@ const Favorites: React.FC = () => (
           actions={<button className="neo-action-button text-amber-300"><Star className="h-4 w-4" /> Gerenciar favoritos</button>}
         />
 
-        <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+        <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
           <QuickTabs items={['Relatórios', 'Indicadores']} />
-          <div className="w-full max-w-xs"><SearchControl placeholder="Buscar nos favoritos..." /></div>
+          <div className="w-full sm:max-w-xs"><SearchControl placeholder="Buscar nos favoritos..." /></div>
         </div>
 
         <div className="grid gap-4 xl:grid-cols-[1fr_380px]">
@@ -30,10 +30,10 @@ const Favorites: React.FC = () => (
                   ['Operações & Produção', 'Performance operacional', '7 relatórios', 'amber'],
                   ['Comercial & Vendas', 'Inteligência comercial', '5 relatórios', 'blue'],
                 ].map(([title, sub, count, tone]) => (
-                  <div key={title} className="rounded-xl border border-border/60 bg-white/[0.025] p-4">
+                  <div key={title} className="min-w-0 rounded-xl border border-border/60 bg-white/[0.025] p-4">
                     <Folder className={`mb-3 h-9 w-9 ${tone === 'green' ? 'text-emerald-300' : tone === 'purple' ? 'text-violet-300' : tone === 'amber' ? 'text-amber-300' : 'text-sky-300'}`} />
-                    <div className="flex justify-between gap-3"><p className="font-medium text-foreground">{title}</p><Star className="h-4 w-4 fill-amber-400 text-amber-400" /></div>
-                    <p className="mt-2 text-sm text-muted-foreground">{sub}</p>
+                    <div className="flex min-w-0 justify-between gap-3"><p className="break-words font-medium text-foreground">{title}</p><Star className="h-4 w-4 shrink-0 fill-amber-400 text-amber-400" /></div>
+                    <p className="mt-2 break-words text-sm text-muted-foreground">{sub}</p>
                     <p className="mt-2 text-sm text-muted-foreground">{count}</p>
                   </div>
                 ))}
@@ -43,14 +43,14 @@ const Favorites: React.FC = () => (
             <Panel title="Relatórios favoritos" action={<button className="text-sm font-medium text-emerald-400">Ver todas ›</button>}>
               <div className="grid gap-3 md:grid-cols-2">
                 {['Relatório S.A. Comercial Q4 2024', 'DRE Consolidado Dezembro', 'Estratégia de Expansão 2025', 'Dashboard Operacional - Dezembro', 'Fluxo de Caixa Projetado', 'Plano Comercial 2025'].map((title, index) => (
-                  <div key={title} className="flex items-center gap-3 rounded-xl border border-border/60 bg-white/[0.025] p-3">
-                    {index % 3 === 0 ? <FileText className="h-9 w-9 text-red-300" /> : <FileSpreadsheet className="h-9 w-9 text-emerald-300" />}
+                  <div key={title} className="flex min-w-0 flex-wrap items-center gap-3 rounded-xl border border-border/60 bg-white/[0.025] p-3">
+                    {index % 3 === 0 ? <FileText className="h-9 w-9 shrink-0 text-red-300" /> : <FileSpreadsheet className="h-9 w-9 shrink-0 text-emerald-300" />}
                     <div className="min-w-0 flex-1">
-                      <p className="truncate font-medium text-foreground">{title}</p>
+                      <p className="break-words font-medium text-foreground">{title}</p>
                       <p className="text-sm text-muted-foreground">{index % 2 ? 'Financeiro' : 'Comercial'}</p>
                     </div>
-                    <span className="text-sm text-muted-foreground">19/12/2024</span>
-                    <Star className="h-5 w-5 fill-amber-400 text-amber-400" />
+                    <span className="shrink-0 text-sm text-muted-foreground">19/12/2024</span>
+                    <Star className="h-5 w-5 shrink-0 fill-amber-400 text-amber-400" />
                   </div>
                 ))}
               </div>
@@ -58,8 +58,8 @@ const Favorites: React.FC = () => (
 
             <Panel title="Acesso recente">
               {['Comparativo Geração x Consumo 2024', 'Pesquisa Satisfação Corporativa 2024', 'Apresentação Resultados do Mês', 'Análise de Custos e Despesas', 'Relatório de Sustentabilidade 2024'].map((title) => (
-                <div key={title} className="flex items-center justify-between border-b border-border/60 py-3 text-sm last:border-0">
-                  <span className="text-foreground">{title}</span><span className="text-muted-foreground">15/12/2024</span><Star className="h-5 w-5 fill-amber-400 text-amber-400" />
+                <div key={title} className="flex min-w-0 flex-wrap items-center justify-between gap-3 border-b border-border/60 py-3 text-sm last:border-0">
+                  <span className="min-w-0 flex-1 break-words text-foreground">{title}</span><span className="shrink-0 text-muted-foreground">15/12/2024</span><Star className="h-5 w-5 shrink-0 fill-amber-400 text-amber-400" />
                 </div>
               ))}
             </Panel>
@@ -72,7 +72,7 @@ const Favorites: React.FC = () => (
               <SmallArrowRow icon={AlertTriangle} title="3 alertas não visualizados" subtitle="Validações críticas pendentes" tone="purple" />
             </Panel>
             <Panel title="Atividade dos favoritos">
-              <div className="flex items-center justify-center gap-6">
+              <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
                 <div className="grid h-32 w-32 place-items-center rounded-full border-[14px] border-sky-500 bg-emerald-500/20 text-center">
                   <span className="text-3xl font-bold text-foreground">28</span>
                 </div>
