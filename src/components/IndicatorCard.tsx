@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TrendingUp, TrendingDown, Minus, FileText, Download, ChevronDown, ChevronUp } from 'lucide-react';
+import { toast } from 'sonner';
 import { Indicator } from '@/data/mockData';
 
 interface IndicatorCardProps {
@@ -73,7 +74,12 @@ export const IndicatorCard: React.FC<IndicatorCardProps> = ({ indicator, highlig
                     </p>
                   </div>
                 </div>
-                <button className="p-2 hover:bg-primary/10 rounded-lg transition-colors group">
+                <button
+                  type="button"
+                  onClick={() => toast.success('Download preparado', { description: `${report.name} foi preparado para baixar.` })}
+                  className="p-2 hover:bg-primary/10 rounded-lg transition-colors group"
+                  aria-label={`Baixar ${report.name}`}
+                >
                   <Download className="w-4 h-4 text-muted-foreground group-hover:text-primary" />
                 </button>
               </div>

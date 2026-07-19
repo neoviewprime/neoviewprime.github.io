@@ -11,6 +11,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'sonner';
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -108,7 +109,11 @@ const Companies: React.FC = () => {
               Gerencie as empresas do grupo Neoenergia
             </p>
           </div>
-          <Button className="gap-2">
+          <Button
+            type="button"
+            onClick={() => toast.info('Nova empresa', { description: 'Fluxo demonstrativo preparado para cadastro de empresa.' })}
+            className="gap-2"
+          >
             <Plus className="w-4 h-4" />
             Nova Empresa
           </Button>
@@ -164,17 +169,33 @@ const Companies: React.FC = () => {
                         <CardTitle className="text-lg">{company.name}</CardTitle>
                       </div>
                       <DropdownMenu>
-                        <DropdownMenuTrigger asChild onClick={(e) => e.stopPropagation()}>
-                          <Button variant="ghost" size="icon">
+                        <DropdownMenuTrigger asChild>
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="icon"
+                            onClick={(event) => event.stopPropagation()}
+                          >
                             <MoreVertical className="w-4 h-4" />
                           </Button>
                         </DropdownMenuTrigger>
                         <DropdownMenuContent align="end">
-                          <DropdownMenuItem>
+                          <DropdownMenuItem
+                            onClick={(event) => {
+                              event.stopPropagation();
+                              toast.info('Editar empresa', { description: `${company.name} foi selecionada para edição.` });
+                            }}
+                          >
                             <Edit className="w-4 h-4 mr-2" />
                             Editar
                           </DropdownMenuItem>
-                          <DropdownMenuItem className="text-destructive">
+                          <DropdownMenuItem
+                            onClick={(event) => {
+                              event.stopPropagation();
+                              toast.error('Exclusão bloqueada', { description: `${company.name} não pode ser excluída nesta demonstração.` });
+                            }}
+                            className="text-destructive"
+                          >
                             <Trash2 className="w-4 h-4 mr-2" />
                             Excluir
                           </DropdownMenuItem>
@@ -219,7 +240,11 @@ const Companies: React.FC = () => {
             <p className="text-muted-foreground mb-4">
               {searchQuery ? 'Tente uma busca diferente' : 'Adicione sua primeira empresa'}
             </p>
-            <Button className="gap-2">
+            <Button
+              type="button"
+              onClick={() => toast.info('Nova empresa', { description: 'Fluxo demonstrativo preparado para cadastro de empresa.' })}
+              className="gap-2"
+            >
               <Plus className="w-4 h-4" />
               Nova Empresa
             </Button>

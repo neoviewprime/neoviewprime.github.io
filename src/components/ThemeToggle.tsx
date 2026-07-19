@@ -13,9 +13,12 @@ export const ThemeToggle = () => {
   if (!mounted) {
     return (
       <button
+        type="button"
+        disabled
         data-theme-toggle="true"
         className="p-2 rounded-lg hover:bg-muted transition-colors"
         aria-label="Toggle theme"
+        aria-busy="true"
       >
         <span className="block h-4 w-4" aria-hidden="true" />
       </button>
@@ -26,6 +29,7 @@ export const ThemeToggle = () => {
 
   return (
     <button
+      type="button"
       onClick={() => setTheme(isDark ? 'light' : 'dark')}
       data-theme-toggle="true"
       className="p-2 rounded-lg hover:bg-muted transition-colors"

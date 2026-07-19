@@ -1,4 +1,4 @@
-import type { ElementType, ReactNode } from 'react';
+import type { ChangeEvent, ElementType, ReactNode } from 'react';
 import {
   ArrowRight,
   BarChart3,
@@ -111,19 +111,32 @@ export function Panel({ title, children, action, className }: { title?: string; 
   );
 }
 
-export function SearchControl({ placeholder = 'Buscar relatórios, indicadores ou usuários...' }: { placeholder?: string }) {
+export function SearchControl({
+  placeholder = 'Buscar relatórios, indicadores ou usuários...',
+  value,
+  onChange,
+}: {
+  placeholder?: string;
+  value?: string;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
+}) {
   return (
     <div className="relative min-w-0">
       <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
-      <input className="neo-control h-12 w-full pl-12 pr-4 text-sm sm:pr-20" placeholder={placeholder} />
+      <input
+        className="neo-control h-12 w-full pl-12 pr-4 text-sm sm:pr-20"
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+      />
       <span className="absolute right-3 top-1/2 hidden -translate-y-1/2 rounded-md bg-white/[0.06] px-2 py-1 text-xs text-muted-foreground sm:inline-flex">⌘ K</span>
     </div>
   );
 }
 
-export function FilterButton({ children = 'Filtros' }: { children?: ReactNode }) {
+export function FilterButton({ children = 'Filtros', active = false, onClick }: { children?: ReactNode; active?: boolean; onClick?: () => void }) {
   return (
-    <button className="neo-action-button min-w-0">
+    <button type="button" onClick={onClick} className={cn('neo-action-button min-w-0', active ? 'border-primary/50 bg-primary/10 text-primary' : '')}>
       <Search className="h-4 w-4" />
       {children}
       <ChevronDown className="h-4 w-4" />
@@ -153,11 +166,27 @@ export function StatusPill({ status }: { status: string }) {
   return <span className={cn('neo-chip border-0', classes)}>{status}</span>;
 }
 
-export function ReportsTable({ approvals = false }: { approvals?: boolean }) {
+export function ReportsTable({
+  approvals = false,
+  rows,
+  onOpenReport,
+  onApproveReport,
+  onRejectReport,
+  onMoreActions,
+}: {
+  approvals?: boolean;
+  rows?: typeof reportRows;
+  onOpenReport?: (name: string) => void;
+  onApproveReport?: (name: string) => void;
+  onRejectReport?: (name: string) => void;
+  onMoreActions?: (name: string) => void;
+}) {
+  const visibleRows = rows ?? reportRows;
+
   return (
     <>
       <div className="space-y-3 md:hidden">
-        {reportRows.map((row, index) => (
+        {visibleRows.map((row, index) => (
           <div key={row.name} className="rounded-xl border border-border/70 bg-background/55 p-4 dark:bg-white/[0.025]">
             <div className="flex min-w-0 items-start gap-3">
               <FileBadge type={row.type} color={row.color} />
@@ -210,7 +239,7 @@ export function ReportsTable({ approvals = false }: { approvals?: boolean }) {
 
             <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
               {approvals ? <StatusPill status="Pendente" /> : <span className="text-xs text-muted-foreground">{index + 2} destinatários</span>}
-              <button className="neo-action-button py-2 text-xs">
+              <button type="button" onClick={() => onOpenReport?.(row.name)} className="neo-action-button py-2 text-xs">
                 {approvals ? 'Analisar' : 'Abrir ações'}
                 <ArrowRight className="h-4 w-4" />
               </button>
@@ -236,7 +265,7 @@ export function ReportsTable({ approvals = false }: { approvals?: boolean }) {
           </tr>
         </thead>
         <tbody>
-          {reportRows.map((row, index) => (
+          {visibleRows.map((row, index) => (
             <tr key={row.name} className="neo-table-row border-b">
               {approvals ? <td className="px-4 py-3"><input type="checkbox" className="rounded border-border bg-transparent" /></td> : null}
               {approvals ? (
@@ -279,12 +308,12 @@ export function ReportsTable({ approvals = false }: { approvals?: boolean }) {
               <td className="px-4 py-3">
                 {approvals ? (
                   <div className="flex gap-2">
-                    <button className="neo-icon-button h-9 w-9 border-emerald-500/40 text-emerald-300"><Check className="h-4 w-4" /></button>
-                    <button className="neo-icon-button h-9 w-9 border-red-500/40 text-red-300"><X className="h-4 w-4" /></button>
-                    <button className="neo-icon-button h-9 w-9"><MoreVertical className="h-4 w-4" /></button>
+                    <button type="button" onClick={() => onApproveReport?.(row.name)} className="neo-icon-button h-9 w-9 border-emerald-500/40 text-emerald-300" aria-label={`Aprovar ${row.name}`}><Check className="h-4 w-4" /></button>
+                    <button type="button" onClick={() => onRejectReport?.(row.name)} className="neo-icon-button h-9 w-9 border-red-500/40 text-red-300" aria-label={`Rejeitar ${row.name}`}><X className="h-4 w-4" /></button>
+                    <button type="button" onClick={() => onMoreActions?.(row.name)} className="neo-icon-button h-9 w-9" aria-label={`Mais ações para ${row.name}`}><MoreVertical className="h-4 w-4" /></button>
                   </div>
                 ) : (
-                  <button className="neo-icon-button h-9 w-9"><MoreVertical className="h-4 w-4" /></button>
+                  <button type="button" onClick={() => onMoreActions?.(row.name)} className="neo-icon-button h-9 w-9" aria-label={`Mais ações para ${row.name}`}><MoreVertical className="h-4 w-4" /></button>
                 )}
               </td>
             </tr>
@@ -375,9 +404,22 @@ function fileBg(color: string) {
   }[color] ?? 'bg-slate-600';
 }
 
-export function SmallArrowRow({ icon: Icon = ChevronRight, title, subtitle, tone = 'green' }: { icon?: ElementType; title: string; subtitle?: string; tone?: 'green' | 'amber' | 'blue' | 'purple' | 'red' }) {
-  return (
-    <button className="flex w-full min-w-0 items-center gap-3 rounded-xl border border-border/60 bg-white/[0.025] p-3 text-left transition-colors hover:bg-white/[0.045]">
+export function SmallArrowRow({
+  icon: Icon = ChevronRight,
+  title,
+  subtitle,
+  tone = 'green',
+  onClick,
+}: {
+  icon?: ElementType;
+  title: string;
+  subtitle?: string;
+  tone?: 'green' | 'amber' | 'blue' | 'purple' | 'red';
+  onClick?: () => void;
+}) {
+  const className = 'flex w-full min-w-0 items-center gap-3 rounded-xl border border-border/60 bg-white/[0.025] p-3 text-left transition-colors hover:bg-white/[0.045]';
+  const content = (
+    <>
       <div className={cn('flex h-9 w-9 shrink-0 items-center justify-center rounded-full', toneBg(tone))}>
         <Icon className="h-4 w-4" />
       </div>
@@ -386,24 +428,37 @@ export function SmallArrowRow({ icon: Icon = ChevronRight, title, subtitle, tone
         {subtitle ? <p className="mt-0.5 break-words text-xs text-muted-foreground">{subtitle}</p> : null}
       </div>
       <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground" />
+    </>
+  );
+
+  return onClick ? (
+    <button type="button" onClick={onClick} className={className}>
+      {content}
     </button>
+  ) : (
+    <div className={className}>{content}</div>
   );
 }
 
-export function CompanySelect() {
+export function CompanySelect({ onClick }: { onClick?: () => void }) {
   return (
-    <button className="neo-action-button min-w-0 justify-between sm:min-w-[260px]">
+    <button type="button" onClick={onClick} className="neo-action-button min-w-0 justify-between sm:min-w-[260px]">
       <span className="flex min-w-0 items-center gap-2"><Building2 className="h-5 w-5 shrink-0 text-primary" /> <span className="truncate">Neoenergia Coelba</span></span>
       <ChevronDown className="h-4 w-4" />
     </button>
   );
 }
 
-export function QuickTabs({ items, active = 0 }: { items: string[]; active?: number }) {
+export function QuickTabs({ items, active = 0, onChange }: { items: string[]; active?: number; onChange?: (index: number, item: string) => void }) {
   return (
     <div className="flex min-w-0 flex-wrap gap-2">
       {items.map((item, index) => (
-        <button key={item} className={cn('min-w-0 max-w-full truncate rounded-lg border px-4 py-2 text-sm transition-colors', index === active ? 'border-primary/30 bg-primary text-primary-foreground' : 'border-border/70 bg-white/[0.035] text-muted-foreground hover:text-foreground')}>
+        <button
+          key={item}
+          type="button"
+          onClick={() => onChange?.(index, item)}
+          className={cn('min-w-0 max-w-full truncate rounded-lg border px-4 py-2 text-sm transition-colors', index === active ? 'border-primary/30 bg-primary text-primary-foreground' : 'border-border/70 bg-white/[0.035] text-muted-foreground hover:text-foreground')}
+        >
           {item}
         </button>
       ))}

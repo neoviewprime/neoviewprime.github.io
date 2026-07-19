@@ -244,7 +244,11 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle }) => {
               initial={false}
               animate={isOpen ? 'show' : 'hide'}
             >
-              <button className="flex w-full items-center gap-3 px-3 py-3 text-left text-sidebar-foreground">
+              <button
+                type="button"
+                onClick={() => navigate('/workspace')}
+                className="flex w-full items-center gap-3 px-3 py-3 text-left text-sidebar-foreground transition-colors hover:bg-sidebar-accent"
+              >
                 <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sidebar-primary/15">
                   <Building2 className="h-4 w-4" />
                 </div>

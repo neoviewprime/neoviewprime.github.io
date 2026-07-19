@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Download, Share2, Smartphone, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -21,17 +22,19 @@ const isIosDevice = () => {
 };
 
 export function PwaInstallPrompt() {
+  const location = useLocation();
   const isMobile = useMediaQuery('(max-width: 767px)');
   const [isOpen, setIsOpen] = useState(false);
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [isInstalled, setIsInstalled] = useState(false);
   const [isInstalling, setIsInstalling] = useState(false);
+  const isPublicRoute = useMemo(() => ['/', '/landing', '/login'].includes(location.pathname), [location.pathname]);
 
   const canShowPrompt = useMemo(() => {
     if (typeof window === 'undefined') return false;
     const hasSeenPrompt = window.localStorage.getItem(PWA_PROMPT_STORAGE_KEY) === 'true';
-    return isMobile && !hasSeenPrompt && !isInstalled && !isStandaloneMode();
-  }, [isInstalled, isMobile]);
+    return isPublicRoute && isMobile && !hasSeenPrompt && !isInstalled && !isStandaloneMode();
+  }, [isInstalled, isMobile, isPublicRoute]);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -70,6 +73,12 @@ export function PwaInstallPrompt() {
     return () => window.clearTimeout(timer);
   }, [canShowPrompt]);
 
+  useEffect(() => {
+    if (!isPublicRoute) {
+      setIsOpen(false);
+    }
+  }, [isPublicRoute]);
+
   const closePrompt = () => {
     setIsOpen(false);
   };
@@ -90,7 +99,7 @@ export function PwaInstallPrompt() {
     closePrompt();
   };
 
-  if (!isOpen || !isMobile || isInstalled) {
+  if (!isOpen || !isMobile || isInstalled || !isPublicRoute) {
     return null;
   }
 
