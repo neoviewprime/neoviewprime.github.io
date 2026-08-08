@@ -3,19 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
 import {
   ArrowRight,
-  BarChart3,
   CheckSquare,
   Clock3,
   FileText,
   Lightbulb,
-  Save,
   TrendingUp,
-  Users,
 } from 'lucide-react';
 import { FloatingAssistant } from '@/components/FloatingAssistant';
 import {
   CompanySelect,
-  DecisionList,
   MiniChart,
   PageTitle,
   Panel,
@@ -54,18 +50,16 @@ const Workspace: React.FC = () => {
 
           <PageTitle
             title="Bem-vindo, João 👋"
-            description="Aqui está o panorama executivo da Neoenergia Coelba para apoiar suas decisões."
+            description="Priorize pendências, abra relatórios importantes e acompanhe a saúde das aprovações."
           />
 
-          <div className="mb-4 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+          <div className="mb-4 grid gap-4 md:grid-cols-3">
             <StatCard icon={CheckSquare} label="Relatórios aprovados" value="44" trend="+10% vs mês anterior ↗" tone="green" />
             <StatCard icon={Clock3} label="Pendências críticas" value="2" trend="-20% vs mês anterior ↘" tone="amber" />
-            <StatCard icon={Save} label="Relatórios salvos" value="18" trend="+8% vs mês anterior ↗" tone="blue" />
-            <StatCard icon={BarChart3} label="Gráficos criados" value="36" trend="+15% vs mês anterior ↗" tone="purple" />
             <StatCard icon={Clock3} label="Tempo médio de aprovação" value="1,8h" trend="-0,6h vs mês anterior ↘" tone="blue" />
           </div>
 
-          <div className="grid gap-4 xl:grid-cols-[1.15fr_1.18fr_0.88fr]">
+          <div className="grid gap-4 xl:grid-cols-[minmax(0,1fr)_380px]">
             <Panel title="Prioridades da sua fila" action={<button type="button" onClick={() => navigate('/approvals')} className="text-sm font-medium text-emerald-400">Ver fila completa</button>}>
               <div className="space-y-1">
                 {[
@@ -87,24 +81,12 @@ const Workspace: React.FC = () => {
               </div>
               <div className="mt-4 flex flex-col gap-3 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
                 <span>Atualizado agora há poucos minutos</span>
-                <button type="button" onClick={() => navigate('/approvals')} className="neo-action-button py-2 text-xs"><Users className="h-4 w-4" /> Atribuir delegações</button>
+                <button type="button" onClick={() => navigate('/approvals')} className="neo-action-button py-2 text-xs">Ir para validações <ArrowRight className="h-4 w-4" /></button>
               </div>
             </Panel>
 
-            <Panel title="Aprovações nos últimos 6 meses" action={<button type="button" onClick={() => setPeriod(period === 'Últimos 6 meses' ? 'Últimos 30 dias' : 'Últimos 6 meses')} className="neo-action-button py-2 text-xs">{period}</button>}>
-              <MiniChart />
-              <p className="mt-3 text-emerald-300">↗ +12% de aprovações no período</p>
-            </Panel>
-
-            <Panel title="Decisões recentes" action={<button type="button" onClick={() => navigate('/approvals')} className="text-sm font-medium text-emerald-400">Ver todas</button>}>
-              <DecisionList />
-              <button type="button" onClick={() => navigate('/approvals')} className="neo-action-button mt-3">Ir para validações <ArrowRight className="h-4 w-4" /></button>
-            </Panel>
-          </div>
-
-          <div className="mt-4 grid gap-4 xl:grid-cols-[0.92fr_0.98fr_1fr]">
-            <Panel title="Relatórios de destaque" action={<button type="button" onClick={() => navigate('/reports')} className="text-sm font-medium text-emerald-400">Ver todos</button>}>
-              <div className="flex flex-col gap-4 rounded-xl border border-border/60 bg-white/[0.025] p-4 sm:flex-row sm:items-center">
+            <Panel title="Relatório em foco" action={<button type="button" onClick={() => navigate('/reports')} className="text-sm font-medium text-emerald-400">Ver todos</button>}>
+              <div className="flex flex-col gap-4 rounded-xl border border-border/60 bg-background/55 p-4 dark:bg-white/[0.025]">
                 <div className="flex h-24 w-full items-center justify-center rounded-md bg-gradient-to-br from-white to-emerald-500 p-2 text-center text-[9px] font-bold leading-3 text-emerald-950 sm:w-20 sm:shrink-0">RELATÓRIO SLA COMERCIAL Q4</div>
                 <div className="min-w-0 flex-1">
                   <p className="break-words font-medium text-foreground">Relatório SLA Comercial Q4 2024.pdf</p>
@@ -114,21 +96,19 @@ const Workspace: React.FC = () => {
                 </div>
               </div>
             </Panel>
+          </div>
 
-            <Panel title="Atividade compartilhada" action={<button type="button" onClick={() => navigate('/reports')} className="text-sm font-medium text-emerald-400">Ver tudo</button>}>
+          <div className="mt-4 grid gap-4 xl:grid-cols-[minmax(0,1fr)_380px]">
+            <Panel title="Atividade recente">
               <div className="space-y-2">
                 <SmallArrowRow onClick={() => openReport('Relatório Recuperação Energia 2024.pdf')} title="Maria Silva compartilhou um relatório com você" subtitle="Relatório Recuperação Energia 2024.pdf" tone="green" />
                 <SmallArrowRow onClick={() => openReport('Dashboard Operacional Dezembro.pdf')} title="Carlos Lima comentou no relatório" subtitle="Dashboard Operacional Dezembro.pdf" tone="amber" />
-                <SmallArrowRow onClick={() => navigate('/indicators')} title="Ana Costa compartilhou um gráfico com você" subtitle="Gráfico: Inadimplência por Região" tone="blue" />
               </div>
             </Panel>
 
-            <Panel title="Insights rápidos">
-              <div className="space-y-2">
-                <SmallArrowRow onClick={() => navigate('/indicators')} icon={TrendingUp} title="Crescimento nas aprovações" subtitle="As aprovações aumentaram 12% nos últimos 6 meses." tone="green" />
-                <SmallArrowRow onClick={() => navigate('/indicators')} icon={Clock3} title="Redução no tempo médio" subtitle="O tempo médio de aprovação caiu 0,6h vs mês anterior." tone="purple" />
-                <SmallArrowRow onClick={() => toast.info('Insight salvo', { description: 'Esse insight foi marcado para acompanhamento no workspace.' })} icon={Lightbulb} title="Mais colaboração" subtitle="A atividade compartilhada aumentou 18% este mês." tone="amber" />
-              </div>
+            <Panel title="Tendência de aprovações" action={<button type="button" onClick={() => setPeriod(period === 'Últimos 6 meses' ? 'Últimos 30 dias' : 'Últimos 6 meses')} className="neo-action-button py-2 text-xs">{period}</button>}>
+              <MiniChart />
+              <SmallArrowRow onClick={() => navigate('/indicators')} icon={TrendingUp} title="+12% de aprovações" subtitle="Abra a análise para ver indicadores relacionados." tone="green" />
             </Panel>
           </div>
 

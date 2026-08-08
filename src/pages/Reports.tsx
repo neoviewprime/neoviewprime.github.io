@@ -1,9 +1,9 @@
 import React, { useMemo, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { toast } from 'sonner';
-import { ArrowRight, BarChart3, Calendar, CheckCircle2, Clock3, Eye, FileText, MessageCircle, Send, Upload, XCircle } from 'lucide-react';
+import { ArrowRight, BarChart3, Calendar, CheckCircle2, Clock3, Eye, FileText, MessageCircle, Upload } from 'lucide-react';
 import { FloatingAssistant } from '@/components/FloatingAssistant';
-import { DecisionList, FilterButton, PageTitle, Panel, reportRows, ReportsTable, SearchControl, SmallArrowRow, StatCard } from '@/components/neo/NeoReferenceUI';
+import { FilterButton, PageTitle, Panel, reportRows, ReportsTable, SearchControl, SmallArrowRow, StatCard } from '@/components/neo/NeoReferenceUI';
 import { reportDetailPath } from '@/lib/reportRouting';
 
 const reportTabs = ['Todos', 'Rascunhos 12', 'Pendentes 18', 'Aprovados 86', 'Rejeitados 6'];
@@ -47,18 +47,16 @@ const Reports: React.FC = () => {
 
           <div className="grid min-w-0 gap-4 xl:grid-cols-[minmax(0,1fr)_320px]">
             <div className="min-w-0 space-y-4">
-              <div className="grid min-w-0 gap-4 md:grid-cols-2 xl:grid-cols-5">
+              <div className="grid min-w-0 gap-4 md:grid-cols-3">
                 <StatCard icon={FileText} label="Total" value="128" trend="+12% vs mês anterior ↗" tone="green" />
                 <StatCard icon={Clock3} label="Pendentes" value="18" trend="+8% vs mês anterior ↘" tone="amber" />
                 <StatCard icon={CheckCircle2} label="Aprovados" value="86" trend="+15% vs mês anterior ↗" tone="green" />
-                <StatCard icon={XCircle} label="Rejeitados" value="6" trend="-25% vs mês anterior ↘" tone="red" />
-                <StatCard icon={BarChart3} label="Engajamento médio" value="78%" trend="+9 p.p. vs mês anterior ↘" tone="purple" />
               </div>
 
               <Panel>
                 <div className="mb-4 grid gap-3 lg:grid-cols-[minmax(0,1fr)_auto_auto_auto]">
                   <SearchControl placeholder="Buscar por nome, destino ou responsável..." value={query} onChange={(event) => setQuery(event.target.value)} />
-                  <button type="button" onClick={() => toast.info('Período fixado para a demonstração', { description: '01/05/2024 a 31/05/2024 aplicado aos relatórios.' })} className="neo-action-button"><Calendar className="h-4 w-4" /> 01/05/2024 - 31/05/2024</button>
+                  <button type="button" onClick={() => toast.info('Período aplicado', { description: '01/05/2024 a 31/05/2024 aplicado aos relatórios.' })} className="neo-action-button"><Calendar className="h-4 w-4" /> Maio/2024</button>
                   <FilterButton active={filtersOpen} onClick={() => setFiltersOpen((current) => !current)} />
                   <button type="button" onClick={() => navigate('/indicators')} className="neo-icon-button" aria-label="Abrir estatísticas"><BarChart3 className="h-4 w-4" /></button>
                 </div>
@@ -124,7 +122,7 @@ const Reports: React.FC = () => {
             </div>
 
             <aside className="min-w-0 space-y-4">
-              <Panel title="Relatórios em destaque" action={<button type="button" onClick={() => setActiveTab(3)} className="text-sm font-medium text-emerald-400">Ver todos</button>}>
+              <Panel title="Em destaque" action={<button type="button" onClick={() => setActiveTab(3)} className="text-sm font-medium text-emerald-400">Ver aprovados</button>}>
                 <div className="rounded-xl border border-border/60 bg-white/[0.025] p-4 text-center">
                   <div className="mx-auto flex h-28 w-20 items-center justify-center rounded-md bg-gradient-to-br from-white to-emerald-500 p-2 text-[9px] font-bold leading-3 text-emerald-950">
                     RELATÓRIO SLA COMERCIAL Q4
@@ -140,17 +138,11 @@ const Reports: React.FC = () => {
                 </div>
               </Panel>
 
-              <Panel title="Atividade recente" action={<button type="button" onClick={() => toast.info('Atividades recentes sincronizadas', { description: 'Exibindo os últimos eventos de visualização, comentário e aprovação.' })} className="text-sm font-medium text-emerald-400">Ver tudo</button>}>
+              <Panel title="Atividade recente">
                 <div className="space-y-2">
                   <SmallArrowRow onClick={() => openReport('Relatório SLA Comercial Q4 2024.pdf')} title="Maria Silva visualizou um relatório" subtitle="Relatório SLA Comercial Q4 2024.pdf" tone="green" />
                   <SmallArrowRow onClick={() => openReport('Dashboard Operacional Dezembro.pdf')} title="Carlos Lima comentou" subtitle="Dashboard Operacional Dezembro.pdf" tone="amber" />
-                  <SmallArrowRow onClick={() => openReport('Estratégias Recuperação de Energia 2024.pdf')} title="Ana Costa aprovou um relatório" subtitle="Estratégias Recuperação de Energia 2024.pdf" tone="purple" />
-                  <SmallArrowRow onClick={() => navigate('/approvals')} icon={Send} title="Relatório enviado para validação" subtitle="Comparativo Geração x Consumo 2024.xlsx" tone="green" />
                 </div>
-              </Panel>
-
-              <Panel>
-                <DecisionList />
               </Panel>
             </aside>
           </div>

@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { toast } from 'sonner';
-import { ArrowRight, Book, Bot, CheckCircle2, FileText, Headphones, HelpCircle, LifeBuoy, Mail, Search, Video } from 'lucide-react';
+import { ArrowRight, Bot, CheckCircle2, Headphones, Mail } from 'lucide-react';
 import { FloatingAssistant } from '@/components/FloatingAssistant';
 import { PageTitle, Panel, SearchControl, SmallArrowRow } from '@/components/neo/NeoReferenceUI';
 
@@ -50,17 +50,8 @@ const Help: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid gap-4 xl:grid-cols-[1fr_420px]">
+        <div className="grid gap-4 xl:grid-cols-[1fr_360px]">
           <div className="space-y-4">
-            <Panel title="Acesso rápido">
-              <div className="grid gap-4 md:grid-cols-4">
-                <SmallArrowRow onClick={() => toast.info('Guia aberto', { description: 'Passo 1: busque relatórios; passo 2: favorite; passo 3: valide quando necessário.' })} icon={FileText} title="Guia de início rápido" subtitle="Aprenda o essencial em 5 minutos" tone="green" />
-                <SmallArrowRow onClick={() => toast.info('Manual do usuário', { description: 'Manual demonstrativo carregado com navegação, relatórios e aprovações.' })} icon={Book} title="Manual do usuário" subtitle="Documentação completa e detalhada" tone="blue" />
-                <SmallArrowRow onClick={() => toast.info('Tutoriais em vídeo', { description: 'Lista de vídeos da demonstração preparada para treinamento.' })} icon={Video} title="Tutoriais em vídeo" subtitle="Aprenda visualmente passo a passo" tone="purple" />
-                <SmallArrowRow onClick={() => toast.info('Dica rápida', { description: 'Use a IRIS para encontrar relatórios sem lembrar o nome exato.' })} icon={HelpCircle} title="Dicas e truques" subtitle="Seja mais produtivo no dia a dia" tone="amber" />
-              </div>
-            </Panel>
-
             <Panel title="Perguntas frequentes" action={<button type="button" onClick={() => setQuery('')} className="text-sm text-muted-foreground">Ver todas as perguntas ›</button>}>
               {filteredFaqs.map(([q, answer]) => (
                 <button type="button" onClick={() => setOpenQuestion(openQuestion === q ? null : q)} key={q} className="w-full border-b border-border/60 px-4 py-3 text-left text-sm text-foreground last:border-0">
@@ -84,8 +75,8 @@ const Help: React.FC = () => {
                 </div>
               </div>
               <button type="button" onClick={() => setAssistantKey((key) => key + 1)} className="neo-action-button mt-4 w-full justify-between border-primary/50 text-primary">Pergunte algo para a IRIS <ArrowRight className="h-4 w-4" /></button>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {['Como criar um relatório?', 'Como aprovar um relatório?', 'Quais relatórios foram acessados hoje?'].map((item) => (
+              <div className="mt-4 grid gap-2">
+                {['Como aprovar um relatório?', 'Compare DEC 2023 e 2024'].map((item) => (
                   <button type="button" onClick={() => {
                     setAssistantKey((key) => key + 1);
                     toast.info('Sugestão enviada para a IRIS', { description: item });

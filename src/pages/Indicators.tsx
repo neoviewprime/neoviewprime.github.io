@@ -8,8 +8,6 @@ import {
   CheckCircle2,
   FileText,
   Lightbulb,
-  LineChart,
-  Link2,
   Search,
   Sparkles,
   Target,
@@ -20,7 +18,6 @@ import { FloatingAssistant } from '@/components/FloatingAssistant';
 import { PageTitle, Panel, QuickTabs, StatCard } from '@/components/neo/NeoReferenceUI';
 import {
   buildIndicatorAssessment,
-  findMockIndicator,
   formatValue,
   getIndicatorProfileById,
   indicatorProfiles,
@@ -37,7 +34,6 @@ const Indicators: React.FC = () => {
   const [query, setQuery] = useState('');
 
   const profile = getIndicatorProfileById(selectedProfileId) ?? indicatorProfiles[0];
-  const currentIndicator = findMockIndicator(profile.id);
   const assessment = useMemo(() => buildIndicatorAssessment(profile, [fromYear, toYear]), [profile, fromYear, toYear]);
   const deltaIcon = assessment.delta.improved ? CheckCircle2 : profile.direction === 'lower-is-better' ? TrendingUp : TrendingDown;
   const deltaTone = assessment.delta.improved ? 'green' : 'amber';
@@ -102,30 +98,19 @@ const Indicators: React.FC = () => {
           />
 
           <section className="neo-ai-hero mb-4">
-            <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_380px]">
-              <div>
-                <div className="flex flex-wrap items-center gap-2">
-                  <span className="neo-chip border-primary/30 bg-primary/10 text-primary">
-                    <Sparkles className="h-3.5 w-3.5" />
-                    Série histórica 2022-2026
-                  </span>
-                  <span className="neo-chip">Meta, tendência e fonte</span>
-                </div>
-                <h2 className="mt-4 max-w-4xl text-2xl font-semibold text-foreground sm:text-3xl">
-                  {profile.acronym}: {profile.businessQuestion}
-                </h2>
-                <p className="mt-3 max-w-3xl text-sm leading-6 text-muted-foreground">
-                  {assessment.verdict} A leitura correta é: {profile.direction === 'lower-is-better' ? 'quanto menor, melhor' : 'quanto maior, melhor'}.
-                </p>
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+              <div className="min-w-0">
+                <span className="neo-chip border-primary/30 bg-primary/10 text-primary">
+                  <Sparkles className="h-3.5 w-3.5" />
+                  Série histórica 2022-2026
+                </span>
+                <h2 className="mt-4 max-w-4xl text-2xl font-semibold text-foreground sm:text-3xl">{profile.acronym}: {profile.businessQuestion}</h2>
+                <p className="mt-3 max-w-3xl text-sm leading-6 text-muted-foreground">{assessment.verdict}</p>
               </div>
-              <div className="rounded-2xl border border-primary/25 bg-background/70 p-4 dark:bg-white/[0.04]">
-                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Prompt sugerido</p>
-                <p className="mt-2 text-sm font-medium text-foreground">{prompt}</p>
-                <button type="button" onClick={openIrisPrompt} className="neo-action-button mt-4 w-full">
-                  <Link2 className="h-4 w-4" />
-                  Copiar pergunta
-                </button>
-              </div>
+              <button type="button" onClick={openIrisPrompt} className="neo-action-button shrink-0">
+                <Bot className="h-4 w-4" />
+                Perguntar esta comparação
+              </button>
             </div>
           </section>
 
@@ -170,7 +155,7 @@ const Indicators: React.FC = () => {
             </aside>
 
             <main className="space-y-4">
-              <div className="grid gap-4 md:grid-cols-3">
+              <div className="grid gap-4 md:grid-cols-2">
                 <StatCard
                   icon={deltaIcon}
                   label={`${fromYear} → ${toYear}`}
@@ -184,13 +169,6 @@ const Indicators: React.FC = () => {
                   value={formatValue(profile, assessment.latest.target)}
                   trend={assessment.targetVerdict}
                   tone={assessment.targetGap >= 0 ? 'green' : 'amber'}
-                />
-                <StatCard
-                  icon={LineChart}
-                  label="Valor atual"
-                  value={currentIndicator ? `${currentIndicator.value} ${currentIndicator.unit}` : formatValue(profile, assessment.latest.value)}
-                  trend={currentIndicator?.description ?? profile.name}
-                  tone="blue"
                 />
               </div>
 
@@ -228,17 +206,12 @@ const Indicators: React.FC = () => {
                 </div>
               </Panel>
 
-              <div className="grid gap-4 lg:grid-cols-2">
+              <div className="grid gap-4 lg:grid-cols-[minmax(0,1fr)_360px]">
                 <Panel title="O indicador faz sentido?">
-                  <div className="space-y-3 text-sm">
-                    <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4 text-emerald-100">
-                      <p className="font-semibold text-emerald-200">Use para</p>
-                      <p className="mt-2 text-emerald-50/85">{profile.goodFor.join(', ')}.</p>
-                    </div>
-                    <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 p-4 text-amber-100">
-                      <p className="font-semibold text-amber-200">Cuidado</p>
-                      <p className="mt-2 text-amber-50/85">{profile.avoidFor.join(', ')}.</p>
-                    </div>
+                  <div className="space-y-4 text-sm">
+                    <p className="leading-6 text-muted-foreground">
+                      Use para {profile.goodFor.slice(0, 3).join(', ')}. Evite analisar sozinho quando a pergunta depender de {profile.avoidFor[0]}.
+                    </p>
                     <div className="flex flex-wrap gap-2">
                       {profile.related.map((item) => (
                         <span key={item} className="neo-chip">
