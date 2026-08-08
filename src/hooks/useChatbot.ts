@@ -2,6 +2,7 @@
 import type { ChatMessage, ChatPageContext, ChatSession, SearchSource } from '@/types/backend';
 import { API_URL } from '@/lib/api';
 import { buildDemoChatAnswer } from '@/lib/demoApi';
+import { buildIrisWelcomeMessage } from '@/lib/iris/prompts';
 
 const getAuthHeaders = (): HeadersInit => {
   const token = typeof window !== 'undefined' ? window.localStorage.getItem('neoview_token') : null;
@@ -30,24 +31,7 @@ interface UseChatbotReturn {
 }
 
 const buildWelcomeMessage = (pageContext?: ChatPageContext | null): string => {
-  if (!pageContext) {
-    return 'Ola. Sou a IRIS. Posso analisar indicadores, comparar anos, cruzar empresas, localizar relatorios e transformar perguntas soltas em uma visao de decisao. Experimente perguntar: "como esta o DEC em 2024?", "compare DEC e FEC" ou "qual empresa esta melhor em SLA?".';
-  }
-
-  const pageOpeners: Partial<Record<ChatPageContext['page'], string>> = {
-    home: 'Ola. Estou na visao inicial com voce. Posso montar uma leitura executiva, apontar indicadores prioritarios ou comparar empresas antes de voce entrar nos detalhes.',
-    workspace: 'Estou considerando a hierarquia atual. Posso filtrar por empresa, area, projeto, indicador ou relatorio e te ajudar a chegar na fonte certa.',
-    reports: 'Estou olhando como curadora de relatorios. Posso encontrar a melhor fonte, resumir o que ela sustenta e sugerir comparacoes por periodo ou empresa.',
-    indicators: 'Estou em modo analise de indicadores. Posso avaliar tendencia, meta, aderencia da pergunta, comparacao anual, cruzamento entre KPIs e diferenca entre empresas.',
-    approvals: 'Estou olhando pelo angulo de governanca. Posso separar pendencias, riscos, relatorios que precisam de decisao e evidencias para aprovar ou questionar.',
-    favorites: 'Estou nos seus acessos rapidos. Posso recuperar itens salvos e sugerir acompanhamentos recorrentes por indicador ou area.',
-    settings: 'Estou no apoio de configuracao. Posso guiar preferencias, perfil, tema, notificacoes e ajustes de conta.',
-    help: 'Estou em modo orientacao. Posso explicar fluxos, indicar onde clicar e traduzir duvidas em caminhos dentro do NeoView.',
-    register: 'Estou na area de cadastro. Posso orientar perfil, hierarquia, aprovador e permissao adequada para cada usuario.'
-  };
-
-  const hints = (pageContext.hints ?? []).slice(0, 2).join(' ');
-  return [pageOpeners[pageContext.page] ?? `Ola. Estou considerando a tela ${pageContext.title}.`, hints].filter(Boolean).join(' ');
+  return buildIrisWelcomeMessage(pageContext);
 };
 
 interface ApiSource {

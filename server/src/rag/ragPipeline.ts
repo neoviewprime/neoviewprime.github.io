@@ -9,6 +9,7 @@ import { reportCatalogService } from "../services/reportCatalogService";
 import { CatalogJsonDoc, reportCatalogFileQueryService } from "../services/reportCatalogFileQueryService";
 import { chatQueryInterpreter } from "../services/chatQueryInterpreter";
 import { canUserAccessHierarchy, userHasGlobalCatalogAccess } from "../services/reportVisibilityService";
+import { IRIS_SYSTEM_PROMPT } from "./irisSystemPrompt";
 
 const normalize = (text: string): string =>
   text
@@ -357,8 +358,7 @@ const generateWithOllama = async (prompt: string): Promise<string | null> => {
         messages: [
           {
             role: "system",
-            content:
-              "Voce e a IRIS, assistente corporativa de analise de relatorios. Responda em portugues com tom consultivo e executivo, comece pela principal conclusao, priorize clareza, nao invente dados e so use o que estiver sustentado pelas fontes."
+            content: IRIS_SYSTEM_PROMPT
           },
           { role: "user", content: prompt }
         ],
@@ -390,8 +390,7 @@ const generateWithOpenAi = async (prompt: string): Promise<string | null> => {
         messages: [
           {
             role: "system",
-            content:
-              "Voce e a IRIS, assistente corporativa de analise de relatorios. Responda em portugues com tom consultivo e executivo, comece pela principal conclusao, priorize clareza, nao invente dados e so use o que estiver sustentado pelas fontes."
+            content: IRIS_SYSTEM_PROMPT
           },
           {
             role: "user",

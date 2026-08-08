@@ -8,7 +8,10 @@ import {
   indicatorProfiles,
   scoreIndicatorFit,
 } from '@/lib/indicatorIntelligence';
-import type { UserManagementOptions } from '@/types/backend';
+import { irisMemory } from '@/lib/iris/memory';
+import { runIrisOrchestrator } from '@/lib/iris/orchestrator';
+import type { IrisAnswer, IrisTool, IrisToolContext } from '@/lib/iris/types';
+import type { ChatPageContext, UserManagementOptions } from '@/types/backend';
 
 type CatalogEntry = {
   id: string;
@@ -1081,132 +1084,70 @@ const buildIndicatorIntelligenceAnswer = (question: string) => {
   };
 };
 
-export const buildDemoChatAnswer = (question: string, pageContext?: { title?: string; summary?: string; hints?: string[] } | null) => {
-  const frame = buildNeuralQueryFrame(question, pageContext);
-  const intent = detectChatIntent(question);
-  const matches = buildSemanticMatches(question, pageContext);
+const buildSemanticIrisAnswer = (
+  context: IrisToolContext,
+  intent: ChatIntent,
+  matches = buildSemanticMatches(context.question, context.pageContext)
+): IrisAnswer => {
   const topMatches = matches.slice(0, 6);
   const total = matches.length;
   const confidence = topMatches[0] ? Math.min(0.98, Math.max(0.35, topMatches[0].score / 24)) : 0.25;
-  const normalizedQuestion = normalizeText(question);
-  const questionTokens = tokenize(question);
-  const isNavigationLike = hasAny(normalizedQuestion, questionTokens, ['onde', 'abrir', 'acessar', 'entrar', 'ir para', 'caminho', 'tela', 'menu']);
-  const isRouteIntent = ['workspace', 'favoritos', 'ajuda', 'configuracoes', 'administracao'].includes(intent);
-
-  if (intent === 'saudacao') {
-    return {
-      answer: 'Ola. Sou a IRIS. Posso buscar relatorios, indicadores, metricas e pendencias no catalogo do NeoView. Me diga uma empresa, sigla ou tema para eu começar.',
-      sources: [],
-      totalSources: 0,
-      intent,
-      confidence: 0.9,
-      retrievalMode: 'intencao-direta'
-    };
-  }
-
-  if (intent === 'agradecimento') {
-    return {
-      answer: 'Por nada. Quando quiser, posso refinar por empresa, indicador, periodo, gerencia, unidade ou status do relatorio.',
-      sources: [],
-      totalSources: 0,
-      intent,
-      confidence: 0.9,
-      retrievalMode: 'intencao-direta'
-    };
-  }
-
-  if (intent === 'capacidades') {
-    return {
-      answer: buildCapabilitiesAnswer(),
-      sources: [],
-      totalSources: 0,
-      intent,
-      confidence: 0.95,
-      retrievalMode: 'intencao-direta'
-    };
-  }
-
-  if (intent === 'aprendizado') {
-    return {
-      answer: buildLearningAnswer(),
-      sources: [],
-      totalSources: 0,
-      intent,
-      confidence: 0.95,
-      retrievalMode: 'aprendizado-local'
-    };
-  }
-
-  const indicatorAnswer = buildIndicatorIntelligenceAnswer(question);
-  if (indicatorAnswer && (intent === 'indicadores' || intent === 'comparacao' || intent === 'metricas')) {
-    return indicatorAnswer;
-  }
-
-  if (frame.wantsCompanyComparison && frame.indicators.length > 0) {
-    return buildCompanyComparisonAnswer(frame);
-  }
-
-  const directAnswer = buildDirectIntentAnswer(intent, pageContext);
-  if (directAnswer && (topMatches.length === 0 || isNavigationLike || isRouteIntent)) {
-    return {
-      answer: directAnswer,
-      sources: [],
-      totalSources: 0,
-      intent,
-      confidence: 0.86,
-      retrievalMode: 'intencao-direta'
-    };
-  }
 
   if (topMatches.length === 0) {
-    const contextHint = pageContext?.title ? ` Estou considerando tambem a tela "${pageContext.title}".` : '';
+    const contextHint = context.pageContext?.title ? ` Estou considerando também a tela "${context.pageContext.title}".` : '';
     return {
       answer: [
-        `Nao encontrei fontes fortes para "${question}".${contextHint}`,
-        'Tente informar empresa, indicador, sigla, gerencia, projeto ou parte do nome do relatorio.',
-        'Exemplos: "relatorios de DEC da Coelba", "metricas de FEC", "pendencias de aprovacao", "onde vejo favoritos" ou "indicadores da Pernambuco".'
+        `Não encontrei fontes fortes para "${context.question}".${contextHint}`,
+        'Para eu ser mais precisa, informe empresa, indicador, período, gerência, projeto ou parte do nome do relatório.',
+        'Exemplos: "relatórios de DEC da Coelba", "métricas de FEC", "pendências de aprovação" ou "compare empresas em SLA 2024".'
       ].join('\n'),
       sources: [],
       totalSources: 0,
       intent,
       confidence,
-      retrievalMode: 'semantica-local'
+      retrievalMode: 'semantica-local-sem-fonte'
     };
   }
 
   const distribution = new Map<string, number>();
   topMatches.forEach(({ entry }) => distribution.set(entry.company_name, (distribution.get(entry.company_name) ?? 0) + 1));
   const distributionText = Array.from(distribution.entries()).map(([company, count]) => `${company}: ${count}`).join(' | ');
+  const memoryHint = irisMemory.summarizeRelevant(context.perception);
   const lines = topMatches.map(({ entry, score }, index) => {
     const metrics = ensureMetrics(entry);
     const metricText = intent === 'metricas'
-      ? ` | metricas: ${metrics.views} views, ${metrics.likes} curtidas, ${metrics.comments} comentarios, ${metrics.shares} compartilhamentos`
+      ? ` | métricas: ${metrics.views} views, ${metrics.likes} curtidas, ${metrics.comments} comentários, ${metrics.shares} compartilhamentos`
       : '';
-    return `- ${index + 1}. ${entry.report_name} | ${entry.company_name} | ${entry.indicator_names.join(', ') || 'sem indicadores'} | score ${score.toFixed(1)}${metricText}`;
+    return `- ${index + 1}. ${entry.report_name} | ${entry.company_name} | ${entry.indicator_names.join(', ') || 'sem indicadores'} | aderência ${score.toFixed(1)}${metricText}`;
   });
 
   const intentLead: Record<string, string> = {
-    aprovacoes: 'Para decidir com seguranca, eu olharia primeiro os relatorios com pendencia e o historico de aprovacao.',
-    favoritos: 'Nos favoritos, o melhor caminho e recuperar o que voce acompanha com frequencia e cruzar com o indicador atual.',
-    workspace: 'Para uma visao executiva, eu juntaria empresa, area, indicador e relatorio fonte antes de abrir detalhes.',
-    metricas: 'A leitura aqui combina engajamento do relatorio com indicadores operacionais.',
-    comparacao: 'A comparacao fica mais clara separando empresa, periodo e indicador antes de concluir.',
-    indicadores: 'O melhor caminho e ligar a sigla ao indicador, ao periodo e aos relatorios que sustentam a leitura.',
-    relatorios: 'Encontrei documentos que podem sustentar sua analise e deixei os mais aderentes no topo.',
-    administracao: 'Para administracao, o ponto central e confirmar perfil, permissao e hierarquia do usuario.',
-    configuracoes: 'Esse caminho passa por perfil, preferencias, notificacoes e ajustes de conta.',
+    aprovacoes: 'Para decidir com segurança, eu olharia primeiro os relatórios com pendência e o histórico de aprovação.',
+    favoritos: 'Nos favoritos, o melhor caminho é recuperar o que você acompanha com frequência e cruzar com o indicador atual.',
+    workspace: 'Para uma visão executiva, eu juntaria empresa, área, indicador e relatório fonte antes de abrir detalhes.',
+    metricas: 'A leitura aqui combina engajamento do relatório com indicadores operacionais.',
+    comparacao: 'A comparação fica mais clara separando empresa, período e indicador antes de concluir.',
+    indicadores: 'O melhor caminho é ligar a sigla ao indicador, ao período e aos relatórios que sustentam a leitura.',
+    relatorios: 'Encontrei documentos que podem sustentar sua análise e deixei os mais aderentes no topo.',
+    administracao: 'Para administração, o ponto central é confirmar perfil, permissão e hierarquia do usuário.',
+    configuracoes: 'Esse caminho passa por perfil, preferências, notificações e ajustes de conta.',
     ajuda: 'Aqui eu sigo como guia de uso, indicando o fluxo mais curto dentro do NeoView.',
-    busca_semantica: 'Busquei correspondencias por termos, sinonimos, siglas e contexto da tela atual.'
+    busca_semantica: 'Busquei correspondências por termos, sinônimos, siglas e contexto da tela atual.',
+    saudacao: '',
+    agradecimento: '',
+    capacidades: '',
+    aprendizado: ''
   };
 
   return {
     answer: [
       intentLead[intent] ?? intentLead.busca_semantica,
-      `${total} fonte(s) combinam com a sua pergunta${pageContext?.title ? ` dentro de ${pageContext.title}` : ''}. Distribuicao: ${distributionText || 'sem agrupamento'}.`,
+      `${total} fonte(s) combinam com a sua pergunta${context.pageContext?.title ? ` dentro de ${context.pageContext.title}` : ''}. Distribuição: ${distributionText || 'sem agrupamento'}.`,
+      memoryHint ? `Também considerei o contexto recente: ${memoryHint}.` : '',
       'Melhores caminhos encontrados:',
       ...lines,
-      total > topMatches.length ? `Ainda ha mais ${total - topMatches.length} resultado(s) alem deste recorte.` : '',
-      'Proximo passo: refine por empresa, indicador, periodo ou gerencia para eu devolver uma leitura mais precisa.'
+      total > topMatches.length ? `Ainda há mais ${total - topMatches.length} resultado(s) além deste recorte.` : '',
+      'Próximo passo: refine por empresa, indicador, período ou gerência para eu devolver uma leitura mais precisa.'
     ].filter(Boolean).join('\n'),
     sources: topMatches.map(({ entry, score }) => sourceFromEntry(entry, score)),
     totalSources: total,
@@ -1216,7 +1157,118 @@ export const buildDemoChatAnswer = (question: string, pageContext?: { title?: st
   };
 };
 
-const buildChatStreamResponse = (question: string, pageContext?: { title?: string; summary?: string; hints?: string[] } | null) => {
+const buildIrisTools = (intent: ChatIntent, matches: ReturnType<typeof buildSemanticMatches>): IrisTool[] => [
+  {
+    name: 'direct-greeting',
+    purpose: 'Responder cumprimentos sem acionar busca.',
+    canHandle: ({ perception }) => perception.action === 'greeting',
+    run: () => ({
+      answer: 'Olá. Sou a IRIS. Posso buscar relatórios, analisar indicadores, comparar anos, cruzar empresas e apontar o melhor caminho dentro do NeoView. Me diga uma empresa, sigla ou tema para começarmos.',
+      sources: [],
+      totalSources: 0,
+      intent: 'saudacao',
+      confidence: 0.9,
+      retrievalMode: 'intencao-direta'
+    })
+  },
+  {
+    name: 'direct-thanks',
+    purpose: 'Responder agradecimentos de forma curta.',
+    canHandle: ({ perception }) => perception.action === 'thanks',
+    run: () => ({
+      answer: 'Por nada. Quando quiser, posso refinar por empresa, indicador, período, gerência, unidade ou status do relatório.',
+      sources: [],
+      totalSources: 0,
+      intent: 'agradecimento',
+      confidence: 0.9,
+      retrievalMode: 'intencao-direta'
+    })
+  },
+  {
+    name: 'capabilities',
+    purpose: 'Explicar capacidades da IRIS em pt-BR.',
+    canHandle: ({ perception }) => perception.action === 'capabilities',
+    run: () => ({
+      answer: buildCapabilitiesAnswer(),
+      sources: [],
+      totalSources: 0,
+      intent: 'capacidades',
+      confidence: 0.95,
+      retrievalMode: 'intencao-direta'
+    })
+  },
+  {
+    name: 'memory-learning',
+    purpose: 'Explicar memoria e aprendizado local controlado.',
+    canHandle: ({ perception }) => perception.action === 'memory',
+    run: () => ({
+      answer: buildLearningAnswer(),
+      sources: [],
+      totalSources: 0,
+      intent: 'aprendizado',
+      confidence: 0.95,
+      retrievalMode: 'aprendizado-local'
+    })
+  },
+  {
+    name: 'indicator-reasoning',
+    purpose: 'Comparar indicadores, anos e empresas quando a pergunta envolve KPIs.',
+    canHandle: ({ perception }) =>
+      perception.indicators.length > 0 ||
+      ['indicadores', 'comparacao', 'metricas'].includes(intent),
+    run: ({ question, perception }) => {
+      const answer = buildIndicatorIntelligenceAnswer(question);
+      if (answer) return answer;
+
+      const frame = buildNeuralQueryFrame(question);
+      if (perception.wantsCompanyComparison && frame.indicators.length > 0) {
+        return buildCompanyComparisonAnswer(frame);
+      }
+
+      return null;
+    }
+  },
+  {
+    name: 'navigation-guidance',
+    purpose: 'Orientar caminho dentro da aplicação sem buscar dados quando a pergunta é de navegação.',
+    canHandle: ({ perception }) => {
+      const isRouteIntent = ['workspace', 'favoritos', 'ajuda', 'configuracoes', 'administracao'].includes(intent);
+      return Boolean(buildDirectIntentAnswer(intent)) && (matches.length === 0 || perception.isNavigationLike || isRouteIntent);
+    },
+    run: ({ pageContext }) => {
+      const answer = buildDirectIntentAnswer(intent, pageContext);
+      if (!answer) return null;
+      return {
+        answer,
+        sources: [],
+        totalSources: 0,
+        intent,
+        confidence: 0.86,
+        retrievalMode: 'intencao-direta'
+      };
+    }
+  },
+  {
+    name: 'semantic-catalog-search',
+    purpose: 'Buscar relatórios e fontes no catálogo local controlado.',
+    canHandle: () => true,
+    run: (context) => buildSemanticIrisAnswer(context, intent, matches)
+  }
+];
+
+export const buildDemoChatAnswer = (question: string, pageContext?: ChatPageContext | null) => {
+  const intent = detectChatIntent(question);
+  const matches = buildSemanticMatches(question, pageContext);
+
+  return runIrisOrchestrator({
+    question,
+    pageContext,
+    tools: buildIrisTools(intent, matches),
+    fallback: (context) => buildSemanticIrisAnswer(context, intent, matches)
+  });
+};
+
+const buildChatStreamResponse = (question: string, pageContext?: ChatPageContext | null) => {
   const sessionId = `sess-demo-${Date.now()}`;
   const result = buildDemoChatAnswer(question, pageContext);
   const answer = result.answer;
@@ -1578,7 +1630,7 @@ const tryHandleDemoApiRequest = async (request: Request): Promise<Response | nul
     const body = await request.clone().json().catch(() => ({} as Record<string, unknown>));
     return buildChatStreamResponse(
       String((body as { message?: string }).message ?? ''),
-      (body as { pageContext?: { title?: string; summary?: string; hints?: string[] } }).pageContext
+      (body as { pageContext?: ChatPageContext }).pageContext
     );
   }
 

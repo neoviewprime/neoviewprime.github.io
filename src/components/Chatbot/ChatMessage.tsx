@@ -90,11 +90,6 @@ export function ChatMessage({ message, onRate }: ChatMessageProps) {
             >
               <ThumbsDown className="h-3.5 w-3.5" />
             </Button>
-            {message.metadata?.intent ? (
-              <span className="ml-1 max-w-[9rem] truncate text-[11px]" title={`Intencao: ${message.metadata.intent}`}>
-                {message.metadata.intent}
-              </span>
-            ) : null}
           </div>
         ) : null}
       </div>

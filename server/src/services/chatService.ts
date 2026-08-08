@@ -4,9 +4,10 @@ import { getDbClient } from "../db/connection";
 import { randomUUID } from "crypto";
 import type { JwtPayload } from "../middleware/auth";
 import { userManagementService } from "./userManagementService";
+import type { ChatPageId } from "../rag/irisSystemPrompt";
 
 export type ChatPageContext = {
-  page: "register" | "workspace" | "reports" | "approvals" | "generic";
+  page: ChatPageId;
   title: string;
   summary: string;
   hints?: string[];
@@ -65,6 +66,8 @@ const buildContextualQuestion = (
   if (!pageContext) return question;
 
   const pageInstructions: Record<ChatPageContext["page"], string> = {
+    home:
+      "Ajude o usuário a sair da visão inicial com uma leitura executiva, indicando indicadores, empresas, relatórios ou pendências que merecem prioridade.",
     register:
       "Ajude o usuário a preencher cadastro, explicar campos obrigatórios, validar senha, hierarquia, empresa, unidade, cargo e mensagens de erro sem responder de forma genérica.",
     workspace:
@@ -73,6 +76,14 @@ const buildContextualQuestion = (
       "Ajude com submissão por link externo, rascunho, status, filtros, métricas e navegação dos relatórios visíveis para o usuário.",
     approvals:
       "Resuma a fila de aprovação, destaque pendências, destino automático, histórico e oriente o usuário sobre o que exige decisão agora.",
+    indicators:
+      "Ajude a avaliar tendência, meta, aderência do indicador, comparação anual, cruzamento entre KPIs e diferença entre empresas.",
+    favorites:
+      "Ajude a recuperar itens salvos, sugerir acompanhamentos recorrentes e relacionar favoritos a indicadores e decisões.",
+    settings:
+      "Ajude com perfil, preferências, tema, notificações, segurança e ajustes de conta.",
+    help:
+      "Explique fluxos de uso, indique onde clicar e traduza dúvidas em caminhos objetivos dentro do NeoView.",
     generic:
       "Responda considerando a tela atual e use o resumo fornecido para evitar respostas genericas."
   };

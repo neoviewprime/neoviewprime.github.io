@@ -2,9 +2,10 @@ import { Response } from "express";
 import { z } from "zod";
 import { chatService } from "../services/chatService";
 import type { AuthenticatedRequest } from "../middleware/auth";
+import { CHAT_PAGE_IDS } from "../rag/irisSystemPrompt";
 
 const pageContextSchema = z.object({
-  page: z.enum(["register", "workspace", "reports", "approvals", "generic"]),
+  page: z.enum(CHAT_PAGE_IDS),
   title: z.string().min(1).max(120),
   summary: z.string().min(1).max(4000),
   hints: z.array(z.string().min(1).max(400)).max(6).optional()
