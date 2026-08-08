@@ -31,7 +31,23 @@ const Help: React.FC = () => {
         <PageTitle title="Central de Ajuda, João 👋" description="Estamos aqui para ajudar você a tirar o máximo do NeoView." />
         <div className="mb-6 grid gap-6 xl:grid-cols-[1fr_460px]">
           <SearchControl placeholder="Como podemos ajudar você hoje?" value={query} onChange={(event) => setQuery(event.target.value)} />
-          <div className="hidden min-h-36 rounded-xl bg-[radial-gradient(circle_at_center,rgba(34,197,94,.32),transparent_35%),linear-gradient(90deg,transparent,rgba(14,165,233,.12),transparent)] xl:block" />
+          <div className="hidden min-h-36 overflow-hidden rounded-xl border border-border/70 bg-background/70 p-4 dark:bg-white/[0.035] xl:block">
+            <div className="flex h-full items-center gap-4">
+              <div className="grid h-24 w-24 shrink-0 place-items-center rounded-2xl bg-primary/10 ring-1 ring-primary/20">
+                <img src="/neoview-icon-192.png" alt="IRIS NeoView" className="h-16 w-16 rounded-xl" />
+              </div>
+              <div className="min-w-0">
+                <p className="text-sm font-semibold text-foreground">IRIS pronta para orientar</p>
+                <p className="mt-1 text-xs leading-5 text-muted-foreground">
+                  Encontre respostas, abra relatórios e compare indicadores sem sair do fluxo de trabalho.
+                </p>
+                <div className="mt-3 flex gap-2">
+                  <span className="neo-chip border-primary/30 text-primary">Busca guiada</span>
+                  <span className="neo-chip">Suporte</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid gap-4 xl:grid-cols-[1fr_420px]">

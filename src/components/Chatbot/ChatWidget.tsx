@@ -55,6 +55,13 @@ export function ChatWidget({
     rateMessage
   } = useChatbot(pageContext);
 
+  const promptSuggestions = [
+    'Compare DEC 2023 e 2024',
+    'O indicador FEC faz sentido para qualidade?',
+    'Mostre SLA Comercial em 2026',
+    'Cruze ISQP com DEC'
+  ];
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -154,6 +161,13 @@ export function ChatWidget({
     await refreshSessions().catch(() => undefined);
   };
 
+  const handleSuggestion = async (suggestion: string) => {
+    if (isLoading) return;
+    setInputValue('');
+    await sendMessage(suggestion);
+    await refreshSessions().catch(() => undefined);
+  };
+
   if (fabOnly) {
     return (
       <Button
@@ -237,7 +251,7 @@ export function ChatWidget({
             <div className="min-w-0">
               <span className="font-bold text-sm leading-tight block">IRIS</span>
               <p className="text-[10px] opacity-80 leading-tight truncate">
-                {pageContext?.title ? `Assistente da tela: ${pageContext.title}` : 'Assistente de Busca'}
+                {pageContext?.title ? `Analise da tela: ${pageContext.title}` : 'Indicadores, relatorios e comparacoes'}
               </p>
             </div>
           </div>
@@ -346,6 +360,24 @@ export function ChatWidget({
               )}
             </div>
           ))}
+
+          {messages.length <= 1 && !isTyping ? (
+            <div className="grid gap-2">
+              <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Experimente</p>
+              <div className="flex flex-wrap gap-2">
+                {promptSuggestions.map((suggestion) => (
+                  <button
+                    key={suggestion}
+                    type="button"
+                    onClick={() => void handleSuggestion(suggestion)}
+                    className="rounded-full border border-primary/25 bg-primary/10 px-3 py-1.5 text-left text-xs font-medium text-primary transition-colors hover:border-primary/40 hover:bg-primary/20"
+                  >
+                    {suggestion}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : null}
 
           {isTyping && (
             <div className="flex items-center gap-3 p-3 rounded-lg bg-muted/50 animate-fade-in">

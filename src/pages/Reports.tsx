@@ -1,16 +1,18 @@
 import React, { useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { toast } from 'sonner';
 import { ArrowRight, BarChart3, Calendar, CheckCircle2, Clock3, Eye, FileText, MessageCircle, Send, Upload, XCircle } from 'lucide-react';
 import { FloatingAssistant } from '@/components/FloatingAssistant';
 import { DecisionList, FilterButton, PageTitle, Panel, reportRows, ReportsTable, SearchControl, SmallArrowRow, StatCard } from '@/components/neo/NeoReferenceUI';
+import { reportDetailPath } from '@/lib/reportRouting';
 
 const reportTabs = ['Todos', 'Rascunhos 12', 'Pendentes 18', 'Aprovados 86', 'Rejeitados 6'];
 
 const Reports: React.FC = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [activeTab, setActiveTab] = useState(0);
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState(searchParams.get('query') ?? '');
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [page, setPage] = useState('1');
 
@@ -30,9 +32,7 @@ const Reports: React.FC = () => {
   }, [activeTab, query]);
 
   const openReport = (name: string) => {
-    toast.success('Relatório aberto', {
-      description: `${name} foi carregado na visão de detalhes da demonstração.`,
-    });
+    navigate(reportDetailPath(name));
   };
 
   return (
@@ -94,7 +94,7 @@ const Reports: React.FC = () => {
                   <ReportsTable
                     rows={filteredRows}
                     onOpenReport={openReport}
-                    onMoreActions={(name) => toast.info('Ações do relatório', { description: `${name}: compartilhar, favoritar, comentar e abrir detalhes.` })}
+                    onMoreActions={openReport}
                   />
                 ) : (
                   <div className="rounded-xl border border-dashed border-border/70 p-6 text-center text-sm text-muted-foreground">

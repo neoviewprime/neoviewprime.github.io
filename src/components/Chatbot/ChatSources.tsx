@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import type { SearchSource } from '@/types/backend';
 import { COELBA_UTD_FLOW_ID, isCoelbaUtdPath } from '@/lib/coelbaUtd';
+import { reportDetailPath } from '@/lib/reportRouting';
 
 interface ChatSourcesProps {
   sources: SearchSource[];
@@ -32,6 +33,11 @@ export function ChatSources({ sources, totalSources, className }: ChatSourcesPro
   };
 
   const handleSourceClick = (source: SearchSource) => {
+    if (source.type === 'report') {
+      navigate(reportDetailPath(source.name));
+      return;
+    }
+
     const companyId = source.hierarchy?.companyId;
     const superintendenceId = source.hierarchy?.superintendenceId;
     const managementId = source.hierarchy?.managementId;
@@ -51,11 +57,6 @@ export function ChatSources({ sources, totalSources, className }: ChatSourcesPro
       ) {
         params.set('view', COELBA_UTD_FLOW_ID);
       }
-      if (source.type === 'report') {
-        params.set('report', source.id);
-        params.set('reportName', source.name);
-        params.set('openReport', '1');
-      }
       if (source.type === 'indicator') params.set('indicator', source.name);
       params.set('label', source.name);
       navigate(`/dashboard?${params.toString()}`);
@@ -64,11 +65,6 @@ export function ChatSources({ sources, totalSources, className }: ChatSourcesPro
 
     if (source.type === 'indicator') {
       navigate(`/dashboard?indicator=${encodeURIComponent(source.name)}&label=${encodeURIComponent(source.name)}`);
-      return;
-    }
-
-    if (source.type === 'report') {
-      navigate(`/reports?source=${encodeURIComponent(source.id)}&label=${encodeURIComponent(source.name)}`);
       return;
     }
 

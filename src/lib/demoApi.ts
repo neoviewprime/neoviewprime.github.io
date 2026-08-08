@@ -1,4 +1,11 @@
 import { companies, type Company, type Indicator, type PdfReport, type Project } from '@/data/mockData';
+import {
+  buildIndicatorAssessment,
+  extractYears,
+  findIndicatorProfile,
+  formatValue,
+  indicatorProfiles,
+} from '@/lib/indicatorIntelligence';
 import type { UserManagementOptions } from '@/types/backend';
 
 type CatalogEntry = {
@@ -715,6 +722,8 @@ const buildCapabilitiesAnswer = () =>
     'O que eu consigo fazer agora:',
     '- Encontrar relatorios por indicador, empresa, gerencia, unidade, projeto, tema ou trecho da descricao.',
     '- Entender variacoes e siglas como DEC, FEC, IAR, IPCE e DCE.',
+    '- Comparar indicadores entre anos de 2022 a 2026, incluindo meta, tendencia e relatorios de origem.',
+    '- Dizer se o indicador faz sentido para a pergunta de negocio ou se deve ser cruzado com outro KPI.',
     '- Cruzar resultados por hierarquia, listar fontes e sugerir refinamentos.',
     '- Aprender com sua avaliacao de resposta util ou nao util, separando exemplos em treino e teste no navegador.'
   ].join('\n');
@@ -802,6 +811,68 @@ const buildDirectIntentAnswer = (intent: ChatIntent, pageContext?: { title?: str
     .join('\n');
 };
 
+const sourceFromIndicatorPoint = (point: {
+  reportId: string;
+  reportName: string;
+  companyId: string;
+  companyName: string;
+  year: number;
+  note: string;
+}) => {
+  const catalogEntry = listCatalogEntries().find((entry) => entry.source_report_id === point.reportId);
+  if (catalogEntry) return sourceFromEntry(catalogEntry, 18);
+
+  return {
+    type: 'report',
+    id: point.reportId,
+    name: point.reportName,
+    description: point.note,
+    meta: `${point.companyName} | ano ${point.year} | serie historica`,
+    path: [point.companyName, 'Indicadores inteligentes', String(point.year)],
+    relevance_score: 18,
+    hierarchy: {
+      companyId: point.companyId
+    }
+  };
+};
+
+const buildIndicatorIntelligenceAnswer = (question: string) => {
+  const profile = findIndicatorProfile(question);
+  if (!profile) return null;
+
+  const years = extractYears(question);
+  const assessment = buildIndicatorAssessment(profile, years);
+  const selected = assessment.selected.length ? assessment.selected : profile.series.slice(-2);
+  const sourcePoints = selected.length ? selected : [assessment.previous, assessment.latest];
+  const deltaLabel = `${assessment.delta.rawDelta > 0 ? '+' : ''}${assessment.delta.rawDelta.toFixed(1)} ${profile.unit}`;
+  const percentLabel = `${assessment.delta.percent > 0 ? '+' : ''}${assessment.delta.percent.toFixed(1)}%`;
+  const directionText = profile.direction === 'lower-is-better' ? 'quanto menor, melhor' : 'quanto maior, melhor';
+  const available = indicatorProfiles.map((item) => item.acronym).join(', ');
+
+  const answer = [
+    `Indicador analisado: ${profile.acronym} - ${profile.name}.`,
+    `Pergunta que ele responde: ${profile.businessQuestion}`,
+    `Leitura: ${directionText}. ${assessment.verdict}`,
+    `Comparacao ${assessment.previous.year} -> ${assessment.latest.year}: ${formatValue(profile, assessment.previous.value)} para ${formatValue(profile, assessment.latest.value)} (${deltaLabel}; ${percentLabel}).`,
+    `Meta em ${assessment.latest.year}: ${formatValue(profile, assessment.latest.target)}. ${assessment.targetVerdict}`,
+    'Serie por ano no recorte:',
+    ...sourcePoints.map((point) => `- ${point.year}: ${formatValue(profile, point.value)} | meta ${formatValue(profile, point.target)} | fonte: ${point.reportName}. ${point.note}`),
+    `Faz sentido usar quando voce quer: ${profile.goodFor.join(', ')}.`,
+    `Evite usar sozinho para: ${profile.avoidFor.join(', ')}.`,
+    `Indicadores para cruzar: ${profile.related.join(', ')}.`,
+    `Outros indicadores disponiveis: ${available}.`
+  ].join('\n');
+
+  return {
+    answer,
+    sources: sourcePoints.map(sourceFromIndicatorPoint),
+    totalSources: sourcePoints.length,
+    intent: years.length > 1 ? 'comparacao' : 'indicadores',
+    confidence: 0.94,
+    retrievalMode: 'inteligencia-indicadores'
+  };
+};
+
 export const buildDemoChatAnswer = (question: string, pageContext?: { title?: string; summary?: string; hints?: string[] } | null) => {
   const intent = detectChatIntent(question);
   const matches = buildSemanticMatches(question, pageContext);
@@ -855,6 +926,11 @@ export const buildDemoChatAnswer = (question: string, pageContext?: { title?: st
       confidence: 0.95,
       retrievalMode: 'aprendizado-local'
     };
+  }
+
+  const indicatorAnswer = buildIndicatorIntelligenceAnswer(question);
+  if (indicatorAnswer && (intent === 'indicadores' || intent === 'comparacao' || intent === 'metricas')) {
+    return indicatorAnswer;
   }
 
   const directAnswer = buildDirectIntentAnswer(intent, pageContext);
@@ -936,18 +1012,27 @@ const buildChatStreamResponse = (question: string, pageContext?: { title?: strin
   const encoder = new TextEncoder();
   const stream = new ReadableStream({
     start(controller) {
-      controller.enqueue(encoder.encode(`event: session\ndata: ${JSON.stringify({ sessionId })}\n\n`));
-      answer.split(' ').forEach((token) => {
-        controller.enqueue(encoder.encode(`event: token\ndata: ${JSON.stringify({ token: `${token} ` })}\n\n`));
-      });
-      controller.enqueue(encoder.encode(`event: done\ndata: ${JSON.stringify({
-        sources: result.sources,
-        totalSources: result.totalSources,
-        intent: result.intent,
-        confidence: result.confidence,
-        retrievalMode: result.retrievalMode
-      })}\n\n`));
-      controller.close();
+      void (async () => {
+        const wait = (ms: number) => new Promise((resolve) => window.setTimeout(resolve, ms));
+        const chunks = answer.match(/.{1,34}(\s|$)/g) ?? [answer];
+
+        controller.enqueue(encoder.encode(`event: session\ndata: ${JSON.stringify({ sessionId })}\n\n`));
+        await wait(140);
+
+        for (const chunk of chunks) {
+          controller.enqueue(encoder.encode(`event: token\ndata: ${JSON.stringify({ token: chunk })}\n\n`));
+          await wait(chunk.includes('\n') ? 90 : 42);
+        }
+
+        controller.enqueue(encoder.encode(`event: done\ndata: ${JSON.stringify({
+          sources: result.sources,
+          totalSources: result.totalSources,
+          intent: result.intent,
+          confidence: result.confidence,
+          retrievalMode: result.retrievalMode
+        })}\n\n`));
+        controller.close();
+      })();
     }
   });
 

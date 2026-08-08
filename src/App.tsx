@@ -18,6 +18,7 @@ const Workspace = lazy(() => import("./pages/Workspace"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
 const Companies = lazy(() => import("./pages/Companies"));
 const Reports = lazy(() => import("./pages/Reports"));
+const ReportDetails = lazy(() => import("./pages/ReportDetails"));
 const Indicators = lazy(() => import("./pages/Indicators"));
 const Settings = lazy(() => import("./pages/Settings"));
 const Approvals = lazy(() => import("./pages/Approvals"));
@@ -57,6 +58,7 @@ const App = () => (
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/companies" element={<Companies />} />
                 <Route path="/reports" element={<Reports />} />
+                <Route path="/reports/:reportId" element={<ReportDetails />} />
                 <Route path="/indicators" element={<Indicators />} />
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/approvals" element={<Approvals />} />

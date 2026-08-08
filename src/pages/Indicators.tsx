@@ -1,30 +1,82 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'sonner';
-import { BarChart3, CheckCircle2, Clock3, Download, LineChart, Plus, RefreshCcw, Save, Share2, WalletCards, XCircle } from 'lucide-react';
+import {
+  ArrowRight,
+  BarChart3,
+  Bot,
+  CheckCircle2,
+  FileText,
+  Lightbulb,
+  LineChart,
+  Link2,
+  Search,
+  Sparkles,
+  Target,
+  TrendingDown,
+  TrendingUp,
+} from 'lucide-react';
 import { FloatingAssistant } from '@/components/FloatingAssistant';
-import { CompanySelect, MiniChart, PageTitle, Panel, QuickTabs, StatCard } from '@/components/neo/NeoReferenceUI';
+import { PageTitle, Panel, QuickTabs, StatCard } from '@/components/neo/NeoReferenceUI';
+import {
+  buildIndicatorAssessment,
+  findMockIndicator,
+  formatValue,
+  getIndicatorProfileById,
+  indicatorProfiles,
+} from '@/lib/indicatorIntelligence';
+import { cn } from '@/lib/utils';
+
+const yearOptions = [2022, 2023, 2024, 2025, 2026];
 
 const Indicators: React.FC = () => {
   const navigate = useNavigate();
-  const [activeModel, setActiveModel] = useState(0);
-  const [activePeriod, setActivePeriod] = useState(1);
-  const [activeGroup, setActiveGroup] = useState(0);
-  const [chartType, setChartType] = useState('Linha');
-  const [metrics, setMetrics] = useState(['Aprovados', 'Rejeitados']);
-  const [showValues, setShowValues] = useState(true);
-  const [showComparison, setShowComparison] = useState(true);
-  const [showAverage, setShowAverage] = useState(false);
+  const [selectedProfileId, setSelectedProfileId] = useState('ind-dec');
+  const [fromYear, setFromYear] = useState(2023);
+  const [toYear, setToYear] = useState(2024);
+  const [query, setQuery] = useState('');
 
-  const addMetric = () => {
-    const candidates = ['Pendentes', 'No prazo', 'Visualizações', 'Comentários'];
-    const nextMetric = candidates.find((item) => !metrics.includes(item));
-    if (!nextMetric) {
-      toast.info('Todas as métricas da demonstração já foram adicionadas.');
-      return;
-    }
-    setMetrics((items) => [...items, nextMetric]);
-    toast.success('Métrica adicionada', { description: `${nextMetric} entrou na configuração do gráfico.` });
+  const profile = getIndicatorProfileById(selectedProfileId) ?? indicatorProfiles[0];
+  const currentIndicator = findMockIndicator(profile.id);
+  const assessment = useMemo(() => buildIndicatorAssessment(profile, [fromYear, toYear]), [profile, fromYear, toYear]);
+  const deltaIcon = assessment.delta.improved ? CheckCircle2 : profile.direction === 'lower-is-better' ? TrendingUp : TrendingDown;
+  const deltaTone = assessment.delta.improved ? 'green' : 'amber';
+  const filteredProfiles = useMemo(() => {
+    const normalized = query.trim().toLowerCase();
+    if (!normalized) return indicatorProfiles;
+    return indicatorProfiles.filter((item) =>
+      [item.acronym, item.name, item.businessQuestion, ...item.goodFor, ...item.aliases]
+        .join(' ')
+        .toLowerCase()
+        .includes(normalized)
+    );
+  }, [query]);
+
+  const prompt = `Compare ${profile.acronym} ${fromYear} e ${toYear} e diga se esse indicador faz sentido`;
+  const chartPoints = profile.series;
+  const minValue = Math.min(...chartPoints.map((point) => Math.min(point.value, point.target)));
+  const maxValue = Math.max(...chartPoints.map((point) => Math.max(point.value, point.target)));
+  const valueRange = Math.max(1, maxValue - minValue);
+  const linePoints = chartPoints
+    .map((point, index) => {
+      const x = 34 + (index * 432) / Math.max(1, chartPoints.length - 1);
+      const y = 190 - ((point.value - minValue) / valueRange) * 140;
+      return `${x},${y}`;
+    })
+    .join(' ');
+  const targetPoints = chartPoints
+    .map((point, index) => {
+      const x = 34 + (index * 432) / Math.max(1, chartPoints.length - 1);
+      const y = 190 - ((point.target - minValue) / valueRange) * 140;
+      return `${x},${y}`;
+    })
+    .join(' ');
+
+  const openIrisPrompt = async () => {
+    await navigator.clipboard?.writeText(prompt).catch(() => undefined);
+    toast.success('Pergunta pronta para a IRIS', {
+      description: 'Copiei o prompt. Abra a IRIS no canto da tela e cole para ver a resposta analítica.',
+    });
   };
 
   return (
@@ -33,123 +85,198 @@ const Indicators: React.FC = () => {
         <div className="neo-page-inner">
           <PageTitle
             icon={BarChart3}
-            title="Estatísticas"
-            description="Crie gráficos personalizados com dados confiáveis para análises estratégicas."
+            title="Inteligência de Indicadores"
+            description="Compare anos, entenda metas e valide se o indicador responde à pergunta certa antes de abrir relatórios."
             actions={
               <>
-                <button type="button" onClick={() => toast.success('Link copiado', { description: 'O link do painel de estatísticas foi copiado para compartilhamento.' })} className="neo-action-button"><Share2 className="h-4 w-4" /> Compartilhar</button>
-                <button type="button" onClick={() => toast.success('Exportação preparada', { description: 'O arquivo PNG do gráfico foi preparado na demonstração.' })} className="neo-action-button"><Download className="h-4 w-4" /> Exportar</button>
-                <button type="button" onClick={() => toast.success('Modelo salvo', { description: `${['Visão Executiva', 'Desempenho Operacional', 'Indicadores ESG', 'Financeiro Consolidado'][activeModel] ?? 'Modelo'} foi salvo como favorito.` })} className="neo-primary-button"><Save className="h-4 w-4" /> Salvar como modelo</button>
+                <button type="button" onClick={openIrisPrompt} className="neo-action-button">
+                  <Bot className="h-4 w-4" />
+                  Perguntar à IRIS
+                </button>
+                <button type="button" onClick={() => navigate('/reports')} className="neo-primary-button">
+                  <FileText className="h-4 w-4" />
+                  Ver fontes
+                </button>
               </>
             }
           />
 
-          <Panel className="mb-3">
-            <div className="grid gap-5 xl:grid-cols-[340px_1fr]">
+          <section className="neo-ai-hero mb-4">
+            <div className="grid gap-5 xl:grid-cols-[minmax(0,1fr)_380px]">
               <div>
-                <p className="mb-2 text-sm font-medium text-foreground">Empresa</p>
-                <CompanySelect onClick={() => navigate('/dashboard?company=coelba')} />
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="neo-chip border-primary/30 bg-primary/10 text-primary">
+                    <Sparkles className="h-3.5 w-3.5" />
+                    Série histórica 2022-2026
+                  </span>
+                  <span className="neo-chip">Meta, tendência e fonte</span>
+                </div>
+                <h2 className="mt-4 max-w-4xl text-2xl font-semibold text-foreground sm:text-3xl">
+                  {profile.acronym}: {profile.businessQuestion}
+                </h2>
+                <p className="mt-3 max-w-3xl text-sm leading-6 text-muted-foreground">
+                  {assessment.verdict} A leitura correta é: {profile.direction === 'lower-is-better' ? 'quanto menor, melhor' : 'quanto maior, melhor'}.
+                </p>
               </div>
-              <div>
-                <p className="mb-2 text-sm font-medium text-foreground">Modelos salvos</p>
-                <QuickTabs
-                  items={['Visão Executiva', 'Desempenho Operacional', 'Indicadores ESG', 'Financeiro Consolidado', '+ Ver todos']}
-                  active={activeModel}
-                  onChange={(index, item) => {
-                    if (item.startsWith('+')) {
-                      toast.info('Modelos disponíveis', { description: '4 modelos salvos estão disponíveis nesta demonstração.' });
-                      return;
-                    }
-                    setActiveModel(index);
-                  }}
+              <div className="rounded-2xl border border-primary/25 bg-background/70 p-4 dark:bg-white/[0.04]">
+                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">Prompt sugerido</p>
+                <p className="mt-2 text-sm font-medium text-foreground">{prompt}</p>
+                <button type="button" onClick={openIrisPrompt} className="neo-action-button mt-4 w-full">
+                  <Link2 className="h-4 w-4" />
+                  Copiar pergunta
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <div className="grid gap-4 xl:grid-cols-[320px_minmax(0,1fr)]">
+            <aside className="space-y-4">
+              <Panel title="Escolher indicador">
+                <div className="relative mb-3">
+                  <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                  <input
+                    value={query}
+                    onChange={(event) => setQuery(event.target.value)}
+                    className="neo-control h-11 w-full pl-10 pr-3 text-sm"
+                    placeholder="Buscar DEC, FEC, SLA..."
+                  />
+                </div>
+                <div className="space-y-2">
+                  {filteredProfiles.map((item) => (
+                    <button
+                      key={item.id}
+                      type="button"
+                      onClick={() => setSelectedProfileId(item.id)}
+                      className={cn(
+                        'w-full rounded-xl border p-3 text-left transition-colors',
+                        item.id === profile.id
+                          ? 'border-primary/45 bg-primary/10 text-foreground'
+                          : 'border-border/70 bg-background/55 text-muted-foreground hover:border-primary/30 hover:text-foreground dark:bg-white/[0.025]'
+                      )}
+                    >
+                      <span className="block text-sm font-semibold">{item.acronym}</span>
+                      <span className="mt-1 line-clamp-2 block text-xs">{item.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </Panel>
+
+              <Panel title="Comparar anos">
+                <p className="mb-2 text-sm font-medium text-foreground">Ano base</p>
+                <QuickTabs items={yearOptions.map(String)} active={yearOptions.indexOf(fromYear)} onChange={(index) => setFromYear(yearOptions[index])} />
+                <p className="mb-2 mt-4 text-sm font-medium text-foreground">Ano comparado</p>
+                <QuickTabs items={yearOptions.map(String)} active={yearOptions.indexOf(toYear)} onChange={(index) => setToYear(yearOptions[index])} />
+              </Panel>
+            </aside>
+
+            <main className="space-y-4">
+              <div className="grid gap-4 md:grid-cols-3">
+                <StatCard
+                  icon={deltaIcon}
+                  label={`${fromYear} → ${toYear}`}
+                  value={`${assessment.delta.rawDelta > 0 ? '+' : ''}${assessment.delta.rawDelta.toFixed(1)} ${profile.unit}`}
+                  trend={`${assessment.delta.percent > 0 ? '+' : ''}${assessment.delta.percent.toFixed(1)}% no período`}
+                  tone={deltaTone}
                 />
-              </div>
-            </div>
-          </Panel>
-
-          <Panel className="mb-3">
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-              <span className="text-sm font-medium text-foreground">Período</span>
-              <button type="button" onClick={() => toast.info('Período personalizado', { description: '01/05/2024 a 31/05/2024 aplicado ao gráfico.' })} className="neo-action-button">01/05/2024 - 31/05/2024</button>
-              <QuickTabs items={['7D', '30D', '3M', '6M', '12M', 'Personalizado']} active={activePeriod} onChange={(index) => setActivePeriod(index)} />
-              <span className="text-sm font-medium text-foreground sm:ml-auto">Comparar com</span>
-              <button type="button" onClick={() => setShowComparison((value) => !value)} className={`neo-action-button ${showComparison ? 'border-primary/40 text-primary' : ''}`}>Período anterior</button>
-            </div>
-          </Panel>
-
-          <div className="grid gap-3 xl:grid-cols-[1fr_500px]">
-            <div className="space-y-3">
-              <div className="grid gap-3 md:grid-cols-4">
-                <StatCard icon={WalletCards} label="Total" value="128" trend="+12% vs período anterior" tone="blue" />
-                <StatCard icon={CheckCircle2} label="Aprovados" value="86" trend="+15% vs período anterior" tone="green" />
-                <StatCard icon={Clock3} label="Pendentes" value="18" trend="-8% vs período anterior" tone="amber" />
-                <StatCard icon={XCircle} label="Rejeitados" value="6" trend="-25% vs período anterior" tone="red" />
+                <StatCard
+                  icon={Target}
+                  label={`Meta ${assessment.latest.year}`}
+                  value={formatValue(profile, assessment.latest.target)}
+                  trend={assessment.targetVerdict}
+                  tone={assessment.targetGap >= 0 ? 'green' : 'amber'}
+                />
+                <StatCard
+                  icon={LineChart}
+                  label="Valor atual"
+                  value={currentIndicator ? `${currentIndicator.value} ${currentIndicator.unit}` : formatValue(profile, assessment.latest.value)}
+                  trend={currentIndicator?.description ?? profile.name}
+                  tone="blue"
+                />
               </div>
 
               <Panel>
-                <div className="mb-4 flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-                  <div className="min-w-0">
-                    <h2 className="text-xl font-semibold text-foreground">Evolução de aprovações e rejeições</h2>
-                    <p className="mt-1 break-words text-sm text-muted-foreground">Período: 01/05/2024 a 31/05/2024 • Comparação: Período anterior</p>
+                <div className="mb-4 flex flex-col gap-3 lg:flex-row lg:items-start lg:justify-between">
+                  <div>
+                    <h2 className="text-xl font-semibold text-foreground">Evolução anual e meta</h2>
+                    <p className="mt-1 text-sm text-muted-foreground">Linha verde: realizado. Linha tracejada: meta.</p>
                   </div>
-                  <div className="flex flex-col gap-2 sm:flex-row">
-                    <button type="button" onClick={() => setChartType('Linha')} className="neo-action-button"><LineChart className="h-4 w-4" /> {chartType}</button>
-                    <button type="button" onClick={() => setActiveGroup((index) => (index + 1) % 3)} className="neo-action-button">{['Por dia', 'Por semana', 'Por mês'][activeGroup]}</button>
-                  </div>
+                  <button type="button" onClick={() => toast.success('Análise recalculada', { description: assessment.verdict })} className="neo-action-button">
+                    <Sparkles className="h-4 w-4" />
+                    Reavaliar
+                  </button>
                 </div>
-                <MiniChart />
-                <div className="mt-4 grid gap-3 md:grid-cols-2">
-                  <div className="rounded-xl border border-border/60 bg-white/[0.025] p-4">
-                    <p className="text-sm text-muted-foreground">Média diária de aprovações</p>
-                    <p className="mt-2 break-words text-2xl font-semibold text-foreground">46,2 <span className="text-sm text-emerald-300">↗ 11% vs período anterior</span></p>
-                  </div>
-                  <div className="rounded-xl border border-border/60 bg-white/[0.025] p-4">
-                    <p className="text-sm text-muted-foreground">Média diária de rejeições</p>
-                    <p className="mt-2 break-words text-2xl font-semibold text-foreground">3,1 <span className="text-sm text-red-300">↘ 9% vs período anterior</span></p>
-                  </div>
+                <div className="relative overflow-hidden rounded-xl border border-border/70 bg-[#071522] p-4">
+                  <svg viewBox="0 0 500 230" className="h-[280px] w-full">
+                    {[0, 1, 2, 3].map((line) => (
+                      <line key={line} x1="30" x2="472" y1={50 + line * 46} y2={50 + line * 46} stroke="rgba(255,255,255,.08)" />
+                    ))}
+                    <polyline points={targetPoints} fill="none" stroke="#38bdf8" strokeDasharray="7 7" strokeWidth="3" />
+                    <polyline points={linePoints} fill="none" stroke="#22c55e" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+                    {chartPoints.map((point, index) => {
+                      const x = 34 + (index * 432) / Math.max(1, chartPoints.length - 1);
+                      const y = 190 - ((point.value - minValue) / valueRange) * 140;
+                      const selected = point.year === fromYear || point.year === toYear;
+                      return (
+                        <g key={point.year}>
+                          <circle cx={x} cy={y} r={selected ? 7 : 5} fill={selected ? '#f59e0b' : '#22c55e'} />
+                          <text x={x} y="216" textAnchor="middle" fill="rgba(255,255,255,.72)" fontSize="12">{point.year}</text>
+                          {selected ? <text x={x} y={Math.max(18, y - 13)} textAnchor="middle" fill="#f8fafc" fontSize="12">{formatValue(profile, point.value)}</text> : null}
+                        </g>
+                      );
+                    })}
+                  </svg>
                 </div>
               </Panel>
-            </div>
 
-            <Panel title="Configurar gráfico">
-              <p className="mb-4 text-sm text-muted-foreground">Selecione os dados e o formato para sua visualização.</p>
-              <div className="space-y-4">
-                <div>
-                  <p className="mb-2 text-sm font-medium text-foreground">Métricas</p>
-                  {metrics.map((item, index) => (
-                    <div key={item} className="mb-2 flex items-center justify-between rounded-lg border border-border/70 bg-white/[0.025] px-3 py-2 text-sm">
-                      <span className="flex items-center gap-2"><span className={`h-3 w-3 rounded-full ${index === 0 ? 'bg-emerald-400' : 'bg-red-400'}`} />{item}</span>
-                      <button type="button" onClick={() => setMetrics((items) => items.filter((metric) => metric !== item))} className="text-muted-foreground hover:text-red-300" aria-label={`Remover métrica ${item}`}>×</button>
+              <div className="grid gap-4 lg:grid-cols-2">
+                <Panel title="O indicador faz sentido?">
+                  <div className="space-y-3 text-sm">
+                    <div className="rounded-xl border border-emerald-500/20 bg-emerald-500/10 p-4 text-emerald-100">
+                      <p className="font-semibold text-emerald-200">Use para</p>
+                      <p className="mt-2 text-emerald-50/85">{profile.goodFor.join(', ')}.</p>
                     </div>
-                  ))}
-                  <button type="button" onClick={addMetric} className="neo-action-button w-full justify-between"><span><Plus className="mr-2 inline h-4 w-4" />Adicionar métrica</span>⌄</button>
-                </div>
-                <div>
-                  <p className="mb-2 text-sm font-medium text-foreground">Agrupar por</p>
-                  <QuickTabs items={['Dia', 'Semana', 'Mês', 'Trimestre', 'Personalizado']} active={activeGroup} onChange={(index) => setActiveGroup(index)} />
-                </div>
-                <div>
-                  <p className="mb-2 text-sm font-medium text-foreground">Tipo de gráfico</p>
-                  <div className="grid grid-cols-3 gap-2">
-                    {['Linha', 'Colunas', 'Barras', 'Área', 'Pizza', 'Rosca'].map((type) => (
-                      <button type="button" onClick={() => setChartType(type)} key={type} className={`rounded-lg border px-3 py-3 text-sm ${chartType === type ? 'border-primary/40 bg-primary/15 text-primary' : 'border-border/70 bg-white/[0.025] text-muted-foreground'}`}>
-                        <BarChart3 className="mx-auto mb-1 h-5 w-5" />{type}
+                    <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 p-4 text-amber-100">
+                      <p className="font-semibold text-amber-200">Cuidado</p>
+                      <p className="mt-2 text-amber-50/85">{profile.avoidFor.join(', ')}.</p>
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {profile.related.map((item) => (
+                        <span key={item} className="neo-chip">
+                          <Lightbulb className="h-3.5 w-3.5 text-primary" />
+                          Cruzar com {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </Panel>
+
+                <Panel title="Relatórios usados na comparação">
+                  <div className="space-y-2">
+                    {assessment.selected.map((point) => (
+                      <button
+                        key={`${point.reportId}-${point.year}`}
+                        type="button"
+                        onClick={() => navigate(`/reports?query=${encodeURIComponent(point.reportName)}`)}
+                        className="flex w-full items-center gap-3 rounded-xl border border-border/70 bg-background/55 p-3 text-left transition-colors hover:border-primary/35 dark:bg-white/[0.025]"
+                      >
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                          <FileText className="h-5 w-5" />
+                        </div>
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-sm font-medium text-foreground">{point.reportName}</p>
+                          <p className="mt-0.5 text-xs text-muted-foreground">{point.year} · {point.note}</p>
+                        </div>
+                        <ArrowRight className="h-4 w-4 text-muted-foreground" />
                       </button>
                     ))}
                   </div>
-                </div>
-                <div className="space-y-2 text-sm">
-                  <label className="flex items-center gap-2 text-muted-foreground"><input type="checkbox" checked={showValues} onChange={() => setShowValues((value) => !value)} className="rounded border-border bg-transparent" />Mostrar valores</label>
-                  <label className="flex items-center gap-2 text-muted-foreground"><input type="checkbox" checked={showComparison} onChange={() => setShowComparison((value) => !value)} className="rounded border-border bg-transparent" />Mostrar comparação</label>
-                  <label className="flex items-center gap-2 text-muted-foreground"><input type="checkbox" checked={showAverage} onChange={() => setShowAverage((value) => !value)} className="rounded border-border bg-transparent" />Mostrar média</label>
-                </div>
-                <button type="button" onClick={() => toast.success('Gráfico atualizado', { description: `${chartType} com ${metrics.length} métrica(s), agrupado por ${['dia', 'semana', 'mês', 'trimestre', 'personalizado'][activeGroup]}.` })} className="neo-primary-button w-full"><RefreshCcw className="h-4 w-4" /> Aplicar alterações</button>
+                </Panel>
               </div>
-            </Panel>
+            </main>
           </div>
         </div>
       </div>
-      <FloatingAssistant currentLevel="indicators" selectedCompanyId={undefined} selectedSupId={undefined} selectedMgmtId={undefined} selectedProjId={undefined} />
+      <FloatingAssistant currentLevel="indicators" selectedCompanyId="coelba" selectedSupId={undefined} selectedMgmtId={undefined} selectedProjId={undefined} />
     </>
   );
 };

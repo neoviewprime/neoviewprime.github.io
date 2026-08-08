@@ -278,6 +278,22 @@
     @apply neo-surface-strong rounded-[28px] p-5 sm:p-6 lg:p-7;
   }
 
+  .neo-ai-hero {
+    @apply rounded-[28px] border p-5 shadow-sm sm:p-6 lg:p-7;
+    border-color: color-mix(in srgb, var(--brand-accent) 28%, var(--border-subtle));
+    background:
+      linear-gradient(135deg, color-mix(in srgb, var(--brand-accent) 16%, transparent), transparent 42%),
+      linear-gradient(90deg, color-mix(in srgb, var(--accent-blue) 10%, transparent), transparent 58%),
+      color-mix(in srgb, var(--bg-surface-elevated) 94%, transparent);
+  }
+
+  .dark .neo-ai-hero {
+    background:
+      linear-gradient(135deg, rgba(34, 197, 94, 0.18), transparent 42%),
+      linear-gradient(90deg, rgba(14, 165, 233, 0.12), transparent 58%),
+      #0b1b2b;
+  }
+
   .neo-control {
     @apply rounded-xl border border-border/80 bg-background/70 text-foreground shadow-sm placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-primary/25 dark:bg-white/[0.055];
   }

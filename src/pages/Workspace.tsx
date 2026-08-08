@@ -22,6 +22,7 @@ import {
   SmallArrowRow,
   StatCard,
 } from '@/components/neo/NeoReferenceUI';
+import { reportDetailPath } from '@/lib/reportRouting';
 
 const Workspace: React.FC = () => {
   const navigate = useNavigate();
@@ -29,9 +30,7 @@ const Workspace: React.FC = () => {
   const [period, setPeriod] = useState('Últimos 6 meses');
 
   const openReport = (name: string) => {
-    toast.success('Relatório aberto', {
-      description: `${name} foi carregado na visão demonstrativa.`,
-    });
+    navigate(reportDetailPath(name));
   };
 
   return (
