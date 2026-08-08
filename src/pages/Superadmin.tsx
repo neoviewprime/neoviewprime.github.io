@@ -6,7 +6,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { Avatar, PageTitle, Panel, SearchControl, SmallArrowRow, StatCard } from '@/components/neo/NeoReferenceUI';
 
 const users = [
-  ['JN', 'João Nogueira', 'joao.nogueira@neoview.com.br', 'Superadmin', 'Ativo', 'Hoje, 10:32'],
+  ['GN', 'Gabriel Nogueira', 'gabriel.nogueira@neoview.com.br', 'Superadmin', 'Ativo', 'Hoje, 10:32'],
   ['GN', 'Gabriel Nogueira', 'gabriel.nogueira@neoview.com.br', 'Superadmin', 'Ativo', 'Hoje, 09:15'],
   ['MC', 'Maria Silva', 'maria.silva@neoview.com.br', 'Administrador', 'Ativo', 'Ontem, 16:45'],
   ['CP', 'Carlos Lima', 'carlos.lima@neoview.com.br', 'Analista', 'Ativo', 'Ontem, 11:08'],
@@ -37,7 +37,7 @@ const Superadmin: React.FC = () => {
         <PageTitle
           icon={Shield}
           title="Gerenciamento Superadmin"
-          description="Área restrita para João Nogueira e Gabriel Nogueira monitorarem usuários, relatórios, operações e auditoria."
+          description="Área restrita para Gabriel Nogueira monitorar usuários, relatórios, operações e auditoria."
           actions={<button type="button" onClick={() => toast.info('Acesso validado', { description: 'Sessão com papel superadmin ativa para a demonstração.' })} className="neo-action-button"><Lock className="h-4 w-4" /> Acesso restrito aos dois superadmins</button>}
         />
 
@@ -47,7 +47,7 @@ const Superadmin: React.FC = () => {
           <StatCard icon={AlertTriangle} label="Operações críticas" value="6" helper="+2 este mês" tone="amber" />
           <StatCard icon={Activity} label="Eventos de auditoria" value="1.248" helper="+12% este mês" tone="purple" />
           <Panel title="Atividade recente" action={<button type="button" onClick={() => setActiveTab(2)} className="text-sm font-medium text-emerald-400">Ver tudo</button>}>
-            <SmallArrowRow onClick={() => setActiveTab(0)} icon={UserPlus} title="Usuário criado" subtitle="Maria Silva foi criada por João Nogueira" tone="green" />
+            <SmallArrowRow onClick={() => setActiveTab(0)} icon={UserPlus} title="Usuário criado" subtitle="Maria Silva foi criada por Gabriel Nogueira" tone="green" />
             <SmallArrowRow onClick={() => setActiveTab(1)} icon={FileText} title="Relatório aprovado" subtitle="Relatório SLA Comercial Q4 2024.pdf" tone="blue" />
           </Panel>
         </div>

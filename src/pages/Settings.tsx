@@ -17,8 +17,8 @@ const Settings: React.FC = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState(0);
   const [profile, setProfile] = useState({
-    name: 'João Nogueira',
-    email: 'joao.nogueira@neoview.com',
+    name: 'Gabriel Nogueira',
+    email: 'gabriel.nogueira@neoview.com',
     department: 'Diretoria Executiva',
     phone: '(00) 00000-0000',
     role: 'Superadmin',

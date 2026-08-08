@@ -9,7 +9,7 @@ import { reportJsonFileService } from "./reportJsonFileService";
 import { userManagementService } from "./userManagementService";
 
 export const SUPERADMIN_EMAILS = [
-  "joao.paes@neoenergia.com",
+  "gabriel.paes@neoenergia.com",
   "gabriel.nogueira@neoenergia.com"
 ] as const;
 

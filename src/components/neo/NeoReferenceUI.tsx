@@ -208,7 +208,7 @@ export function ReportsTable({
                   </div>
                   <div className="rounded-lg bg-muted/50 p-2">
                     <p className="text-muted-foreground">Solicitante</p>
-                    <p className="mt-1 font-medium text-foreground">{['Maria Silva', 'Carlos Lima', 'Ana Costa', 'João Nogueira', 'Paula Rodrigues', 'Marina Souza'][index]}</p>
+                    <p className="mt-1 font-medium text-foreground">{['Maria Silva', 'Carlos Lima', 'Ana Costa', 'Gabriel Nogueira', 'Paula Rodrigues', 'Marina Souza'][index]}</p>
                   </div>
                 </>
               ) : (
@@ -292,7 +292,7 @@ export function ReportsTable({
                   <div className="flex items-center gap-2">
                     <Avatar initials={['MS', 'CL', 'AC', 'JN', 'PR', 'MS'][index]} tone={index % 3 === 0 ? 'green' : 'slate'} />
                     <div className="min-w-0">
-                      <p className="max-w-[140px] truncate text-foreground">{['Maria Silva', 'Carlos Lima', 'Ana Costa', 'João Nogueira', 'Paula Rodrigues', 'Marina Souza'][index]}</p>
+                      <p className="max-w-[140px] truncate text-foreground">{['Maria Silva', 'Carlos Lima', 'Ana Costa', 'Gabriel Nogueira', 'Paula Rodrigues', 'Marina Souza'][index]}</p>
                       <p className="truncate text-xs text-muted-foreground">{row.area}</p>
                     </div>
                   </div>

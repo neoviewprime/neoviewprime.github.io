@@ -28,7 +28,7 @@ const Help: React.FC = () => {
     <>
       <div className="neo-page">
         <div className="neo-page-inner">
-        <PageTitle title="Central de Ajuda, João 👋" description="Estamos aqui para ajudar você a tirar o máximo do NeoView." />
+        <PageTitle title="Central de Ajuda, Gabriel 👋" description="Estamos aqui para ajudar você a tirar o máximo do NeoView." />
         <div className="mb-6 grid gap-6 xl:grid-cols-[1fr_460px]">
           <SearchControl placeholder="Como podemos ajudar você hoje?" value={query} onChange={(event) => setQuery(event.target.value)} />
           <div className="hidden min-h-36 overflow-hidden rounded-xl border border-border/70 bg-background/70 p-4 dark:bg-white/[0.035] xl:block">
@@ -71,7 +71,7 @@ const Help: React.FC = () => {
               <div className="flex gap-4">
                 <div className="grid h-14 w-14 place-items-center rounded-full bg-emerald-500/20 text-emerald-300"><Bot /></div>
                 <div className="rounded-xl border border-border/60 bg-white/[0.035] p-4 text-sm text-muted-foreground">
-                  Olá, João! Sou a IRIS, sua assistente inteligente. Posso te ajudar a encontrar relatórios, entender indicadores ou tirar dúvidas sobre o sistema.
+                  Olá, Gabriel! Sou a IRIS, sua assistente inteligente. Posso te ajudar a encontrar relatórios, entender indicadores ou tirar dúvidas sobre o sistema.
                 </div>
               </div>
               <button type="button" onClick={() => setAssistantKey((key) => key + 1)} className="neo-action-button mt-4 w-full justify-between border-primary/50 text-primary">Pergunte algo para a IRIS <ArrowRight className="h-4 w-4" /></button>

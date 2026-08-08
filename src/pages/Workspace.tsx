@@ -49,7 +49,7 @@ const Workspace: React.FC = () => {
           ) : null}
 
           <PageTitle
-            title="Bem-vindo, João 👋"
+            title="Bem-vindo, Gabriel 👋"
             description="Priorize pendências, abra relatórios importantes e acompanhe a saúde das aprovações."
           />
 
