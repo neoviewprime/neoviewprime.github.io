@@ -433,7 +433,7 @@ const writeDelegations = (value: { outgoing: StoredApprovalDelegation[]; incomin
 
 const demoUsers = [
   { id: 'demo-dir-1', name: 'Marina Costa', email: 'marina.costa@neoenergia.demo' },
-  { id: 'demo-dir-2', name: 'Gestor Demo', email: 'gestor@neoenergia.demo' },
+  { id: 'demo-dir-2', name: 'Felipe Andrade', email: 'felipe.andrade@neoenergia.demo' },
   { id: 'demo-dir-3', name: 'Patricia Nunes', email: 'patricia.nunes@neoenergia.demo' },
   { id: 'demo-dir-4', name: 'Ricardo Alves', email: 'ricardo.alves@neoenergia.demo' }
 ];
@@ -573,7 +573,7 @@ const buildWorkspaceSummary = () => {
     pendingReports: pendingReports.map((item) => ({
       id: item.id,
       name: item.report_name,
-      submitter_name: 'Usuário Demo',
+      submitter_name: 'Mariana Alves',
       uploaded_at: `${item.report_date ?? '2026-01-01'}T09:00:00Z`,
       destination_path: item.path
     })),
@@ -1505,7 +1505,7 @@ const tryHandleDemoApiRequest = async (request: Request): Promise<Response | nul
           description: item.report_description ?? '',
           uploaded_at: `${item.report_date ?? '2026-01-01'}T09:00:00Z`,
           indicator_name: item.indicator_names[0] ?? 'Indicador',
-          submitter_name: 'Usuário Demo',
+          submitter_name: 'Mariana Alves',
           destination_path: item.path,
           company_name: item.company_name,
           superintendence_name: item.superintendence_name ?? '',
@@ -1550,7 +1550,7 @@ const tryHandleDemoApiRequest = async (request: Request): Promise<Response | nul
       approver_name: String((body as { approverName?: string }).approverName ?? 'Diretoria Demo'),
       report_name: reports.find((item) => item.id === reportId)?.report_name ?? 'Relatório demonstrativo',
       destination_path: reports.find((item) => item.id === reportId)?.path ?? [],
-      submitter_name: 'Usuário Demo'
+      submitter_name: 'Mariana Alves'
     });
     writeApprovalHistory(currentHistory);
     return createJsonResponse({ success: true });

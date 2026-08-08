@@ -957,7 +957,7 @@ export const reportCatalogService = {
         projectId: 'proj-eficiencia-rede',
         projectName: 'Eficiencia de Rede',
         indicators: [{ id: 'ind-dec', name: 'DEC - Duracao Equivalente por Consumidor', value: '12.1', unit: 'horas', trend: 'down' }],
-        submitterName: 'Usuário Demo',
+        submitterName: 'Mariana Alves',
         submitterEmail: 'carlos.nogueira@neoview.local'
       },
       {
@@ -1834,5 +1834,4 @@ export const reportCatalogService = {
     return { upserted, deleted };
   }
 };
-
 

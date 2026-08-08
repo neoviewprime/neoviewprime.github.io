@@ -6,11 +6,11 @@ import { useAuth } from '@/hooks/useAuth';
 import { Avatar, PageTitle, Panel, SearchControl, SmallArrowRow, StatCard } from '@/components/neo/NeoReferenceUI';
 
 const users = [
-  ['SA', 'Superadmin Demo', 'superadmin@neoview.demo', 'Superadmin', 'Ativo', 'Hoje, 10:32'],
-  ['AD', 'Administrador Demo', 'administrador@neoview.demo', 'Administrador', 'Ativo', 'Hoje, 09:15'],
-  ['AN', 'Analista Demo', 'analista@neoview.demo', 'Analista', 'Ativo', 'Ontem, 16:45'],
-  ['GE', 'Gestor Demo', 'gestor@neoview.demo', 'Gestor', 'Ativo', 'Ontem, 11:08'],
-  ['VI', 'Visualizador Demo', 'visualizador@neoview.demo', 'Visualizador', 'Inativo', 'Há 15 dias'],
+  ['MA', 'Mariana Alves', 'mariana.alves@neoview.demo', 'Superadmin', 'Ativo', 'Hoje, 10:32'],
+  ['RC', 'Rafael Costa', 'rafael.costa@neoview.demo', 'Administrador', 'Ativo', 'Hoje, 09:15'],
+  ['BR', 'Beatriz Rocha', 'beatriz.rocha@neoview.demo', 'Analista', 'Ativo', 'Ontem, 16:45'],
+  ['FA', 'Felipe Andrade', 'felipe.andrade@neoview.demo', 'Gestor', 'Ativo', 'Ontem, 11:08'],
+  ['LM', 'Lucas Martins', 'lucas.martins@neoview.demo', 'Visualizador', 'Inativo', 'Há 15 dias'],
 ];
 
 const Superadmin: React.FC = () => {
@@ -47,7 +47,7 @@ const Superadmin: React.FC = () => {
           <StatCard icon={AlertTriangle} label="Operações críticas" value="6" helper="+2 este mês" tone="amber" />
           <StatCard icon={Activity} label="Eventos de auditoria" value="1.248" helper="+12% este mês" tone="purple" />
           <Panel title="Atividade recente" action={<button type="button" onClick={() => setActiveTab(2)} className="text-sm font-medium text-emerald-400">Ver tudo</button>}>
-            <SmallArrowRow onClick={() => setActiveTab(0)} icon={UserPlus} title="Usuário criado" subtitle="Novo usuário cadastrado pelo administrador" tone="green" />
+            <SmallArrowRow onClick={() => setActiveTab(0)} icon={UserPlus} title="Usuário criado" subtitle="Beatriz Rocha foi cadastrada por Mariana Alves" tone="green" />
             <SmallArrowRow onClick={() => setActiveTab(1)} icon={FileText} title="Relatório aprovado" subtitle="Relatório SLA Comercial Q4 2024.pdf" tone="blue" />
           </Panel>
         </div>

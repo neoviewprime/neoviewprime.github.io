@@ -20,7 +20,7 @@ const ReportDetails: React.FC = () => {
     [reportId]
   );
   const governance = {
-    owner: report.area === 'Comercial' ? 'Área Comercial' : report.area === 'Operações' ? 'Área Operacional' : 'Área responsável',
+    owner: report.area === 'Comercial' ? 'Mariana Alves' : report.area === 'Operações' ? 'Rafael Costa' : 'Beatriz Rocha',
     validity: '31/12/2026',
     reviewCycle: 'Trimestral',
     visibility: 'Diretoria, gerência e área responsável',
@@ -116,9 +116,9 @@ const ReportDetails: React.FC = () => {
 
               <Panel title="Linha do tempo">
                 <div className="space-y-2">
-                  <SmallArrowRow icon={Eye} title="Relatório visualizado pela área responsável" subtitle={`${report.date} · ${report.time}`} tone="green" />
-                  <SmallArrowRow icon={MessageCircle} title="Comentário adicionado" subtitle="Solicitou cruzamento com indicadores do período anterior" tone="amber" />
-                  <SmallArrowRow icon={CheckCircle2} title="Hierarquia validada" subtitle={`${report.area} · Neoenergia Coelba`} tone="purple" />
+                  <SmallArrowRow icon={Eye} title="Mariana Alves visualizou o relatório" subtitle={`${report.date} · ${report.time}`} tone="green" />
+                  <SmallArrowRow icon={MessageCircle} title="Rafael Costa adicionou comentário" subtitle="Solicitou cruzamento com indicadores do período anterior" tone="amber" />
+                  <SmallArrowRow icon={CheckCircle2} title="Beatriz Rocha validou a hierarquia" subtitle={`${report.area} · Neoenergia Coelba`} tone="purple" />
                 </div>
               </Panel>
             </main>

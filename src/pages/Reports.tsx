@@ -140,8 +140,8 @@ const Reports: React.FC = () => {
 
               <Panel title="Atividade recente">
                 <div className="space-y-2">
-                  <SmallArrowRow onClick={() => openReport('Relatório SLA Comercial Q4 2024.pdf')} title="Relatório visualizado recentemente" subtitle="Relatório SLA Comercial Q4 2024.pdf" tone="green" />
-                  <SmallArrowRow onClick={() => openReport('Dashboard Operacional Dezembro.pdf')} title="Comentário recente" subtitle="Dashboard Operacional Dezembro.pdf" tone="amber" />
+                  <SmallArrowRow onClick={() => openReport('Relatório SLA Comercial Q4 2024.pdf')} title="Mariana Alves visualizou um relatório" subtitle="Relatório SLA Comercial Q4 2024.pdf" tone="green" />
+                  <SmallArrowRow onClick={() => openReport('Dashboard Operacional Dezembro.pdf')} title="Rafael Costa comentou" subtitle="Dashboard Operacional Dezembro.pdf" tone="amber" />
                 </div>
               </Panel>
             </aside>

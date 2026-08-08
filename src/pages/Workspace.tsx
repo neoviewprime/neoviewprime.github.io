@@ -63,9 +63,9 @@ const Workspace: React.FC = () => {
             <Panel title="Prioridades da sua fila" action={<button type="button" onClick={() => navigate('/approvals')} className="text-sm font-medium text-emerald-400">Ver fila completa</button>}>
               <div className="space-y-1">
                 {[
-                  ['Relatório SLA Comercial Q4 2024.pdf', 'Enviado pela área Comercial  •  19/12/2024', 'Alta prioridade', 'text-red-300 bg-red-500/16'],
-                  ['Dashboard Operacional Dezembro.pdf', 'Enviado pela área Operacional  •  18/12/2024', 'Média prioridade', 'text-amber-300 bg-amber-500/16'],
-                  ['Estratégias Recuperação Crédito.pdf', 'Enviado pela área Financeira  •  17/12/2024', 'Baixa prioridade', 'text-sky-300 bg-sky-500/16'],
+                  ['Relatório SLA Comercial Q4 2024.pdf', 'Enviado por Mariana Alves  •  19/12/2024', 'Alta prioridade', 'text-red-300 bg-red-500/16'],
+                  ['Dashboard Operacional Dezembro.pdf', 'Enviado por Rafael Costa  •  18/12/2024', 'Média prioridade', 'text-amber-300 bg-amber-500/16'],
+                  ['Estratégias Recuperação Crédito.pdf', 'Enviado por Beatriz Rocha  •  17/12/2024', 'Baixa prioridade', 'text-sky-300 bg-sky-500/16'],
                 ].map(([title, meta, tag, tagClass]) => (
                   <button type="button" key={title} onClick={() => navigate('/approvals')} className="flex w-full flex-col gap-3 border-b border-border/60 py-3 text-left last:border-0 sm:flex-row sm:items-center">
                     <span className="h-2 w-2 rounded-full bg-red-400" />
@@ -101,8 +101,8 @@ const Workspace: React.FC = () => {
           <div className="mt-4 grid gap-4 xl:grid-cols-[minmax(0,1fr)_380px]">
             <Panel title="Atividade recente">
               <div className="space-y-2">
-                <SmallArrowRow onClick={() => openReport('Relatório Recuperação Energia 2024.pdf')} title="Área responsável compartilhou um relatório" subtitle="Relatório Recuperação Energia 2024.pdf" tone="green" />
-                <SmallArrowRow onClick={() => openReport('Dashboard Operacional Dezembro.pdf')} title="Comentário adicionado ao relatório" subtitle="Dashboard Operacional Dezembro.pdf" tone="amber" />
+                <SmallArrowRow onClick={() => openReport('Relatório Recuperação Energia 2024.pdf')} title="Mariana Alves compartilhou um relatório com você" subtitle="Relatório Recuperação Energia 2024.pdf" tone="green" />
+                <SmallArrowRow onClick={() => openReport('Dashboard Operacional Dezembro.pdf')} title="Rafael Costa comentou no relatório" subtitle="Dashboard Operacional Dezembro.pdf" tone="amber" />
               </div>
             </Panel>
 

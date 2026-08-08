@@ -105,7 +105,7 @@ const Approvals: React.FC = () => {
                 <div className="space-y-2">
                   <SmallArrowRow onClick={() => toast.info('Regras de aprovação', { description: '2 regras ativas, SLA padrão de 24h e prioridade por criticidade.' })} icon={ShieldCheck} title="Regras de aprovação" subtitle="2 regras ativas • SLA: 24h" tone="purple" />
                   <SmallArrowRow onClick={() => setActiveTab(2)} icon={Users} title="Minhas delegações" subtitle="2 delegações ativas" tone="amber" />
-                  <SmallArrowRow onClick={() => toast.info('Substitutos', { description: 'Substituto ativo para ausências e férias configurado.' })} icon={Users} title="Substitutos" subtitle="1 substituto configurado" tone="blue" />
+                  <SmallArrowRow onClick={() => toast.info('Substitutos', { description: 'Substituto ativo para ausências e férias: Felipe Andrade.' })} icon={Users} title="Substitutos" subtitle="1 substituto configurado" tone="blue" />
                 </div>
               </Panel>
             </aside>

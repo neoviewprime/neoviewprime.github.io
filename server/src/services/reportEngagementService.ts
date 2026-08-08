@@ -806,7 +806,7 @@ export const reportEngagementService = {
       { id: 'mock-user-1', name: 'Ana Silva' },
       { id: 'mock-user-2', name: 'Bruno Costa' },
       { id: 'mock-user-3', name: 'Carla Souza' },
-      { id: 'mock-user-4', name: 'Usuário Demo 4' }
+      { id: 'mock-user-4', name: 'Lucas Martins' }
     ];
   },
 
@@ -887,7 +887,6 @@ export const reportEngagementService = {
     );
   }
 };
-
 
 
 
