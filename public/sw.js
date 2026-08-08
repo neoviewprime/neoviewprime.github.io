@@ -1,5 +1,6 @@
-const APP_SHELL_CACHE = 'neoview-app-shell-v1';
-const RUNTIME_CACHE = 'neoview-runtime-v1';
+const APP_VERSION = '2026-08-08-2';
+const APP_SHELL_CACHE = `neoview-app-shell-${APP_VERSION}`;
+const RUNTIME_CACHE = `neoview-runtime-${APP_VERSION}`;
 const APP_SHELL_FILES = [
   '/',
   '/index.html',
@@ -13,7 +14,9 @@ const APP_SHELL_FILES = [
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(APP_SHELL_CACHE).then((cache) => cache.addAll(APP_SHELL_FILES))
+    caches.open(APP_SHELL_CACHE).then((cache) =>
+      cache.addAll(APP_SHELL_FILES.map((file) => new Request(file, { cache: 'reload' })))
+    )
   );
   self.skipWaiting();
 });
@@ -29,6 +32,12 @@ self.addEventListener('activate', (event) => {
     )
   );
   self.clients.claim();
+});
+
+self.addEventListener('message', (event) => {
+  if (event.data?.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
 
 self.addEventListener('fetch', (event) => {
@@ -47,12 +56,11 @@ self.addEventListener('fetch', (event) => {
       fetch(request)
         .then((response) => {
           const copy = response.clone();
-          caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, copy));
+          caches.open(RUNTIME_CACHE).then((cache) => cache.put('/index.html', copy));
           return response;
         })
         .catch(async () => {
-          const cached = await caches.match(request);
-          return cached || caches.match('/index.html');
+          return caches.match('/index.html');
         })
     );
     return;
@@ -63,12 +71,8 @@ self.addEventListener('fetch', (event) => {
   }
 
   event.respondWith(
-    caches.match(request).then((cached) => {
-      if (cached) {
-        return cached;
-      }
-
-      return fetch(request).then((response) => {
+    fetch(request)
+      .then((response) => {
         if (!response || response.status !== 200) {
           return response;
         }
@@ -76,7 +80,7 @@ self.addEventListener('fetch', (event) => {
         const copy = response.clone();
         caches.open(RUNTIME_CACHE).then((cache) => cache.put(request, copy));
         return response;
-      });
-    })
+      })
+      .catch(() => caches.match(request))
   );
 });

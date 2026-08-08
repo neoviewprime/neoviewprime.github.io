@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoView</title>
+    <script>
+      (function () {
+        var path = window.location.pathname.replace(/^\/+/, "");
+        var search = window.location.search || "";
+        var hash = window.location.hash || "";
+        var target = "/";
+
+        if (path && path !== "index.html") {
+          target += "#/" + path + search + hash;
+        } else {
+          target += hash || "#/";
+        }
+
+        window.location.replace(target);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Carregando NeoView...</p>
+  </body>
+</html>
