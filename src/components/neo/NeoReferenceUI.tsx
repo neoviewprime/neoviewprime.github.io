@@ -240,7 +240,7 @@ export function ReportsTable({
             <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
               {approvals ? <StatusPill status="Pendente" /> : <span className="text-xs text-muted-foreground">{index + 2} destinatários</span>}
               <button type="button" onClick={() => onOpenReport?.(row.name)} className="neo-action-button py-2 text-xs">
-                {approvals ? 'Analisar' : 'Abrir ações'}
+                {approvals ? 'Analisar' : 'Abrir relatório'}
                 <ArrowRight className="h-4 w-4" />
               </button>
             </div>

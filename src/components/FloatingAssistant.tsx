@@ -52,19 +52,21 @@ export function FloatingAssistant({
     <div
       className={cn(
         "fixed z-50",
-        isMobile ? "bottom-[calc(env(safe-area-inset-bottom)+5.25rem)] right-4" : "bottom-6 right-6"
+        isMobile ? "inset-x-3 bottom-[calc(env(safe-area-inset-bottom)+5.35rem)]" : "bottom-6 right-6"
       )}
       style={{
         '--chat-duration': `${CHAT_DURATION}ms`,
         '--chat-ease': EASE_BASE,
       } as CSSProperties & Record<`--${string}`, string>}
     >
-      <div className="mb-4 flex items-end justify-end">
+      <div className={cn("mb-3 flex items-end", isMobile ? "justify-center" : "justify-end")}>
         <div
           className={cn(
             "origin-bottom-right will-change-transform will-change-opacity",
             "transform transition-[transform,opacity]",
-            isChatVisible ? "opacity-100 translate-x-3" : "opacity-0 translate-x-full pointer-events-none"
+            isMobile
+              ? isChatVisible ? "w-full opacity-100 translate-y-0" : "w-full opacity-0 translate-y-6 pointer-events-none"
+              : isChatVisible ? "opacity-100 translate-x-3" : "opacity-0 translate-x-full pointer-events-none"
           )}
           style={{
             transitionDuration: "var(--chat-duration)",
@@ -75,7 +77,7 @@ export function FloatingAssistant({
         </div>
       </div>
 
-      <div className={cn("flex justify-end", isMobile && "gap-2")}>
+      <div className={cn("flex", isMobile ? "justify-end gap-2 pr-1" : "justify-end")}>
         <Button
           onClick={toggleChat}
           size="lg"

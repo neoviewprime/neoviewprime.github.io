@@ -195,7 +195,7 @@ export function ChatWidget({
         className={cn(
           'bg-card border border-border rounded-2xl shadow-xl overflow-hidden flex flex-col',
           isMobile
-            ? 'h-[min(72dvh,640px)] w-[min(92vw,420px)]'
+            ? 'h-[min(68dvh,620px)] w-full rounded-[18px]'
             : isExpanded
               ? 'w-[500px] h-[600px]'
               : 'w-[380px] h-[500px]'
@@ -213,7 +213,7 @@ export function ChatWidget({
           className={cn(
             'mb-4 bg-card border border-border rounded-2xl shadow-xl overflow-hidden flex flex-col',
             isMobile
-              ? 'h-[min(76dvh,680px)] w-[min(calc(100vw-2rem),420px)]'
+              ? 'h-[min(68dvh,620px)] w-[min(calc(100vw-1.5rem),420px)] rounded-[18px]'
               : isExpanded
                 ? 'w-[500px] h-[600px]'
                 : 'w-[380px] h-[500px]',
@@ -245,7 +245,7 @@ export function ChatWidget({
   function renderChatContent() {
     return (
       <>
-        <div className="flex items-center justify-between px-3 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground h-[52px]">
+        <div className="flex h-[52px] items-center justify-between bg-gradient-to-r from-primary to-primary/80 px-3 text-primary-foreground">
           <div className="flex items-center gap-2 min-w-0">
             <ScanEye className="w-5 h-5 flex-shrink-0" strokeWidth={2.25} absoluteStrokeWidth aria-hidden />
             <div className="min-w-0">
@@ -348,7 +348,7 @@ export function ChatWidget({
           </div>
         )}
 
-        <div className="flex-1 min-h-0 overflow-y-auto p-4 space-y-4">
+        <div className="min-h-0 flex-1 space-y-4 overflow-y-auto p-3 sm:p-4">
           {messages.map((message) => (
             <div key={message.id}>
               <ChatMessage message={message} onRate={(messageId, rating) => void rateMessage(messageId, rating)} />
@@ -402,7 +402,7 @@ export function ChatWidget({
           <div ref={messagesEndRef} />
         </div>
 
-        <form onSubmit={handleSubmit} className="p-4 border-t border-border bg-card">
+        <form onSubmit={handleSubmit} className="border-t border-border bg-card p-3 sm:p-4">
           <div className="flex items-center gap-2">
             <input
               ref={inputRef}

@@ -6,9 +6,9 @@ import { useAuth } from '@/hooks/useAuth';
 
 const primaryItems = [
   { icon: Home, label: 'Inicio', path: '/home' },
-  { icon: FileText, label: 'Relatorios', path: '/reports' },
-  { icon: BarChart3, label: 'Estatisticas', path: '/indicators' },
-  { icon: Star, label: 'Favoritos', path: '/favorites' },
+  { icon: FileText, label: 'Relat.', path: '/reports' },
+  { icon: BarChart3, label: 'Indic.', path: '/indicators' },
+  { icon: Star, label: 'Salvos', path: '/favorites' },
   { icon: User, label: 'Perfil', path: '/settings' },
 ];
 
@@ -20,7 +20,7 @@ export const MobileBottomNav: React.FC = () => {
   if (!isAuthenticated) return null;
 
   return (
-    <nav className="neo-bottom-nav fixed inset-x-0 bottom-0 z-50 border-t px-2 pb-[max(0.45rem,env(safe-area-inset-bottom))] pt-2 md:hidden">
+    <nav className="neo-bottom-nav fixed inset-x-0 bottom-0 z-50 border-t px-2 pb-[max(0.4rem,env(safe-area-inset-bottom))] pt-1.5 md:hidden">
       <div className="mx-auto grid max-w-md grid-cols-5 items-end gap-1">
         {primaryItems.map((item) => {
           const Icon = item.icon;
@@ -32,7 +32,7 @@ export const MobileBottomNav: React.FC = () => {
               type="button"
               onClick={() => navigate(item.path)}
               className={cn(
-                'flex min-h-[3.35rem] flex-col items-center justify-center gap-1 rounded-2xl px-1 text-[0.68rem] font-medium transition-colors',
+                'flex min-h-[3.05rem] flex-col items-center justify-center gap-0.5 rounded-xl px-1 text-[0.66rem] font-medium transition-colors',
                 isActive
                   ? 'bg-primary/15 text-primary ring-1 ring-primary/25'
                   : 'text-muted-foreground hover:bg-muted hover:text-foreground'
