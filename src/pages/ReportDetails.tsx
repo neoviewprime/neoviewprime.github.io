@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'sonner';
-import { ArrowLeft, BarChart3, Calendar, CheckCircle2, Download, Eye, FileText, MessageCircle, Send, Share2, Star } from 'lucide-react';
+import { ArrowLeft, BarChart3, Bot, Calendar, CheckCircle2, Download, Eye, FileText, MessageCircle, Send, Share2, ShieldCheck, Star, UserRound } from 'lucide-react';
 import { FloatingAssistant } from '@/components/FloatingAssistant';
 import { PageTitle, Panel, reportRows, SmallArrowRow, StatCard, StatusPill } from '@/components/neo/NeoReferenceUI';
 import { reportDetailPath, reportSlug } from '@/lib/reportRouting';
@@ -19,6 +19,17 @@ const ReportDetails: React.FC = () => {
     () => reportRows.find((item) => reportSlug(item.name) === reportId) ?? reportRows[0],
     [reportId]
   );
+  const governance = {
+    owner: report.area === 'Comercial' ? 'Maria Silva' : report.area === 'Operações' ? 'Carlos Lima' : 'Ana Costa',
+    validity: '31/12/2026',
+    reviewCycle: 'Trimestral',
+    visibility: 'Diretoria, gerência e área responsável',
+    indicators: report.name.toLowerCase().includes('sla')
+      ? ['SLA Comercial', 'TMA', 'Backlog']
+      : report.name.toLowerCase().includes('inad')
+        ? ['Inadimplência', 'IPCE', 'Receita']
+        : ['DEC', 'FEC', 'ISQP'],
+  };
 
   return (
     <>
@@ -46,11 +57,11 @@ const ReportDetails: React.FC = () => {
             }
           />
 
-          <div className="grid gap-4 lg:grid-cols-4">
-            <StatCard icon={Eye} label="Visualizações" value={report.views} trend="+12% nos últimos 30 dias" tone="green" />
-            <StatCard icon={MessageCircle} label="Comentários" value={report.comments} trend="Discussões ativas" tone="blue" />
-            <StatCard icon={Calendar} label="Atualização" value={report.date} trend={report.time} tone="amber" />
-            <StatCard icon={BarChart3} label="Área" value={report.area} trend="Hierarquia validada" tone="purple" />
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            <StatCard icon={UserRound} label="Responsável" value={governance.owner} trend={report.area} tone="green" />
+            <StatCard icon={Calendar} label="Validade" value={governance.validity} trend={`Revisão ${governance.reviewCycle.toLowerCase()}`} tone="amber" />
+            <StatCard icon={ShieldCheck} label="Acesso" value="Governado" trend={governance.visibility} tone="blue" />
+            <StatCard icon={Eye} label="Uso" value={report.views} trend={`${report.comments} comentários`} tone="purple" />
           </div>
 
           <div className="mt-4 grid gap-4 xl:grid-cols-[minmax(0,1fr)_360px]">
@@ -71,11 +82,11 @@ const ReportDetails: React.FC = () => {
                     </div>
                     <h2 className="text-xl font-semibold text-foreground">Resumo executivo</h2>
                     <p className="mt-3 text-sm leading-6 text-muted-foreground">
-                      Este relatório consolida indicadores, evidências e comentários operacionais para apoiar decisões da área {report.area}.
-                      A leitura atual indica boa aderência ao fluxo de acompanhamento e pode ser usada como fonte para análises da IRIS.
+                      Este relatório consolida indicadores, evidências e histórico operacional para apoiar decisões da área {report.area}.
+                      Ele possui responsável definido, validade cadastrada e indicadores relacionados para a IRIS responder com fonte rastreável.
                     </p>
                     <div className="mt-5 grid gap-3 md:grid-cols-3">
-                      {['Indicadores revisados', 'Hierarquia conferida', 'Fontes anexadas'].map((item) => (
+                      {['Dono definido', 'Permissão aplicada', 'Fonte rastreável'].map((item) => (
                         <div key={item} className="rounded-xl border border-border/70 bg-background/55 p-4 dark:bg-white/[0.025]">
                           <CheckCircle2 className="h-5 w-5 text-emerald-300" />
                           <p className="mt-2 text-sm font-medium text-foreground">{item}</p>
@@ -83,6 +94,23 @@ const ReportDetails: React.FC = () => {
                       ))}
                     </div>
                   </div>
+                </div>
+              </Panel>
+
+              <Panel title="Indicadores relacionados">
+                <div className="grid gap-3 md:grid-cols-3">
+                  {governance.indicators.map((indicator) => (
+                    <button
+                      key={indicator}
+                      type="button"
+                      onClick={() => navigate('/indicators')}
+                      className="rounded-xl border border-border/70 bg-background/55 p-4 text-left transition-colors hover:border-primary/35 dark:bg-white/[0.025]"
+                    >
+                      <BarChart3 className="h-5 w-5 text-primary" />
+                      <p className="mt-3 text-sm font-semibold text-foreground">{indicator}</p>
+                      <p className="mt-1 text-xs leading-5 text-muted-foreground">Comparar anos, meta e leitura de negócio.</p>
+                    </button>
+                  ))}
                 </div>
               </Panel>
 
@@ -98,6 +126,7 @@ const ReportDetails: React.FC = () => {
             <aside className="space-y-4">
               <Panel title="Ações do relatório">
                 <div className="space-y-2">
+                  <SmallArrowRow onClick={() => toast.success('IRIS preparada', { description: 'Abra a IRIS e pergunte sobre os indicadores deste relatório.' })} icon={Bot} title="Perguntar à IRIS" subtitle="Analisar com contexto e fontes" tone="purple" />
                   <SmallArrowRow onClick={() => toast.success('Enviado para validação', { description: 'O relatório entrou na fila de aprovações.' })} icon={Send} title="Enviar para validação" tone="green" />
                   <SmallArrowRow onClick={() => toast.success('Favorito atualizado', { description: 'Preferência salva nesta sessão.' })} icon={Star} title={report.favorite ? 'Remover dos favoritos' : 'Adicionar aos favoritos'} tone="amber" />
                   <SmallArrowRow onClick={() => navigate('/indicators')} icon={BarChart3} title="Analisar indicadores" subtitle="Comparar anos e metas" tone="blue" />

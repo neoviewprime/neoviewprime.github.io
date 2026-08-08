@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { API_URL } from '@/lib/api';
 import { getStoredAuthToken } from '@/lib/authToken';
 import { COELBA_UTD_FLOW_ID, isCoelbaUtdPath } from '@/lib/coelbaUtd';
+import { reportDetailPath } from '@/lib/reportRouting';
 
 type GlobalSearchResult = {
   type: 'report' | 'indicator';
@@ -90,6 +91,15 @@ export const GlobalSearch: React.FC = () => {
   }, [query]);
 
   const handleResultClick = (result: GlobalSearchResult) => {
+    if (result.type === 'report') {
+      navigate(reportDetailPath(result.reportName));
+      setIsOpen(false);
+      setQuery('');
+      setResults([]);
+      setHighlightedIndex(0);
+      return;
+    }
+
     const params = new URLSearchParams({
       company: result.companyId,
       label: result.type === 'indicator' ? result.indicatorName ?? result.reportName : result.reportName
@@ -108,13 +118,7 @@ export const GlobalSearch: React.FC = () => {
       params.set('view', COELBA_UTD_FLOW_ID);
     }
 
-    if (result.type === 'indicator') {
-      params.set('indicator', result.indicatorName ?? result.reportName);
-    } else {
-      params.set('report', result.sourceReportId);
-      params.set('reportName', result.reportName);
-      params.set('openReport', '1');
-    }
+    params.set('indicator', result.indicatorName ?? result.reportName);
 
     navigate(`/dashboard?${params.toString()}`);
     setIsOpen(false);
