@@ -496,7 +496,17 @@ export interface ApiError {
   details?: Record<string, unknown>;
 }
 
-export type ChatPageId = 'register' | 'workspace' | 'reports' | 'approvals' | 'generic';
+export type ChatPageId =
+  | 'home'
+  | 'register'
+  | 'workspace'
+  | 'reports'
+  | 'indicators'
+  | 'approvals'
+  | 'favorites'
+  | 'settings'
+  | 'help'
+  | 'generic';
 
 export interface ChatPageContext {
   page: ChatPageId;

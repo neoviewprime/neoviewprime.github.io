@@ -55,12 +55,41 @@ export function ChatWidget({
     rateMessage
   } = useChatbot(pageContext);
 
-  const promptSuggestions = [
-    'Compare DEC 2023 e 2024',
-    'Cruze ISQP com DEC em 2024',
-    'SLA faz sentido para medir atendimento?',
-    'Qual indicador usar para qualidade percebida?'
-  ];
+  const promptSuggestions = (() => {
+    if (pageContext?.page === 'home') {
+      return [
+        'Monte uma visão executiva da Coelba',
+        'Qual indicador merece atenção agora?',
+        'Compare empresas em DEC 2024',
+        'Quais relatórios devo abrir primeiro?'
+      ];
+    }
+
+    if (pageContext?.page === 'reports') {
+      return [
+        'Ache o relatório de DEC 2024',
+        'Quais fontes sustentam ISQP?',
+        'Compare relatórios de SLA',
+        'Mostre documentos da Coelba'
+      ];
+    }
+
+    if (pageContext?.page === 'approvals') {
+      return [
+        'Quais aprovações são críticas?',
+        'Que evidência falta para aprovar?',
+        'Mostre pendências por relatório',
+        'Qual decisão reduz mais risco?'
+      ];
+    }
+
+    return [
+      'Compare DEC 2023 e 2024',
+      'Cruze ISQP com DEC em 2024',
+      'SLA faz sentido para medir atendimento?',
+      'Compare empresas em FEC 2024'
+    ];
+  })();
 
   useEffect(() => {
     setMounted(true);

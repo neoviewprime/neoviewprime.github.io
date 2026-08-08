@@ -805,9 +805,9 @@ const buildDirectIntentAnswer = (intent: ChatIntent, pageContext?: { title?: str
 
   return [
     info.title,
-    `Caminho sugerido: ${info.route}.`,
+    `Eu iria por aqui: ${info.route}.`,
     ...info.details.map((detail) => `- ${detail}`),
-    pageContext?.title ? `Contexto atual considerado: ${pageContext.title}.` : ''
+    pageContext?.title ? `Como voce esta em ${pageContext.title}, posso adaptar o caminho ao que aparece nessa tela.` : ''
   ]
     .filter(Boolean)
     .join('\n');
@@ -838,6 +838,143 @@ const sourceFromIndicatorPoint = (point: {
   };
 };
 
+type NeuralQueryFrame = {
+  action: 'show' | 'compare' | 'assess' | 'find' | 'guide';
+  years: number[];
+  companies: Company[];
+  indicators: typeof indicatorProfiles;
+  wantsCompanyComparison: boolean;
+  wantsIndicatorComparison: boolean;
+  pageTitle?: string;
+  page?: string;
+};
+
+const companyAliases: Record<string, string[]> = {
+  coelba: ['coelba', 'bahia', 'neoenergia coelba'],
+  cosern: ['cosern', 'rio grande do norte', 'rn', 'neoenergia cosern'],
+  brasilia: ['brasilia', 'brasília', 'df', 'neoenergia brasilia', 'neoenergia brasília'],
+  elektro: ['elektro', 'sao paulo', 'sul sudeste', 'neoenergia elektro']
+};
+
+const companyValueMultipliers: Record<string, number> = {
+  coelba: 1,
+  cosern: 0.94,
+  brasilia: 0.9,
+  elektro: 0.86
+};
+
+const resolveCompaniesForQuestion = (question: string) => {
+  const normalized = normalizeText(question);
+  const selected = companies.filter((company) => {
+    const aliases = [company.id, company.name, company.fullName, ...(companyAliases[company.id] ?? [])].map(normalizeText);
+    return aliases.some((alias) => normalized.includes(alias));
+  });
+
+  return selected.length ? selected : [];
+};
+
+const inferAction = (question: string): NeuralQueryFrame['action'] => {
+  const normalized = normalizeText(question);
+  const tokens = tokenize(question);
+
+  if (hasAny(normalized, tokens, ['comparar', 'compara', 'comparativo', 'versus', 'contra', 'ranking', 'melhor', 'pior'])) return 'compare';
+  if (hasAny(normalized, tokens, ['faz sentido', 'adequado', 'serve', 'usar', 'aderencia', 'recomendacao'])) return 'assess';
+  if (hasAny(normalized, tokens, ['onde', 'abrir', 'buscar', 'encontrar', 'traga', 'mostre relatorio'])) return 'find';
+  if (hasAny(normalized, tokens, ['ajuda', 'guie', 'orienta', 'como faco', 'como faço'])) return 'guide';
+  return 'show';
+};
+
+const buildNeuralQueryFrame = (
+  question: string,
+  pageContext?: { page?: string; title?: string; summary?: string; hints?: string[] } | null
+): NeuralQueryFrame => {
+  const indicators = resolveIndicatorProfilesForQuestion(question);
+  const years = extractYears(question);
+  const companiesInQuestion = resolveCompaniesForQuestion(question);
+  const normalized = normalizeText(question);
+  const tokens = tokenize(question);
+
+  return {
+    action: inferAction(question),
+    years,
+    companies: companiesInQuestion,
+    indicators,
+    wantsCompanyComparison:
+      companiesInQuestion.length > 1 ||
+      hasAny(normalized, tokens, ['empresa', 'empresas', 'distribuidora', 'distribuidoras', 'ranking', 'grupo']),
+    wantsIndicatorComparison:
+      indicators.length > 1 ||
+      hasAny(normalized, tokens, ['indicadores', 'kpis', 'cruze', 'cruzar', 'relacao', 'correlacao']),
+    pageTitle: pageContext?.title,
+    page: pageContext?.page
+  };
+};
+
+const resolveComparisonYears = (years: number[]) =>
+  years.length >= 2
+    ? [years[0], years[1]]
+    : years.length === 1
+      ? [Math.max(2022, years[0] - 1), years[0]]
+      : [2023, 2024];
+
+const getCompanyIndicatorPoint = (
+  profile: (typeof indicatorProfiles)[number],
+  company: Company,
+  year: number
+) => {
+  const base = profile.series.find((point) => point.year === year) ?? profile.series.at(-1)!;
+  const multiplier = companyValueMultipliers[company.id] ?? 1;
+  const value = Number((base.value * multiplier).toFixed(1));
+  const target = Number((base.target * (profile.direction === 'lower-is-better' ? 0.98 + multiplier * 0.02 : 1)).toFixed(1));
+
+  return {
+    ...base,
+    value,
+    target,
+    companyId: company.id,
+    companyName: company.name,
+    note: `${company.name}: leitura consolidada para comparacao executiva do grupo.`
+  };
+};
+
+const buildCompanyComparisonAnswer = (frame: NeuralQueryFrame) => {
+  const profile = frame.indicators[0] ?? indicatorProfiles[0];
+  const year = frame.years.at(-1) ?? 2024;
+  const comparedCompanies = frame.companies.length > 1 ? frame.companies : companies.slice(0, 4);
+  const rows = comparedCompanies
+    .map((company) => {
+      const point = getCompanyIndicatorPoint(profile, company, year);
+      const targetGap = profile.direction === 'lower-is-better' ? point.target - point.value : point.value - point.target;
+      return { company, point, targetGap };
+    })
+    .sort((left, right) =>
+      profile.direction === 'lower-is-better'
+        ? left.point.value - right.point.value
+        : right.point.value - left.point.value
+    );
+  const best = rows[0];
+  const weakest = rows.at(-1)!;
+
+  return {
+    answer: [
+      `${best.company.name} aparece melhor posicionada em ${profile.acronym} no recorte de ${year}.`,
+      `O indicador responde a: ${profile.businessQuestion}`,
+      'Comparativo por empresa:',
+      ...rows.map(({ company, point, targetGap }, index) => {
+        const status = targetGap >= 0 ? 'dentro da meta' : 'fora da meta';
+        return `- ${index + 1}. ${company.name}: ${formatValue(profile, point.value)} | meta ${formatValue(profile, point.target)} | ${status}.`;
+      }),
+      `Leitura: ${profile.direction === 'lower-is-better' ? 'menor valor indica melhor desempenho' : 'maior valor indica melhor desempenho'}. A diferenca entre ${best.company.name} e ${weakest.company.name} e de ${formatValue(profile, Math.abs(best.point.value - weakest.point.value))}.`,
+      `Para uma decisao mais justa, eu cruzaria com ${profile.related.slice(0, 2).join(' e ')} e abriria os relatorios fonte antes de concluir causa.`
+    ].join('\n'),
+    sources: rows.map(({ point }) => sourceFromIndicatorPoint(point)),
+    totalSources: rows.length,
+    intent: 'comparacao',
+    confidence: 0.95,
+    retrievalMode: 'malha-contextual-empresas'
+  };
+};
+
 const resolveIndicatorProfilesForQuestion = (question: string) => {
   const directProfiles = findIndicatorProfiles(question);
   if (directProfiles.length > 0) return directProfiles;
@@ -858,13 +995,8 @@ const describeIndicatorFit = (question: string, profile: (typeof indicatorProfil
   };
 };
 
-const buildMultiIndicatorIntelligenceAnswer = (question: string, profiles: typeof indicatorProfiles) => {
-  const years = extractYears(question);
-  const comparisonYears = years.length >= 2
-    ? [years[0], years[1]]
-    : years.length === 1
-      ? [Math.max(2022, years[0] - 1), years[0]]
-      : [2023, 2024];
+const buildMultiIndicatorIntelligenceAnswer = (question: string, profiles: typeof indicatorProfiles, frame?: NeuralQueryFrame) => {
+  const comparisonYears = resolveComparisonYears(frame?.years ?? extractYears(question));
   const assessments = profiles.map((profile) => ({
     profile,
     assessment: buildIndicatorAssessment(profile, comparisonYears),
@@ -884,8 +1016,8 @@ const buildMultiIndicatorIntelligenceAnswer = (question: string, profiles: typeo
   });
 
   const answer = [
-    `Vou tratar isso como uma analise comparativa entre ${profiles.map((profile) => profile.acronym).join(' x ')}.`,
-    `Recorte usado: ${comparisonYears.join(' e ')}.`,
+    `${profiles.map((profile) => profile.acronym).join(' x ')} formam uma boa visao combinada para esse recorte.`,
+    `Usei ${comparisonYears.join(' e ')} como periodo de comparacao${frame?.pageTitle ? ` e considerei que voce esta em ${frame.pageTitle}` : ''}.`,
     'Leitura executiva:',
     ...lines,
     'Como decidir:',
@@ -906,9 +1038,11 @@ const buildMultiIndicatorIntelligenceAnswer = (question: string, profiles: typeo
 };
 
 const buildIndicatorIntelligenceAnswer = (question: string) => {
-  const profiles = resolveIndicatorProfilesForQuestion(question);
+  const frame = buildNeuralQueryFrame(question);
+  const profiles = frame.indicators;
   if (profiles.length === 0) return null;
-  if (profiles.length > 1) return buildMultiIndicatorIntelligenceAnswer(question, profiles);
+  if (frame.wantsCompanyComparison) return buildCompanyComparisonAnswer(frame);
+  if (profiles.length > 1) return buildMultiIndicatorIntelligenceAnswer(question, profiles, frame);
 
   const [profile] = profiles;
   const years = extractYears(question);
@@ -922,10 +1056,10 @@ const buildIndicatorIntelligenceAnswer = (question: string) => {
   const available = indicatorProfiles.map((item) => item.acronym).join(', ');
 
   const answer = [
-    `Indicador analisado: ${profile.acronym} - ${profile.name}.`,
-    `Pergunta que ele responde: ${profile.businessQuestion}`,
-    `Avaliacao da sua pergunta: ${fit.line}`,
-    `Leitura: ${directionText}. ${assessment.verdict}`,
+    `${profile.acronym} esta ${assessment.delta.improved ? 'evoluindo bem' : 'pedindo atencao'} no recorte analisado.`,
+    `${profile.acronym} significa ${profile.name} e responde a pergunta: ${profile.businessQuestion}`,
+    `${fit.line}`,
+    `A leitura correta e: ${directionText}. ${assessment.verdict}`,
     `Comparacao ${assessment.previous.year} -> ${assessment.latest.year}: ${formatValue(profile, assessment.previous.value)} para ${formatValue(profile, assessment.latest.value)} (${deltaLabel}; ${percentLabel}).`,
     `Meta em ${assessment.latest.year}: ${formatValue(profile, assessment.latest.target)}. ${assessment.targetVerdict}`,
     'Serie por ano no recorte:',
@@ -948,6 +1082,7 @@ const buildIndicatorIntelligenceAnswer = (question: string) => {
 };
 
 export const buildDemoChatAnswer = (question: string, pageContext?: { title?: string; summary?: string; hints?: string[] } | null) => {
+  const frame = buildNeuralQueryFrame(question, pageContext);
   const intent = detectChatIntent(question);
   const matches = buildSemanticMatches(question, pageContext);
   const topMatches = matches.slice(0, 6);
@@ -1007,6 +1142,10 @@ export const buildDemoChatAnswer = (question: string, pageContext?: { title?: st
     return indicatorAnswer;
   }
 
+  if (frame.wantsCompanyComparison && frame.indicators.length > 0) {
+    return buildCompanyComparisonAnswer(frame);
+  }
+
   const directAnswer = buildDirectIntentAnswer(intent, pageContext);
   if (directAnswer && (topMatches.length === 0 || isNavigationLike || isRouteIntent)) {
     return {
@@ -1047,28 +1186,27 @@ export const buildDemoChatAnswer = (question: string, pageContext?: { title?: st
   });
 
   const intentLead: Record<string, string> = {
-    aprovacoes: 'Priorizei itens que ajudam a localizar relatorios e contexto para decisao/aprovacao.',
-    favoritos: 'Priorizei relatorios salvos, recorrentes ou associados ao seu historico local.',
-    workspace: 'Priorizei fontes que ajudam a montar o panorama executivo do workspace.',
-    metricas: 'Priorizei resultados com leitura de engajamento e indicadores operacionais.',
-    comparacao: 'Separei fontes comparaveis por empresa e hierarquia.',
-    indicadores: 'Priorizei relatorios associados aos indicadores e siglas detectadas.',
-    relatorios: 'Priorizei documentos catalogados com melhor aderencia textual.',
-    administracao: 'Priorizei informacoes relacionadas a usuarios, permissoes e hierarquia.',
-    configuracoes: 'Priorizei contexto de perfil, preferencias e notificacoes.',
-    ajuda: 'Priorizei orientacoes praticas sobre o uso do NeoView.',
-    busca_semantica: 'Usei busca semantica local com sinonimos e aprendizado por avaliacao.'
+    aprovacoes: 'Para decidir com seguranca, eu olharia primeiro os relatorios com pendencia e o historico de aprovacao.',
+    favoritos: 'Nos favoritos, o melhor caminho e recuperar o que voce acompanha com frequencia e cruzar com o indicador atual.',
+    workspace: 'Para uma visao executiva, eu juntaria empresa, area, indicador e relatorio fonte antes de abrir detalhes.',
+    metricas: 'A leitura aqui combina engajamento do relatorio com indicadores operacionais.',
+    comparacao: 'A comparacao fica mais clara separando empresa, periodo e indicador antes de concluir.',
+    indicadores: 'O melhor caminho e ligar a sigla ao indicador, ao periodo e aos relatorios que sustentam a leitura.',
+    relatorios: 'Encontrei documentos que podem sustentar sua analise e deixei os mais aderentes no topo.',
+    administracao: 'Para administracao, o ponto central e confirmar perfil, permissao e hierarquia do usuario.',
+    configuracoes: 'Esse caminho passa por perfil, preferencias, notificacoes e ajustes de conta.',
+    ajuda: 'Aqui eu sigo como guia de uso, indicando o fluxo mais curto dentro do NeoView.',
+    busca_semantica: 'Busquei correspondencias por termos, sinonimos, siglas e contexto da tela atual.'
   };
 
   return {
     answer: [
-      `Entendi sua intencao como: ${intent}.`,
       intentLead[intent] ?? intentLead.busca_semantica,
-      `Encontrei ${total} fonte(s) aderente(s). Distribuicao: ${distributionText || 'sem agrupamento'}.`,
-      'Melhores resultados:',
+      `${total} fonte(s) combinam com a sua pergunta${pageContext?.title ? ` dentro de ${pageContext.title}` : ''}. Distribuicao: ${distributionText || 'sem agrupamento'}.`,
+      'Melhores caminhos encontrados:',
       ...lines,
       total > topMatches.length ? `Ainda ha mais ${total - topMatches.length} resultado(s) alem deste recorte.` : '',
-      'Proximo passo sugerido: posso refinar por empresa, indicador, periodo, gerencia ou abrir um relatorio especifico.'
+      'Proximo passo: refine por empresa, indicador, periodo ou gerencia para eu devolver uma leitura mais precisa.'
     ].filter(Boolean).join('\n'),
     sources: topMatches.map(({ entry, score }) => sourceFromEntry(entry, score)),
     totalSources: total,

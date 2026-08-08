@@ -35,6 +35,7 @@ const EASE_BASE = "cubic-bezier(0.16, 1, 0.3, 1)";
 export function FloatingAssistant({
   variant = "chat",
   defaultChatOpen = false,
+  currentLevel,
   pageContext,
 }: FloatingAssistantProps) {
   const isMobile = useMediaQuery('(max-width: 767px)');
@@ -47,6 +48,8 @@ export function FloatingAssistant({
   }, [enableChat]);
 
   if (!enableChat) return null;
+
+  const resolvedPageContext = pageContext ?? buildPageContext(currentLevel);
 
   return (
     <div
@@ -73,7 +76,7 @@ export function FloatingAssistant({
             transitionTimingFunction: "var(--chat-ease)",
           }}
         >
-          <ChatWidget isOpen={isChatVisible} onClose={toggleChat} embedded pageContext={pageContext} />
+          <ChatWidget isOpen={isChatVisible} onClose={toggleChat} embedded pageContext={resolvedPageContext} />
         </div>
       </div>
 
@@ -109,3 +112,83 @@ export const FloatingChatOnly = (props: Omit<FloatingAssistantProps, "variant">)
 );
 
 export const FloatingRankingOnly = (_props: Omit<FloatingAssistantProps, "variant">) => null;
+
+const buildPageContext = (level?: FloatingAssistantProps["currentLevel"]): ChatPageContext | null => {
+  const contexts: Partial<Record<NonNullable<FloatingAssistantProps["currentLevel"]>, ChatPageContext>> = {
+    companies: {
+      page: 'home',
+      title: 'Início',
+      summary: 'Tela de entrada para visão executiva, busca global, empresas, relatórios recentes e atalhos de decisão.',
+      hints: [
+        'Sugira perguntas amplas sobre indicadores, empresas e relatórios prioritários.',
+        'Ajude o usuário a escolher entre analisar indicador, abrir relatório, comparar empresas ou ver pendências.',
+        'Quando a pergunta for vaga, proponha uma visão executiva inicial.'
+      ]
+    },
+    superintendences: {
+      page: 'workspace',
+      title: 'Hierarquia organizacional',
+      summary: 'Navegação por empresa, superintendência, gerência, projeto, indicadores e relatórios.',
+      hints: [
+        'Considere filtros de hierarquia quando o usuário citar área, unidade ou responsável.',
+        'Ajude a descer ou subir na estrutura do NeoView.'
+      ]
+    },
+    managements: {
+      page: 'workspace',
+      title: 'Gerências',
+      summary: 'Recorte de gestão para localizar projetos, indicadores e relatórios da área selecionada.',
+      hints: ['Priorize respostas por gerência, indicador e relatório associado.']
+    },
+    projects: {
+      page: 'workspace',
+      title: 'Projetos',
+      summary: 'Recorte por projeto com indicadores, relatórios e evidências operacionais.',
+      hints: ['Relacione projeto com KPI, relatório fonte e próximos passos de análise.']
+    },
+    indicators: {
+      page: 'indicators',
+      title: 'Inteligência de Indicadores',
+      summary: 'Área para comparar anos, validar aderência do indicador e cruzar KPIs.',
+      hints: [
+        'Responda com leitura de tendência, meta, aderência da pergunta e indicadores complementares.',
+        'Se houver ano na pergunta, use o recorte temporal.'
+      ]
+    },
+    reports: {
+      page: 'reports',
+      title: 'Relatórios',
+      summary: 'Catálogo de relatórios com fontes, indicadores, responsáveis e detalhes para consulta.',
+      hints: [
+        'Quando o usuário pedir um relatório, sugira a fonte mais provável e o indicador relacionado.',
+        'Se houver ano, empresa ou área, trate como filtro.'
+      ]
+    },
+    approvals: {
+      page: 'approvals',
+      title: 'Aprovações',
+      summary: 'Fila de validações, pendências, histórico de decisão e governança dos relatórios.',
+      hints: ['Priorize risco, pendência, status de aprovação e ação recomendada.']
+    },
+    favorites: {
+      page: 'favorites',
+      title: 'Favoritos',
+      summary: 'Relatórios e indicadores salvos para acesso rápido.',
+      hints: ['Ajude a recuperar itens salvos e sugerir acompanhamento recorrente.']
+    },
+    settings: {
+      page: 'settings',
+      title: 'Configurações',
+      summary: 'Preferências de perfil, tema, notificações e conta.',
+      hints: ['Responda como guia de configuração e personalização.']
+    },
+    help: {
+      page: 'help',
+      title: 'Ajuda',
+      summary: 'Central de suporte, dúvidas frequentes e orientação de uso da plataforma.',
+      hints: ['Explique fluxos com clareza e sugira onde clicar no NeoView.']
+    }
+  };
+
+  return level ? contexts[level] ?? null : null;
+};
