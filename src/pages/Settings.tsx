@@ -17,8 +17,8 @@ const Settings: React.FC = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState(0);
   const [profile, setProfile] = useState({
-    name: 'Gabriel Nogueira',
-    email: 'gabriel.nogueira@neoview.com',
+    name: 'Usuário do protótipo',
+    email: 'usuario@neoview.demo',
     department: 'Diretoria Executiva',
     phone: '(00) 00000-0000',
     role: 'Superadmin',
@@ -54,7 +54,7 @@ const Settings: React.FC = () => {
                 <p className="mb-8 text-sm text-muted-foreground">Atualize seus dados de identificação exibidos na plataforma.</p>
                 <div className="grid gap-8 lg:grid-cols-[190px_1fr]">
                   <button type="button" onClick={() => toast.info('Upload de foto', { description: 'Seleção de imagem simulada para a demonstração.' })} className="text-center">
-                    <div className="relative mx-auto grid h-28 w-28 place-items-center rounded-full bg-emerald-600 text-4xl font-bold text-white ring-2 ring-emerald-400">JN</div>
+                    <div className="relative mx-auto grid h-28 w-28 place-items-center rounded-full bg-emerald-600 text-4xl font-bold text-white ring-2 ring-emerald-400">US</div>
                     <p className="mt-4 text-sm text-muted-foreground">JPG, PNG ou GIF<br />Máx. 2MB</p>
                   </button>
                   <div className="grid gap-5 md:grid-cols-2">

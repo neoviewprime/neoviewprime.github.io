@@ -31,7 +31,7 @@ export const recentDecisions = [
   { status: 'Aprovado', title: 'Relatório Recuperação Energia 2024.pdf', meta: 'Aprovado por você  •  19/12/2024  •  10:32', tone: 'green' },
   { status: 'Rejeitado', title: 'Relatório Inadimplência Q4 2024.pdf', meta: 'Rejeitado por você  •  18/12/2024  •  16:21', tone: 'red' },
   { status: 'Aprovado', title: 'Pesquisa Satisfação Corporativos 2024.pdf', meta: 'Aprovado por você  •  18/12/2024  •  09:47', tone: 'green' },
-  { status: 'Delegado', title: 'Dashboard Comercial Novembro.pdf', meta: 'Delegado para Maria Silva  •  17/12/2024', tone: 'amber' },
+  { status: 'Delegado', title: 'Dashboard Comercial Novembro.pdf', meta: 'Delegado para gestor substituto  •  17/12/2024', tone: 'amber' },
 ];
 
 export function PageTitle({
@@ -208,7 +208,7 @@ export function ReportsTable({
                   </div>
                   <div className="rounded-lg bg-muted/50 p-2">
                     <p className="text-muted-foreground">Solicitante</p>
-                    <p className="mt-1 font-medium text-foreground">{['Maria Silva', 'Carlos Lima', 'Ana Costa', 'Gabriel Nogueira', 'Paula Rodrigues', 'Marina Souza'][index]}</p>
+                    <p className="mt-1 font-medium text-foreground">{['Usuário Comercial', 'Usuário Operacional', 'Usuário Financeiro', 'Administrador Demo', 'Gestor Demo', 'Analista Demo'][index]}</p>
                   </div>
                 </>
               ) : (
@@ -292,7 +292,7 @@ export function ReportsTable({
                   <div className="flex items-center gap-2">
                     <Avatar initials={['MS', 'CL', 'AC', 'JN', 'PR', 'MS'][index]} tone={index % 3 === 0 ? 'green' : 'slate'} />
                     <div className="min-w-0">
-                      <p className="max-w-[140px] truncate text-foreground">{['Maria Silva', 'Carlos Lima', 'Ana Costa', 'Gabriel Nogueira', 'Paula Rodrigues', 'Marina Souza'][index]}</p>
+                      <p className="max-w-[140px] truncate text-foreground">{['Usuário Comercial', 'Usuário Operacional', 'Usuário Financeiro', 'Administrador Demo', 'Gestor Demo', 'Analista Demo'][index]}</p>
                       <p className="truncate text-xs text-muted-foreground">{row.area}</p>
                     </div>
                   </div>

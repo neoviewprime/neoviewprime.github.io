@@ -6,11 +6,11 @@ import { useAuth } from '@/hooks/useAuth';
 import { Avatar, PageTitle, Panel, SearchControl, SmallArrowRow, StatCard } from '@/components/neo/NeoReferenceUI';
 
 const users = [
-  ['GN', 'Gabriel Nogueira', 'gabriel.nogueira@neoview.com.br', 'Superadmin', 'Ativo', 'Hoje, 10:32'],
-  ['GN', 'Gabriel Nogueira', 'gabriel.nogueira@neoview.com.br', 'Superadmin', 'Ativo', 'Hoje, 09:15'],
-  ['MC', 'Maria Silva', 'maria.silva@neoview.com.br', 'Administrador', 'Ativo', 'Ontem, 16:45'],
-  ['CP', 'Carlos Lima', 'carlos.lima@neoview.com.br', 'Analista', 'Ativo', 'Ontem, 11:08'],
-  ['AF', 'Ana Costa', 'ana.costa@neoview.com.br', 'Visualizador', 'Inativo', 'Há 15 dias'],
+  ['SA', 'Superadmin Demo', 'superadmin@neoview.demo', 'Superadmin', 'Ativo', 'Hoje, 10:32'],
+  ['AD', 'Administrador Demo', 'administrador@neoview.demo', 'Administrador', 'Ativo', 'Hoje, 09:15'],
+  ['AN', 'Analista Demo', 'analista@neoview.demo', 'Analista', 'Ativo', 'Ontem, 16:45'],
+  ['GE', 'Gestor Demo', 'gestor@neoview.demo', 'Gestor', 'Ativo', 'Ontem, 11:08'],
+  ['VI', 'Visualizador Demo', 'visualizador@neoview.demo', 'Visualizador', 'Inativo', 'Há 15 dias'],
 ];
 
 const Superadmin: React.FC = () => {
@@ -37,8 +37,8 @@ const Superadmin: React.FC = () => {
         <PageTitle
           icon={Shield}
           title="Gerenciamento Superadmin"
-          description="Área restrita para Gabriel Nogueira monitorar usuários, relatórios, operações e auditoria."
-          actions={<button type="button" onClick={() => toast.info('Acesso validado', { description: 'Sessão com papel superadmin ativa para a demonstração.' })} className="neo-action-button"><Lock className="h-4 w-4" /> Acesso restrito aos dois superadmins</button>}
+          description="Área restrita para monitorar usuários, relatórios, operações e auditoria."
+          actions={<button type="button" onClick={() => toast.info('Acesso validado', { description: 'Sessão com papel superadmin ativa para a demonstração.' })} className="neo-action-button"><Lock className="h-4 w-4" /> Acesso restrito</button>}
         />
 
         <div className="mb-4 grid gap-4 md:grid-cols-2 xl:grid-cols-[1fr_1fr_1fr_1fr_320px]">
@@ -47,7 +47,7 @@ const Superadmin: React.FC = () => {
           <StatCard icon={AlertTriangle} label="Operações críticas" value="6" helper="+2 este mês" tone="amber" />
           <StatCard icon={Activity} label="Eventos de auditoria" value="1.248" helper="+12% este mês" tone="purple" />
           <Panel title="Atividade recente" action={<button type="button" onClick={() => setActiveTab(2)} className="text-sm font-medium text-emerald-400">Ver tudo</button>}>
-            <SmallArrowRow onClick={() => setActiveTab(0)} icon={UserPlus} title="Usuário criado" subtitle="Maria Silva foi criada por Gabriel Nogueira" tone="green" />
+            <SmallArrowRow onClick={() => setActiveTab(0)} icon={UserPlus} title="Usuário criado" subtitle="Novo usuário cadastrado pelo administrador" tone="green" />
             <SmallArrowRow onClick={() => setActiveTab(1)} icon={FileText} title="Relatório aprovado" subtitle="Relatório SLA Comercial Q4 2024.pdf" tone="blue" />
           </Panel>
         </div>

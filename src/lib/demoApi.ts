@@ -433,7 +433,7 @@ const writeDelegations = (value: { outgoing: StoredApprovalDelegation[]; incomin
 
 const demoUsers = [
   { id: 'demo-dir-1', name: 'Marina Costa', email: 'marina.costa@neoenergia.demo' },
-  { id: 'demo-dir-2', name: 'Gabriel Lima', email: 'gabriel.lima@neoenergia.demo' },
+  { id: 'demo-dir-2', name: 'Gestor Demo', email: 'gestor@neoenergia.demo' },
   { id: 'demo-dir-3', name: 'Patricia Nunes', email: 'patricia.nunes@neoenergia.demo' },
   { id: 'demo-dir-4', name: 'Ricardo Alves', email: 'ricardo.alves@neoenergia.demo' }
 ];

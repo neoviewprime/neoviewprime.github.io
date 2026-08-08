@@ -9,8 +9,8 @@ import { reportJsonFileService } from "./reportJsonFileService";
 import { userManagementService } from "./userManagementService";
 
 export const SUPERADMIN_EMAILS = [
-  "gabriel.paes@neoenergia.com",
-  "gabriel.nogueira@neoenergia.com"
+  "superadmin@neoview.demo",
+  "administrador@neoview.demo"
 ] as const;
 
 export const DEFAULT_SUPERADMIN_PASSWORD = "neoview2026";
