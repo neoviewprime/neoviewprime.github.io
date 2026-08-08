@@ -57,9 +57,9 @@ export function ChatWidget({
 
   const promptSuggestions = [
     'Compare DEC 2023 e 2024',
-    'O indicador FEC faz sentido para qualidade?',
-    'Mostre SLA Comercial em 2026',
-    'Cruze ISQP com DEC'
+    'Cruze ISQP com DEC em 2024',
+    'SLA faz sentido para medir atendimento?',
+    'Qual indicador usar para qualidade percebida?'
   ];
 
   useEffect(() => {

@@ -166,6 +166,15 @@ export const findIndicatorProfile = (query: string): IndicatorProfile | undefine
   });
 };
 
+export const findIndicatorProfiles = (query: string): IndicatorProfile[] => {
+  const normalized = normalize(query);
+
+  return profiles.filter((profile) => {
+    const directTerms = [profile.acronym, profile.name, profile.id, ...profile.aliases].map(normalize);
+    return directTerms.some((term) => normalized.includes(term));
+  });
+};
+
 export const getIndicatorProfileById = (id: string) =>
   profiles.find((profile) => profile.id === id || normalize(profile.acronym) === normalize(id));
 
@@ -208,5 +217,31 @@ export const buildIndicatorAssessment = (profile: IndicatorProfile, requestedYea
       ? `${profile.acronym} faz sentido para essa busca e mostra melhora no recorte.`
       : `${profile.acronym} faz sentido para essa busca, mas o recorte pede investigação.`,
     targetVerdict: targetGap >= 0 ? 'Dentro ou melhor que a meta.' : 'Fora da meta, vale detalhar causas por região/unidade.',
+  };
+};
+
+export const scoreIndicatorFit = (profile: IndicatorProfile, query: string) => {
+  const normalized = normalize(query);
+  const positiveTerms = [profile.businessQuestion, ...profile.goodFor, ...profile.aliases].map(normalize);
+  const cautionTerms = profile.avoidFor.map(normalize);
+  const positiveHits = positiveTerms.filter((term) =>
+    term
+      .split(/\s+/)
+      .filter((part) => part.length > 3)
+      .some((part) => normalized.includes(part))
+  );
+  const cautionHits = cautionTerms.filter((term) =>
+    term
+      .split(/\s+/)
+      .filter((part) => part.length > 3)
+      .some((part) => normalized.includes(part))
+  );
+  const score = Math.max(0.35, Math.min(0.98, 0.58 + positiveHits.length * 0.08 - cautionHits.length * 0.1));
+
+  return {
+    score,
+    positiveHits,
+    cautionHits,
+    label: score >= 0.78 ? 'alta aderencia' : score >= 0.58 ? 'aderencia moderada' : 'aderencia baixa'
   };
 };

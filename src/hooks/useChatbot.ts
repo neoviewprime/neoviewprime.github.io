@@ -147,6 +147,21 @@ const readSseEvents = async (
   }
 };
 
+const streamTextLocally = async (
+  text: string,
+  onChunk: (content: string) => void
+) => {
+  const wait = (ms: number) => new Promise((resolve) => window.setTimeout(resolve, ms));
+  const chunks = text.match(/.{1,38}(\s|$)/g) ?? [text];
+  let accumulated = '';
+
+  for (const chunk of chunks) {
+    accumulated += chunk;
+    onChunk(accumulated);
+    await wait(chunk.includes('\n') ? 80 : 34);
+  }
+};
+
 const mapSession = (sessionItem: SessionApiItem): ChatSession => ({
   id: sessionItem.id,
   user_id: sessionItem.user_id ?? 'usr-current',
@@ -335,6 +350,25 @@ export function useChatbot(pageContext?: ChatPageContext | null): UseChatbotRetu
           'Tive instabilidade na resposta em streaming, entao usei a IRIS local para nao deixar voce sem retorno.',
           fallback.answer
         ].join('\n\n');
+
+        await streamTextLocally(finalAnswer, (partialAnswer) => {
+          setMessages((prev) =>
+            prev.map((message) =>
+              message.id === pendingAssistantId
+                ? {
+                    ...message,
+                    session_id: activeSessionId,
+                    content: partialAnswer,
+                    metadata: {
+                      sources: [],
+                      model: 'local-rag',
+                      tokens_used: undefined
+                    }
+                  }
+                : message
+            )
+          );
+        });
 
         setMessages((prev) =>
           prev.map((message) =>

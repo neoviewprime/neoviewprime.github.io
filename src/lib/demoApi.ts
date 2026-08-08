@@ -3,8 +3,10 @@ import {
   buildIndicatorAssessment,
   extractYears,
   findIndicatorProfile,
+  findIndicatorProfiles,
   formatValue,
   indicatorProfiles,
+  scoreIndicatorFit,
 } from '@/lib/indicatorIntelligence';
 import type { UserManagementOptions } from '@/types/backend';
 
@@ -836,12 +838,82 @@ const sourceFromIndicatorPoint = (point: {
   };
 };
 
-const buildIndicatorIntelligenceAnswer = (question: string) => {
-  const profile = findIndicatorProfile(question);
-  if (!profile) return null;
+const resolveIndicatorProfilesForQuestion = (question: string) => {
+  const directProfiles = findIndicatorProfiles(question);
+  if (directProfiles.length > 0) return directProfiles;
 
+  const inferred = findIndicatorProfile(question);
+  return inferred ? [inferred] : [];
+};
+
+const describeIndicatorFit = (question: string, profile: (typeof indicatorProfiles)[number]) => {
+  const fit = scoreIndicatorFit(profile, question);
+  const caution = fit.cautionHits.length
+    ? `Ponto de atencao: a pergunta toca em "${fit.cautionHits[0]}", entao eu nao usaria ${profile.acronym} sozinho.`
+    : `Aderencia: ${fit.label}; ${profile.acronym} conversa com a pergunta de negocio.`;
+
+  return {
+    fit,
+    line: `${profile.acronym}: ${fit.label} (${Math.round(fit.score * 100)}%). ${caution}`
+  };
+};
+
+const buildMultiIndicatorIntelligenceAnswer = (question: string, profiles: typeof indicatorProfiles) => {
+  const years = extractYears(question);
+  const comparisonYears = years.length >= 2
+    ? [years[0], years[1]]
+    : years.length === 1
+      ? [Math.max(2022, years[0] - 1), years[0]]
+      : [2023, 2024];
+  const assessments = profiles.map((profile) => ({
+    profile,
+    assessment: buildIndicatorAssessment(profile, comparisonYears),
+    fit: describeIndicatorFit(question, profile)
+  }));
+
+  const sourcePoints = assessments.flatMap(({ assessment }) => {
+    const selected = assessment.selected.length ? assessment.selected : [assessment.previous, assessment.latest];
+    return selected.slice(-2);
+  });
+
+  const lines = assessments.map(({ profile, assessment, fit }) => {
+    const delta = `${assessment.delta.rawDelta > 0 ? '+' : ''}${assessment.delta.rawDelta.toFixed(1)} ${profile.unit}`;
+    const percent = `${assessment.delta.percent > 0 ? '+' : ''}${assessment.delta.percent.toFixed(1)}%`;
+    const quality = assessment.delta.improved ? 'melhorou' : 'piorou ou ficou pressionado';
+    return `- ${fit.line} No recorte ${assessment.previous.year}-${assessment.latest.year}, ${quality}: ${formatValue(profile, assessment.previous.value)} para ${formatValue(profile, assessment.latest.value)} (${delta}; ${percent}).`;
+  });
+
+  const answer = [
+    `Vou tratar isso como uma analise comparativa entre ${profiles.map((profile) => profile.acronym).join(' x ')}.`,
+    `Recorte usado: ${comparisonYears.join(' e ')}.`,
+    'Leitura executiva:',
+    ...lines,
+    'Como decidir:',
+    '- Se a pergunta for qualidade tecnica ou continuidade, DEC/FEC tendem a ser o eixo principal.',
+    '- Se a pergunta for percepcao do cliente, ISQP deve entrar junto para evitar conclusao puramente operacional.',
+    '- Se a pergunta for prazo, fila ou atendimento comercial, SLA/TMA costumam responder melhor.',
+    'Proximo passo sugerido: escolha um indicador principal e um de controle. Exemplo: "use DEC como principal e ISQP como percepcao do cliente em 2024".'
+  ].join('\n');
+
+  return {
+    answer,
+    sources: sourcePoints.map(sourceFromIndicatorPoint),
+    totalSources: sourcePoints.length,
+    intent: 'comparacao',
+    confidence: 0.96,
+    retrievalMode: 'raciocinio-multiindicador'
+  };
+};
+
+const buildIndicatorIntelligenceAnswer = (question: string) => {
+  const profiles = resolveIndicatorProfilesForQuestion(question);
+  if (profiles.length === 0) return null;
+  if (profiles.length > 1) return buildMultiIndicatorIntelligenceAnswer(question, profiles);
+
+  const [profile] = profiles;
   const years = extractYears(question);
   const assessment = buildIndicatorAssessment(profile, years);
+  const fit = describeIndicatorFit(question, profile);
   const selected = assessment.selected.length ? assessment.selected : profile.series.slice(-2);
   const sourcePoints = selected.length ? selected : [assessment.previous, assessment.latest];
   const deltaLabel = `${assessment.delta.rawDelta > 0 ? '+' : ''}${assessment.delta.rawDelta.toFixed(1)} ${profile.unit}`;
@@ -852,6 +924,7 @@ const buildIndicatorIntelligenceAnswer = (question: string) => {
   const answer = [
     `Indicador analisado: ${profile.acronym} - ${profile.name}.`,
     `Pergunta que ele responde: ${profile.businessQuestion}`,
+    `Avaliacao da sua pergunta: ${fit.line}`,
     `Leitura: ${directionText}. ${assessment.verdict}`,
     `Comparacao ${assessment.previous.year} -> ${assessment.latest.year}: ${formatValue(profile, assessment.previous.value)} para ${formatValue(profile, assessment.latest.value)} (${deltaLabel}; ${percentLabel}).`,
     `Meta em ${assessment.latest.year}: ${formatValue(profile, assessment.latest.target)}. ${assessment.targetVerdict}`,
@@ -860,6 +933,7 @@ const buildIndicatorIntelligenceAnswer = (question: string) => {
     `Faz sentido usar quando voce quer: ${profile.goodFor.join(', ')}.`,
     `Evite usar sozinho para: ${profile.avoidFor.join(', ')}.`,
     `Indicadores para cruzar: ${profile.related.join(', ')}.`,
+    'Minha recomendacao: use esse indicador como evidência principal se a pergunta bater com a pergunta de negocio acima; caso contrario, trate como indicador de apoio.',
     `Outros indicadores disponiveis: ${available}.`
   ].join('\n');
 
