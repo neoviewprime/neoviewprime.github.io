@@ -4,16 +4,7 @@ import { NeoLogo } from '@/components/NeoLogo';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { Building2, FileText, Search, ArrowRight, Shield, BarChart3, Download, Share2, Smartphone } from 'lucide-react';
 import { toast } from 'sonner';
-
-type BeforeInstallPromptEvent = Event & {
-  prompt: () => Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; platform: string }>;
-};
-
-const isStandaloneMode = () =>
-  window.matchMedia('(display-mode: standalone)').matches || (window.navigator as Navigator & { standalone?: boolean }).standalone === true;
-
-const isIosDevice = () => /iphone|ipad|ipod/i.test(window.navigator.userAgent);
+import { clearPwaInstallPrompt, isIosDevice, subscribeToPwaInstall, type BeforeInstallPromptEvent } from '@/lib/pwaInstall';
 
 const Landing: React.FC = () => {
   const navigate = useNavigate();
@@ -37,28 +28,16 @@ const Landing: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    setIsInstalled(isStandaloneMode());
+    return subscribeToPwaInstall(({ prompt, isInstalled: installed }) => {
+      setDeferredPrompt(prompt);
+      setIsInstalled(installed);
 
-    const handleBeforeInstallPrompt = (event: Event) => {
-      event.preventDefault();
-      setDeferredPrompt(event as BeforeInstallPromptEvent);
-    };
-
-    const handleInstalled = () => {
-      setIsInstalled(true);
-      setDeferredPrompt(null);
-      toast.success('NeoView instalado', {
-        description: 'O aplicativo foi adicionado à tela inicial.'
-      });
-    };
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleInstalled);
-
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleInstalled);
-    };
+      if (installed) {
+        toast.success('NeoView instalado', {
+          description: 'O aplicativo foi adicionado à tela inicial.'
+        });
+      }
+    });
   }, []);
 
   const handleInstallApp = async () => {
@@ -86,7 +65,7 @@ const Landing: React.FC = () => {
     setIsInstalling(true);
     await deferredPrompt.prompt();
     await deferredPrompt.userChoice.catch(() => undefined);
-    setDeferredPrompt(null);
+    clearPwaInstallPrompt();
     setIsInstalling(false);
   };
 

@@ -3,23 +3,9 @@ import { useLocation } from 'react-router-dom';
 import { Download, Share2, Smartphone, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
+import { clearPwaInstallPrompt, isIosDevice, isStandaloneMode, subscribeToPwaInstall, type BeforeInstallPromptEvent } from '@/lib/pwaInstall';
 
 const PWA_PROMPT_STORAGE_KEY = 'neoview-pwa-install-prompt-seen';
-
-type BeforeInstallPromptEvent = Event & {
-  prompt: () => Promise<void>;
-  userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; platform: string }>;
-};
-
-const isStandaloneMode = () => {
-  if (typeof window === 'undefined') return false;
-  return window.matchMedia('(display-mode: standalone)').matches || (window.navigator as Navigator & { standalone?: boolean }).standalone === true;
-};
-
-const isIosDevice = () => {
-  if (typeof window === 'undefined') return false;
-  return /iphone|ipad|ipod/i.test(window.navigator.userAgent);
-};
 
 export function PwaInstallPrompt() {
   const location = useLocation();
@@ -37,29 +23,15 @@ export function PwaInstallPrompt() {
   }, [isInstalled, isMobile, isPublicRoute]);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
+    return subscribeToPwaInstall(({ prompt, isInstalled: installed }) => {
+      setDeferredPrompt(prompt);
+      setIsInstalled(installed);
 
-    setIsInstalled(isStandaloneMode());
-
-    const handleBeforeInstallPrompt = (event: Event) => {
-      event.preventDefault();
-      setDeferredPrompt(event as BeforeInstallPromptEvent);
-    };
-
-    const handleInstalled = () => {
-      window.localStorage.setItem(PWA_PROMPT_STORAGE_KEY, 'true');
-      setIsInstalled(true);
-      setIsOpen(false);
-      setDeferredPrompt(null);
-    };
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    window.addEventListener('appinstalled', handleInstalled);
-
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-      window.removeEventListener('appinstalled', handleInstalled);
-    };
+      if (installed) {
+        window.localStorage.setItem(PWA_PROMPT_STORAGE_KEY, 'true');
+        setIsOpen(false);
+      }
+    });
   }, []);
 
   useEffect(() => {
@@ -91,10 +63,8 @@ export function PwaInstallPrompt() {
 
     setIsInstalling(true);
     await deferredPrompt.prompt();
-    const choice = await deferredPrompt.userChoice;
-    if (choice.outcome !== 'accepted') {
-      setDeferredPrompt(null);
-    }
+    await deferredPrompt.userChoice.catch(() => undefined);
+    clearPwaInstallPrompt();
     setIsInstalling(false);
     closePrompt();
   };
