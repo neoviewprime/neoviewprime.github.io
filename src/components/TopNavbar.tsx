@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HelpCircle, ChevronLeft, Bell, Share2, ShieldCheck, Clock3 } from 'lucide-react';
+import { HelpCircle, ChevronLeft, Bell, Share2, ShieldCheck, Clock3, LogOut, Settings, UserRound } from 'lucide-react';
 import { NeoLogo } from './NeoLogo';
 import { GlobalSearch } from './GlobalSearch';
 import { ThemeToggle } from './ThemeToggle';
@@ -21,10 +21,11 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
 }) => {
   const navigate = useNavigate();
   const { canGoBack, triggerBack } = useHierarchyNav();
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
   const isMobile = useMediaQuery('(max-width: 767px)');
   const { items, unreadCount, isLoading, markAllAsRead, markAsRead } = useNotifications(isAuthenticated && Boolean(user?.id));
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   const handleNotificationClick = async (notificationId: string, actionUrl?: string) => {
     await markAsRead(notificationId).catch(() => undefined);
@@ -38,13 +39,20 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
     if (type.includes('delegation')) return ShieldCheck;
     return Clock3;
   };
+
+  const handleSignOut = async () => {
+    await signOut();
+    setIsProfileOpen(false);
+    navigate('/login', { replace: true });
+  };
+
   const initials = user?.full_name
     ?.split(/\s+/)
     .filter(Boolean)
     .map((part) => part[0])
     .slice(0, 2)
     .join('')
-    .toUpperCase() ?? 'JN';
+    .toUpperCase() ?? 'US';
 
   return (
     <header className="sticky top-0 z-50 border-b neo-topbar">
@@ -169,15 +177,58 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
                   </button>
                 ) : null}
                 {isAuthenticated ? (
-                  <button
-                    type="button"
-                    onClick={() => navigate('/settings')}
-                    className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground ring-1 ring-primary/30"
-                    title={user?.full_name ?? 'Perfil'}
-                    aria-label="Abrir perfil"
-                  >
-                    {initials}
-                  </button>
+                  <Popover open={isProfileOpen} onOpenChange={setIsProfileOpen}>
+                    <PopoverTrigger asChild>
+                      <button
+                        type="button"
+                        className="flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-semibold text-primary-foreground ring-1 ring-primary/30 transition-transform hover:scale-105"
+                        title={user?.full_name ?? 'Perfil'}
+                        aria-label="Abrir menu do perfil"
+                      >
+                        {initials}
+                      </button>
+                    </PopoverTrigger>
+                    <PopoverContent align="end" className="neo-surface-strong w-[min(92vw,280px)] rounded-2xl p-2">
+                      <div className="border-b border-border/70 px-3 py-3">
+                        <p className="truncate text-sm font-semibold text-foreground">{user?.full_name ?? 'Usuário NeoView'}</p>
+                        <p className="mt-1 truncate text-xs text-muted-foreground">{user?.email ?? 'sessão demonstrativa'}</p>
+                      </div>
+                      <div className="py-2">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setIsProfileOpen(false);
+                            navigate('/settings');
+                          }}
+                          className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm text-foreground transition-colors hover:bg-muted"
+                        >
+                          <UserRound className="h-4 w-4 text-primary" />
+                          Ver perfil
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setIsProfileOpen(false);
+                            navigate('/settings');
+                          }}
+                          className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm text-foreground transition-colors hover:bg-muted"
+                        >
+                          <Settings className="h-4 w-4 text-primary" />
+                          Configurações
+                        </button>
+                      </div>
+                      <div className="border-t border-border/70 pt-2">
+                        <button
+                          type="button"
+                          onClick={() => void handleSignOut()}
+                          className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-left text-sm font-medium text-red-300 transition-colors hover:bg-red-500/10"
+                        >
+                          <LogOut className="h-4 w-4" />
+                          Sair
+                        </button>
+                      </div>
+                    </PopoverContent>
+                  </Popover>
                 ) : null}
               </>
             ) : (

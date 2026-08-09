@@ -2,12 +2,26 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NeoLogo } from '@/components/NeoLogo';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import { Building2, FileText, Search, ArrowRight, Shield, BarChart3 } from 'lucide-react';
+import { Building2, FileText, Search, ArrowRight, Shield, BarChart3, Download, Share2, Smartphone } from 'lucide-react';
+import { toast } from 'sonner';
+
+type BeforeInstallPromptEvent = Event & {
+  prompt: () => Promise<void>;
+  userChoice: Promise<{ outcome: 'accepted' | 'dismissed'; platform: string }>;
+};
+
+const isStandaloneMode = () =>
+  window.matchMedia('(display-mode: standalone)').matches || (window.navigator as Navigator & { standalone?: boolean }).standalone === true;
+
+const isIosDevice = () => /iphone|ipad|ipod/i.test(window.navigator.userAgent);
 
 const Landing: React.FC = () => {
   const navigate = useNavigate();
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const [videoFailed, setVideoFailed] = useState(false);
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [isInstalled, setIsInstalled] = useState(false);
+  const [isInstalling, setIsInstalling] = useState(false);
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -22,6 +36,60 @@ const Landing: React.FC = () => {
     const timer = window.setTimeout(() => setShouldLoadVideo(true), 900);
     return () => window.clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    setIsInstalled(isStandaloneMode());
+
+    const handleBeforeInstallPrompt = (event: Event) => {
+      event.preventDefault();
+      setDeferredPrompt(event as BeforeInstallPromptEvent);
+    };
+
+    const handleInstalled = () => {
+      setIsInstalled(true);
+      setDeferredPrompt(null);
+      toast.success('NeoView instalado', {
+        description: 'O aplicativo foi adicionado à tela inicial.'
+      });
+    };
+
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.addEventListener('appinstalled', handleInstalled);
+
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window.removeEventListener('appinstalled', handleInstalled);
+    };
+  }, []);
+
+  const handleInstallApp = async () => {
+    if (isInstalled) {
+      toast.success('NeoView já está instalado', {
+        description: 'Abra pelo ícone da tela inicial para usar em tela cheia.'
+      });
+      return;
+    }
+
+    if (!deferredPrompt) {
+      if (isIosDevice()) {
+        toast.info('Instale pela tela inicial', {
+          description: 'Toque em compartilhar e escolha "Adicionar à Tela de Início".'
+        });
+        return;
+      }
+
+      toast.info('Instalação disponível pelo navegador', {
+        description: 'Use a opção "Instalar app" no menu do navegador se o botão nativo não aparecer.'
+      });
+      return;
+    }
+
+    setIsInstalling(true);
+    await deferredPrompt.prompt();
+    await deferredPrompt.userChoice.catch(() => undefined);
+    setDeferredPrompt(null);
+    setIsInstalling(false);
+  };
 
   const features = [
     {
@@ -109,6 +177,33 @@ const Landing: React.FC = () => {
               Acessar Plataforma
               <ArrowRight className="h-5 w-5" />
             </button>
+
+            {!isInstalled ? (
+              <div className="mt-4 sm:hidden">
+                <button
+                  type="button"
+                  onClick={() => void handleInstallApp()}
+                  disabled={isInstalling}
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/12 px-6 py-3.5 text-base font-semibold text-white shadow-lg backdrop-blur-md transition-colors hover:bg-white/18 disabled:cursor-not-allowed disabled:opacity-70"
+                >
+                  <Download className="h-5 w-5" />
+                  {isInstalling ? 'Abrindo instalação...' : 'Baixar aplicativo'}
+                </button>
+                <p className="mt-3 flex items-center justify-center gap-1.5 text-xs font-medium text-white/78">
+                  {isIosDevice() ? (
+                    <>
+                      <Share2 className="h-3.5 w-3.5" />
+                      Também funciona por Adicionar à Tela de Início
+                    </>
+                  ) : (
+                    <>
+                      <Smartphone className="h-3.5 w-3.5" />
+                      PWA pronto para usar antes do login
+                    </>
+                  )}
+                </p>
+              </div>
+            ) : null}
           </div>
         </div>
       </section>
