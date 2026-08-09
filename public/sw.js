@@ -1,4 +1,4 @@
-const APP_VERSION = '2026-08-08-2';
+const APP_VERSION = '2026-08-09-1';
 const APP_SHELL_CACHE = `neoview-app-shell-${APP_VERSION}`;
 const RUNTIME_CACHE = `neoview-runtime-${APP_VERSION}`;
 const APP_SHELL_FILES = [

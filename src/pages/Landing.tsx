@@ -25,15 +25,14 @@ const Landing: React.FC = () => {
 
   useEffect(() => {
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isMobile = window.matchMedia('(max-width: 767px)').matches;
     const connection = (navigator as Navigator & {
       connection?: { saveData?: boolean; effectiveType?: string };
     }).connection;
     const isSlowConnection = Boolean(connection?.saveData || /2g/u.test(connection?.effectiveType ?? ''));
 
-    if (prefersReducedMotion || isMobile || isSlowConnection) return;
+    if (prefersReducedMotion || isSlowConnection) return;
 
-    const timer = window.setTimeout(() => setShouldLoadVideo(true), 900);
+    const timer = window.setTimeout(() => setShouldLoadVideo(true), 200);
     return () => window.clearTimeout(timer);
   }, []);
 
@@ -140,7 +139,7 @@ const Landing: React.FC = () => {
               muted
               loop
               playsInline
-              preload="none"
+              preload="metadata"
               aria-hidden="true"
               onError={() => setVideoFailed(true)}
             >
