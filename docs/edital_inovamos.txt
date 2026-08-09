@@ -1,0 +1,364 @@
+# EDITAL — PROGRAMA DE INOVAÇÃO NEOENERGIA
+
+## TRILHA ESTAGIÁRIOS
+
+### Versão revisada com foco em impacto corporativo, estratégico e financeiro
+
+## 1. Premissa do programa
+
+O Programa de Inovação Neoenergia — Trilha Estagiários tem como objetivo estimular a criação de soluções inovadoras capazes de gerar valor para a companhia de forma ampla, considerando não apenas os desafios técnicos do setor de energia, mas também os impactos financeiros, estratégicos, operacionais, humanos, digitais, regulatórios, ambientais, reputacionais e sociais.
+
+A Neoenergia está inserida no setor elétrico, porém sua operação depende de múltiplas áreas fundamentais, como finanças, pessoas, tecnologia, atendimento ao cliente, jurídico, suprimentos, comunicação, sustentabilidade, engenharia, operação, planejamento, comercialização, dados, segurança, governança e relacionamento institucional.
+
+Dessa forma, o presente edital busca selecionar propostas de inovação que contribuam para o fortalecimento da companhia como organização, incentivando os estagiários a identificar problemas reais, propor soluções viáveis e demonstrar impacto mensurável.
+
+## 2. Objetivo geral
+
+Selecionar, desenvolver e reconhecer propostas inovadoras elaboradas por estagiários da Neoenergia que apresentem potencial de impacto positivo para a empresa, seus clientes, colaboradores, comunidades, processos internos, resultados financeiros e posicionamento estratégico.
+
+## 3. Objetivos específicos
+
+São objetivos da Trilha Estagiários:
+
+a) estimular o protagonismo dos estagiários na identificação e solução de problemas reais da companhia;
+b) desenvolver visão sistêmica sobre o funcionamento de uma grande empresa;
+c) incentivar propostas com potencial de ganho financeiro, eficiência, redução de riscos, melhoria de processos ou geração de novas oportunidades;
+d) fortalecer a cultura de inovação, colaboração e melhoria contínua;
+e) aproximar jovens talentos das áreas estratégicas da companhia;
+f) promover soluções alinhadas à sustentabilidade, à transformação digital, à experiência do cliente e à excelência operacional;
+g) criar um ambiente de experimentação responsável, com foco em aprendizado, validação e geração de valor.
+
+## 4. Abrangência das propostas
+
+As propostas poderão estar relacionadas a qualquer área relevante da Neoenergia, incluindo, mas não se limitando a:
+
+a) finanças;
+b) estratégia e planejamento;
+c) operação e manutenção;
+d) distribuição, transmissão, geração e comercialização de energia;
+e) tecnologia da informação e dados;
+f) recursos humanos, cultura e desenvolvimento de pessoas;
+g) atendimento e experiência do cliente;
+h) comunicação e reputação institucional;
+i) jurídico, regulação e compliance;
+j) suprimentos, contratos e logística;
+k) segurança do trabalho e saúde ocupacional;
+l) sustentabilidade, ESG e impacto social;
+m) governança, riscos e controles internos;
+n) inovação em processos administrativos e corporativos.
+
+## 5. Eixos temáticos do programa
+
+As propostas deverão estar vinculadas a pelo menos um dos seguintes eixos.
+
+### 5.1 Impacto financeiro e geração de valor
+
+Soluções que contribuam para redução de custos, aumento de receita, melhor uso de recursos, redução de perdas, otimização orçamentária, melhoria de margem, previsibilidade financeira ou criação de novas oportunidades econômicas.
+
+Exemplos:
+
+a) redução de desperdícios;
+b) automação de controles financeiros;
+c) melhoria na previsão de custos;
+d) otimização de contratos;
+e) aumento de eficiência em compras e suprimentos;
+f) identificação de oportunidades de economia;
+g) melhoria no acompanhamento de indicadores financeiros.
+
+### 5.2 Estratégia, crescimento e competitividade
+
+Soluções que apoiem a tomada de decisão estratégica, a análise de mercado, a priorização de investimentos, a expansão de negócios, a inteligência competitiva e o posicionamento da companhia.
+
+Exemplos:
+
+a) ferramentas de apoio à decisão;
+b) análises de cenários;
+c) estudos de novos mercados;
+d) dashboards estratégicos;
+e) modelos de priorização de projetos;
+f) identificação de tendências e oportunidades;
+g) propostas para fortalecimento da vantagem competitiva.
+
+### 5.3 Eficiência operacional e produtividade
+
+Soluções voltadas à simplificação de processos, redução de retrabalho, automação de atividades, melhoria de fluxos internos, padronização, aumento de produtividade e ganho de qualidade.
+
+Exemplos:
+
+a) redução de tempo em processos administrativos;
+b) eliminação de etapas desnecessárias;
+c) automação de tarefas repetitivas;
+d) melhoria de fluxos de aprovação;
+e) digitalização de documentos;
+f) padronização de rotinas;
+g) ferramentas de acompanhamento operacional.
+
+### 5.4 Experiência do cliente e qualidade do serviço
+
+Soluções que melhorem a jornada do cliente, a comunicação, o atendimento, os canais digitais, a satisfação, a acessibilidade, a clareza das informações e a resolução de demandas.
+
+Exemplos:
+
+a) melhoria na compreensão da fatura;
+b) redução de reclamações;
+c) atendimento mais rápido e humanizado;
+d) soluções para clientes vulneráveis;
+e) melhorias em aplicativos e canais digitais;
+f) comunicação preventiva;
+g) educação do cliente sobre consumo e segurança.
+
+### 5.5 Pessoas, cultura e desenvolvimento organizacional
+
+Soluções voltadas ao engajamento de colaboradores, aprendizagem, inclusão, diversidade, clima organizacional, desenvolvimento de lideranças, comunicação interna e fortalecimento da cultura de inovação.
+
+Exemplos:
+
+a) melhoria da integração de novos colaboradores;
+b) programas de capacitação digital;
+c) ações de engajamento;
+d) soluções para compartilhamento de conhecimento;
+e) iniciativas de diversidade e inclusão;
+f) melhoria da comunicação entre áreas;
+g) plataformas de aprendizagem interna.
+
+### 5.6 Dados, tecnologia e transformação digital
+
+Soluções baseadas em dados, automação, inteligência artificial, analytics, dashboards, integração de sistemas, aplicativos internos, RPA, IoT, machine learning ou outras tecnologias digitais.
+
+Exemplos:
+
+a) painéis de indicadores;
+b) modelos preditivos;
+c) automações com baixo custo;
+d) integração de bases de dados;
+e) ferramentas de apoio à decisão;
+f) uso de IA para análise de documentos;
+g) melhoria na governança de dados.
+
+### 5.7 Governança, riscos, compliance e regulação
+
+Soluções que contribuam para reduzir riscos, melhorar controles internos, fortalecer conformidade regulatória, prevenir falhas, aumentar transparência, proteger dados e melhorar processos de auditoria.
+
+Exemplos:
+
+a) monitoramento de riscos;
+b) melhoria de controles internos;
+c) automação de verificações de conformidade;
+d) organização de evidências regulatórias;
+e) redução de exposição jurídica;
+f) proteção de dados;
+g) melhoria da rastreabilidade de decisões.
+
+### 5.8 Sustentabilidade, ESG e impacto social
+
+Soluções que gerem impacto ambiental, social ou de governança, contribuindo para sustentabilidade, eficiência energética, descarbonização, inclusão, desenvolvimento comunitário, educação e responsabilidade social.
+
+Exemplos:
+
+a) redução de consumo de recursos;
+b) ações de educação energética;
+c) projetos com comunidades;
+d) inclusão de grupos vulneráveis;
+e) indicadores ESG;
+f) redução de emissões;
+g) fortalecimento da reputação institucional.
+
+### 5.9 Segurança, saúde e prevenção
+
+Soluções voltadas à segurança de colaboradores, equipes de campo, clientes, comunidades, instalações e processos críticos.
+
+Exemplos:
+
+a) prevenção de acidentes;
+b) treinamentos digitais de segurança;
+c) análise de riscos;
+d) alertas preventivos;
+e) melhoria no uso de EPIs;
+f) comunicação de segurança;
+g) redução de incidentes e quase acidentes.
+
+### 5.10 Energia, operação técnica e transição energética
+
+Soluções diretamente ligadas ao setor elétrico, incluindo distribuição, transmissão, geração, comercialização, qualidade do fornecimento, perdas, redes inteligentes, renováveis, eficiência energética e transição energética.
+
+Exemplos:
+
+a) redução de perdas técnicas e não técnicas;
+b) manutenção preditiva;
+c) redes inteligentes;
+d) integração de fontes renováveis;
+e) mobilidade elétrica;
+f) armazenamento de energia;
+g) melhoria da confiabilidade operacional.
+
+## 6. Critérios avaliativos principais
+
+As propostas serão avaliadas não apenas pela criatividade da ideia, mas pela sua capacidade de resolver um problema relevante e gerar valor concreto para a companhia.
+
+A avaliação considerará os seguintes pontos:
+
+a) relevância do problema identificado;
+b) impacto financeiro ou econômico;
+c) impacto estratégico;
+d) impacto operacional;
+e) impacto para clientes, colaboradores ou sociedade;
+f) grau de inovação;
+g) viabilidade técnica;
+h) viabilidade econômica;
+i) escalabilidade;
+j) uso de dados e indicadores;
+k) aderência à realidade da empresa;
+l) sustentabilidade e responsabilidade social;
+m) riscos envolvidos;
+n) clareza da apresentação;
+o) maturidade da solução.
+
+## 7. Matriz de avaliação
+
+A pontuação máxima será de 100 pontos.
+
+| Critério                                  |           Peso | O que será avaliado                                                                                                                               |
+| ----------------------------------------- | -------------: | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Relevância do problema                    |      10 pontos | Se o problema é real, bem definido, recorrente, relevante e conectado à realidade da empresa.                                                     |
+| Impacto financeiro                        |      15 pontos | Potencial de reduzir custos, evitar perdas, aumentar receita, otimizar orçamento, melhorar margem ou gerar economia mensurável.                   |
+| Impacto estratégico                       |      10 pontos | Contribuição para prioridades da companhia, vantagem competitiva, tomada de decisão, crescimento, posicionamento ou fortalecimento institucional. |
+| Impacto operacional                       |      10 pontos | Potencial de aumentar produtividade, reduzir retrabalho, melhorar processos, elevar qualidade, reduzir falhas ou acelerar entregas.               |
+| Impacto em pessoas, clientes ou sociedade |      10 pontos | Benefícios para colaboradores, clientes, comunidades, segurança, inclusão, satisfação ou experiência do usuário.                                  |
+| Grau de inovação                          |      15 pontos | Originalidade, criatividade, diferenciação em relação ao modelo atual e capacidade de propor uma abordagem nova ou significativamente melhor.     |
+| Viabilidade técnica e operacional         |      10 pontos | Possibilidade real de desenvolvimento com recursos, dados, tecnologias, pessoas e processos disponíveis ou acessíveis.                            |
+| Viabilidade econômica                     |       5 pontos | Relação entre custo, esforço, complexidade e benefício esperado.                                                                                  |
+| Escalabilidade e replicabilidade          |       5 pontos | Possibilidade de aplicar a solução em outras áreas, unidades, processos, regiões ou públicos.                                                     |
+| Indicadores e mensuração de resultados    |       5 pontos | Clareza das métricas, forma de mensuração, evidências e acompanhamento de resultados.                                                             |
+| Qualidade do pitch e defesa da proposta   |       5 pontos | Clareza, objetividade, domínio do problema, capacidade argumentativa e organização da apresentação.                                               |
+| **Total**                                 | **100 pontos** |                                                                                                                                                   |
+
+## 8. Perguntas orientadoras para avaliação
+
+A banca avaliadora deverá considerar as seguintes perguntas:
+
+a) O problema apresentado é relevante para a Neoenergia?
+b) A solução gera valor mensurável?
+c) Existe impacto financeiro direto ou indireto?
+d) A proposta melhora algum indicador estratégico da companhia?
+e) A solução reduz risco, custo, tempo, desperdício ou retrabalho?
+f) A ideia melhora a experiência de clientes, colaboradores ou comunidades?
+g) A proposta é inovadora ou apenas uma melhoria básica?
+h) A equipe demonstrou conhecimento da realidade do problema?
+i) A solução pode ser testada em pequena escala?
+j) Há potencial de expansão para outras áreas?
+k) Os indicadores são objetivos e verificáveis?
+l) A solução respeita segurança, compliance, privacidade e governança?
+m) O benefício esperado justifica o esforço de implementação?
+
+## 9. Indicadores recomendados
+
+Cada equipe deverá apresentar indicadores compatíveis com sua proposta. Poderão ser usados, entre outros:
+
+### Indicadores financeiros
+
+a) economia estimada;
+b) redução de custos;
+c) redução de perdas;
+d) retorno sobre investimento;
+e) payback estimado;
+f) ganho de produtividade convertido em valor;
+g) redução de multas, penalidades ou passivos.
+
+### Indicadores estratégicos
+
+a) contribuição para metas corporativas;
+b) melhoria da tomada de decisão;
+c) fortalecimento da vantagem competitiva;
+d) aumento de previsibilidade;
+e) melhoria de governança;
+f) expansão de oportunidades;
+g) aderência a prioridades da companhia.
+
+### Indicadores operacionais
+
+a) redução de tempo de processo;
+b) redução de retrabalho;
+c) aumento de produtividade;
+d) redução de falhas;
+e) melhoria de qualidade;
+f) aumento de eficiência;
+g) redução de etapas manuais.
+
+### Indicadores de cliente
+
+a) satisfação do cliente;
+b) redução de reclamações;
+c) tempo de atendimento;
+d) taxa de resolução;
+e) adesão a canais digitais;
+f) clareza da comunicação;
+g) acessibilidade.
+
+### Indicadores de pessoas
+
+a) engajamento;
+b) adesão a treinamentos;
+c) redução de tempo de aprendizagem;
+d) melhoria do clima;
+e) participação em iniciativas internas;
+f) retenção de conhecimento;
+g) colaboração entre áreas.
+
+### Indicadores ESG
+
+a) redução de emissões;
+b) economia de energia;
+c) redução de resíduos;
+d) pessoas impactadas;
+e) inclusão de públicos vulneráveis;
+f) impacto comunitário;
+g) melhoria de indicadores de sustentabilidade.
+
+## 10. Critérios eliminatórios
+
+Serão eliminadas propostas que:
+
+a) não apresentem problema claramente definido;
+b) não demonstrem impacto esperado;
+c) não indiquem indicadores mínimos de resultado;
+d) sejam desconectadas da realidade da empresa;
+e) apresentem apenas uma ideia genérica, sem aplicação prática;
+f) dependam de recursos incompatíveis com a proposta;
+g) violem segurança da informação, privacidade, compliance ou normas internas;
+h) envolvam risco relevante sem plano de mitigação;
+i) apresentem plágio ou uso indevido de propriedade intelectual;
+j) não sejam passíveis de avaliação pela banca.
+
+## 11. Níveis de maturidade da proposta
+
+As propostas poderão ser enquadradas em diferentes níveis de maturidade:
+
+| Nível             | Descrição                                                                                     |
+| ----------------- | --------------------------------------------------------------------------------------------- |
+| Ideia estruturada | Problema bem definido, solução inicial e impacto esperado.                                    |
+| Conceito validado | A equipe apresentou evidências, entrevistas, dados ou benchmarking que sustentam a proposta.  |
+| Protótipo         | Existe uma versão inicial da solução, fluxo, tela, dashboard, modelo, automação ou simulação. |
+| Piloto proposto   | A equipe definiu local, área, público, indicadores e condições para teste.                    |
+| Solução escalável | A proposta demonstra potencial de replicação e continuidade após o programa.                  |
+
+## 12. Resultado esperado da Trilha Estagiários
+
+Ao final do programa, espera-se que os estagiários entreguem propostas com:
+
+a) problema claro;
+b) solução bem estruturada;
+c) impacto demonstrável;
+d) indicadores mensuráveis;
+e) análise mínima de viabilidade;
+f) visão financeira ou estratégica;
+g) aderência à realidade da Neoenergia;
+h) potencial de teste, piloto ou implementação;
+i) aprendizado aplicável à formação profissional dos participantes.
+
+## 13. Princípio central de avaliação
+
+O programa não premiará apenas a ideia mais tecnológica ou mais ligada ao setor elétrico.
+
+A proposta mais bem avaliada será aquela que demonstrar melhor combinação entre:
+
+**problema relevante + solução inovadora + impacto mensurável + viabilidade real + geração de valor para a Neoenergia.**
