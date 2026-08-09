@@ -51,13 +51,13 @@ const Landing: React.FC = () => {
     if (!deferredPrompt) {
       if (isIosDevice()) {
         toast.info('Instale pela tela inicial', {
-          description: 'Toque em compartilhar e escolha "Adicionar à Tela de Início".'
+          description: 'Use o botão de compartilhar e adicione o NeoView à tela inicial.'
         });
         return;
       }
 
-      toast.info('Instalação disponível pelo navegador', {
-        description: 'Use a opção "Instalar app" no menu do navegador se o botão nativo não aparecer.'
+      toast.info('Instalação disponível', {
+        description: 'Adicione o NeoView à tela inicial para abrir como aplicativo.'
       });
       return;
     }
@@ -171,12 +171,12 @@ const Landing: React.FC = () => {
                   {isIosDevice() ? (
                     <>
                       <Share2 className="h-3.5 w-3.5" />
-                      Também funciona por Adicionar à Tela de Início
+                      Adicione à tela inicial para abrir mais rápido
                     </>
                   ) : (
                     <>
                       <Smartphone className="h-3.5 w-3.5" />
-                      PWA pronto para usar antes do login
+                      Acesso rápido antes mesmo do login
                     </>
                   )}
                 </p>
