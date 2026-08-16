@@ -91,7 +91,7 @@ const Home: React.FC = () => {
             title="Central de Decisão"
             description="Comece pela pergunta de negócio. A NeoView ajuda a chegar no indicador certo, comparar períodos e abrir o relatório fonte."
             actions={
-              <Button className="rounded-xl" onClick={() => setAssistantKey((key) => key + 1)}>
+              <Button className="rounded-2xl" onClick={() => setAssistantKey((key) => key + 1)}>
                 <Bot className="mr-2 h-4 w-4" />
                 Abrir IRIS
               </Button>
@@ -109,14 +109,14 @@ const Home: React.FC = () => {
                 <div className="relative mt-5 max-w-3xl">
                   <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-muted-foreground" />
                   <Input
-                    className="neo-control h-14 rounded-xl pl-12 text-base"
+                    className="neo-control h-14 rounded-2xl pl-12 text-base"
                     placeholder="Digite uma dúvida, indicador ou relatório..."
                     value={searchQuery}
                     onChange={(event) => setSearchQuery(event.target.value)}
                   />
                 </div>
               </div>
-              <Button type="submit" className="h-12 rounded-xl px-5">
+              <Button type="submit" className="h-12 rounded-2xl px-5">
                 Começar análise
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
@@ -131,7 +131,7 @@ const Home: React.FC = () => {
                   key={card.title}
                   type="button"
                   onClick={() => navigate(card.path)}
-                  className="neo-surface neo-card-hover min-h-[150px] rounded-xl p-5 text-left"
+                  className="neo-surface neo-card-hover min-h-[150px] rounded-2xl p-5 text-left"
                 >
                   <div className="flex items-start justify-between gap-3">
                     <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border ${card.tone}`}>
@@ -154,7 +154,7 @@ const Home: React.FC = () => {
                     key={company.id}
                     type="button"
                     onClick={() => navigate(`/dashboard?company=${company.id}`)}
-                    className="flex items-center gap-3 rounded-xl border border-border/70 bg-background/55 p-4 text-left transition-colors hover:border-primary/35 dark:bg-white/[0.035]"
+                    className="flex items-center gap-3 rounded-2xl border border-border/70 bg-background/55 p-4 text-left transition-colors hover:border-primary/35 dark:bg-white/[0.035]"
                   >
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                       <Building2 className="h-5 w-5" />

@@ -195,7 +195,7 @@
   }
 
   .search-input {
-    @apply w-full rounded-xl border border-border bg-card/90 px-4 py-3 text-foreground shadow-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 dark:bg-white/[0.06];
+    @apply w-full rounded-2xl border border-border bg-card/90 px-4 py-3 text-foreground shadow-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 dark:bg-white/[0.06];
   }
 
   .breadcrumb-link {
@@ -263,7 +263,7 @@
   }
 
   .neo-card {
-    @apply neo-surface rounded-xl;
+    @apply neo-surface rounded-2xl;
   }
 
   .neo-card-hover {
@@ -275,11 +275,11 @@
   }
 
   .neo-page-header {
-    @apply neo-surface-strong rounded-2xl p-5 sm:p-6 lg:p-7;
+    @apply neo-surface-strong rounded-[28px] p-5 sm:p-6 lg:p-7;
   }
 
   .neo-ai-hero {
-    @apply rounded-2xl border p-5 shadow-sm sm:p-6 lg:p-7;
+    @apply rounded-[28px] border p-5 shadow-sm sm:p-6 lg:p-7;
     border-color: color-mix(in srgb, var(--brand-accent) 28%, var(--border-subtle));
     background:
       linear-gradient(135deg, color-mix(in srgb, var(--brand-accent) 16%, transparent), transparent 42%),
