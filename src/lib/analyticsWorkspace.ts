@@ -4,6 +4,7 @@ import type {
   AnalyticsMetric,
 } from "@/hooks/useAnalyticsChart";
 import { getUserPreferences, updateUserPreferences } from "@/lib/userPreferencesApi";
+import { isDemoUserId } from "@/lib/demoMode";
 
 const ANALYTICS_WORKSPACE_STORAGE_KEY = "neoview_analytics_workspaces";
 
@@ -99,6 +100,7 @@ const normalizeStoredAnalyticsWorkspaces = (value: unknown, actorKey: string): S
 
 export const syncStoredAnalyticsWorkspacesFromBackend = async (actorKey: string, userId?: string) => {
   if (!userId) return listStoredAnalyticsWorkspaces(actorKey);
+  if (isDemoUserId(userId)) return listStoredAnalyticsWorkspaces(actorKey);
 
   try {
     const preferences = await getUserPreferences();
@@ -112,6 +114,7 @@ export const syncStoredAnalyticsWorkspacesFromBackend = async (actorKey: string,
 
 export const persistStoredAnalyticsWorkspacesToBackend = async (actorKey: string, userId?: string) => {
   if (!userId) return listStoredAnalyticsWorkspaces(actorKey);
+  if (isDemoUserId(userId)) return listStoredAnalyticsWorkspaces(actorKey);
 
   const current = listStoredAnalyticsWorkspaces(actorKey);
   const updated = await updateUserPreferences({ analytics_workspaces: current });

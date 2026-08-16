@@ -1,5 +1,6 @@
 import type { PdfReport, ReportMetrics } from '@/data/mockData';
 import { getUserPreferences, updateUserPreferences } from '@/lib/userPreferencesApi';
+import { isDemoUserId } from '@/lib/demoMode';
 
 export type FavoriteReportEntry = {
   report: PdfReport;
@@ -60,7 +61,7 @@ export const updateFavoriteReportMetrics = (reportId: string, metrics: ReportMet
       : entry
   );
   writeFavorites(next, userId);
-  if (userId) {
+  if (userId && !isDemoUserId(userId)) {
     void persistFavoriteReportsToBackend(userId).catch(() => undefined);
   }
 };
@@ -72,6 +73,7 @@ const normalizeFavoriteEntries = (value: unknown): FavoriteReportEntry[] => {
 
 export const syncFavoriteReportsFromBackend = async (userId?: string) => {
   if (!userId) return readFavorites(userId);
+  if (isDemoUserId(userId)) return readFavorites(userId);
 
   try {
     const preferences = await getUserPreferences();
@@ -85,6 +87,7 @@ export const syncFavoriteReportsFromBackend = async (userId?: string) => {
 
 export const persistFavoriteReportsToBackend = async (userId?: string) => {
   if (!userId) return readFavorites(userId);
+  if (isDemoUserId(userId)) return readFavorites(userId);
 
   const current = readFavorites(userId);
   const updated = await updateUserPreferences({ favorite_reports: current });
@@ -97,7 +100,7 @@ export const toggleFavoriteReportRemote = async (entry: FavoriteReportEntry, use
   const previous = readFavorites(userId);
   const nextValue = toggleFavoriteReport(entry, userId);
 
-  if (!userId) return nextValue;
+  if (!userId || isDemoUserId(userId)) return nextValue;
 
   try {
     await persistFavoriteReportsToBackend(userId);

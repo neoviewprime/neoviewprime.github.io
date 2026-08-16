@@ -65,8 +65,11 @@ export const TopNavbar: React.FC<TopNavbarProps> = ({
           </div>
 
           {isAuthenticated && !isMobile ? (
-            <div className="hidden flex-1 justify-start px-0 sm:flex">
+            <div className="hidden flex-1 items-center gap-3 px-0 sm:flex">
               <GlobalSearch />
+              <span className="hidden shrink-0 rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary xl:inline-flex">
+                Modo demonstração
+              </span>
             </div>
           ) : null}
 

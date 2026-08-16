@@ -3,6 +3,7 @@ import type { AuthResponse, LoginCredentials, User, UserRole } from '@/types/bac
 import { syncStoredAnalyticsWorkspacesFromBackend } from '@/lib/analyticsWorkspace';
 import { syncFavoriteReportsFromBackend } from '@/lib/reportFavorites';
 import { companies } from '@/data/mockData';
+import { DEMO_SESSION_TOKEN, DEMO_SESSION_USER_ID, isDemoMode } from '@/lib/demoMode';
 
 const AUTH_STORAGE_KEY = 'neoview_auth';
 const TOKEN_STORAGE_KEY = 'neoview_token';
@@ -28,6 +29,7 @@ interface AuthContextType {
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
+const DEMO_MODE = isDemoMode();
 
 const mapBackendUser = (input: Record<string, unknown>): User => {
   const now = new Date().toISOString();
@@ -64,34 +66,19 @@ const persistAuth = (auth: StoredAuth) => {
   if (auth.token) localStorage.setItem(TOKEN_STORAGE_KEY, auth.token);
 };
 
-const buildDemoUser = (identifier: string): StoredAuth => {
+const buildDemoUser = (): StoredAuth => {
   const now = new Date().toISOString();
-  const normalizedIdentifier = identifier.trim();
-  const isEmail = normalizedIdentifier.includes('@');
-  const sanitized = normalizedIdentifier
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '') || `demo-${Date.now()}`;
   const company = companies.find((entry) => entry.id === 'coelba') ?? companies[0];
   const superintendence = company?.superintendences.find((entry) => entry.id === 'sup-tecnica-coelba') ?? company?.superintendences[0];
   const management = superintendence?.managements.find((entry) => entry.id === 'ger-manutencao') ?? superintendence?.managements[0];
   const project = management?.projects.find((entry) => entry.id === 'proj-eficiencia-rede') ?? management?.projects[0];
-  const email = isEmail ? normalizedIdentifier.toLowerCase() : `${sanitized}@demo.neoview.local`;
-  const employeeId = isEmail ? `U-${sanitized.slice(0, 8).toUpperCase()}` : normalizedIdentifier.toUpperCase();
-  const displayName = isEmail
-    ? normalizedIdentifier.split('@')[0].replace(/[._-]+/g, ' ').trim() || 'Usuario Demo'
-    : `Usuario ${employeeId}`;
 
   return {
     user: {
-      id: `demo-${sanitized}`,
-      email,
-      full_name: displayName
-        .split(' ')
-        .filter(Boolean)
-        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-        .join(' '),
-      employee_id: employeeId,
+      id: DEMO_SESSION_USER_ID,
+      email: 'demonstracao@neoview.local',
+      full_name: 'Usuário NeoView',
+      employee_id: 'DEMO-LOCAL',
       department: 'Diretoria Executiva',
       company_id: company?.id,
       company_name: company?.name,
@@ -111,12 +98,13 @@ const buildDemoUser = (identifier: string): StoredAuth => {
       last_login_at: now
     },
     roles: ['superadmin', 'supervisor'],
-    token: `demo-token-${sanitized}`
+    token: DEMO_SESSION_TOKEN
   };
 };
 
 const bootstrapUserState = (userId?: string) => {
   if (!userId) return;
+  if (DEMO_MODE) return;
   void syncFavoriteReportsFromBackend(userId);
   void syncStoredAnalyticsWorkspacesFromBackend(userId, userId);
 };
@@ -162,7 +150,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         return { user: null, session: null, error: 'Informe o codigo enviado para continuar.' };
       }
 
-      const demoAuth = buildDemoUser(identifier);
+      const demoAuth = buildDemoUser();
       persistAuth(demoAuth);
       setUser(demoAuth.user);
       setRoles(demoAuth.roles);

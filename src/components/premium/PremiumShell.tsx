@@ -16,7 +16,7 @@ export function PageHeader({ icon: Icon, title, description, eyebrow, actions }:
     <div className="mb-6 flex flex-col gap-4 sm:mb-8 lg:flex-row lg:items-end lg:justify-between">
       <div className="flex min-w-0 items-start gap-4">
         {Icon ? (
-          <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-primary/12 text-primary ring-1 ring-primary/20 sm:flex">
+          <div className="hidden h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/12 text-primary ring-1 ring-primary/20 sm:flex">
             <Icon className="h-6 w-6" />
           </div>
         ) : null}
@@ -51,7 +51,7 @@ const toneClasses: Record<NonNullable<MetricCardProps['tone']>, string> = {
 
 export function MetricCard({ label, value, helper, icon: Icon, tone = 'green', trend }: MetricCardProps) {
   return (
-    <div className="neo-surface neo-card-hover rounded-[24px] p-5">
+    <div className="neo-surface neo-card-hover rounded-xl p-5">
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0">
           <p className="text-sm text-muted-foreground">{label}</p>
@@ -59,7 +59,7 @@ export function MetricCard({ label, value, helper, icon: Icon, tone = 'green', t
           {helper ? <p className="mt-2 text-xs leading-5 text-muted-foreground">{helper}</p> : null}
           {trend ? <p className="mt-3 text-xs font-medium text-emerald-600 dark:text-emerald-300">{trend}</p> : null}
         </div>
-        <div className={cn('flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border', toneClasses[tone])}>
+        <div className={cn('flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border', toneClasses[tone])}>
           <Icon className="h-5 w-5" />
         </div>
       </div>
@@ -78,7 +78,7 @@ type PremiumPanelProps = {
 
 export function PremiumPanel({ title, description, actionLabel, onAction, children, className }: PremiumPanelProps) {
   return (
-    <section className={cn('neo-surface rounded-[28px] p-5', className)}>
+    <section className={cn('neo-surface rounded-2xl p-5', className)}>
       <div className="mb-4 flex items-start justify-between gap-4">
         <div>
           <h2 className="neo-section-title">{title}</h2>
@@ -105,7 +105,7 @@ type ActivityRowProps = {
 
 export function ActivityRow({ icon: Icon = ChevronRight, title, subtitle, meta, tone = 'slate' }: ActivityRowProps) {
   return (
-    <div className="flex items-center gap-3 rounded-2xl border border-border/70 bg-background/55 p-3 dark:bg-white/[0.035]">
+    <div className="flex items-center gap-3 rounded-xl border border-border/70 bg-background/55 p-3 dark:bg-white/[0.035]">
       <div className={cn('flex h-9 w-9 shrink-0 items-center justify-center rounded-full border', toneClasses[tone])}>
         <Icon className="h-4 w-4" />
       </div>
@@ -151,12 +151,12 @@ export function EmptyState({ icon: Icon, title, description, actionLabel, onActi
   onAction?: () => void;
 }) {
   return (
-    <div className="rounded-[24px] border border-dashed border-border/80 bg-background/45 p-8 text-center dark:bg-white/[0.03]">
+    <div className="rounded-2xl border border-dashed border-border/80 bg-background/45 p-8 text-center dark:bg-white/[0.03]">
       <Icon className="mx-auto mb-3 h-10 w-10 text-muted-foreground" />
       <h3 className="text-lg font-semibold text-foreground">{title}</h3>
       <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">{description}</p>
       {actionLabel ? (
-        <Button className="mt-5 rounded-2xl" onClick={onAction}>
+        <Button className="mt-5 rounded-xl" onClick={onAction}>
           {actionLabel}
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>

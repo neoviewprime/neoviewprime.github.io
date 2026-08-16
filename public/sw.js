@@ -1,4 +1,4 @@
-const APP_VERSION = '2026-08-09-2';
+const APP_VERSION = '2026-08-16-1';
 const APP_SHELL_CACHE = `neoview-app-shell-${APP_VERSION}`;
 const RUNTIME_CACHE = `neoview-runtime-${APP_VERSION}`;
 const APP_SHELL_FILES = [
@@ -50,6 +50,11 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(request.url);
   const isSameOrigin = url.origin === self.location.origin;
   const isNavigationRequest = request.mode === 'navigate';
+  const isApiRequest = isSameOrigin && url.pathname.startsWith('/api/');
+
+  if (isApiRequest) {
+    return;
+  }
 
   if (isNavigationRequest) {
     event.respondWith(

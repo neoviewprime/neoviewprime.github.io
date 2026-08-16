@@ -41,10 +41,10 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle }) => {
   const menuItems = useMemo(
     () => [
       { icon: Home, label: 'Início', path: '/home' },
-      { icon: LayoutDashboard, label: 'Meu Workspace', path: '/workspace' },
-      { icon: FileText, label: 'Meus Relatórios', path: '/reports' },
-      { icon: BarChart3, label: 'Estatísticas', path: '/indicators' },
-      { icon: CheckSquare, label: 'Validações', path: '/approvals' },
+      { icon: LayoutDashboard, label: 'Workspace', path: '/workspace' },
+      { icon: FileText, label: 'Relatórios', path: '/reports' },
+      { icon: BarChart3, label: 'Indicadores', path: '/indicators' },
+      { icon: CheckSquare, label: 'Aprovações', path: '/approvals' },
       { icon: Star, label: 'Favoritos', path: '/favorites' },
       { icon: HelpCircle, label: 'Ajuda', path: '/help' },
       { icon: Settings, label: 'Configurações', path: '/settings' },
@@ -107,7 +107,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle }) => {
               initial={false}
               animate="show"
             >
-              Navegacao
+              Navegação
             </motion.p>
           ) : null}
 
@@ -131,7 +131,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle }) => {
                     navigate(item.path);
                   }}
                   className={cn(
-                    'relative flex h-11 w-full min-w-0 items-center gap-3 rounded-xl px-3 text-left transition-all',
+                    'relative flex h-11 w-full min-w-0 items-center gap-3 rounded-lg px-3 text-left transition-all',
                     isActive
                       ? 'bg-sidebar-primary/15 text-sidebar-accent-foreground ring-1 ring-sidebar-primary/35 shadow-[0_10px_28px_-22px_hsl(var(--sidebar-primary))]'
                       : 'text-sidebar-foreground/78 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
@@ -179,7 +179,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle }) => {
                         navigate(item.path);
                       }}
                       className={cn(
-                        'relative flex h-11 w-full min-w-0 items-center gap-3 rounded-xl px-3 text-left transition-all',
+                        'relative flex h-11 w-full min-w-0 items-center gap-3 rounded-lg px-3 text-left transition-all',
                         isActive
                           ? 'bg-sidebar-primary/15 text-sidebar-accent-foreground ring-1 ring-sidebar-primary/35'
                           : 'text-sidebar-foreground/78 hover:bg-sidebar-accent hover:text-sidebar-accent-foreground',
@@ -211,7 +211,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle }) => {
               <div className="mb-3">
                 <div
                   className={cn(
-                    'flex items-center rounded-2xl border border-sidebar-border bg-sidebar-accent/50 text-sidebar-foreground',
+                    'flex items-center rounded-xl border border-sidebar-border bg-sidebar-accent/50 text-sidebar-foreground',
                     isCollapsed ? 'mx-auto h-11 w-11 justify-center rounded-xl px-0 py-0' : 'gap-3 px-3 py-3'
                   )}
                   title={user.full_name}
@@ -237,7 +237,7 @@ export const AppSidebar: React.FC<AppSidebarProps> = ({ isOpen, onToggle }) => {
             ) : null}
             <motion.div
               className={cn(
-                'mb-3 overflow-hidden rounded-2xl border border-sidebar-border bg-sidebar-accent/35',
+                'mb-3 overflow-hidden rounded-xl border border-sidebar-border bg-sidebar-accent/35',
                 isCollapsed ? 'hidden' : ''
               )}
               variants={labelVariants}

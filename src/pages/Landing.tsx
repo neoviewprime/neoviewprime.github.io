@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NeoLogo } from '@/components/NeoLogo';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import { Building2, FileText, Search, ArrowRight, Shield, BarChart3, Download, Share2, Smartphone } from 'lucide-react';
+import { Building2, FileText, Search, ArrowRight, Shield, BarChart3, Download, Share2, Smartphone, CheckCircle2, Bot } from 'lucide-react';
 import { toast } from 'sonner';
 import { clearPwaInstallPrompt, isIosDevice, subscribeToPwaInstall, type BeforeInstallPromptEvent } from '@/lib/pwaInstall';
 
@@ -109,11 +109,11 @@ const Landing: React.FC = () => {
         </div>
       </header>
 
-      <section className="relative overflow-hidden py-12 sm:py-20 lg:py-28">
+      <section className="relative overflow-hidden py-10 sm:py-16 lg:py-20">
         <div className="absolute inset-0">
           {shouldLoadVideo && !videoFailed ? (
             <video
-              className="h-full w-full scale-[1.02] object-cover"
+              className="h-full w-full scale-[1.02] object-cover opacity-30"
               autoPlay
               muted
               loop
@@ -127,47 +127,48 @@ const Landing: React.FC = () => {
           ) : (
             <div className="h-full w-full bg-[linear-gradient(135deg,#0b1f33_0%,#103658_35%,#16527a_65%,#1d6c8e_100%)]" />
           )}
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,17,30,0.68)_0%,rgba(9,17,30,0.54)_34%,rgba(9,17,30,0.5)_62%,rgba(9,17,30,0.7)_100%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(9,17,30,0.88)_0%,rgba(9,17,30,0.78)_42%,rgba(9,17,30,0.9)_100%)]" />
         </div>
 
         <div className="container relative z-10 mx-auto px-4 text-center sm:px-6">
-          <div className="mx-auto max-w-4xl rounded-2xl border border-white/15 bg-slate-950/28 px-5 py-8 shadow-2xl backdrop-blur-md sm:rounded-[28px] lg:px-10 lg:py-12">
-            <div className="mb-8 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-sm font-extrabold tracking-[0.02em] text-white">
+          <div className="mx-auto max-w-5xl">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white">
               <Shield className="h-4 w-4" />
-              Plataforma Corporativa
+              Ambiente demonstrativo
             </div>
 
-            <h1 className="mb-6 text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-6xl">
-              Relatórios Corporativos
-              <br />
-              <span className="text-gradient">em um só lugar</span>
+            <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Informação confiável no momento da decisão.
             </h1>
 
-            <p className="mx-auto mb-8 max-w-2xl text-base font-bold text-white sm:text-lg lg:text-xl">
-              NeoView é a plataforma centralizada para acesso a indicadores e relatórios
-              das empresas do grupo Neoenergia.
+            <p className="mx-auto mt-5 max-w-2xl text-base font-medium leading-7 text-white/82 sm:text-lg">
+              Relatórios, indicadores e conhecimento corporativo em um único ambiente, com governança, busca inteligente e rastreabilidade até a fonte.
             </p>
 
-            <button
-              onClick={() => navigate('/login')}
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-base font-semibold text-primary-foreground shadow-lg transition-opacity hover:opacity-90 sm:w-auto sm:px-8 sm:py-4 sm:text-lg hero-gradient"
-            >
-              Acessar Plataforma
-              <ArrowRight className="h-5 w-5" />
-            </button>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <button
+                onClick={() => navigate('/login')}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition-colors hover:bg-primary/90 sm:w-auto sm:px-8"
+              >
+                Acessar NeoView
+                <ArrowRight className="h-5 w-5" />
+              </button>
 
-            {!isInstalled ? (
-              <div className="mt-4 sm:hidden">
+              {!isInstalled ? (
                 <button
                   type="button"
                   onClick={() => void handleInstallApp()}
                   disabled={isInstalling}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/12 px-6 py-3.5 text-base font-semibold text-white shadow-lg backdrop-blur-md transition-colors hover:bg-white/18 disabled:cursor-not-allowed disabled:opacity-70"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/12 px-6 py-3.5 text-base font-semibold text-white backdrop-blur-md transition-colors hover:bg-white/18 disabled:cursor-not-allowed disabled:opacity-70 sm:hidden"
                 >
                   <Download className="h-5 w-5" />
                   {isInstalling ? 'Abrindo instalação...' : 'Baixar aplicativo'}
                 </button>
-                <p className="mt-3 flex items-center justify-center gap-1.5 text-xs font-medium text-white/78">
+              ) : null}
+            </div>
+
+            {!isInstalled ? (
+              <p className="mt-3 flex items-center justify-center gap-1.5 text-xs font-medium text-white/72 sm:hidden">
                   {isIosDevice() ? (
                     <>
                       <Share2 className="h-3.5 w-3.5" />
@@ -180,8 +181,71 @@ const Landing: React.FC = () => {
                     </>
                   )}
                 </p>
-              </div>
             ) : null}
+
+            <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-2xl border border-white/15 bg-white/95 text-left shadow-2xl dark:bg-slate-950/92">
+              <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3 dark:border-white/10">
+                <div className="flex items-center gap-2">
+                  <div className="h-2.5 w-2.5 rounded-full bg-primary" />
+                  <p className="text-sm font-semibold text-slate-900 dark:text-white">Central de Decisão</p>
+                </div>
+                <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">Fontes validadas</span>
+              </div>
+
+              <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
+                <div className="p-4 sm:p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.16em] text-primary">Pergunta de negócio</p>
+                  <div className="mt-3 flex items-center gap-3 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 dark:border-white/10 dark:bg-white/[0.05]">
+                    <Search className="h-5 w-5 text-primary" />
+                    <p className="truncate text-sm font-medium text-slate-700 dark:text-slate-200">Compare DEC 2023 e 2024 e mostre o relatório fonte</p>
+                  </div>
+
+                  <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                    {[
+                      ['73%', 'redução estimada'],
+                      ['22 min', 'por demanda'],
+                      ['65 mil h', 'potencial anual'],
+                    ].map(([value, label]) => (
+                      <div key={value} className="rounded-xl border border-slate-200 bg-white p-4 dark:border-white/10 dark:bg-white/[0.04]">
+                        <p className="text-2xl font-semibold text-slate-950 dark:text-white">{value}</p>
+                        <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{label}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-5 divide-y divide-slate-200 rounded-xl border border-slate-200 dark:divide-white/10 dark:border-white/10">
+                    {['Relatório DEC Q4 2024', 'Comparativo DEC 2023-2024', 'Plano de ação DEC 2025'].map((item, index) => (
+                      <div key={item} className="flex items-center justify-between gap-3 px-4 py-3">
+                        <div className="flex items-center gap-3">
+                          <CheckCircle2 className="h-4 w-4 text-primary" />
+                          <span className="text-sm font-medium text-slate-700 dark:text-slate-200">{item}</span>
+                        </div>
+                        <span className="text-xs text-slate-500 dark:text-slate-400">{index === 0 ? 'Validado' : 'Fonte'}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="border-t border-slate-200 bg-slate-50 p-4 sm:p-6 lg:border-l lg:border-t-0 dark:border-white/10 dark:bg-white/[0.04]">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                      <Bot className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-slate-900 dark:text-white">ÍRIS</p>
+                      <p className="text-xs text-slate-500 dark:text-slate-400">Assistente corporativa</p>
+                    </div>
+                  </div>
+                  <div className="mt-5 rounded-xl bg-white p-4 text-sm leading-6 text-slate-700 shadow-sm dark:bg-slate-950/70 dark:text-slate-200">
+                    O DEC apresenta melhora no período analisado e faz sentido para avaliar continuidade do serviço. Use também FEC e plano de ação para validar a causa operacional.
+                  </div>
+                  <div className="mt-4 rounded-xl border border-primary/20 bg-primary/10 p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-primary">Rastreabilidade</p>
+                    <p className="mt-2 text-sm text-slate-700 dark:text-slate-200">Resposta conectada ao relatório fonte, período e área responsável.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

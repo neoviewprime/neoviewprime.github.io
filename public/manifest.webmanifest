@@ -7,19 +7,21 @@
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#ffffff",
-  "theme_color": "#0b5fff",
+  "background_color": "#f6f8fb",
+  "theme_color": "#00a443",
   "categories": ["business", "productivity"],
   "icons": [
     {
       "src": "/neoview-icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/neoview-icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
